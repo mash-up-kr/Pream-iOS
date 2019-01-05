@@ -32,6 +32,12 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>카메라 써두 돼요???</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>사진첩 써두 돼요???</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>사진첨에 저장해도 돼요???</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
