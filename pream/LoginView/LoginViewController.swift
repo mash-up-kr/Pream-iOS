@@ -8,8 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
+class LoginViewController: KeyboardViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
