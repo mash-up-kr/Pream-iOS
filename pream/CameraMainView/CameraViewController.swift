@@ -16,6 +16,11 @@ class CameraViewController: UIViewController {
     var stillImageOutput: AVCapturePhotoOutput!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
 
+    var isLogin: Bool = {
+        let isLogin = false
+        return isLogin
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,6 +28,7 @@ class CameraViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        loginChecked()
         startCameraSession()
     }
 
@@ -91,5 +97,17 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
         stillImageOutput.capturePhoto(with: settings, delegate: self)
+    }
+}
+
+// MARK: - CheckLogin
+extension CameraViewController {
+    func loginChecked() {
+        guard !isLogin else { return }
+        isLogin.toggle()
+
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController")
+        present(loginViewController, animated: true, completion: nil)
     }
 }

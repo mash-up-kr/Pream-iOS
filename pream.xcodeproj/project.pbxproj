@@ -10,6 +10,9 @@
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		D1D41A82D695DE76E564E0B5 /* Pods_pream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EF6112755CBDA5CC865C20 /* Pods_pream.framework */; };
 		EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1C421E21E3400802F7E /* BlurView.swift */; };
+		EFB5A1C821E2212A00802F7E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB5A1C721E2212A00802F7E /* Login.storyboard */; };
+		EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1C921E2213700802F7E /* LoginViewController.swift */; };
+		EFB5A1CC21E2214100802F7E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1CB21E2214100802F7E /* RegisterViewController.swift */; };
 		EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */; };
 		EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CB21DE3CAA00B7CCA8 /* Main.storyboard */; };
 		EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CE21DE3CAC00B7CCA8 /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
 		68EF6112755CBDA5CC865C20 /* Pods_pream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB5A1C421E21E3400802F7E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		EFB5A1C721E2212A00802F7E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EFB5A1C921E2213700802F7E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EFB5A1CB21E2214100802F7E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EFEAE9C421DE3CAA00B7CCA8 /* pream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEAE9CC21DE3CAA00B7CCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +74,9 @@
 		EFB5A1C621E220A400802F7E /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				EFB5A1C721E2212A00802F7E /* Login.storyboard */,
+				EFB5A1C921E2213700802F7E /* LoginViewController.swift */,
+				EFB5A1CB21E2214100802F7E /* RegisterViewController.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB5A1C821E2212A00802F7E /* Login.storyboard in Resources */,
 				EFEAE9D221DE3CAC00B7CCA8 /* LaunchScreen.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
 				EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */,
@@ -296,8 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */,
 				EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */,
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
+				EFB5A1CC21E2214100802F7E /* RegisterViewController.swift in Sources */,
 				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
