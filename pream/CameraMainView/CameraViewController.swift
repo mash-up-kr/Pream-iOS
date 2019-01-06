@@ -78,12 +78,6 @@ extension CameraViewController {
         }
     }
 
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        guard let imageData = photo.fileDataRepresentation(), let image = UIImage(data: imageData) else { return }
-
-        saveImage(image)
-    }
-
     func saveImage(_ image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
@@ -97,6 +91,11 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
         stillImageOutput.capturePhoto(with: settings, delegate: self)
+    }
+
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard let imageData = photo.fileDataRepresentation(), let image = UIImage(data: imageData) else { return }
+        saveImage(image)
     }
 }
 
