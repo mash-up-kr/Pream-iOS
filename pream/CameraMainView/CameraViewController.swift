@@ -15,6 +15,10 @@ class CameraViewController: UIViewController {
     var captureSession: AVCaptureSession!
     var stillImageOutput: AVCapturePhotoOutput!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    var cameraPosition: AVCaptureDevice.Position = {
+        let position = AVCaptureDevice.Position.back
+        return position
+    }()
 
     var isLogin: Bool = {
         let isLogin = false
@@ -34,7 +38,7 @@ class CameraViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.captureSession.stopRunning()
+        endCameraSession()
     }
 }
 
@@ -44,12 +48,12 @@ extension CameraViewController {
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo
 
-        guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video) else {
-            Log.msg("Unable to access back camera!")
+        guard let cameraDevice = getCameraDevice(position: cameraPosition) else {
+            Log.msg("Unable to access camera!")
             return
         }
         do {
-            let input = try AVCaptureDeviceInput(device: backCamera)
+            let input = try AVCaptureDeviceInput(device: cameraDevice)
             stillImageOutput = AVCapturePhotoOutput()
 
             if captureSession.canAddInput(input) && captureSession.canAddOutput(stillImageOutput) {
@@ -60,6 +64,10 @@ extension CameraViewController {
         } catch let error {
             Log.msg("Error Unable to initialize back camera:  \(error.localizedDescription)")
         }
+    }
+
+    func endCameraSession() {
+        captureSession.stopRunning()
     }
 
     func setupLivePreview() {
@@ -78,8 +86,29 @@ extension CameraViewController {
         }
     }
 
+    func getCameraDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
+        return AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: position)
+    }
+
+    func changeCameraPosition() {
+        if cameraPosition == .back {
+            cameraPosition = .front
+        } else {
+            cameraPosition = .back
+        }
+
+        reloadCameraSession()
+    }
+
+    func reloadCameraSession() {
+        endCameraSession()
+        startCameraSession()
+    }
+
     func saveImage(_ image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        //임시로 찍을때마다 카메라 앞뒤로 바뀌도록 함
+        changeCameraPosition()
     }
 
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
