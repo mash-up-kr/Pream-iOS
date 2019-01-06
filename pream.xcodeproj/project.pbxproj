@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		D1D41A82D695DE76E564E0B5 /* Pods_pream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EF6112755CBDA5CC865C20 /* Pods_pream.framework */; };
+		EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1C421E21E3400802F7E /* BlurView.swift */; };
 		EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */; };
 		EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CB21DE3CAA00B7CCA8 /* Main.storyboard */; };
 		EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CE21DE3CAC00B7CCA8 /* Assets.xcassets */; };
 		EFEAE9D221DE3CAC00B7CCA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9D021DE3CAC00B7CCA8 /* LaunchScreen.storyboard */; };
+		EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9DC21E20F3000B7CCA8 /* RoundView.swift */; };
+		EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9DE21E20F8600B7CCA8 /* RoundButton.swift */; };
+		EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9E221E2160C00B7CCA8 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,16 @@
 		63D6211621DFA88000EF4059 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
 		68EF6112755CBDA5CC865C20 /* Pods_pream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB5A1C421E21E3400802F7E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		EFEAE9C421DE3CAA00B7CCA8 /* pream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEAE9CC21DE3CAA00B7CCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFEAE9CE21DE3CAC00B7CCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFEAE9D121DE3CAC00B7CCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFEAE9D321DE3CAC00B7CCA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFEAE9DC21E20F3000B7CCA8 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		EFEAE9DE21E20F8600B7CCA8 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		EFEAE9E221E2160C00B7CCA8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EFB5A1C621E220A400802F7E /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
 		EFEAE9BB21DE3CAA00B7CCA8 = {
 			isa = PBXGroup;
 			children = (
@@ -78,14 +93,43 @@
 		EFEAE9C621DE3CAA00B7CCA8 /* pream */ = {
 			isa = PBXGroup;
 			children = (
-				EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */,
 				EFEAE9CB21DE3CAA00B7CCA8 /* Main.storyboard */,
+				EFB5A1C621E220A400802F7E /* LoginView */,
+				EFEAE9E021E215B000B7CCA8 /* CameraMainView */,
+				EFEAE9DB21E20F1900B7CCA8 /* Common */,
+				EFEAE9E421E2169400B7CCA8 /* Supports */,
+			);
+			path = pream;
+			sourceTree = "<group>";
+		};
+		EFEAE9DB21E20F1900B7CCA8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EFEAE9DC21E20F3000B7CCA8 /* RoundView.swift */,
+				EFEAE9DE21E20F8600B7CCA8 /* RoundButton.swift */,
+				EFEAE9E221E2160C00B7CCA8 /* Log.swift */,
+				EFB5A1C421E21E3400802F7E /* BlurView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EFEAE9E021E215B000B7CCA8 /* CameraMainView */ = {
+			isa = PBXGroup;
+			children = (
+				63D6211621DFA88000EF4059 /* CameraViewController.swift */,
+			);
+			path = CameraMainView;
+			sourceTree = "<group>";
+		};
+		EFEAE9E421E2169400B7CCA8 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */,
 				EFEAE9CE21DE3CAC00B7CCA8 /* Assets.xcassets */,
 				EFEAE9D021DE3CAC00B7CCA8 /* LaunchScreen.storyboard */,
 				EFEAE9D321DE3CAC00B7CCA8 /* Info.plist */,
-				63D6211621DFA88000EF4059 /* CameraViewController.swift */,
 			);
-			path = pream;
+			name = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,8 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */,
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
+				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
+				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
+				EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
