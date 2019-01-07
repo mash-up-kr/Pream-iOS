@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import AVFoundation
+import AudioToolbox
 
 class CameraViewController: UIViewController {
     @IBOutlet weak var cameraPreviewImageView: UIImageView!
@@ -125,6 +126,16 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let imageData = photo.fileDataRepresentation(), let image = UIImage(data: imageData) else { return }
         saveImage(image)
+    }
+
+    func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+        try? AVAudioSession.sharedInstance().setActive(true)
+
+        guard let soundURL = Bundle.main.url(forResource: "photoShutter2", withExtension: "caf") else { return }
+        var mySound: SystemSoundID = 0
+        AudioServicesCreateSystemSoundID(soundURL as CFURL, &mySound)
+        AudioServicesPlaySystemSound(mySound)
     }
 }
 
