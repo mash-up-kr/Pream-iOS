@@ -9,9 +9,11 @@
 import UIKit
 import SnapKit
 import AVFoundation
+import Photos
 
 class CameraViewController: UIViewController {
     @IBOutlet weak var cameraPreviewImageView: UIImageView!
+    @IBOutlet weak var libraryButton: UIButton!
     var captureSession: AVCaptureSession!
     var stillImageOutput: AVCapturePhotoOutput!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
@@ -34,6 +36,7 @@ class CameraViewController: UIViewController {
 
         loginChecked()
         startCameraSession()
+        setLibraryButtonImage()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -112,6 +115,8 @@ extension CameraViewController {
     }
 
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        //우선 사진 저장할 때마다 사진첩버튼 이미지 최신껄로 변경
+        setLibraryButtonImage()
     }
 }
 
@@ -137,5 +142,35 @@ extension CameraViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController")
         present(loginViewController, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Photo Library
+extension CameraViewController {
+    func setLibraryButtonImage() {
+        libraryButton.imageView?.contentMode = .scaleAspectFill
+
+        if let asset = fetchLatestPhoto().firstObject {
+            // Request the image.
+            PHImageManager.default().requestImage(for: asset,
+                                                  targetSize: self.libraryButton.frame.size,
+                                                  contentMode: .aspectFit,
+                                                  options: nil) { image, _ in
+                self.libraryButton.setImage(image, for: .normal)
+            }
+        }
+    }
+
+    func fetchLatestPhoto() -> PHFetchResult<PHAsset> {
+        let options = PHFetchOptions()
+
+        // 한가지 이미지만 가져오기
+        options.fetchLimit = 1
+
+        // 최신순으로 정렬
+        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
+        options.sortDescriptors = [sortDescriptor]
+
+        return PHAsset.fetchAssets(with: .image, options: options)
     }
 }
