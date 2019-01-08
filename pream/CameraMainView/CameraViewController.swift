@@ -27,8 +27,12 @@ class CameraViewController: UIViewController {
         return isLogin
     }()
 
+    var imagePicker = UIImagePickerController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        imagePicker.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -145,7 +149,7 @@ extension CameraViewController {
     }
 }
 
-// MARK: - Photo Library
+// MARK: - Photo Library Functions
 extension CameraViewController {
     func setLibraryButtonImage() {
         libraryButton.imageView?.contentMode = .scaleAspectFill
@@ -172,5 +176,21 @@ extension CameraViewController {
         options.sortDescriptors = [sortDescriptor]
 
         return PHAsset.fetchAssets(with: .image, options: options)
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+extension CameraViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBAction private func tapLibraryButton(_ sender: UIButton) {
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        imagePicker.allowsEditing = false
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 }
