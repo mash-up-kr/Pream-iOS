@@ -57,12 +57,38 @@
                                             <action selector="didTabOnShotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZHb-pn-m9y"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-Eu-p3O">
+                                        <rect key="frame" x="20" y="28" width="34" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avu-oK-WfQ">
+                                                <rect key="frame" x="3" y="3" width="28" height="28"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tapLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ej-pM-6Xa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Avu-oK-WfQ" firstAttribute="leading" secondItem="oyS-Eu-p3O" secondAttribute="leading" constant="3" id="4bB-XJ-T0J"/>
+                                            <constraint firstAttribute="bottom" secondItem="Avu-oK-WfQ" secondAttribute="bottom" constant="3" id="8XZ-ab-aDB"/>
+                                            <constraint firstAttribute="width" constant="34" id="YQA-h2-gt2"/>
+                                            <constraint firstAttribute="height" constant="34" id="c4B-kz-Sv5"/>
+                                            <constraint firstItem="Avu-oK-WfQ" firstAttribute="top" secondItem="oyS-Eu-p3O" secondAttribute="top" constant="3" id="rgZ-wY-Llc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Avu-oK-WfQ" secondAttribute="trailing" constant="3" id="zKl-AW-qz4"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="gB7-Nd-hGV" firstAttribute="top" secondItem="0jp-30-SkP" secondAttribute="top" constant="8" id="Crs-cw-tvu"/>
+                                    <constraint firstItem="oyS-Eu-p3O" firstAttribute="leading" secondItem="VEd-gE-dL9" secondAttribute="leading" constant="20" id="DIi-9t-rDG"/>
                                     <constraint firstItem="0jp-30-SkP" firstAttribute="centerX" secondItem="VEd-gE-dL9" secondAttribute="centerX" id="Dhl-wB-4OY"/>
                                     <constraint firstItem="gB7-Nd-hGV" firstAttribute="bottom" secondItem="0jp-30-SkP" secondAttribute="bottom" constant="-8" id="E6D-Mb-0UI"/>
+                                    <constraint firstItem="oyS-Eu-p3O" firstAttribute="centerY" secondItem="VEd-gE-dL9" secondAttribute="centerY" id="d0F-sw-ehS"/>
                                     <constraint firstItem="gB7-Nd-hGV" firstAttribute="trailing" secondItem="0jp-30-SkP" secondAttribute="trailing" constant="-8" id="f1i-tz-3ch"/>
                                     <constraint firstItem="gB7-Nd-hGV" firstAttribute="leading" secondItem="0jp-30-SkP" secondAttribute="leading" constant="8" id="pcg-tQ-CCz"/>
                                     <constraint firstItem="0jp-30-SkP" firstAttribute="centerY" secondItem="VEd-gE-dL9" secondAttribute="centerY" id="yRi-62-ncg"/>
@@ -102,6 +128,7 @@
                     </view>
                     <connections>
                         <outlet property="cameraPreviewImageView" destination="kuH-Pg-cpi" id="PQp-49-Is7"/>
+                        <outlet property="libraryButton" destination="Avu-oK-WfQ" id="qPl-cZ-Fsq"/>
                         <outlet property="cameraShotButton" destination="gB7-Nd-hGV" id="MQU-3L-78T"/>
                     </connections>
                 </viewController>

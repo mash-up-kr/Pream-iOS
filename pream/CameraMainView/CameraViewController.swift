@@ -9,12 +9,14 @@
 import UIKit
 import SnapKit
 import AVFoundation
+import Photos
 import UIImageColors
 import AudioToolbox
 
 class CameraViewController: UIViewController {
     @IBOutlet weak var cameraShotButton: RoundButton!
     @IBOutlet weak var cameraPreviewImageView: UIImageView!
+    @IBOutlet weak var libraryButton: UIButton!
     var captureSession: AVCaptureSession!
     var stillImageOutput: AVCapturePhotoOutput!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
@@ -29,9 +31,12 @@ class CameraViewController: UIViewController {
         let isLogin = false
         return isLogin
     }()
-    
+    var imagePicker = UIImagePickerController()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        imagePicker.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,6 +44,7 @@ class CameraViewController: UIViewController {
         
         loginChecked()
         startCameraSession()
+        setLibraryButtonImage()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -119,6 +125,8 @@ extension CameraViewController {
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        //우선 사진 저장할 때마다 사진첩버튼 이미지 최신껄로 변경
+        setLibraryButtonImage()
     }
 }
 
@@ -174,5 +182,51 @@ extension CameraViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController")
         present(loginViewController, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Photo Library Functions
+extension CameraViewController {
+    func setLibraryButtonImage() {
+        libraryButton.imageView?.contentMode = .scaleAspectFill
+
+        if let asset = fetchLatestPhoto().firstObject {
+            // Request the image.
+            PHImageManager.default().requestImage(for: asset,
+                                                  targetSize: self.libraryButton.frame.size,
+                                                  contentMode: .aspectFit,
+                                                  options: nil) { image, _ in
+                self.libraryButton.setImage(image, for: .normal)
+            }
+        }
+    }
+
+    func fetchLatestPhoto() -> PHFetchResult<PHAsset> {
+        let options = PHFetchOptions()
+
+        // 한가지 이미지만 가져오기
+        options.fetchLimit = 1
+
+        // 최신순으로 정렬
+        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
+        options.sortDescriptors = [sortDescriptor]
+
+        return PHAsset.fetchAssets(with: .image, options: options)
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+extension CameraViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBAction private func tapLibraryButton(_ sender: UIButton) {
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        imagePicker.allowsEditing = false
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 }
