@@ -129,6 +129,7 @@
                     <connections>
                         <outlet property="cameraPreviewImageView" destination="kuH-Pg-cpi" id="PQp-49-Is7"/>
                         <outlet property="libraryButton" destination="Avu-oK-WfQ" id="qPl-cZ-Fsq"/>
+                        <outlet property="cameraShotButton" destination="gB7-Nd-hGV" id="MQU-3L-78T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

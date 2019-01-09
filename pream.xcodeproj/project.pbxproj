@@ -13,9 +13,9 @@
 		EFB5A1C821E2212A00802F7E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB5A1C721E2212A00802F7E /* Login.storyboard */; };
 		EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1C921E2213700802F7E /* LoginViewController.swift */; };
 		EFB5A1CC21E2214100802F7E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1CB21E2214100802F7E /* RegisterViewController.swift */; };
-		EFB5A1CF21E226E600802F7E /* UIImage+ColorAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1CE21E226E600802F7E /* UIImage+ColorAverage.swift */; };
 		EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1D021E2293A00802F7E /* UIView+ConvertImage.swift */; };
 		EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1D221E22D1700802F7E /* KeyboardViewController.swift */; };
+		EFB5A1D721E3BB4700802F7E /* photoShutter2.caf in Resources */ = {isa = PBXBuildFile; fileRef = EFB5A1D621E3BA9B00802F7E /* photoShutter2.caf */; };
 		EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */; };
 		EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CB21DE3CAA00B7CCA8 /* Main.storyboard */; };
 		EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CE21DE3CAC00B7CCA8 /* Assets.xcassets */; };
@@ -34,9 +34,9 @@
 		EFB5A1C721E2212A00802F7E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EFB5A1C921E2213700802F7E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EFB5A1CB21E2214100802F7E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		EFB5A1CE21E226E600802F7E /* UIImage+ColorAverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ColorAverage.swift"; sourceTree = "<group>"; };
 		EFB5A1D021E2293A00802F7E /* UIView+ConvertImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ConvertImage.swift"; sourceTree = "<group>"; };
 		EFB5A1D221E22D1700802F7E /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		EFB5A1D621E3BA9B00802F7E /* photoShutter2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = photoShutter2.caf; sourceTree = "<group>"; };
 		EFEAE9C421DE3CAA00B7CCA8 /* pream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEAE9CC21DE3CAA00B7CCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,7 +90,6 @@
 		EFB5A1CD21E226C800802F7E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				EFB5A1CE21E226E600802F7E /* UIImage+ColorAverage.swift */,
 				EFB5A1D021E2293A00802F7E /* UIView+ConvertImage.swift */,
 			);
 			path = Extension;
@@ -150,6 +149,7 @@
 		EFEAE9E421E2169400B7CCA8 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				EFB5A1D621E3BA9B00802F7E /* photoShutter2.caf */,
 				EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */,
 				EFEAE9CE21DE3CAC00B7CCA8 /* Assets.xcassets */,
 				EFEAE9D021DE3CAC00B7CCA8 /* LaunchScreen.storyboard */,
@@ -220,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB5A1D721E3BB4700802F7E /* photoShutter2.caf in Resources */,
 				EFB5A1C821E2212A00802F7E /* Login.storyboard in Resources */,
 				EFEAE9D221DE3CAC00B7CCA8 /* LaunchScreen.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
@@ -243,6 +244,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/UIImageColors/UIImageColors.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -252,6 +254,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageColors.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -324,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */,
-				EFB5A1CF21E226E600802F7E /* UIImage+ColorAverage.swift in Sources */,
 				EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */,
 				EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */,
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
