@@ -181,6 +181,7 @@ extension CameraViewController {
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
         cameraShotButton.layer.addSublayer(gradient)
+        gradient.cornerRadius = cameraShotButton.layer.cornerRadius
     }
 
     func animationShotButton() {
