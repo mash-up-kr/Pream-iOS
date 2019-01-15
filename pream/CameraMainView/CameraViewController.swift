@@ -26,6 +26,14 @@ class CameraViewController: UIViewController {
     var cameraPosition: AVCaptureDevice.Position = .back
     var imagePicker = UIImagePickerController()
 
+    //gradation Values
+    let gradient: CAGradientLayer = CAGradientLayer()
+    var currentGradient: Int = 0
+    var gradientSet: [[CGColor]] = [[#colorLiteral(red: 0.5529411765, green: 0.7176470588, blue: 1, alpha: 1).cgColor, #colorLiteral(red: 0.6705882353, green: 0.537254902, blue: 1, alpha: 1).cgColor],
+                                    [#colorLiteral(red: 1, green: 0.6392156863, blue: 0.9882352941, alpha: 1).cgColor, #colorLiteral(red: 1, green: 0.5254901961, blue: 0.5254901961, alpha: 1).cgColor],
+                                    [#colorLiteral(red: 0.6705882353, green: 0.537254902, blue: 1, alpha: 1).cgColor, #colorLiteral(red: 1, green: 0.6392156863, blue: 0.9882352941, alpha: 1).cgColor],
+                                    [#colorLiteral(red: 1, green: 0.5254901961, blue: 0.5254901961, alpha: 1).cgColor, #colorLiteral(red: 0.5529411765, green: 0.7176470588, blue: 1, alpha: 1).cgColor]]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,9 +43,11 @@ class CameraViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        loginChecked()
-        startCameraSession()
-        setLibraryButtonImage()
+//        loginChecked()
+//        startCameraSession()
+//        setLibraryButtonImage()
+        addGradation()
+        animationShotButton()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -136,7 +146,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
     }
 }
 
-// MARK: - CheckLogin
+// MARK: - Functions
 extension CameraViewController {
     @objc func imageCapture() {
         DispatchQueue.global(qos: .default).async { [weak self] in
@@ -163,6 +173,31 @@ extension CameraViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController")
         present(loginViewController, animated: true, completion: nil)
+    }
+
+    func addGradation() {
+        gradient.frame = cameraShotButton.bounds
+        gradient.colors = gradientSet[currentGradient]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        cameraShotButton.layer.addSublayer(gradient)
+    }
+
+    func animationShotButton() {
+        if currentGradient < gradientSet.count - 1 {
+            currentGradient += 1
+        } else {
+            currentGradient = 0
+        }
+
+        let gradientChangeAnimation = CABasicAnimation(keyPath: "colors")
+        gradientChangeAnimation.duration = 5.0
+        gradientChangeAnimation.autoreverses = true
+        gradientChangeAnimation.repeatCount = Float.infinity
+        gradientChangeAnimation.toValue = gradientSet[currentGradient]
+        gradientChangeAnimation.fillMode = .both
+        gradient.add(gradientChangeAnimation, forKey: "gradationChange")
+
     }
 }
 
