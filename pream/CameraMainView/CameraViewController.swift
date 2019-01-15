@@ -43,9 +43,9 @@ class CameraViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-//        loginChecked()
-//        startCameraSession()
-//        setLibraryButtonImage()
+        loginChecked()
+        startCameraSession()
+        setLibraryButtonImage()
         addGradation()
         animationShotButton()
     }
