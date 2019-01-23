@@ -89,7 +89,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ej-pM-6Xa"/>
+                                                    <segue destination="uYa-M5-TAc" kind="presentation" id="2Bc-Ly-gbM"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -159,6 +159,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="gjI-TD-vKD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Library" id="uYa-M5-TAc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fra-a5-hR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="132"/>
         </scene>
     </scenes>
 </document>

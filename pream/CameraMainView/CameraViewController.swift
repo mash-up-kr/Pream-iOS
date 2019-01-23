@@ -24,7 +24,6 @@ class CameraViewController: UIViewController {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
     var isLogin: Bool = false
     var cameraPosition: AVCaptureDevice.Position = .back
-    var imagePicker = UIImagePickerController()
 
     //gradation Values
     let gradient: CAGradientLayer = CAGradientLayer()
@@ -36,8 +35,6 @@ class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imagePicker.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -229,22 +226,6 @@ extension CameraViewController {
         options.sortDescriptors = [sortDescriptor]
 
         return PHAsset.fetchAssets(with: .image, options: options)
-    }
-}
-
-// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
-extension CameraViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBAction private func tapLibraryButton(_ sender: UIButton) {
-        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-        imagePicker.allowsEditing = false
-        self.present(imagePicker, animated: true, completion: nil)
-    }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-    }
-
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        imagePicker.dismiss(animated: true, completion: nil)
     }
 }
 
