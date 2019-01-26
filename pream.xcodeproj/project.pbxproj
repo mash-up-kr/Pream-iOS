@@ -19,6 +19,9 @@
 		EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1D221E22D1700802F7E /* KeyboardViewController.swift */; };
 		EFB5A1D721E3BB4700802F7E /* photoShutter2.caf in Resources */ = {isa = PBXBuildFile; fileRef = EFB5A1D621E3BA9B00802F7E /* photoShutter2.caf */; };
 		EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB5A1D821EE36A800802F7E /* Colors.xcassets */; };
+		EFC8AC9A21FC7343004B940A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9921FC7343004B940A /* CameraManager.swift */; };
+		EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9B21FC741F004B940A /* PresentError.swift */; };
+		EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9D21FC75CB004B940A /* UIView+FindViewController.swift */; };
 		EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */; };
 		EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CB21DE3CAA00B7CCA8 /* Main.storyboard */; };
 		EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CE21DE3CAC00B7CCA8 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		EFB5A1D221E22D1700802F7E /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		EFB5A1D621E3BA9B00802F7E /* photoShutter2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = photoShutter2.caf; sourceTree = "<group>"; };
 		EFB5A1D821EE36A800802F7E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EFC8AC9921FC7343004B940A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		EFC8AC9B21FC741F004B940A /* PresentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentError.swift; sourceTree = "<group>"; };
+		EFC8AC9D21FC75CB004B940A /* UIView+FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindViewController.swift"; sourceTree = "<group>"; };
 		EFEAE9C421DE3CAA00B7CCA8 /* pream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEAE9CC21DE3CAA00B7CCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				EFB5A1D021E2293A00802F7E /* UIView+ConvertImage.swift */,
+				EFC8AC9D21FC75CB004B940A /* UIView+FindViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 				EFEAE9E221E2160C00B7CCA8 /* Log.swift */,
 				EFB5A1C421E21E3400802F7E /* BlurView.swift */,
 				EFB5A1D221E22D1700802F7E /* KeyboardViewController.swift */,
+				EFC8AC9B21FC741F004B940A /* PresentError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				63D6211621DFA88000EF4059 /* CameraViewController.swift */,
+				EFC8AC9921FC7343004B940A /* CameraManager.swift */,
 			);
 			path = CameraMainView;
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 			files = (
 				EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */,
 				B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */,
+				EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */,
 				EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */,
 				EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */,
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
@@ -355,7 +365,9 @@
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
+				EFC8AC9A21FC7343004B940A /* CameraManager.swift in Sources */,
 				EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */,
+				EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
