@@ -17,12 +17,13 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var convertCameraButton: UIButton!
     @IBOutlet weak var changeRatioButton: UIButton!
     @IBOutlet weak var cameraManager: CameraManager!
+    @IBOutlet weak var filterView: UIView!
+    var isLogin: Bool = false
 
     @IBOutlet weak var topBlurView: BlurView!
     @IBOutlet weak var bottomBlurView: BlurView!
 
     var isDuringbuttonColorAnimation = false
-    var isLogin: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,6 +133,14 @@ extension CameraViewController {
 
         bottomBlurEffectView.snp.makeConstraints {
             $0.top.bottom.leading.trailing.equalTo(bottomBlurView)
+        }
+    }
+
+    @IBAction private func showFilter(_ sender: UIButton) {
+        if filterView.isHidden {
+            filterView.isHidden = false
+        } else {
+            filterView.isHidden = true
         }
     }
 }

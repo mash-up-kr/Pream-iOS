@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F2A8A21FC7E690066AEAC /* FilterCollectionViewCell.swift */; };
+		030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030F2A9821FC94960066AEAC /* FilterCollection.storyboard */; };
+		030F2A9B21FC95670066AEAC /* FilterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F2A9A21FC95670066AEAC /* FilterCollectionViewController.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
 		B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030F2A8A21FC7E690066AEAC /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		030F2A9821FC94960066AEAC /* FilterCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterCollection.storyboard; sourceTree = "<group>"; };
+		030F2A9A21FC95670066AEAC /* FilterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewController.swift; sourceTree = "<group>"; };
 		3CBFE07F816140D178519767 /* Pods-pream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.debug.xcconfig"; sourceTree = "<group>"; };
 		63D6211621DFA88000EF4059 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030F2A8921FC7E2E0066AEAC /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				030F2A8A21FC7E690066AEAC /* FilterCollectionViewCell.swift */,
+				030F2A9821FC94960066AEAC /* FilterCollection.storyboard */,
+				030F2A9A21FC95670066AEAC /* FilterCollectionViewController.swift */,
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
 		2801250D0943AF45842BC22E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +155,7 @@
 		EFEAE9C621DE3CAA00B7CCA8 /* pream */ = {
 			isa = PBXGroup;
 			children = (
+				030F2A8921FC7E2E0066AEAC /* FilterView */,
 				EFEAE9CB21DE3CAA00B7CCA8 /* Main.storyboard */,
 				EFB5A1C621E220A400802F7E /* LoginView */,
 				EFEAE9E021E215B000B7CCA8 /* CameraMainView */,
@@ -249,6 +266,7 @@
 				EFB5A1C821E2212A00802F7E /* Login.storyboard in Resources */,
 				EFEAE9D221DE3CAC00B7CCA8 /* LaunchScreen.storyboard in Resources */,
 				EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */,
+				030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
 				B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */,
 				EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */,
@@ -353,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030F2A9B21FC95670066AEAC /* FilterCollectionViewController.swift in Sources */,
 				EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */,
 				B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */,
 				EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */,
@@ -366,6 +385,7 @@
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
 				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
 				EFC8AC9A21FC7343004B940A /* CameraManager.swift in Sources */,
+				030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */,
 				EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */,
 				EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */,
 			);
