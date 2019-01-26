@@ -12,6 +12,7 @@ class BlurView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        layer.opacity = 0.8
+        backgroundColor = .black
+        layer.opacity = 0.4
     }
 }

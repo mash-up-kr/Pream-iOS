@@ -6,6 +6,5 @@ target 'pream' do
   pod 'SnapKit'
   pod 'Moya'
   pod 'Alamofire'
-  pod 'UIImageColors'
-
+  pod 'SideMenu'
 end

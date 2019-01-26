@@ -6,30 +6,30 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
   - Result (4.0.0)
+  - SideMenu (5.0.3)
   - SnapKit (4.2.0)
-  - UIImageColors (2.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - Moya
+  - SideMenu
   - SnapKit
-  - UIImageColors
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Moya
     - Result
+    - SideMenu
     - SnapKit
-    - UIImageColors
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  UIImageColors: c83669aff7ceb55a3b3f2c398f3b5c14632a267b
 
-PODFILE CHECKSUM: 3c70dd43caeecb71cbc415da33c202e9792a538d
+PODFILE CHECKSUM: 9b1778b3e6040c0ff67bf562a11abfabeaf5e5e5
 
 COCOAPODS: 1.5.3

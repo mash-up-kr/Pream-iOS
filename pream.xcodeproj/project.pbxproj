@@ -21,6 +21,7 @@
 		EFC8AC9A21FC7343004B940A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9921FC7343004B940A /* CameraManager.swift */; };
 		EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9B21FC741F004B940A /* PresentError.swift */; };
 		EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9D21FC75CB004B940A /* UIView+FindViewController.swift */; };
+		EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3801821FCF83700CB2DDF /* UIColor+ColorPicker.swift */; };
 		EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */; };
 		EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CB21DE3CAA00B7CCA8 /* Main.storyboard */; };
 		EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEAE9CE21DE3CAC00B7CCA8 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		EFC8AC9921FC7343004B940A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		EFC8AC9B21FC741F004B940A /* PresentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentError.swift; sourceTree = "<group>"; };
 		EFC8AC9D21FC75CB004B940A /* UIView+FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindViewController.swift"; sourceTree = "<group>"; };
+		EFE3801821FCF83700CB2DDF /* UIColor+ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorPicker.swift"; sourceTree = "<group>"; };
 		EFEAE9C421DE3CAA00B7CCA8 /* pream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEAE9C721DE3CAA00B7CCA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEAE9CC21DE3CAA00B7CCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				EFB5A1D021E2293A00802F7E /* UIView+ConvertImage.swift */,
 				EFC8AC9D21FC75CB004B940A /* UIView+FindViewController.swift */,
+				EFE3801821FCF83700CB2DDF /* UIColor+ColorPicker.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -267,8 +270,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/UIImageColors/UIImageColors.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -277,8 +280,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageColors.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -361,6 +364,7 @@
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
+				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
 				EFC8AC9A21FC7343004B940A /* CameraManager.swift in Sources */,
 				EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */,
 				EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */,
