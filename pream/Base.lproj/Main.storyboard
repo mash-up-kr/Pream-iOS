@@ -84,9 +84,9 @@
                                         <rect key="frame" x="20" y="28" width="34" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avu-oK-WfQ">
-                                                <rect key="frame" x="3" y="3" width="28" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
+                                                <state key="normal" image="MainIcon">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -96,12 +96,12 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Avu-oK-WfQ" firstAttribute="leading" secondItem="oyS-Eu-p3O" secondAttribute="leading" constant="3" id="4bB-XJ-T0J"/>
-                                            <constraint firstAttribute="bottom" secondItem="Avu-oK-WfQ" secondAttribute="bottom" constant="3" id="8XZ-ab-aDB"/>
+                                            <constraint firstItem="Avu-oK-WfQ" firstAttribute="leading" secondItem="oyS-Eu-p3O" secondAttribute="leading" id="4bB-XJ-T0J"/>
+                                            <constraint firstAttribute="bottom" secondItem="Avu-oK-WfQ" secondAttribute="bottom" id="8XZ-ab-aDB"/>
                                             <constraint firstAttribute="width" constant="34" id="YQA-h2-gt2"/>
                                             <constraint firstAttribute="height" constant="34" id="c4B-kz-Sv5"/>
-                                            <constraint firstItem="Avu-oK-WfQ" firstAttribute="top" secondItem="oyS-Eu-p3O" secondAttribute="top" constant="3" id="rgZ-wY-Llc"/>
-                                            <constraint firstAttribute="trailing" secondItem="Avu-oK-WfQ" secondAttribute="trailing" constant="3" id="zKl-AW-qz4"/>
+                                            <constraint firstItem="Avu-oK-WfQ" firstAttribute="top" secondItem="oyS-Eu-p3O" secondAttribute="top" id="rgZ-wY-Llc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Avu-oK-WfQ" secondAttribute="trailing" id="zKl-AW-qz4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -170,4 +170,7 @@
             <point key="canvasLocation" x="860" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MainIcon" width="70" height="74"/>
+    </resources>
 </document>

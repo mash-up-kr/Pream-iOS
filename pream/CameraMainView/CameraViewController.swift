@@ -32,6 +32,7 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -42,7 +43,6 @@ class CameraViewController: UIViewController {
         super.viewDidAppear(animated)
 
         loginChecked()
-        setLibraryButtonImage()
         addGradation()
         animationShotButton()
     }
@@ -63,54 +63,17 @@ extension CameraViewController {
 
         cameraManagerView.reloadSession()
     }
-
-    func saveImage(_ image: UIImage) {
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-    }
-
-    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        //우선 사진 저장할 때마다 사진첩버튼 이미지 최신껄로 변경
-        setLibraryButtonImage()
-    }
 }
 
 // MARK: - AVCapturePhotoCaptureDelegate
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
-//        let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
-//        stillImageOutput.capturePhoto(with: settings, delegate: self)
+        cameraManagerView.shotImage()
     }
-
-//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-//        guard let imageData = photo.fileDataRepresentation(), let image = UIImage(data: imageData) else { return }
-//        saveImage(image)
-//    }
-//
-//    func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
-//        muteCameraSound()
-//    }
 }
 
 // MARK: - Functions
 extension CameraViewController {
-//    @objc func imageCapture() {
-//        DispatchQueue.global(qos: .default).async { [weak self] in
-//            guard let self = self else { return }
-//            let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
-//            self.stillImageOutput.capturePhoto(with: settings, delegate: self)
-//        }
-//    }
-//
-//    func muteCameraSound() {
-//        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
-//        try? AVAudioSession.sharedInstance().setActive(true)
-//
-//        guard let soundURL = Bundle.main.url(forResource: "photoShutter2", withExtension: "caf") else { return }
-//        var mySound: SystemSoundID = 0
-//        AudioServicesCreateSystemSoundID(soundURL as CFURL, &mySound)
-//        AudioServicesPlaySystemSound(mySound)
-//    }
-
     func loginChecked() {
         guard !isLogin else { return }
         isLogin.toggle()
@@ -147,40 +110,11 @@ extension CameraViewController {
     }
 }
 
-// MARK: - Photo Library Functions
-extension CameraViewController {
-    func setLibraryButtonImage() {
-        libraryButton.imageView?.contentMode = .scaleAspectFill
-
-        if let asset = fetchLatestPhoto().firstObject {
-            // Request the image.
-            PHImageManager.default().requestImage(for: asset,
-                                                  targetSize: self.libraryButton.frame.size,
-                                                  contentMode: .aspectFit,
-                                                  options: nil) { image, _ in
-                self.libraryButton.setImage(image, for: .normal)
-            }
-        }
-    }
-
-    func fetchLatestPhoto() -> PHFetchResult<PHAsset> {
-        let options = PHFetchOptions()
-
-        // 한가지 이미지만 가져오기
-        options.fetchLimit = 1
-
-        // 최신순으로 정렬
-        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
-        options.sortDescriptors = [sortDescriptor]
-
-        return PHAsset.fetchAssets(with: .image, options: options)
-    }
-}
-
 extension CameraViewController {
     @IBAction private func convertCamera(_ sender: UIButton) {
         changeCameraPosition()
     }
+
     @IBAction private func changeRatio(_ sender: UIButton) {
         Log.msg("changeRatio")
     }
