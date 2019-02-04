@@ -18,7 +18,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var changeRatioButton: UIButton!
     @IBOutlet weak var cameraManager: CameraManager!
     @IBOutlet weak var filterView: UIView!
-    var isLogin: Bool = false
+    var isLogin: Bool = true
 
     @IBOutlet weak var topBlurView: BlurView!
     @IBOutlet weak var bottomBlurView: BlurView!
