@@ -242,8 +242,8 @@ extension CameraViewController: GPUImageVideoCameraDelegate {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touchPoint = touches.first else { return }
-        let screenSize = view.bounds.size
-        let focusPoint = CGPoint(x: touchPoint.location(in: view).y / screenSize.height, y: 1.0 - touchPoint.location(in: view).x / screenSize.width)
+        let screenSize = gpuImageView.bounds.size
+        let focusPoint = CGPoint(x: touchPoint.location(in: gpuImageView).y / screenSize.height, y: 1.0 - touchPoint.location(in: gpuImageView).x / screenSize.width)
 
         if let device = videoCamera?.inputCamera {
             do {
