@@ -10,37 +10,37 @@ import UIKit
 import SnapKit
 import Photos
 import SideMenu
+import GPUImage
 
 class CameraViewController: UIViewController {
+    @IBOutlet weak var gpuImageView: GPUImageView!
     @IBOutlet weak var shotEffectView: UIView!
     @IBOutlet weak var cameraShotButton: RoundView!
     @IBOutlet weak var libraryButton: UIButton!
     @IBOutlet weak var convertCameraButton: UIButton!
     @IBOutlet weak var changeRatioButton: UIButton!
-    @IBOutlet weak var cameraManager: CameraManager!
     @IBOutlet weak var filterView: UIView!
-    var isLogin: Bool = true
-
     @IBOutlet weak var topBlurView: BlurView!
     @IBOutlet weak var bottomBlurView: BlurView!
     @IBOutlet weak var bottomViewHeightConstriant: NSLayoutConstraint!
     @IBOutlet weak var cameraButtonBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var cameraButtonHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cameraButtonWidthConstraint: NSLayoutConstraint!
-
+    var isLogin: Bool = true
+    var videoCamera: GPUImageVideoCamera?
+    var filterGroup: GPUImageFilterGroup?
     var isDuringbuttonColorAnimation = false
+    var cameraPosition: AVCaptureDevice.Position = .front
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        startCameraSession()
         addBlur()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        cameraManager.delegate = self
-        cameraManager.startSession()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +51,6 @@ class CameraViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        cameraManager.endSession()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -65,16 +64,23 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController {
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
-        guard let image = cameraManager.image else { return }
-        shotEffectView.alpha = 0.7
-        UIView.animate(withDuration: 0.4) { [weak self] in
-            self?.shotEffectView.alpha = 0
-        }
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+//        let image = videoCamera.asImage()
+//        shotEffectView.alpha = 0.7
+//        UIView.animate(withDuration: 0.4) { [weak self] in
+//            self?.shotEffectView.alpha = 0
+//        }
+//        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
 
     @IBAction private func convertCamera(_ sender: UIButton) {
-        cameraManager.cameraPositionChange()
+        videoCamera?.stopCapture()
+        if cameraPosition == .front {
+            cameraPosition = .back
+        } else {
+            cameraPosition = .front
+        }
+        videoCamera?.imageFromCurrentFramebuffer()
+        startCameraSession()
     }
 
     @IBAction private func changeRatio(_ sender: UIButton) {
@@ -83,6 +89,25 @@ extension CameraViewController {
 }
 
 extension CameraViewController: CameraManagerDelegate {
+    func startCameraSession() {
+        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
+        videoCamera?.outputImageOrientation = .portrait
+        videoCamera?.delegate = self
+        videoCamera?.horizontallyMirrorFrontFacingCamera = true
+
+        filterGroup = GPUImageFilterGroup()
+        let beautyFilter = GPUImageBeautifyFilter()
+
+        filterGroup?.addTarget(beautyFilter)
+
+        filterGroup?.initialFilters = [beautyFilter]
+        filterGroup?.terminalFilter = beautyFilter
+
+        videoCamera?.addTarget(filterGroup)
+        filterGroup?.addTarget(gpuImageView)
+        videoCamera?.startCapture()
+    }
+
     func captureOutput(image: UIImage) {
         guard let averageColor = image.averageColor else { return }
         if !isDuringbuttonColorAnimation {
@@ -133,8 +158,8 @@ extension CameraViewController {
         topBlurEffectView.translatesAutoresizingMaskIntoConstraints = false
         bottomBlurEffectView.translatesAutoresizingMaskIntoConstraints = false
 
-        cameraManager.addSubview(topBlurEffectView)
-        cameraManager.addSubview(bottomBlurEffectView)
+        gpuImageView.addSubview(topBlurEffectView)
+        gpuImageView.addSubview(bottomBlurEffectView)
 
         topBlurEffectView.snp.makeConstraints {
             $0.top.bottom.leading.trailing.equalTo(topBlurView)
@@ -159,5 +184,39 @@ extension CameraViewController {
             cameraButtonWidthConstraint.constant = 60
             cameraButtonBottomConstraint.constant = 20
         }
+    }
+}
+
+extension CameraViewController: GPUImageVideoCameraDelegate {
+    func willOutputSampleBuffer(_ sampleBuffer: CMSampleBuffer!) {
+        guard let image = sampleBufferToUIImage(sampleBuffer: sampleBuffer) else { return }
+        DispatchQueue.main.async { [weak self] in
+            self?.captureOutput(image: image)
+//            self?.delegate?.captureOutput(image: image)
+//            self?.image = image
+        }
+    }
+
+    func sampleBufferToUIImage(sampleBuffer: CMSampleBuffer) -> UIImage? {
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            Log.msg("Failed to obtain a CVPixelBuffer for the current output frame.")
+            return nil
+        }
+        let exifOrientation = exifOrientationForCurrentDeviceOrientation()
+        let ciImage = CIImage(cvPixelBuffer: pixelBuffer).oriented(exifOrientation)
+        let context = CIContext()
+        guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
+        return UIImage(cgImage: cgImage)
+    }
+
+    func exifOrientationForDeviceOrientation(_ deviceOrientation: UIDeviceOrientation) -> CGImagePropertyOrientation {
+        if cameraPosition == .front {
+            return .leftMirrored
+        }
+        return .right
+    }
+
+    func exifOrientationForCurrentDeviceOrientation() -> CGImagePropertyOrientation {
+        return exifOrientationForDeviceOrientation(UIDevice.current.orientation)
     }
 }

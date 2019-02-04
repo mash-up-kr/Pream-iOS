@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GPUImage
 import AVKit
 
 protocol CameraManagerDelegate: class {
@@ -47,17 +48,7 @@ class CameraManager: UIImageView, PresentError {
 }
 
 extension CameraManager {
-    func sampleBufferToUIImage(sampleBuffer: CMSampleBuffer) -> UIImage? {
-        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
-            Log.msg("Failed to obtain a CVPixelBuffer for the current output frame.")
-            return nil
-        }
-        let exifOrientation = self.exifOrientationForCurrentDeviceOrientation()
-        let ciImage = CIImage(cvPixelBuffer: pixelBuffer).oriented(exifOrientation)
-        let context = CIContext()
-        guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
-        return UIImage(cgImage: cgImage)
-    }
+
 }
 
 extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
@@ -154,25 +145,10 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
         videoDataOutputQueue = nil
     }
 
-    func exifOrientationForDeviceOrientation(_ deviceOrientation: UIDeviceOrientation) -> CGImagePropertyOrientation {
-        if cameraPosition == .front {
-            return .leftMirrored
-        }
-        return .right
-    }
-
-    func exifOrientationForCurrentDeviceOrientation() -> CGImagePropertyOrientation {
-        return exifOrientationForDeviceOrientation(UIDevice.current.orientation)
-    }
 }
 
 extension CameraManager {
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
 
-        guard let image = sampleBufferToUIImage(sampleBuffer: sampleBuffer) else { return }
-        DispatchQueue.main.async { [weak self] in
-            self?.delegate?.captureOutput(image: image)
-            self?.image = image
-        }
     }
 }

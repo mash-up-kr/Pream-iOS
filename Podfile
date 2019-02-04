@@ -7,4 +7,5 @@ target 'pream' do
   pod 'Moya'
   pod 'Alamofire'
   pod 'SideMenu'
+  pod 'GPUImage'
 end

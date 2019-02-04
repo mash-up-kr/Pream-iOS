@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.0)
+  - GPUImage (0.1.7)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GPUImage
   - Moya
   - SideMenu
   - SnapKit
@@ -18,6 +20,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - GPUImage
     - Moya
     - Result
     - SideMenu
@@ -25,11 +28,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 9b1778b3e6040c0ff67bf562a11abfabeaf5e5e5
+PODFILE CHECKSUM: bcf7a6a34b7fc6b2a8ff60874a268c6ae70fa6fc
 
 COCOAPODS: 1.5.3
