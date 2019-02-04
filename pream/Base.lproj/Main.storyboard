@@ -13,7 +13,7 @@
         <!--Side Menu Navigation Controller-->
         <scene sceneID="9it-MK-TGc">
             <objects>
-                <navigationController modalPresentationStyle="overFullScreen" navigationBarHidden="YES" hidesBarsOnTap="YES" id="hVO-wv-l3o" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="overFullScreen" navigationBarHidden="YES" id="hVO-wv-l3o" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vLf-fv-Ypc">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -39,22 +39,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze0-nI-hzl">
-                                <rect key="frame" x="70" y="164" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-is-Cbc">
+                                <rect key="frame" x="35" y="120" width="91" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="My Filter ">
+                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByD-hc-seg">
+                                <rect key="frame" x="35" y="208" width="130" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="PREAM Filter">
+                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njs-L5-fjC">
+                                <rect key="frame" x="35" y="164" width="125" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Shared Filter">
+                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mov-aw-mgX">
+                                <rect key="frame" x="35" y="270" width="80" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="로그아웃">
+                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Njs-L5-fjC" firstAttribute="leading" secondItem="4hB-is-Cbc" secondAttribute="leading" id="3yy-hd-N4o"/>
+                            <constraint firstItem="Mov-aw-mgX" firstAttribute="top" secondItem="ByD-hc-seg" secondAttribute="bottom" constant="22" id="5YG-hO-o7R"/>
+                            <constraint firstItem="Njs-L5-fjC" firstAttribute="top" secondItem="4hB-is-Cbc" secondAttribute="bottom" constant="4" id="6Ew-DU-Zpz"/>
+                            <constraint firstItem="ByD-hc-seg" firstAttribute="top" secondItem="Njs-L5-fjC" secondAttribute="bottom" constant="4" id="8YU-zw-WRK"/>
+                            <constraint firstItem="4hB-is-Cbc" firstAttribute="leading" secondItem="cAd-SE-dJO" secondAttribute="leading" constant="35" id="UdF-jC-Lh2"/>
+                            <constraint firstItem="4hB-is-Cbc" firstAttribute="top" secondItem="cAd-SE-dJO" secondAttribute="top" constant="76" id="b0G-ue-cfp"/>
+                            <constraint firstItem="Mov-aw-mgX" firstAttribute="leading" secondItem="4hB-is-Cbc" secondAttribute="leading" id="iUM-6Z-awJ"/>
+                            <constraint firstItem="ByD-hc-seg" firstAttribute="leading" secondItem="4hB-is-Cbc" secondAttribute="leading" id="jwX-N2-ajj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cAd-SE-dJO"/>
                     </view>
                     <navigationItem key="navigationItem" id="8lY-8q-fXd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4D-7S-kU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-801" y="120"/>
+            <point key="canvasLocation" x="-802.39999999999998" y="119.70443349753695"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
