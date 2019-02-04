@@ -64,12 +64,18 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController {
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
-//        let image = videoCamera.asImage()
-//        shotEffectView.alpha = 0.7
-//        UIView.animate(withDuration: 0.4) { [weak self] in
-//            self?.shotEffectView.alpha = 0
-//        }
-//        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        filterGroup?.useNextFrameForImageCapture()
+        guard let image = filterGroup?.imageFromCurrentFramebuffer() else { return }
+        shotEffectView.alpha = 0.7
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.shotEffectView.alpha = 0
+        }
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+
+//        videoCamera?.capturePhotoAsImageProcessedUp(toFilter: filterGroup, withCompletionHandler: { [weak self] image, _ in
+////            let image = videoCamera.asImage()
+//        })
+
     }
 
     @IBAction private func convertCamera(_ sender: UIButton) {
@@ -89,12 +95,7 @@ extension CameraViewController {
 }
 
 extension CameraViewController: CameraManagerDelegate {
-    func startCameraSession() {
-        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
-        videoCamera?.outputImageOrientation = .portrait
-        videoCamera?.delegate = self
-        videoCamera?.horizontallyMirrorFrontFacingCamera = true
-
+    func addFilter() {
         filterGroup = GPUImageFilterGroup()
         let beautyFilter = GPUImageBeautifyFilter()
 
@@ -105,6 +106,19 @@ extension CameraViewController: CameraManagerDelegate {
 
         videoCamera?.addTarget(filterGroup)
         filterGroup?.addTarget(gpuImageView)
+    }
+
+    func addFilter(image: UIImage) {
+
+    }
+
+    func startCameraSession() {
+        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
+        videoCamera?.outputImageOrientation = .portrait
+        videoCamera?.delegate = self
+        videoCamera?.horizontallyMirrorFrontFacingCamera = true
+
+        addFilter()
         videoCamera?.startCapture()
     }
 
