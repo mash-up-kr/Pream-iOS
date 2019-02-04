@@ -31,10 +31,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0yV-7f-dTZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0yV-7f-dTZ">
+                                            <rect key="frame" x="0.0" y="20" width="50" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="55" id="xB2-Pb-7hZ"/>
+                                                <constraint firstAttribute="height" constant="35" id="iOW-pp-Eme"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVl-os-tGL">
@@ -50,13 +50,15 @@
                                     <constraint firstItem="0yV-7f-dTZ" firstAttribute="leading" secondItem="AVQ-05-qlm" secondAttribute="leading" id="A1r-JY-1Ce"/>
                                     <constraint firstAttribute="trailing" secondItem="jVl-os-tGL" secondAttribute="trailing" id="Cfj-RU-ewo"/>
                                     <constraint firstItem="jVl-os-tGL" firstAttribute="top" secondItem="0yV-7f-dTZ" secondAttribute="bottom" constant="5" id="Kmg-lJ-scL"/>
-                                    <constraint firstItem="0yV-7f-dTZ" firstAttribute="top" secondItem="AVQ-05-qlm" secondAttribute="top" id="Oy1-EN-sUi"/>
+                                    <constraint firstItem="0yV-7f-dTZ" firstAttribute="top" secondItem="AVQ-05-qlm" secondAttribute="top" constant="20" id="Oy1-EN-sUi"/>
                                     <constraint firstAttribute="bottom" secondItem="jVl-os-tGL" secondAttribute="bottom" id="PXS-l5-9uI"/>
                                     <constraint firstAttribute="trailing" secondItem="0yV-7f-dTZ" secondAttribute="trailing" id="dWe-FQ-K8E"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="filterImageView" destination="0yV-7f-dTZ" id="hhy-58-5Os"/>
                                     <outlet property="filterNameLabel" destination="jVl-os-tGL" id="2NL-hp-1Ka"/>
+                                    <outlet property="imageHeight" destination="iOW-pp-Eme" id="Sv3-Eb-hmH"/>
+                                    <outlet property="topConstraint" destination="Oy1-EN-sUi" id="Wv8-Ez-Hli"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
