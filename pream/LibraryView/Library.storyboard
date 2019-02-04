@@ -17,9 +17,58 @@
                     <view key="view" contentMode="scaleToFill" id="WGO-Pu-P4p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgp-ss-7xF">
+                                <rect key="frame" x="158" y="54" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAm-YL-yS9">
+                                <rect key="frame" x="321" y="49.5" width="30" height="30"/>
+                                <state key="normal" title="닫기"/>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nPy-AE-ZEz">
+                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TLN-fy-d6i">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImagePickerCollectionViewCell" id="eCy-mB-970">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="WSD-5l-Giq" id="vu2-yM-J0Z"/>
+                                    <outlet property="delegate" destination="WSD-5l-Giq" id="dbn-DY-km4"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dUc-YH-42k" firstAttribute="trailing" secondItem="nPy-AE-ZEz" secondAttribute="trailing" id="9dW-fo-Mhl"/>
+                            <constraint firstItem="qgp-ss-7xF" firstAttribute="top" secondItem="dUc-YH-42k" secondAttribute="top" constant="34" id="BKG-af-DTK"/>
+                            <constraint firstAttribute="trailing" secondItem="zAm-YL-yS9" secondAttribute="trailing" constant="24" id="DKR-HQ-Otq"/>
+                            <constraint firstItem="dUc-YH-42k" firstAttribute="bottom" secondItem="nPy-AE-ZEz" secondAttribute="bottom" id="HCa-es-E4c"/>
+                            <constraint firstItem="zAm-YL-yS9" firstAttribute="centerY" secondItem="qgp-ss-7xF" secondAttribute="centerY" id="hfQ-pO-eqH"/>
+                            <constraint firstItem="qgp-ss-7xF" firstAttribute="centerX" secondItem="WGO-Pu-P4p" secondAttribute="centerX" id="qDq-9X-8t5"/>
+                            <constraint firstItem="nPy-AE-ZEz" firstAttribute="top" secondItem="qgp-ss-7xF" secondAttribute="bottom" constant="29" id="wIk-Bm-LVB"/>
+                            <constraint firstItem="nPy-AE-ZEz" firstAttribute="leading" secondItem="dUc-YH-42k" secondAttribute="leading" id="zYj-qt-SiX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dUc-YH-42k"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="nPy-AE-ZEz" id="cMa-i1-pEC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIF-K6-1fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
