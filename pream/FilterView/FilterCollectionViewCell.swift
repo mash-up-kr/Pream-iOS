@@ -11,8 +11,9 @@ import UIKit
 class FilterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var filterImageView: UIImageView!
     @IBOutlet weak var filterNameLabel: UILabel!
+    @IBOutlet weak var dimmedView: DimmedView!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageHeight: NSLayoutConstraint!
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
 
     func config() {
         filterNameLabel.text = "피카츄"
@@ -23,10 +24,14 @@ class FilterCollectionViewCell: UICollectionViewCell {
         didSet {
             if self.isSelected {
                 topConstraint.constant = 0
-                imageHeight.constant = 55
+                imageHeightConstraint.constant = 55
+                filterNameLabel.textColor = UIColor.white
+                dimmedView.isHidden = false
             } else {
                 topConstraint.constant = 20
-                imageHeight.constant = 35
+                imageHeightConstraint.constant = 35
+                filterNameLabel.textColor = UIColor(named: "grey")
+                dimmedView.isHidden = true
             }
         }
     }
