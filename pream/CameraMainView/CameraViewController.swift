@@ -91,6 +91,16 @@ extension CameraViewController {
 }
 
 extension CameraViewController {
+    func touchToFocus() {
+        do {
+            try videoCamera?.inputCamera.lockForConfiguration()
+//            videoCamera?.inputCamera.focusMode = .continuousAutoFocus
+//            videoCamera?.inputCamera.setFocusModeLocked(lensPosition: 0.5, completionHandler: nil)
+            videoCamera?.inputCamera.unlockForConfiguration()
+        } catch let error as NSError {
+            Log.msg(error)
+        }
+    }
     //필터 추가
     func addFilter() {
         filterGroup = GPUImageFilterGroup()
@@ -110,9 +120,9 @@ extension CameraViewController {
         videoCamera?.outputImageOrientation = .portrait
         videoCamera?.delegate = self
         videoCamera?.horizontallyMirrorFrontFacingCamera = true
-
         addFilter()
         videoCamera?.startCapture()
+        touchToFocus()
     }
     //실시간으로 이미지 버퍼를 읽어와서 사진촬영 버튼 색상 변경
     func captureOutput(image: UIImage) {
@@ -228,5 +238,27 @@ extension CameraViewController: GPUImageVideoCameraDelegate {
 
     func exifOrientationForCurrentDeviceOrientation() -> CGImagePropertyOrientation {
         return exifOrientationForDeviceOrientation(UIDevice.current.orientation)
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touchPoint = touches.first else { return }
+        let screenSize = view.bounds.size
+        let focusPoint = CGPoint(x: touchPoint.location(in: view).y / screenSize.height, y: 1.0 - touchPoint.location(in: view).x / screenSize.width)
+
+        if let device = videoCamera?.inputCamera {
+            do {
+                try device.lockForConfiguration()
+                if device.isFocusPointOfInterestSupported {
+                    device.focusPointOfInterest = focusPoint
+                    device.focusMode = AVCaptureDevice.FocusMode.autoFocus
+                }
+                if device.isExposurePointOfInterestSupported {
+                    device.exposurePointOfInterest = focusPoint
+                    device.exposureMode = AVCaptureDevice.ExposureMode.autoExpose
+                }
+                device.unlockForConfiguration()
+            } catch {
+            }
+        }
     }
 }
