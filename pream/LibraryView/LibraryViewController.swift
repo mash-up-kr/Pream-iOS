@@ -19,9 +19,12 @@ class LibraryViewController: UIViewController {
     var imageManager = PHCachingImageManager()
     var targetSize = CGSize.zero
 
+    @IBAction private func closeButtonAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         initView()
         loadPhotos()
     }

@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAm-YL-yS9">
                                 <rect key="frame" x="321" y="49.5" width="30" height="30"/>
                                 <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonAction:" destination="WSD-5l-Giq" eventType="touchUpInside" id="CnE-F2-OPo"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nPy-AE-ZEz">
                                 <rect key="frame" x="0.0" y="104" width="375" height="563"/>
