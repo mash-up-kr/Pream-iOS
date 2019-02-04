@@ -169,15 +169,23 @@
                                                     <action selector="didTabOnShotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZHb-pn-m9y"/>
                                                 </connections>
                                             </button>
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eu1-FW-QOE" customClass="RoundView" customModule="pream" customModuleProvider="target">
+                                                <rect key="frame" x="4" y="4" width="52" height="52"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="gB7-Nd-hGV" firstAttribute="leading" secondItem="0jp-30-SkP" secondAttribute="leading" constant="4" id="3L2-Zn-GPO"/>
                                             <constraint firstAttribute="bottom" secondItem="gB7-Nd-hGV" secondAttribute="bottom" constant="4" id="7Uo-cr-hH4"/>
                                             <constraint firstAttribute="height" constant="60" id="IfJ-K1-Hxe"/>
+                                            <constraint firstItem="eu1-FW-QOE" firstAttribute="leading" secondItem="gB7-Nd-hGV" secondAttribute="leading" id="cZL-b7-m6e"/>
                                             <constraint firstAttribute="trailing" secondItem="gB7-Nd-hGV" secondAttribute="trailing" constant="4" id="dEL-jd-yhs"/>
+                                            <constraint firstItem="eu1-FW-QOE" firstAttribute="top" secondItem="gB7-Nd-hGV" secondAttribute="top" id="e2N-uE-qcx"/>
                                             <constraint firstAttribute="width" constant="60" id="gRd-ZZ-ThW"/>
                                             <constraint firstItem="gB7-Nd-hGV" firstAttribute="top" secondItem="0jp-30-SkP" secondAttribute="top" constant="4" id="iha-Ng-8cr"/>
+                                            <constraint firstItem="eu1-FW-QOE" firstAttribute="trailing" secondItem="gB7-Nd-hGV" secondAttribute="trailing" id="lit-ev-jJa"/>
+                                            <constraint firstItem="eu1-FW-QOE" firstAttribute="bottom" secondItem="gB7-Nd-hGV" secondAttribute="bottom" id="rzE-77-YUg"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avu-oK-WfQ">
@@ -226,6 +234,10 @@
                                     <segue destination="Yh2-PV-88P" kind="embed" id="3Z3-I6-enj"/>
                                 </connections>
                             </containerView>
+                            <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVf-gm-oAc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -239,13 +251,17 @@
                             <constraint firstItem="Xr0-Oz-7Yd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JD9-I8-XdS"/>
                             <constraint firstAttribute="bottom" secondItem="7DG-UB-7q2" secondAttribute="bottom" id="K0V-k4-HSj"/>
                             <constraint firstItem="OwD-Zi-m1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lha-hS-Chk"/>
+                            <constraint firstAttribute="bottom" secondItem="mVf-gm-oAc" secondAttribute="bottom" id="QbH-jX-MVQ"/>
                             <constraint firstItem="Xr0-Oz-7Yd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SYf-2x-BoZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OwD-Zi-m1h" secondAttribute="trailing" id="UJl-gT-MHA"/>
                             <constraint firstItem="VEd-gE-dL9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y3Q-tb-C4p"/>
+                            <constraint firstItem="mVf-gm-oAc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YpG-0W-1Ro"/>
+                            <constraint firstItem="mVf-gm-oAc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="czg-Pb-W6o"/>
                             <constraint firstItem="UrY-P1-C8A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eDk-7A-u7e"/>
                             <constraint firstItem="UrY-P1-C8A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eSn-8T-sFJ"/>
                             <constraint firstItem="VEd-gE-dL9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hWi-SM-ooG"/>
                             <constraint firstItem="VEd-gE-dL9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mDV-zF-mno"/>
+                            <constraint firstItem="mVf-gm-oAc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mae-qU-fyF"/>
                             <constraint firstItem="UrY-P1-C8A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mfJ-ra-SPb"/>
                             <constraint firstItem="7DG-UB-7q2" firstAttribute="top" secondItem="VEd-gE-dL9" secondAttribute="top" id="ple-de-Flz"/>
                             <constraint firstItem="xa9-a7-DXG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sEB-WF-sOD"/>
@@ -256,11 +272,12 @@
                     <connections>
                         <outlet property="bottomBlurView" destination="7DG-UB-7q2" id="AG9-vu-Pfe"/>
                         <outlet property="cameraManager" destination="xa9-a7-DXG" id="s7R-s4-fKH"/>
-                        <outlet property="cameraShotButton" destination="gB7-Nd-hGV" id="MQU-3L-78T"/>
+                        <outlet property="cameraShotButton" destination="eu1-FW-QOE" id="veH-MD-hA3"/>
                         <outlet property="changeRatioButton" destination="lTV-9d-nrG" id="qoL-04-RVh"/>
                         <outlet property="convertCameraButton" destination="KTO-4I-KEq" id="8Dj-vT-lMC"/>
                         <outlet property="filterView" destination="OwD-Zi-m1h" id="m5f-Ys-eFQ"/>
                         <outlet property="libraryButton" destination="Avu-oK-WfQ" id="qPl-cZ-Fsq"/>
+                        <outlet property="shotEffectView" destination="mVf-gm-oAc" id="Xwd-6d-zcP"/>
                         <outlet property="topBlurView" destination="UrY-P1-C8A" id="cxD-lV-96u"/>
                     </connections>
                 </viewController>

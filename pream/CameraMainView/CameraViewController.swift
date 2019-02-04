@@ -12,7 +12,8 @@ import Photos
 import SideMenu
 
 class CameraViewController: UIViewController {
-    @IBOutlet weak var cameraShotButton: RoundButton!
+    @IBOutlet weak var shotEffectView: UIView!
+    @IBOutlet weak var cameraShotButton: RoundView!
     @IBOutlet weak var libraryButton: UIButton!
     @IBOutlet weak var convertCameraButton: UIButton!
     @IBOutlet weak var changeRatioButton: UIButton!
@@ -61,6 +62,10 @@ class CameraViewController: UIViewController {
 extension CameraViewController {
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
         guard let image = cameraManager.image else { return }
+        shotEffectView.alpha = 0.7
+        UIView.animate(withDuration: 0.4) { [weak self] in
+            self?.shotEffectView.alpha = 0
+        }
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
 
