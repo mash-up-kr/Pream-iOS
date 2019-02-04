@@ -11,6 +11,12 @@ import UIKit
 class RoundView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
+
+    }
+
+    override func layoutSubviews() {
         layer.cornerRadius = bounds.height / 2
+
+        super.layoutSubviews()
     }
 }

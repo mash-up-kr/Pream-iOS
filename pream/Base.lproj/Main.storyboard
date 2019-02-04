@@ -271,6 +271,10 @@
                     </view>
                     <connections>
                         <outlet property="bottomBlurView" destination="7DG-UB-7q2" id="AG9-vu-Pfe"/>
+                        <outlet property="bottomViewHeightConstriant" destination="sNw-26-tnm" id="cXa-fy-GOz"/>
+                        <outlet property="cameraButtonBottomConstraint" destination="sNI-4V-eVc" id="TfG-sH-rIi"/>
+                        <outlet property="cameraButtonHeightConstraint" destination="IfJ-K1-Hxe" id="SeR-2B-eZk"/>
+                        <outlet property="cameraButtonWidthConstraint" destination="gRd-ZZ-ThW" id="h5a-sd-H9N"/>
                         <outlet property="cameraManager" destination="xa9-a7-DXG" id="s7R-s4-fKH"/>
                         <outlet property="cameraShotButton" destination="eu1-FW-QOE" id="veH-MD-hA3"/>
                         <outlet property="changeRatioButton" destination="lTV-9d-nrG" id="qoL-04-RVh"/>
