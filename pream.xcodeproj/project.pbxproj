@@ -22,7 +22,6 @@
 		EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1D021E2293A00802F7E /* UIView+ConvertImage.swift */; };
 		EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1D221E22D1700802F7E /* KeyboardViewController.swift */; };
 		EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB5A1D821EE36A800802F7E /* Colors.xcassets */; };
-		EFC8AC9A21FC7343004B940A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9921FC7343004B940A /* CameraManager.swift */; };
 		EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9B21FC741F004B940A /* PresentError.swift */; };
 		EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8AC9D21FC75CB004B940A /* UIView+FindViewController.swift */; };
 		EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3801821FCF83700CB2DDF /* UIColor+ColorPicker.swift */; };
@@ -54,7 +53,6 @@
 		EFB5A1D021E2293A00802F7E /* UIView+ConvertImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ConvertImage.swift"; sourceTree = "<group>"; };
 		EFB5A1D221E22D1700802F7E /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		EFB5A1D821EE36A800802F7E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		EFC8AC9921FC7343004B940A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		EFC8AC9B21FC741F004B940A /* PresentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentError.swift; sourceTree = "<group>"; };
 		EFC8AC9D21FC75CB004B940A /* UIView+FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindViewController.swift"; sourceTree = "<group>"; };
 		EFE3801821FCF83700CB2DDF /* UIColor+ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorPicker.swift"; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				63D6211621DFA88000EF4059 /* CameraViewController.swift */,
-				EFC8AC9921FC7343004B940A /* CameraManager.swift */,
 			);
 			path = CameraMainView;
 			sourceTree = "<group>";
@@ -407,7 +404,6 @@
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
 				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
-				EFC8AC9A21FC7343004B940A /* CameraManager.swift in Sources */,
 				030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */,
 				EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */,
 				EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */,

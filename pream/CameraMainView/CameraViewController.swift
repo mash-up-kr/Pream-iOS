@@ -63,6 +63,7 @@ class CameraViewController: UIViewController {
 }
 
 extension CameraViewController {
+    //사진촬영 버튼 동작
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
         filterGroup?.useNextFrameForImageCapture()
         guard let image = filterGroup?.imageFromCurrentFramebuffer() else { return }
@@ -71,13 +72,8 @@ extension CameraViewController {
             self?.shotEffectView.alpha = 0
         }
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-
-//        videoCamera?.capturePhotoAsImageProcessedUp(toFilter: filterGroup, withCompletionHandler: { [weak self] image, _ in
-////            let image = videoCamera.asImage()
-//        })
-
     }
-
+    //카메라 앞뒤 전환 동장
     @IBAction private func convertCamera(_ sender: UIButton) {
         videoCamera?.stopCapture()
         if cameraPosition == .front {
@@ -88,13 +84,14 @@ extension CameraViewController {
         videoCamera?.imageFromCurrentFramebuffer()
         startCameraSession()
     }
-
+    //비율조정 동작
     @IBAction private func changeRatio(_ sender: UIButton) {
         Log.msg("changeRatio")
     }
 }
 
-extension CameraViewController: CameraManagerDelegate {
+extension CameraViewController {
+    //필터 추가
     func addFilter() {
         filterGroup = GPUImageFilterGroup()
         let beautyFilter = GPUImageBeautifyFilter()
@@ -107,11 +104,7 @@ extension CameraViewController: CameraManagerDelegate {
         videoCamera?.addTarget(filterGroup)
         filterGroup?.addTarget(gpuImageView)
     }
-
-    func addFilter(image: UIImage) {
-
-    }
-
+    //카메라 동작
     func startCameraSession() {
         videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
         videoCamera?.outputImageOrientation = .portrait
@@ -121,7 +114,7 @@ extension CameraViewController: CameraManagerDelegate {
         addFilter()
         videoCamera?.startCapture()
     }
-
+    //실시간으로 이미지 버퍼를 읽어와서 사진촬영 버튼 색상 변경
     func captureOutput(image: UIImage) {
         guard let averageColor = image.averageColor else { return }
         if !isDuringbuttonColorAnimation {
@@ -140,6 +133,7 @@ extension CameraViewController: CameraManagerDelegate {
 
 // MARK: - AVCapturePhotoCaptureDelegate
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
+    //사진촬영 성공시 호출되는 함수
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             let ac = UIAlertController(title: "실패", message: error.localizedDescription, preferredStyle: .alert)
@@ -155,6 +149,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 
 // MARK: - Functions
 extension CameraViewController {
+    //첫 진입시 로그인 체크
     func loginChecked() {
         guard !isLogin else { return }
         isLogin.toggle()
@@ -164,6 +159,7 @@ extension CameraViewController {
         present(loginViewController, animated: true, completion: nil)
     }
 
+    //상하단 블러 추가
     func addBlur() {
         let blur = UIBlurEffect(style: .regular)
         let topBlurEffectView = UIVisualEffectView(effect: blur)
@@ -184,6 +180,7 @@ extension CameraViewController {
         }
     }
 
+    //필터뷰 보기
     @IBAction private func showFilter(_ sender: UIButton) {
         if filterView.isHidden {
             filterView.isHidden = false
@@ -202,15 +199,14 @@ extension CameraViewController {
 }
 
 extension CameraViewController: GPUImageVideoCameraDelegate {
+    // 실시간으로 샘플버퍼 읽기
     func willOutputSampleBuffer(_ sampleBuffer: CMSampleBuffer!) {
         guard let image = sampleBufferToUIImage(sampleBuffer: sampleBuffer) else { return }
         DispatchQueue.main.async { [weak self] in
             self?.captureOutput(image: image)
-//            self?.delegate?.captureOutput(image: image)
-//            self?.image = image
         }
     }
-
+    //샘플버퍼를 uiimage로 변경
     func sampleBufferToUIImage(sampleBuffer: CMSampleBuffer) -> UIImage? {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             Log.msg("Failed to obtain a CVPixelBuffer for the current output frame.")
@@ -222,7 +218,7 @@ extension CameraViewController: GPUImageVideoCameraDelegate {
         guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
         return UIImage(cgImage: cgImage)
     }
-
+    //화면 전환 체크
     func exifOrientationForDeviceOrientation(_ deviceOrientation: UIDeviceOrientation) -> CGImagePropertyOrientation {
         if cameraPosition == .front {
             return .leftMirrored
