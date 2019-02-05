@@ -31,6 +31,14 @@
             </objects>
             <point key="canvasLocation" x="-1604" y="120"/>
         </scene>
+        <!--MyFilterCategory-->
+        <scene sceneID="1u3-ZK-RZU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyFilterCategory" id="J7Y-Eq-R5A" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJa-of-jJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-803" y="643"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="kJI-YA-b36">
             <objects>
@@ -45,6 +53,9 @@
                                 <state key="normal" title="My Filter ">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="J7Y-Eq-R5A" kind="show" id="c1T-5b-HOM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByD-hc-seg">
                                 <rect key="frame" x="35" y="208" width="130" height="40"/>
