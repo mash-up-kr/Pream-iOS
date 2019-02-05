@@ -10,6 +10,7 @@
 		030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F2A8A21FC7E690066AEAC /* FilterCollectionViewCell.swift */; };
 		030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030F2A9821FC94960066AEAC /* FilterCollection.storyboard */; };
 		030F2A9B21FC95670066AEAC /* FilterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F2A9A21FC95670066AEAC /* FilterCollectionViewController.swift */; };
+		034230642209F7F6003CC91C /* FilterCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034230632209F7F6003CC91C /* FilterCategory.storyboard */; };
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
@@ -39,6 +40,7 @@
 		030F2A8A21FC7E690066AEAC /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		030F2A9821FC94960066AEAC /* FilterCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterCollection.storyboard; sourceTree = "<group>"; };
 		030F2A9A21FC95670066AEAC /* FilterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewController.swift; sourceTree = "<group>"; };
+		034230632209F7F6003CC91C /* FilterCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterCategory.storyboard; sourceTree = "<group>"; };
 		03D28F2822082FBB007C8B15 /* DimmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
 		3CBFE07F816140D178519767 /* Pods-pream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.debug.xcconfig"; sourceTree = "<group>"; };
 		63D6211621DFA88000EF4059 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 				030F2A9A21FC95670066AEAC /* FilterCollectionViewController.swift */,
 			);
 			path = FilterView;
+			sourceTree = "<group>";
+		};
+		034230622209F76B003CC91C /* FilterListView */ = {
+			isa = PBXGroup;
+			children = (
+				034230632209F7F6003CC91C /* FilterCategory.storyboard */,
+			);
+			path = FilterListView;
 			sourceTree = "<group>";
 		};
 		2801250D0943AF45842BC22E /* Frameworks */ = {
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				EFF00E0F220848FB00865921 /* Filters */,
+				034230622209F76B003CC91C /* FilterListView */,
 				030F2A8921FC7E2E0066AEAC /* FilterView */,
 				EFEAE9CB21DE3CAA00B7CCA8 /* Main.storyboard */,
 				EFB5A1C621E220A400802F7E /* LoginView */,
@@ -283,6 +294,7 @@
 				EFEAE9D221DE3CAC00B7CCA8 /* LaunchScreen.storyboard in Resources */,
 				EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */,
 				030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */,
+				034230642209F7F6003CC91C /* FilterCategory.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
 				B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */,
 				EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */,
