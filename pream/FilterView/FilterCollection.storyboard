@@ -19,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lCg-jW-RpK">
-                            <size key="itemSize" width="50" height="75"/>
+                            <size key="itemSize" width="50" height="55"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="15" minY="15" maxX="0.0" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCollectionViewCell" id="AVQ-05-qlm" customClass="FilterCollectionViewCell" customModule="pream" customModuleProvider="target">
-                                <rect key="frame" x="15" y="15" width="50" height="75"/>
+                                <rect key="frame" x="15" y="15" width="50" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0yV-7f-dTZ">
@@ -38,37 +38,27 @@
                                                 <constraint firstAttribute="height" constant="35" id="iOW-pp-Eme"/>
                                             </constraints>
                                         </imageView>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-7u-BNw" customClass="DimmedView" customModule="pream" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="DUk-Sc-eru"/>
+                                            </constraints>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVl-os-tGL">
-                                            <rect key="frame" x="0.0" y="60" width="50" height="15"/>
+                                            <rect key="frame" x="8" y="29" width="34.5" height="15"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="12"/>
                                             <color key="textColor" name="grey"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-7u-BNw" customClass="DimmedView" customModule="pream" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ9-ke-37N">
-                                                    <rect key="frame" x="8" y="10.5" width="34" height="34"/>
-                                                    <state key="normal" image="icDetail"/>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="ZZ9-ke-37N" firstAttribute="centerY" secondItem="4Ek-7u-BNw" secondAttribute="centerY" id="1Sw-AR-ChY"/>
-                                                <constraint firstAttribute="height" constant="55" id="DUk-Sc-eru"/>
-                                                <constraint firstItem="ZZ9-ke-37N" firstAttribute="centerX" secondItem="4Ek-7u-BNw" secondAttribute="centerX" id="zyp-CF-Ubj"/>
-                                            </constraints>
-                                        </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="jVl-os-tGL" firstAttribute="leading" secondItem="AVQ-05-qlm" secondAttribute="leading" id="7oq-ew-BJL"/>
+                                    <constraint firstAttribute="bottom" secondItem="jVl-os-tGL" secondAttribute="bottom" constant="11" id="3hn-xc-n3h"/>
                                     <constraint firstItem="0yV-7f-dTZ" firstAttribute="leading" secondItem="AVQ-05-qlm" secondAttribute="leading" id="A1r-JY-1Ce"/>
-                                    <constraint firstAttribute="trailing" secondItem="jVl-os-tGL" secondAttribute="trailing" id="Cfj-RU-ewo"/>
                                     <constraint firstItem="4Ek-7u-BNw" firstAttribute="top" secondItem="AVQ-05-qlm" secondAttribute="top" id="H1J-eY-WXE"/>
-                                    <constraint firstItem="jVl-os-tGL" firstAttribute="top" secondItem="0yV-7f-dTZ" secondAttribute="bottom" constant="5" id="Kmg-lJ-scL"/>
                                     <constraint firstItem="0yV-7f-dTZ" firstAttribute="top" secondItem="AVQ-05-qlm" secondAttribute="top" constant="20" id="Oy1-EN-sUi"/>
-                                    <constraint firstAttribute="bottom" secondItem="jVl-os-tGL" secondAttribute="bottom" id="PXS-l5-9uI"/>
+                                    <constraint firstItem="jVl-os-tGL" firstAttribute="centerX" secondItem="AVQ-05-qlm" secondAttribute="centerX" id="PDa-ct-Unt"/>
                                     <constraint firstAttribute="trailing" secondItem="4Ek-7u-BNw" secondAttribute="trailing" id="Tqu-vn-erT"/>
                                     <constraint firstItem="4Ek-7u-BNw" firstAttribute="leading" secondItem="AVQ-05-qlm" secondAttribute="leading" id="VS3-l4-1cI"/>
                                     <constraint firstAttribute="trailing" secondItem="0yV-7f-dTZ" secondAttribute="trailing" id="dWe-FQ-K8E"/>
@@ -78,7 +68,8 @@
                                     <outlet property="filterImageView" destination="0yV-7f-dTZ" id="hhy-58-5Os"/>
                                     <outlet property="filterNameLabel" destination="jVl-os-tGL" id="2NL-hp-1Ka"/>
                                     <outlet property="imageHeightConstraint" destination="iOW-pp-Eme" id="Sv3-Eb-hmH"/>
-                                    <outlet property="topConstraint" destination="Oy1-EN-sUi" id="Wv8-Ez-Hli"/>
+                                    <outlet property="imageTopConstraint" destination="Oy1-EN-sUi" id="Wv8-Ez-Hli"/>
+                                    <outlet property="nameLabelBottomConstraint" destination="3hn-xc-n3h" id="xbB-aS-0Wt"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -94,7 +85,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icDetail" width="34" height="34"/>
         <namedColor name="grey">
             <color red="1" green="1" blue="1" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
