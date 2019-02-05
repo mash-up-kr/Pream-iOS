@@ -238,9 +238,9 @@
                                 </constraints>
                             </view>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwD-Zi-m1h">
-                                <rect key="frame" x="0.0" y="579" width="375" height="95"/>
+                                <rect key="frame" x="0.0" y="599" width="375" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="atM-uh-LiM"/>
+                                    <constraint firstAttribute="height" constant="75" id="atM-uh-LiM"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="Yh2-PV-88P" kind="embed" id="3Z3-I6-enj"/>
