@@ -15,6 +15,8 @@
 		03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */; };
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
+		B815C656220B5948003885C0 /* MyFiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815C655220B5948003885C0 /* MyFiltersTableViewCell.swift */; };
+		B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */; };
 		B84ECF44220B29EE00B11954 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84ECF43220B29EE00B11954 /* Feed.storyboard */; };
 		B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECF45220B2A1D00B11954 /* FeedViewController.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
@@ -52,6 +54,8 @@
 		63D6211621DFA88000EF4059 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
 		68EF6112755CBDA5CC865C20 /* Pods_pream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B815C655220B5948003885C0 /* MyFiltersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFiltersTableViewCell.swift; sourceTree = "<group>"; };
+		B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFiltersTableViewCell.swift; sourceTree = "<group>"; };
 		B84ECF43220B29EE00B11954 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		B84ECF45220B2A1D00B11954 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B8DACC7921F875B7006B6AE2 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				B84ECF43220B29EE00B11954 /* Feed.storyboard */,
 				B84ECF45220B2A1D00B11954 /* FeedViewController.swift */,
+				B815C655220B5948003885C0 /* MyFiltersTableViewCell.swift */,
+				B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */,
 			);
 			path = FeedView;
 			sourceTree = "<group>";
@@ -423,9 +429,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				030F2A9B21FC95670066AEAC /* FilterCollectionViewController.swift in Sources */,
+				B815C656220B5948003885C0 /* MyFiltersTableViewCell.swift in Sources */,
 				EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */,
 				B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */,
 				EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */,
+				B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */,
 				EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */,
 				EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */,
 				EFF00E122208491500865921 /* GPUImageBeautifyFilter.m in Sources */,
@@ -590,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = TA757FA6NR;
 				INFOPLIST_FILE = pream/Info.plist;
@@ -614,6 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = pream/Info.plist;
