@@ -63,6 +63,9 @@
                                 <state key="normal" title="PREAM Filter">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="SA7-FQ-ZFB" kind="show" id="R6U-H1-xPP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njs-L5-fjC">
                                 <rect key="frame" x="35" y="164" width="125" height="40"/>
@@ -312,6 +315,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUv-EU-yY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="894" y="355"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="sh3-k2-703">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Feed" id="SA7-FQ-ZFB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbL-8F-tsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="643"/>
         </scene>
     </scenes>
     <resources>
