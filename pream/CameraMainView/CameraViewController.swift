@@ -22,10 +22,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var topBlurView: BlurView!
     @IBOutlet weak var bottomBlurView: BlurView!
-    @IBOutlet weak var bottomViewHeightConstriant: NSLayoutConstraint!
-    @IBOutlet weak var cameraButtonBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var cameraButtonHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var cameraButtonWidthConstraint: NSLayoutConstraint!
+
     var isLogin: Bool = true
     var videoCamera: GPUImageVideoCamera?
     var filterGroup: GPUImageFilterGroup?
@@ -195,16 +192,8 @@ extension CameraViewController {
     @IBAction private func showFilter(_ sender: UIButton) {
         if filterView.isHidden {
             filterView.isHidden = false
-            bottomViewHeightConstriant.constant = 76
-            cameraButtonHeightConstraint.constant = 46
-            cameraButtonWidthConstraint.constant = 46
-            cameraButtonBottomConstraint.constant = 15
         } else {
             filterView.isHidden = true
-            bottomViewHeightConstriant.constant = 104
-            cameraButtonHeightConstraint.constant = 60
-            cameraButtonWidthConstraint.constant = 60
-            cameraButtonBottomConstraint.constant = 20
         }
     }
 }
