@@ -116,7 +116,8 @@ extension CameraViewController {
     }
     //카메라 동작
     func startCameraSession() {
-        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
+//        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
+        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.high.rawValue, cameraPosition: cameraPosition)
         videoCamera?.outputImageOrientation = .portrait
         videoCamera?.delegate = self
         videoCamera?.horizontallyMirrorFrontFacingCamera = true
