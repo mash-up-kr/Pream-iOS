@@ -113,8 +113,13 @@ extension CameraViewController {
     }
     //카메라 동작
     func startCameraSession() {
-//        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
-        videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.high.rawValue, cameraPosition: cameraPosition)
+        let device = UIDevice.current.name
+        if device == "iPhone SE" {
+            videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.high.rawValue, cameraPosition: cameraPosition)
+        } else {
+            videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
+        }
+        
         videoCamera?.outputImageOrientation = .portrait
         videoCamera?.delegate = self
         videoCamera?.horizontallyMirrorFrontFacingCamera = true
