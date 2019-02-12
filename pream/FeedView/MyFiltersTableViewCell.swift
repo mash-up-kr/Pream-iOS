@@ -13,5 +13,6 @@ class MyFiltersTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        collectionView.showsHorizontalScrollIndicator = false
     }
 }
