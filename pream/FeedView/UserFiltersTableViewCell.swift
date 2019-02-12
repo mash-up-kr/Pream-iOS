@@ -16,6 +16,6 @@ class UserFiltersTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        filterImageView.layer.cornerRadius = 2
+        filterImageView.layer.cornerRadius = 5
     }
 }
