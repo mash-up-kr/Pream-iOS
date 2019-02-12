@@ -23,7 +23,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var topBlurView: BlurView!
     @IBOutlet weak var bottomBlurView: BlurView!
 
-    var isLogin: Bool = false
+    var isLogin: Bool = true
     var videoCamera: GPUImageVideoCamera?
     var filterGroup: GPUImageFilterGroup?
     var isDuringbuttonColorAnimation = false
