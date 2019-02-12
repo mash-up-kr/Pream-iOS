@@ -28,9 +28,9 @@
                                         <color key="textColor" name="greyishBrownTwo"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-aa-SAl">
-                                        <rect key="frame" x="325" y="15.5" width="30" height="30"/>
-                                        <state key="normal" title="찾기"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-aa-SAl">
+                                        <rect key="frame" x="331" y="18.5" width="24" height="24"/>
+                                        <state key="normal" image="find"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCv-DZ-nvs">
                                         <rect key="frame" x="20" y="15.5" width="30" height="30"/>
@@ -246,6 +246,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="find" width="24" height="24"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
