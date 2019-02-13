@@ -41,6 +41,7 @@
 		EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9DE21E20F8600B7CCA8 /* RoundButton.swift */; };
 		EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9E221E2160C00B7CCA8 /* Log.swift */; };
 		EFF00E122208491500865921 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF00E112208491500865921 /* GPUImageBeautifyFilter.m */; };
+		EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF00E34221457BD00865921 /* CameraRatio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		EFF00E102208491400865921 /* pream-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pream-Bridging-Header.h"; sourceTree = "<group>"; };
 		EFF00E112208491500865921 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		EFF00E132208495000865921 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
+		EFF00E34221457BD00865921 /* CameraRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRatio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				EFB5A1D221E22D1700802F7E /* KeyboardViewController.swift */,
 				EFC8AC9B21FC741F004B940A /* PresentError.swift */,
 				03D28F2822082FBB007C8B15 /* DimmedView.swift */,
+				EFF00E34221457BD00865921 /* CameraRatio.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				EFB5A1CC21E2214100802F7E /* RegisterViewController.swift in Sources */,
 				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
+				EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */,
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,

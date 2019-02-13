@@ -22,12 +22,15 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var topBlurView: BlurView!
     @IBOutlet weak var bottomBlurView: BlurView!
+    @IBOutlet weak var bottomBlurViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var topBlurViewHeight: NSLayoutConstraint!
 
     var isLogin: Bool = true
     var videoCamera: GPUImageVideoCamera?
     var filterGroup: GPUImageFilterGroup?
     var isDuringbuttonColorAnimation = false
     var cameraPosition: AVCaptureDevice.Position = .front
+    var currentRatio: CameraRatio = .fourthree
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +46,7 @@ class CameraViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        setRatio()
         loginChecked()
     }
 
@@ -78,16 +82,36 @@ extension CameraViewController {
         } else {
             cameraPosition = .front
         }
-        videoCamera?.imageFromCurrentFramebuffer()
+//        videoCamera?.imageFromCurrentFramebuffer()
         startCameraSession()
     }
     //비율조정 동작
     @IBAction private func changeRatio(_ sender: UIButton) {
-        Log.msg("changeRatio")
+        currentRatio.next()
+        setRatio()
     }
 }
 
 extension CameraViewController {
+    func setRatio() {
+            switch self.currentRatio {
+            case .oneone:
+                let topConstant = 108 + view.safeAreaInsets.top
+                topBlurViewHeight.constant = topConstant
+                bottomBlurViewHeight.constant = view.frame.height - view.frame.width - topConstant
+            case .fourthree:
+                let topConstant = 63 + view.safeAreaInsets.top
+                topBlurViewHeight.constant = topConstant
+                bottomBlurViewHeight.constant = view.frame.height - (view.frame.width / 3 * 4) - topConstant
+            case .full:
+                topBlurViewHeight.constant = 0
+                bottomBlurViewHeight.constant = 0
+            }
+
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.view.setNeedsLayout()
+        }
+    }
     func touchToFocus() {
         do {
             try videoCamera?.inputCamera.lockForConfiguration()
@@ -100,13 +124,32 @@ extension CameraViewController {
     }
     //필터 추가
     func addFilter() {
+        videoCamera?.addTarget(gpuImageView)
+        return
+
         filterGroup = GPUImageFilterGroup()
-        let beautyFilter = GPUImageBeautifyFilter()
+        let exposureFilter = GPUImageExposureFilter()
+        let contrastFilter = GPUImageContrastFilter()
+//        let adjustFilter = gpuimagea
+        let sharpenFilter = GPUImageSharpenFilter()
+//        let clarityFilter = gpuimageclari
+        let saturationFilter = GPUImageSaturationFilter()
+        let toneFilter = GPUImageToneCurveFilter()
+        let whiteBalanceFilter = GPUImageWhiteBalanceFilter()
+        let vignetteFilter = GPUImageVignetteFilter()
+//        let grainFilter = gpuimagegrain
+//        let fadeFilter = gpuimagefade
+//        let splittoneFilter = gpuimagespli
+//        let colorFilter = gpuimagecolor
 
-        filterGroup?.addTarget(beautyFilter)
-
-        filterGroup?.initialFilters = [beautyFilter]
-        filterGroup?.terminalFilter = beautyFilter
+        filterGroup?.addTarget(exposureFilter)
+        filterGroup?.addTarget(contrastFilter)
+        filterGroup?.addTarget(sharpenFilter)
+        filterGroup?.addTarget(saturationFilter)
+        filterGroup?.addTarget(toneFilter)
+        filterGroup?.addTarget(whiteBalanceFilter)
+        filterGroup?.initialFilters = [exposureFilter, contrastFilter, sharpenFilter, saturationFilter, toneFilter, whiteBalanceFilter]
+        filterGroup?.terminalFilter = vignetteFilter
 
         videoCamera?.addTarget(filterGroup)
         filterGroup?.addTarget(gpuImageView)
@@ -119,7 +162,7 @@ extension CameraViewController {
         } else {
             videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.hd1920x1080.rawValue, cameraPosition: cameraPosition)
         }
-        
+
         videoCamera?.outputImageOrientation = .portrait
         videoCamera?.delegate = self
         videoCamera?.horizontallyMirrorFrontFacingCamera = true
