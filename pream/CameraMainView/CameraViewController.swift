@@ -13,6 +13,7 @@ import SideMenu
 import GPUImage
 
 class CameraViewController: UIViewController {
+    @IBOutlet weak var shotView: UIView!
     @IBOutlet weak var gpuImageView: GPUImageView!
     @IBOutlet weak var shotEffectView: UIView!
     @IBOutlet weak var cameraShotButton: RoundView!
@@ -68,11 +69,12 @@ extension CameraViewController {
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
         filterGroup?.useNextFrameForImageCapture()
         guard let image = filterGroup?.imageFromCurrentFramebuffer() else { return }
+        let newImage = cropImage(image: image)
         shotEffectView.alpha = 0.7
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.shotEffectView.alpha = 0
         }
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        UIImageWriteToSavedPhotosAlbum(newImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     //카메라 앞뒤 전환 동장
     @IBAction private func convertCamera(_ sender: UIButton) {
@@ -93,6 +95,17 @@ extension CameraViewController {
 }
 
 extension CameraViewController {
+    func cropImage(image: UIImage) -> UIImage {
+        let imageScale = image.size.height / view.frame.height
+        let shotViewFrame = shotView.frame
+        let imageWidth = shotViewFrame.width * imageScale
+        let imageHeight = shotViewFrame.height * imageScale
+        let imageX = (image.size.width / 2) - (imageWidth / 2)
+        let imageY = shotView.center.y * imageScale - (imageHeight / 2)
+        let imageCropFrame = CGRect(x: imageX, y: imageY, width: imageWidth, height: imageHeight)
+        return image.crop(rect: imageCropFrame)
+    }
+    
     func setRatio() {
             switch self.currentRatio {
             case .oneone:
@@ -124,32 +137,31 @@ extension CameraViewController {
     }
     //필터 추가
     func addFilter() {
-        videoCamera?.addTarget(gpuImageView)
-        return
-
         filterGroup = GPUImageFilterGroup()
+//        Exposure ranges from -10.0 to 10.0, with 0.0 as the normal level
         let exposureFilter = GPUImageExposureFilter()
+        exposureFilter.exposure = 0.5
         let contrastFilter = GPUImageContrastFilter()
-//        let adjustFilter = gpuimagea
         let sharpenFilter = GPUImageSharpenFilter()
-//        let clarityFilter = gpuimageclari
         let saturationFilter = GPUImageSaturationFilter()
-        let toneFilter = GPUImageToneCurveFilter()
         let whiteBalanceFilter = GPUImageWhiteBalanceFilter()
         let vignetteFilter = GPUImageVignetteFilter()
-//        let grainFilter = gpuimagegrain
-//        let fadeFilter = gpuimagefade
-//        let splittoneFilter = gpuimagespli
-//        let colorFilter = gpuimagecolor
+//        let toneFilter = GPUImageToneCurveFilter()
+        //        let adjustFilter = gpuimagea
+        //        let clarityFilter = gpuimageclari
+        //        let grainFilter = gpuimagegrain
+        //        let fadeFilter = gpuimagefade
+        //        let splittoneFilter = gpuimagespli
+        //        let colorFilter = gpuimagecolor
 
         filterGroup?.addTarget(exposureFilter)
-        filterGroup?.addTarget(contrastFilter)
-        filterGroup?.addTarget(sharpenFilter)
-        filterGroup?.addTarget(saturationFilter)
-        filterGroup?.addTarget(toneFilter)
-        filterGroup?.addTarget(whiteBalanceFilter)
-        filterGroup?.initialFilters = [exposureFilter, contrastFilter, sharpenFilter, saturationFilter, toneFilter, whiteBalanceFilter]
-        filterGroup?.terminalFilter = vignetteFilter
+        //        filterGroup?.addTarget(contrastFilter)
+        //        filterGroup?.addTarget(sharpenFilter)
+        //        filterGroup?.addTarget(saturationFilter)
+        //        filterGroup?.addTarget(toneFilter)
+        //        filterGroup?.addTarget(whiteBalanceFilter)
+        filterGroup?.initialFilters = [exposureFilter]
+        filterGroup?.terminalFilter = exposureFilter
 
         videoCamera?.addTarget(filterGroup)
         filterGroup?.addTarget(gpuImageView)
