@@ -105,24 +105,24 @@ extension CameraViewController {
         let imageCropFrame = CGRect(x: imageX, y: imageY, width: imageWidth, height: imageHeight)
         return image.crop(rect: imageCropFrame)
     }
-    
-    func setRatio() {
-            switch self.currentRatio {
-            case .oneone:
-                let topConstant = 108 + view.safeAreaInsets.top
-                topBlurViewHeight.constant = topConstant
-                bottomBlurViewHeight.constant = view.frame.height - view.frame.width - topConstant
-            case .fourthree:
-                let topConstant = 63 + view.safeAreaInsets.top
-                topBlurViewHeight.constant = topConstant
-                bottomBlurViewHeight.constant = view.frame.height - (view.frame.width / 3 * 4) - topConstant
-            case .full:
-                topBlurViewHeight.constant = 0
-                bottomBlurViewHeight.constant = 0
-            }
 
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            self?.view.setNeedsLayout()
+    func setRatio() {
+        switch currentRatio {
+        case .oneone:
+            let topConstant = 108 + view.safeAreaInsets.top
+            topBlurViewHeight.constant = topConstant
+            bottomBlurViewHeight.constant = view.frame.height - view.frame.width - topConstant
+        case .fourthree:
+            let topConstant = 63 + view.safeAreaInsets.top
+            topBlurViewHeight.constant = topConstant
+            bottomBlurViewHeight.constant = view.frame.height - (view.frame.width / 3 * 4) - topConstant
+        case .full:
+            topBlurViewHeight.constant = 0
+            bottomBlurViewHeight.constant = 0
+        }
+
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.view.layoutIfNeeded()
         }
     }
     func touchToFocus() {
