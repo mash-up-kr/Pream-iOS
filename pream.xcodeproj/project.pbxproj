@@ -16,6 +16,9 @@
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */; };
+		B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8365F1D2219D36C00BA255C /* FilterList.storyboard */; };
+		B8365F202219D39500BA255C /* FilterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8365F1F2219D39500BA255C /* FilterListViewController.swift */; };
+		B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8365F212219DF4000BA255C /* FilterTableViewCell.swift */; };
 		B84ECF44220B29EE00B11954 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84ECF43220B29EE00B11954 /* Feed.storyboard */; };
 		B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECF45220B2A1D00B11954 /* FeedViewController.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
@@ -56,6 +59,9 @@
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
 		68EF6112755CBDA5CC865C20 /* Pods_pream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFiltersTableViewCell.swift; sourceTree = "<group>"; };
+		B8365F1D2219D36C00BA255C /* FilterList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterList.storyboard; sourceTree = "<group>"; };
+		B8365F1F2219D39500BA255C /* FilterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewController.swift; sourceTree = "<group>"; };
+		B8365F212219DF4000BA255C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		B84ECF43220B29EE00B11954 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		B84ECF45220B2A1D00B11954 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B8DACC7921F875B7006B6AE2 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 				034230632209F7F6003CC91C /* MyFilterCategory.storyboard */,
 				03423065220A0482003CC91C /* MyFilterCategoryViewController.swift */,
 				03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */,
+				B8365F1D2219D36C00BA255C /* FilterList.storyboard */,
+				B8365F1F2219D39500BA255C /* FilterListViewController.swift */,
+				B8365F212219DF4000BA255C /* FilterTableViewCell.swift */,
 			);
 			path = FilterListView;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 				EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */,
 				030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */,
 				034230642209F7F6003CC91C /* MyFilterCategory.storyboard in Resources */,
+				B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
 				B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */,
 				EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */,
@@ -444,7 +454,9 @@
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
 				EFB5A1CC21E2214100802F7E /* RegisterViewController.swift in Sources */,
 				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
+				B8365F202219D39500BA255C /* FilterListViewController.swift in Sources */,
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
+				B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */,
 				EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */,

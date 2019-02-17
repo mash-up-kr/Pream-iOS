@@ -31,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="-1604" y="120"/>
         </scene>
-        <!--MyFilterCategory-->
+        <!--FilterList-->
         <scene sceneID="1u3-ZK-RZU">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyFilterCategory" id="J7Y-Eq-R5A" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="FilterList" id="J7Y-Eq-R5A" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJa-of-jJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-803" y="643"/>
