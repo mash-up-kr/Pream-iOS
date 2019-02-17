@@ -9,16 +9,12 @@
 import UIKit
 
 enum Feed: String, CaseIterable {
-    case myFiltersHeader
-    case myFilters
     case userFiltersHeader
     case userFilters
 }
 
 class FeedViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-
-    let myFiltersCollectionIdentifier = "myFiltersCollection"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +27,6 @@ class FeedViewController: UIViewController {
 
 // MARK: - Private Extension
 private extension FeedViewController {
-    func getMyFiltersCell(_ tableView: UITableView, section: Feed) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: section.rawValue) as? MyFiltersTableViewCell else { return UITableViewCell() }
-        cell.collectionView.dataSource = self
-        return cell
-    }
-
     func getUserFiltersCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, section: Feed) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: section.rawValue, for: indexPath) as? UserFiltersTableViewCell else { return UITableViewCell() }
         cell.filterImageView.image = #imageLiteral(resourceName: "picachu")
@@ -55,7 +45,7 @@ extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let section = Feed.allCases[section]
         switch section {
-        case .myFiltersHeader, .userFiltersHeader, .myFilters:
+        case .userFiltersHeader:
             return 1
         case .userFilters:
             return 5
@@ -67,10 +57,8 @@ extension FeedViewController: UITableViewDataSource {
         let cell: UITableViewCell
 
         switch section {
-        case .myFiltersHeader, .userFiltersHeader:
+        case .userFiltersHeader:
             cell = tableView.dequeueReusableCell(withIdentifier: section.rawValue) ?? UITableViewCell()
-        case .myFilters:
-            cell = getMyFiltersCell(tableView, section: section)
         case .userFilters:
             cell = getUserFiltersCell(tableView, cellForRowAt: indexPath, section: section)
         }
@@ -80,25 +68,5 @@ extension FeedViewController: UITableViewDataSource {
 }
 
 extension FeedViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let section = Feed.allCases[indexPath.section]
-        if section == .myFilters {
-            return 152
-        } else {
-            return UITableView.automaticDimension
-        }
-    }
-}
 
-extension FeedViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: myFiltersCollectionIdentifier, for: indexPath) as? MyFiltersCollectionViewCell else { return UICollectionViewCell() }
-        cell.imageView.image = #imageLiteral(resourceName: "picachu.png")
-        cell.titleLabel.text = "피카피카"
-        return cell
-    }
 }
