@@ -32,9 +32,9 @@
                                         <rect key="frame" x="331" y="18.5" width="24" height="24"/>
                                         <state key="normal" image="find"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCv-DZ-nvs">
-                                        <rect key="frame" x="20" y="15.5" width="30" height="30"/>
-                                        <state key="normal" title="뒤로"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCv-DZ-nvs">
+                                        <rect key="frame" x="5" y="10.5" width="72" height="40"/>
+                                        <state key="normal" title="뒤로" image="icBack"/>
                                         <connections>
                                             <action selector="backButtonAction:" destination="ta5-ZR-zCC" eventType="touchUpInside" id="IVf-ky-q35"/>
                                         </connections>
@@ -48,7 +48,7 @@
                                     <constraint firstItem="g52-Uq-RBv" firstAttribute="centerY" secondItem="4j7-IB-BJK" secondAttribute="centerY" id="auQ-KS-pkT"/>
                                     <constraint firstItem="g52-Uq-RBv" firstAttribute="centerX" secondItem="4j7-IB-BJK" secondAttribute="centerX" id="lRH-Kd-kxt"/>
                                     <constraint firstItem="R3f-aa-SAl" firstAttribute="centerY" secondItem="4j7-IB-BJK" secondAttribute="centerY" id="oFW-0g-y1x"/>
-                                    <constraint firstItem="XCv-DZ-nvs" firstAttribute="leading" secondItem="4j7-IB-BJK" secondAttribute="leading" constant="20" id="w15-sg-wci"/>
+                                    <constraint firstItem="XCv-DZ-nvs" firstAttribute="leading" secondItem="4j7-IB-BJK" secondAttribute="leading" constant="5" id="w15-sg-wci"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9fu-g8-xo1">
@@ -187,6 +187,7 @@
     </scenes>
     <resources>
         <image name="find" width="24" height="24"/>
+        <image name="icBack" width="40" height="40"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
