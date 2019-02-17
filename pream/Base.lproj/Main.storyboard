@@ -48,8 +48,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-is-Cbc">
-                                <rect key="frame" x="35" y="120" width="91" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="35" y="120" width="71" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="My Filter ">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -58,8 +58,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByD-hc-seg">
-                                <rect key="frame" x="35" y="208" width="130" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="35" y="194" width="99" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="PREAM Filter">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -68,15 +68,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njs-L5-fjC">
-                                <rect key="frame" x="35" y="164" width="125" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="35" y="157" width="97" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Shared Filter">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mov-aw-mgX">
-                                <rect key="frame" x="35" y="270" width="80" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="35" y="249" width="59" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="로그아웃">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -110,12 +110,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-nO-yAM" customClass="GPUImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="-41" y="0.0" width="457" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q2H-nO-yAM" secondAttribute="height" multiplier="1080:1920" id="fbT-Xd-byB"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrY-P1-C8A" customClass="BlurView" customModule="pream" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="LZT-xA-7L9"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xr0-Oz-7Yd">
                                 <rect key="frame" x="0.0" y="44" width="375" height="63"/>
@@ -170,6 +176,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7DG-UB-7q2" customClass="BlurView" customModule="pream" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="674" width="375" height="138"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="nvr-fU-Ff5"/>
+                                </constraints>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1av-25-bPo">
+                                <rect key="frame" x="0.0" y="107" width="375" height="567"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-gE-dL9">
                                 <rect key="frame" x="0.0" y="674" width="375" height="104"/>
@@ -258,14 +271,16 @@
                         <constraints>
                             <constraint firstItem="Xr0-Oz-7Yd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0x6-bi-eO1"/>
                             <constraint firstAttribute="bottom" secondItem="Q2H-nO-yAM" secondAttribute="bottom" id="4LI-aC-nPF"/>
-                            <constraint firstItem="Xr0-Oz-7Yd" firstAttribute="bottom" secondItem="UrY-P1-C8A" secondAttribute="bottom" id="60m-hK-lMk"/>
-                            <constraint firstItem="Q2H-nO-yAM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Kb-dN-bpZ"/>
                             <constraint firstItem="7DG-UB-7q2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9UA-3P-FPL"/>
+                            <constraint firstItem="Q2H-nO-yAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D1Y-IS-uD5"/>
                             <constraint firstItem="7DG-UB-7q2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dn3-8O-wiM"/>
+                            <constraint firstItem="1av-25-bPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ER5-b0-MGj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1av-25-bPo" secondAttribute="trailing" id="Ei9-e7-c7J"/>
                             <constraint firstItem="Q2H-nO-yAM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IKZ-3Y-ZFp"/>
                             <constraint firstItem="Xr0-Oz-7Yd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JD9-I8-XdS"/>
                             <constraint firstAttribute="bottom" secondItem="7DG-UB-7q2" secondAttribute="bottom" id="K0V-k4-HSj"/>
                             <constraint firstItem="OwD-Zi-m1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lha-hS-Chk"/>
+                            <constraint firstItem="1av-25-bPo" firstAttribute="top" secondItem="UrY-P1-C8A" secondAttribute="bottom" id="O9w-SN-pxg"/>
                             <constraint firstAttribute="bottom" secondItem="mVf-gm-oAc" secondAttribute="bottom" id="QbH-jX-MVQ"/>
                             <constraint firstItem="Xr0-Oz-7Yd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SYf-2x-BoZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OwD-Zi-m1h" secondAttribute="trailing" id="UJl-gT-MHA"/>
@@ -278,14 +293,15 @@
                             <constraint firstItem="VEd-gE-dL9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mDV-zF-mno"/>
                             <constraint firstItem="mVf-gm-oAc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mae-qU-fyF"/>
                             <constraint firstItem="UrY-P1-C8A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mfJ-ra-SPb"/>
-                            <constraint firstItem="7DG-UB-7q2" firstAttribute="top" secondItem="VEd-gE-dL9" secondAttribute="top" id="ple-de-Flz"/>
+                            <constraint firstItem="7DG-UB-7q2" firstAttribute="top" secondItem="1av-25-bPo" secondAttribute="bottom" id="mrr-Es-KpS"/>
                             <constraint firstItem="7DG-UB-7q2" firstAttribute="top" secondItem="OwD-Zi-m1h" secondAttribute="bottom" id="xy2-w5-L5F"/>
-                            <constraint firstItem="Q2H-nO-yAM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yg7-gT-nHu"/>
+                            <constraint firstItem="Q2H-nO-yAM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zIb-VR-wTV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bottomBlurView" destination="7DG-UB-7q2" id="AG9-vu-Pfe"/>
+                        <outlet property="bottomBlurViewHeight" destination="nvr-fU-Ff5" id="vmP-Iq-JI0"/>
                         <outlet property="cameraShotButton" destination="eu1-FW-QOE" id="veH-MD-hA3"/>
                         <outlet property="changeRatioButton" destination="lTV-9d-nrG" id="qoL-04-RVh"/>
                         <outlet property="convertCameraButton" destination="KTO-4I-KEq" id="8Dj-vT-lMC"/>
@@ -293,7 +309,9 @@
                         <outlet property="gpuImageView" destination="Q2H-nO-yAM" id="AnY-7U-ZLV"/>
                         <outlet property="libraryButton" destination="Avu-oK-WfQ" id="qPl-cZ-Fsq"/>
                         <outlet property="shotEffectView" destination="mVf-gm-oAc" id="Xwd-6d-zcP"/>
+                        <outlet property="shotView" destination="1av-25-bPo" id="69h-oQ-4Er"/>
                         <outlet property="topBlurView" destination="UrY-P1-C8A" id="cxD-lV-96u"/>
+                        <outlet property="topBlurViewHeight" destination="LZT-xA-7L9" id="x7x-YE-cJT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
