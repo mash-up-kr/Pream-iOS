@@ -18,6 +18,14 @@
             </objects>
             <point key="canvasLocation" x="-803" y="643"/>
         </scene>
+        <!--FilterSetting-->
+        <scene sceneID="q0S-en-XZI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FilterSetting" id="GIa-55-zu2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbz-Fl-M83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-316"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="kJI-YA-b36">
             <objects>
@@ -27,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-is-Cbc">
-                                <rect key="frame" x="35" y="120" width="71" height="33"/>
+                                <rect key="frame" x="35" y="164" width="71" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="My Filter ">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,7 +45,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByD-hc-seg">
-                                <rect key="frame" x="35" y="194" width="99" height="33"/>
+                                <rect key="frame" x="35" y="238" width="99" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="PREAM Filter">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,18 +55,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njs-L5-fjC">
-                                <rect key="frame" x="35" y="157" width="97" height="33"/>
+                                <rect key="frame" x="35" y="201" width="97" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Shared Filter">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mov-aw-mgX">
-                                <rect key="frame" x="35" y="249" width="59" height="33"/>
+                                <rect key="frame" x="35" y="293" width="59" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="로그아웃">
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GIa-55-zu2" kind="show" id="0zc-fE-XB0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4D-7S-kU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-802.39999999999998" y="119.70443349753695"/>
+            <point key="canvasLocation" x="140" y="119.70443349753695"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -112,7 +123,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                 <state key="normal" image="menu"/>
                                                 <connections>
-                                                    <segue destination="IHq-2D-shn" kind="presentation" id="IUo-Bh-GZF"/>
+                                                    <segue destination="2At-sK-nmT" kind="presentation" id="IUo-Bh-GZF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSE-o5-6MN">
@@ -295,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
+            <point key="canvasLocation" x="1079.2" y="132.26600985221674"/>
         </scene>
         <!--Library-->
         <scene sceneID="gjI-TD-vKD">
@@ -303,7 +314,7 @@
                 <viewControllerPlaceholder storyboardName="Library" id="uYa-M5-TAc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fra-a5-hR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="132"/>
+            <point key="canvasLocation" x="1801.5999999999999" y="131.52709359605913"/>
         </scene>
         <!--FilterCollection-->
         <scene sceneID="Vbf-eI-vdx">
@@ -311,7 +322,7 @@
                 <viewControllerPlaceholder storyboardName="FilterCollection" id="Yh2-PV-88P" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUv-EU-yY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="355"/>
+            <point key="canvasLocation" x="1836" y="354.67980295566502"/>
         </scene>
         <!--Feed-->
         <scene sceneID="sh3-k2-703">
@@ -320,6 +331,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbL-8F-tsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-388" y="643"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U7h-PB-3md">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2At-sK-nmT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rRc-ZA-PFe">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IHq-2D-shn" kind="relationship" relationship="rootViewController" id="nva-LK-bi2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gut-1u-7MK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-802.39999999999998" y="119.70443349753695"/>
         </scene>
     </scenes>
     <resources>
