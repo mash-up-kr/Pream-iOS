@@ -26,7 +26,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var bottomBlurViewHeight: NSLayoutConstraint!
     @IBOutlet weak var topBlurViewHeight: NSLayoutConstraint!
 
-    var isLogin: Bool = true
+    var isLogin: Bool = false
     var videoCamera: GPUImageVideoCamera?
     var filterGroup: GPUImageFilterGroup?
     var isDuringbuttonColorAnimation = false

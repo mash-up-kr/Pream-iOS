@@ -176,10 +176,10 @@ would you like to take today?</string>
             </objects>
             <point key="canvasLocation" x="2850" y="-942"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Email View Controller-->
         <scene sceneID="vg9-cF-Whd">
             <objects>
-                <viewController id="M3S-0a-fBc" sceneMemberID="viewController">
+                <viewController id="M3S-0a-fBc" customClass="RegisterEmailViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWH-Ua-zoL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,6 +196,9 @@ would you like to take today?</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txq-g8-Mx6">
                                         <rect key="frame" x="315" y="9.5" width="40" height="40"/>
                                         <state key="normal" image="closeBtn"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="M3S-0a-fBc" eventType="touchUpInside" id="OBL-h2-QKW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -241,7 +244,7 @@ would you like to take today?</string>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpv-ns-iHL">
                                 <rect key="frame" x="20" y="291" width="293" height="3"/>
@@ -263,6 +266,9 @@ would you like to take today?</string>
                                     <constraint firstAttribute="height" constant="36" id="EGL-KJ-3YI"/>
                                 </constraints>
                                 <state key="normal" image="previous"/>
+                                <connections>
+                                    <action selector="previousButtonAction:" destination="M3S-0a-fBc" eventType="touchUpInside" id="wgs-WT-tNU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95K-xn-ehQ">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
@@ -306,6 +312,9 @@ would you like to take today?</string>
                         <viewLayoutGuide key="safeArea" id="SJe-4I-KF3"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="LnV-iY-dEE" id="xgV-fk-y7o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLn-zX-i5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -329,10 +338,10 @@ would you like to take today?</string>
             </objects>
             <point key="canvasLocation" x="-378" y="-235"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Password View Controller-->
         <scene sceneID="fMp-Pz-V3b">
             <objects>
-                <viewController id="Ljy-cc-q0i" sceneMemberID="viewController">
+                <viewController id="Ljy-cc-q0i" customClass="RegisterPasswordViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4hi-iZ-kGj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,6 +358,9 @@ would you like to take today?</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXM-C4-LLg">
                                         <rect key="frame" x="315" y="9.5" width="40" height="40"/>
                                         <state key="normal" image="closeBtn"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="Ljy-cc-q0i" eventType="touchUpInside" id="ogh-2V-uAV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -410,6 +422,9 @@ would you like to take today?</string>
                                     <constraint firstAttribute="width" constant="36" id="WqH-xY-2mZ"/>
                                 </constraints>
                                 <state key="normal" image="previous"/>
+                                <connections>
+                                    <action selector="previousButtonAction:" destination="Ljy-cc-q0i" eventType="touchUpInside" id="JIY-Cc-nDM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-Cj-Mcp">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
@@ -449,15 +464,18 @@ would you like to take today?</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j6U-Bj-d8r"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="9cC-ki-wsh" id="JvE-Ob-rWG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGv-mB-c7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2881" y="-235"/>
+            <point key="canvasLocation" x="2880.8000000000002" y="-235.23238380809596"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Password Check View Controller-->
         <scene sceneID="hSz-VG-6ZK">
             <objects>
-                <viewController id="j9J-wc-Nck" sceneMemberID="viewController">
+                <viewController id="j9J-wc-Nck" customClass="RegisterPasswordCheckViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TI6-kN-9e8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,6 +492,9 @@ would you like to take today?</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edo-ml-H6r">
                                         <rect key="frame" x="315" y="9.5" width="40" height="40"/>
                                         <state key="normal" image="closeBtn"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="j9J-wc-Nck" eventType="touchUpInside" id="seH-Yl-Qc8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -535,6 +556,9 @@ would you like to take today?</string>
                                     <constraint firstAttribute="width" constant="36" id="l7p-xA-3sT"/>
                                 </constraints>
                                 <state key="normal" image="previous"/>
+                                <connections>
+                                    <action selector="previousButtonAction:" destination="j9J-wc-Nck" eventType="touchUpInside" id="J2Q-RX-TDF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hv-nd-Jzb">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
@@ -585,15 +609,18 @@ would you like to take today?</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6KJ-86-qDp"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordCheckTextField" destination="6qB-z6-YhX" id="tbD-MX-MKh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RV2-ef-G64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3671" y="-235"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Nickname View Controller-->
         <scene sceneID="iWu-6y-2tx">
             <objects>
-                <viewController id="YEA-Oy-5xj" sceneMemberID="viewController">
+                <viewController id="YEA-Oy-5xj" customClass="RegisterNicknameViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFg-0s-H46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -610,6 +637,9 @@ would you like to take today?</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-7v-cAQ">
                                         <rect key="frame" x="315" y="9.5" width="40" height="40"/>
                                         <state key="normal" image="closeBtn"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="YEA-Oy-5xj" eventType="touchUpInside" id="pbB-de-p7a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -671,6 +701,9 @@ would you like to take today?</string>
                                     <constraint firstAttribute="height" constant="36" id="pCn-rH-iph"/>
                                 </constraints>
                                 <state key="normal" image="previous"/>
+                                <connections>
+                                    <action selector="previousButtonAction:" destination="YEA-Oy-5xj" eventType="touchUpInside" id="Rds-k5-34p"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnB-QD-Ezw">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
@@ -710,6 +743,9 @@ would you like to take today?</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dlz-zZ-14j"/>
                     </view>
+                    <connections>
+                        <outlet property="nicknameTextField" destination="JpQ-IP-G18" id="IQi-ui-sEa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bji-7B-4bj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -808,10 +844,10 @@ would you like to take today?</string>
             </objects>
             <point key="canvasLocation" x="5236" y="-235"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Email Check View Controller-->
         <scene sceneID="vmg-mG-03z">
             <objects>
-                <viewController id="NzH-NJ-GRi" sceneMemberID="viewController">
+                <viewController id="NzH-NJ-GRi" customClass="RegisterEmailCheckViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52E-FB-0hR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -828,6 +864,9 @@ would you like to take today?</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-Q7-3hh">
                                         <rect key="frame" x="315" y="9.5" width="40" height="40"/>
                                         <state key="normal" image="closeBtn"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="NzH-NJ-GRi" eventType="touchUpInside" id="9aA-if-6BY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -851,14 +890,14 @@ would you like to take today?</string>
                                 <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Puw-G6-WPo">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Puw-G6-WPo">
                                 <rect key="frame" x="20" y="258" width="293" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="U7F-vL-Zv7"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfC-qQ-Qzz">
                                 <rect key="frame" x="20" y="291" width="293" height="3"/>
@@ -880,6 +919,9 @@ would you like to take today?</string>
                                     <constraint firstAttribute="height" constant="36" id="oxX-fq-OFv"/>
                                 </constraints>
                                 <state key="normal" image="previous"/>
+                                <connections>
+                                    <action selector="previousButtonAction:" destination="NzH-NJ-GRi" eventType="touchUpInside" id="QDe-Sw-qzG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s08-Ph-2tg">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
@@ -937,6 +979,9 @@ would you like to take today?</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZpX-Nq-7Dr"/>
                     </view>
+                    <connections>
+                        <outlet property="authenticationCodeTextField" destination="Puw-G6-WPo" id="cQa-2k-u0W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rab-gS-8H4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
