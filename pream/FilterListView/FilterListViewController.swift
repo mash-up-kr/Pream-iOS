@@ -9,6 +9,7 @@
 import UIKit
 
 class FilterListViewController: UIViewController {
+    @IBOutlet weak var preamFilterView: UIView!
     @IBOutlet weak var tableView: UITableView!
 
     enum FilterListCell: String, CaseIterable {
@@ -18,6 +19,7 @@ class FilterListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurePreamFilterView()
     }
 
     @IBAction func backButtonAction(_ sender: UIButton) {
@@ -31,6 +33,14 @@ private extension FilterListViewController {
         cell.filterImageView.image = #imageLiteral(resourceName: "picachu")
         cell.filterTitleView.text = "피카피카"
         return cell
+    }
+
+    func configurePreamFilterView() {
+        preamFilterView.layer.masksToBounds = false
+        preamFilterView.layer.shadowColor = UIColor.black.cgColor
+        preamFilterView.layer.shadowOpacity = 0.3
+        preamFilterView.layer.shadowOffset = CGSize.zero
+        preamFilterView.layer.shadowRadius = 3
     }
 }
 

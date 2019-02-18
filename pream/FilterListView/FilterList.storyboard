@@ -68,7 +68,7 @@
                                     <constraint firstItem="T3L-Kn-gRc" firstAttribute="top" secondItem="dpX-d0-2dC" secondAttribute="top" constant="20" id="z91-oE-1gN"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LeN-9v-Dgb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LeN-9v-Dgb">
                                 <rect key="frame" x="0.0" y="105" width="414" height="757"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="JI0-9Y-qeo">
@@ -242,6 +242,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Lkj-wc-wN0"/>
                     <connections>
+                        <outlet property="preamFilterView" destination="JI0-9Y-qeo" id="gDT-Ak-Y5Y"/>
                         <outlet property="tableView" destination="LeN-9v-Dgb" id="dDk-IK-yPI"/>
                     </connections>
                 </viewController>
