@@ -21,10 +21,14 @@
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */; };
+		B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8365F1D2219D36C00BA255C /* FilterList.storyboard */; };
+		B8365F202219D39500BA255C /* FilterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8365F1F2219D39500BA255C /* FilterListViewController.swift */; };
+		B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8365F212219DF4000BA255C /* FilterTableViewCell.swift */; };
 		B84ECF44220B29EE00B11954 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84ECF43220B29EE00B11954 /* Feed.storyboard */; };
 		B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECF45220B2A1D00B11954 /* FeedViewController.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
 		B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */; };
+		B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */; };
 		D1D41A82D695DE76E564E0B5 /* Pods_pream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EF6112755CBDA5CC865C20 /* Pods_pream.framework */; };
 		EF099753221B03BD00DD29D3 /* FilterSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF099752221B03BD00DD29D3 /* FilterSetting.storyboard */; };
 		EF099755221B0CA900DD29D3 /* FilterSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF099754221B0CA900DD29D3 /* FilterSettingViewController.swift */; };
@@ -69,10 +73,14 @@
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
 		68EF6112755CBDA5CC865C20 /* Pods_pream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFiltersTableViewCell.swift; sourceTree = "<group>"; };
+		B8365F1D2219D36C00BA255C /* FilterList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterList.storyboard; sourceTree = "<group>"; };
+		B8365F1F2219D39500BA255C /* FilterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewController.swift; sourceTree = "<group>"; };
+		B8365F212219DF4000BA255C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		B84ECF43220B29EE00B11954 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		B84ECF45220B2A1D00B11954 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B8DACC7921F875B7006B6AE2 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		EF099752221B03BD00DD29D3 /* FilterSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterSetting.storyboard; sourceTree = "<group>"; };
 		EF099754221B0CA900DD29D3 /* FilterSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSettingViewController.swift; sourceTree = "<group>"; };
 		EF099756221B126D00DD29D3 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -130,6 +138,9 @@
 				034230632209F7F6003CC91C /* MyFilterCategory.storyboard */,
 				03423065220A0482003CC91C /* MyFilterCategoryViewController.swift */,
 				03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */,
+				B8365F1D2219D36C00BA255C /* FilterList.storyboard */,
+				B8365F1F2219D39500BA255C /* FilterListViewController.swift */,
+				B8365F212219DF4000BA255C /* FilterTableViewCell.swift */,
 			);
 			path = FilterListView;
 			sourceTree = "<group>";
@@ -254,6 +265,7 @@
 				EFC8AC9B21FC741F004B940A /* PresentError.swift */,
 				03D28F2822082FBB007C8B15 /* DimmedView.swift */,
 				EFF00E34221457BD00865921 /* CameraRatio.swift */,
+				B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -358,6 +370,7 @@
 				EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */,
 				030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */,
 				034230642209F7F6003CC91C /* MyFilterCategory.storyboard in Resources */,
+				B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
 				B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */,
 				EFEAE9CD21DE3CAA00B7CCA8 /* Main.storyboard in Resources */,
@@ -477,10 +490,13 @@
 				03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */,
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
 				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
+				B8365F202219D39500BA255C /* FilterListViewController.swift in Sources */,
 				03896F1F221B0483003637C8 /* RegisterPasswordCheckViewController.swift in Sources */,
 				EF099757221B126D00DD29D3 /* UIView+Extension.swift in Sources */,
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
+				B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */,
 				EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */,
+				B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				03896F19221B03D4003637C8 /* RegisterPasswordViewController.swift in Sources */,
 				03896F1D221B0419003637C8 /* RegisterNicknameViewController.swift in Sources */,

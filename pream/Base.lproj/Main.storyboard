@@ -10,10 +10,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MyFilterCategory-->
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="9it-MK-TGc">
+            <objects>
+                <navigationController modalPresentationStyle="overFullScreen" navigationBarHidden="YES" id="hVO-wv-l3o" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vLf-fv-Ypc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="279"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="IHq-2D-shn" kind="relationship" relationship="rootViewController" id="Kdq-X4-jrd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ft-2j-kfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1604" y="120"/>
+        </scene>
+        <!--FilterList-->
         <scene sceneID="1u3-ZK-RZU">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyFilterCategory" id="J7Y-Eq-R5A" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="FilterList" id="J7Y-Eq-R5A" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJa-of-jJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-803" y="643"/>
