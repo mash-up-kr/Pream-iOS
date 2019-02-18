@@ -14,7 +14,8 @@ class DimmedView: UIView {
 
         backgroundColor = .black
         layer.opacity = 0.5
-        layer.borderWidth = 1.5
-        layer.borderColor = UIColor.white.cgColor
+        layer.cornerRadius = 2
+//        layer.borderWidth = 1.5
+//        layer.borderColor = UIColor.white.cgColor
     }
 }

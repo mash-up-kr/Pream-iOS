@@ -180,6 +180,10 @@
                                                         <constraint firstAttribute="height" constant="50" id="yyW-9N-sEE"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmt-Lo-KQf" customClass="DimmedView" customModule="pream" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="6" width="374" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hy3-nX-TUw">
                                                     <rect key="frame" x="191.66666666666666" y="20.333333333333329" width="30.666666666666657" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
@@ -202,9 +206,13 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="sIo-q2-4FS" secondAttribute="trailing" constant="11" id="7ta-u2-5MF"/>
                                                 <constraint firstItem="Hy3-nX-TUw" firstAttribute="centerX" secondItem="UZu-GJ-xhv" secondAttribute="centerX" id="D0s-UM-dFJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="zl5-hk-ewa" secondAttribute="bottom" constant="6" id="ENE-DB-0hE"/>
+                                                <constraint firstItem="Pmt-Lo-KQf" firstAttribute="height" secondItem="zl5-hk-ewa" secondAttribute="height" id="YXZ-CO-Nau"/>
+                                                <constraint firstItem="Pmt-Lo-KQf" firstAttribute="width" secondItem="zl5-hk-ewa" secondAttribute="width" id="Z7n-jI-bMR"/>
                                                 <constraint firstItem="sIo-q2-4FS" firstAttribute="centerY" secondItem="UZu-GJ-xhv" secondAttribute="centerY" id="cCR-YX-Qez"/>
+                                                <constraint firstItem="Pmt-Lo-KQf" firstAttribute="centerY" secondItem="zl5-hk-ewa" secondAttribute="centerY" id="gcV-AQ-HA5"/>
                                                 <constraint firstItem="zl5-hk-ewa" firstAttribute="centerY" secondItem="UZu-GJ-xhv" secondAttribute="centerY" id="h22-Uc-Xfm"/>
                                                 <constraint firstItem="zl5-hk-ewa" firstAttribute="top" secondItem="UZu-GJ-xhv" secondAttribute="top" constant="6" id="ibj-3G-WGs"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pmt-Lo-KQf" secondAttribute="trailing" constant="20" id="qhN-YR-eum"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
