@@ -14,6 +14,10 @@ class MyFilterCategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryDetailLabel: UILabel!
     @IBOutlet weak var numberOfFiltersLabel: UILabel!
 
+    override func awakeFromNib() {
+        categoryBackgroundImageView.layer.cornerRadius = 5
+    }
+
     func config() {
         categoryNameLabel.text = "Restaurant"
         categoryDetailLabel.text = "18.10.29 Used 3245"

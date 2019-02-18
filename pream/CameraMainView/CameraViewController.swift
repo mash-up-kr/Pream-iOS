@@ -11,6 +11,7 @@ import SnapKit
 import Photos
 import SideMenu
 import GPUImage
+import MediaPlayer
 
 class CameraViewController: UIViewController {
     @IBOutlet weak var shotView: UIView!
@@ -33,11 +34,16 @@ class CameraViewController: UIViewController {
     var cameraPosition: AVCaptureDevice.Position = .front
     var currentRatio: CameraRatio = .fourthree
 
+    var obs: NSKeyValueObservation?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         startCameraSession()
         addBlur()
+        registerDoubleTapShotView()
+        listenVolumeButton()
+        addVolumeButtonObserver()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +52,6 @@ class CameraViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         setRatio()
         loginChecked()
     }
@@ -67,25 +72,11 @@ class CameraViewController: UIViewController {
 extension CameraViewController {
     //사진촬영 버튼 동작
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
-        filterGroup?.useNextFrameForImageCapture()
-        guard let image = filterGroup?.imageFromCurrentFramebuffer() else { return }
-        let newImage = cropImage(image: image)
-        shotEffectView.alpha = 0.7
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.shotEffectView.alpha = 0
-        }
-        UIImageWriteToSavedPhotosAlbum(newImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        captureImage()
     }
     //카메라 앞뒤 전환 동장
     @IBAction private func convertCamera(_ sender: UIButton) {
-        videoCamera?.stopCapture()
-        if cameraPosition == .front {
-            cameraPosition = .back
-        } else {
-            cameraPosition = .front
-        }
-//        videoCamera?.imageFromCurrentFramebuffer()
-        startCameraSession()
+        changeCamaraPosition()
     }
     //비율조정 동작
     @IBAction private func changeRatio(_ sender: UIButton) {
@@ -95,12 +86,24 @@ extension CameraViewController {
 }
 
 extension CameraViewController {
+    func captureImage() {
+        filterGroup?.useNextFrameForImageCapture()
+        guard let image = filterGroup?.imageFromCurrentFramebuffer() else { return }
+        let newImage = cropImage(image: image)
+        shotEffectView.alpha = 0.7
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.shotEffectView.alpha = 0
+        }
+        UIImageWriteToSavedPhotosAlbum(newImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
     func cropImage(image: UIImage) -> UIImage {
-        let imageScale = image.size.height / view.frame.height
+        let maxValue = max(image.size.height, image.size.width)
+        let imageScale = maxValue / view.frame.height
         let shotViewFrame = shotView.frame
         let imageWidth = shotViewFrame.width * imageScale
         let imageHeight = shotViewFrame.height * imageScale
-        let imageX = (image.size.width / 2) - (imageWidth / 2)
+        let imageX = shotView.center.x * imageScale - (imageWidth / 2)
         let imageY = shotView.center.y * imageScale - (imageHeight / 2)
         let imageCropFrame = CGRect(x: imageX, y: imageY, width: imageWidth, height: imageHeight)
         return image.crop(rect: imageCropFrame)
@@ -112,13 +115,17 @@ extension CameraViewController {
             let topConstant = 108 + view.safeAreaInsets.top
             topBlurViewHeight.constant = topConstant
             bottomBlurViewHeight.constant = view.frame.height - view.frame.width - topConstant
+            filterView.backgroundColor = UIColor.clear
         case .fourthree:
             let topConstant = 63 + view.safeAreaInsets.top
             topBlurViewHeight.constant = topConstant
             bottomBlurViewHeight.constant = view.frame.height - (view.frame.width / 3 * 4) - topConstant
+            filterView.backgroundColor = UIColor.clear
         case .full:
             topBlurViewHeight.constant = 0
             bottomBlurViewHeight.constant = 0
+            filterView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15)
+
         }
 
         UIView.animate(withDuration: 0.25) { [weak self] in
@@ -254,6 +261,45 @@ extension CameraViewController {
             filterView.isHidden = false
         } else {
             filterView.isHidden = true
+        }
+    }
+
+    // 카메라 전환
+    func changeCamaraPosition() {
+        videoCamera?.stopCapture()
+        cameraPosition = cameraPosition == .front ? .back : .front
+        startCameraSession()
+    }
+
+    // 더블탭 카메라 전환
+    func registerDoubleTapShotView() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTab))
+        tap.numberOfTapsRequired = 2
+        gpuImageView.addGestureRecognizer(tap)
+    }
+
+    @objc func handleDoubleTab(_ gestureRecognizer: UITapGestureRecognizer) {
+        changeCamaraPosition()
+    }
+
+    // 볼륨키로 카메라 찍기
+    func listenVolumeButton() {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setActive(true, options: [])
+            audioSession.addObserver(self, forKeyPath: "outputVolume",
+                                     options: NSKeyValueObservingOptions.new, context: nil)
+        } catch {
+            print("Error at volume button shot")
+        }
+    }
+
+    func addVolumeButtonObserver() {
+        let volumeView = MPVolumeView(frame: .zero)
+        view.addSubview(volumeView)
+        let audioSession = AVAudioSession.sharedInstance()
+        obs = audioSession.observe( \.outputVolume ) {[weak self] _, _ in
+            self?.captureImage()
         }
     }
 }
