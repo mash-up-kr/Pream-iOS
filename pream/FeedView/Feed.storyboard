@@ -28,10 +28,6 @@
                                         <color key="textColor" name="greyishBrownTwo"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-aa-SAl">
-                                        <rect key="frame" x="331" y="18.5" width="24" height="24"/>
-                                        <state key="normal" image="find"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCv-DZ-nvs">
                                         <rect key="frame" x="5" y="10.5" width="72" height="40"/>
                                         <state key="normal" title="뒤로" image="icBack"/>
@@ -44,10 +40,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="Egd-g5-xHd"/>
                                     <constraint firstItem="XCv-DZ-nvs" firstAttribute="centerY" secondItem="4j7-IB-BJK" secondAttribute="centerY" id="YYW-UH-VK2"/>
-                                    <constraint firstAttribute="trailing" secondItem="R3f-aa-SAl" secondAttribute="trailing" constant="20" id="Yby-m9-v6h"/>
                                     <constraint firstItem="g52-Uq-RBv" firstAttribute="centerY" secondItem="4j7-IB-BJK" secondAttribute="centerY" id="auQ-KS-pkT"/>
                                     <constraint firstItem="g52-Uq-RBv" firstAttribute="centerX" secondItem="4j7-IB-BJK" secondAttribute="centerX" id="lRH-Kd-kxt"/>
-                                    <constraint firstItem="R3f-aa-SAl" firstAttribute="centerY" secondItem="4j7-IB-BJK" secondAttribute="centerY" id="oFW-0g-y1x"/>
                                     <constraint firstItem="XCv-DZ-nvs" firstAttribute="leading" secondItem="4j7-IB-BJK" secondAttribute="leading" constant="5" id="w15-sg-wci"/>
                                 </constraints>
                             </view>
@@ -104,18 +98,18 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb1-ZW-2w1">
-                                                    <rect key="frame" x="20" y="168" width="300" height="31"/>
+                                                    <rect key="frame" x="20" y="168" width="289" height="31"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <color key="textColor" name="greyishBrownTwo"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKO-Ex-Ks2">
-                                                    <rect key="frame" x="335" y="175" width="20" height="24"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKO-Ex-Ks2">
+                                                    <rect key="frame" x="324" y="160" width="40" height="39"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="20" id="5Nk-TH-3hi"/>
+                                                        <constraint firstAttribute="height" constant="39" id="1Pd-sH-AgY"/>
+                                                        <constraint firstAttribute="width" constant="40" id="SG7-wl-Bc6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <state key="normal" title="담기"/>
+                                                    <state key="normal" image="icDownload"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -123,12 +117,12 @@
                                                 <constraint firstItem="J3f-7S-CZH" firstAttribute="leading" secondItem="51u-PO-4O3" secondAttribute="leading" constant="20" id="Apz-fG-oIl"/>
                                                 <constraint firstItem="LBm-Yu-tYP" firstAttribute="top" secondItem="J3f-7S-CZH" secondAttribute="bottom" constant="10" id="L4k-SX-b22"/>
                                                 <constraint firstAttribute="trailing" secondItem="J3f-7S-CZH" secondAttribute="trailing" constant="20" id="L7c-y3-mxd"/>
+                                                <constraint firstAttribute="trailing" secondItem="IKO-Ex-Ks2" secondAttribute="trailing" constant="11" id="WEF-4C-KGL"/>
                                                 <constraint firstItem="LBm-Yu-tYP" firstAttribute="leading" secondItem="51u-PO-4O3" secondAttribute="leading" constant="20" id="Yhr-wW-Fd9"/>
                                                 <constraint firstAttribute="bottom" secondItem="Mb1-ZW-2w1" secondAttribute="bottom" constant="18" id="cmp-ht-ZUA"/>
                                                 <constraint firstAttribute="bottom" secondItem="IKO-Ex-Ks2" secondAttribute="bottom" constant="18" id="pHL-u7-O9f"/>
                                                 <constraint firstItem="J3f-7S-CZH" firstAttribute="top" secondItem="51u-PO-4O3" secondAttribute="top" constant="5" id="tId-LY-0NJ"/>
                                                 <constraint firstItem="Mb1-ZW-2w1" firstAttribute="top" secondItem="LBm-Yu-tYP" secondAttribute="bottom" constant="5" id="uMi-sR-cT5"/>
-                                                <constraint firstAttribute="trailing" secondItem="IKO-Ex-Ks2" secondAttribute="trailing" constant="20" id="vAh-xi-Afa"/>
                                                 <constraint firstItem="Mb1-ZW-2w1" firstAttribute="leading" secondItem="51u-PO-4O3" secondAttribute="leading" constant="20" id="zKs-4h-l9A"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -186,8 +180,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="find" width="24" height="24"/>
         <image name="icBack" width="40" height="40"/>
+        <image name="icDownload" width="40" height="39"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
