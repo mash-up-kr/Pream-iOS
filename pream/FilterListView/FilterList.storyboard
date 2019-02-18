@@ -103,6 +103,9 @@
                                             <state key="normal" title="PREAM 필터 보러가기">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="vNG-O9-EOp" kind="show" id="E7G-eX-PCg"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picachu" translatesAutoresizingMaskIntoConstraints="NO" id="rlq-1R-tF8" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
                                             <rect key="frame" x="285" y="52" width="34" height="34"/>
@@ -249,6 +252,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aE-97-XHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1098.5507246376812" y="66.964285714285708"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="y7g-gU-CFY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Feed" id="vNG-O9-EOp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpI-Gg-Dcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="-86"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FoJ-TX-ClM">
