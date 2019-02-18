@@ -26,7 +26,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var bottomBlurViewHeight: NSLayoutConstraint!
     @IBOutlet weak var topBlurViewHeight: NSLayoutConstraint!
 
-    var isLogin: Bool = false
+    var isLogin: Bool = true
     var videoCamera: GPUImageVideoCamera?
     var filterGroup: GPUImageFilterGroup?
     var isDuringbuttonColorAnimation = false
@@ -106,13 +106,17 @@ extension CameraViewController {
             let topConstant = 108 + view.safeAreaInsets.top
             topBlurViewHeight.constant = topConstant
             bottomBlurViewHeight.constant = view.frame.height - view.frame.width - topConstant
+            filterView.backgroundColor = UIColor.clear
         case .fourthree:
             let topConstant = 63 + view.safeAreaInsets.top
             topBlurViewHeight.constant = topConstant
             bottomBlurViewHeight.constant = view.frame.height - (view.frame.width / 3 * 4) - topConstant
+            filterView.backgroundColor = UIColor.clear
         case .full:
             topBlurViewHeight.constant = 0
             bottomBlurViewHeight.constant = 0
+            filterView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15)
+
         }
 
         UIView.animate(withDuration: 0.25) { [weak self] in
