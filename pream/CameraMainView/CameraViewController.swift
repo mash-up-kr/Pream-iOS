@@ -38,6 +38,7 @@ class CameraViewController: UIViewController {
 
         startCameraSession()
         addBlur()
+        registerDoubleTapShotView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +47,6 @@ class CameraViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         setRatio()
         loginChecked()
     }
@@ -78,14 +78,7 @@ extension CameraViewController {
     }
     //카메라 앞뒤 전환 동장
     @IBAction private func convertCamera(_ sender: UIButton) {
-        videoCamera?.stopCapture()
-        if cameraPosition == .front {
-            cameraPosition = .back
-        } else {
-            cameraPosition = .front
-        }
-//        videoCamera?.imageFromCurrentFramebuffer()
-        startCameraSession()
+        changeCamaraPosition()
     }
     //비율조정 동작
     @IBAction private func changeRatio(_ sender: UIButton) {
@@ -256,6 +249,24 @@ extension CameraViewController {
         } else {
             filterView.isHidden = true
         }
+    }
+
+    // 카메라 전환
+    func changeCamaraPosition() {
+        videoCamera?.stopCapture()
+        cameraPosition = cameraPosition == .front ? .back : .front
+        startCameraSession()
+    }
+
+    // 더블탭 카메라 전환
+    func registerDoubleTapShotView() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTab))
+        tap.numberOfTapsRequired = 2
+        gpuImageView.addGestureRecognizer(tap)
+    }
+
+    @objc func handleDoubleTab(_ gestureRecognizer: UITapGestureRecognizer) {
+        changeCamaraPosition()
     }
 }
 
