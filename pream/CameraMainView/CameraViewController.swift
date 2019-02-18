@@ -11,6 +11,7 @@ import SnapKit
 import Photos
 import SideMenu
 import GPUImage
+import MediaPlayer
 
 class CameraViewController: UIViewController {
     @IBOutlet weak var shotView: UIView!
@@ -33,12 +34,16 @@ class CameraViewController: UIViewController {
     var cameraPosition: AVCaptureDevice.Position = .front
     var currentRatio: CameraRatio = .fourthree
 
+    var obs: NSKeyValueObservation?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         startCameraSession()
         addBlur()
         registerDoubleTapShotView()
+        listenVolumeButton()
+        addVolumeButtonObserver()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -67,14 +72,7 @@ class CameraViewController: UIViewController {
 extension CameraViewController {
     //사진촬영 버튼 동작
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
-        filterGroup?.useNextFrameForImageCapture()
-        guard let image = filterGroup?.imageFromCurrentFramebuffer() else { return }
-        let newImage = cropImage(image: image)
-        shotEffectView.alpha = 0.7
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.shotEffectView.alpha = 0
-        }
-        UIImageWriteToSavedPhotosAlbum(newImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        captureImage()
     }
     //카메라 앞뒤 전환 동장
     @IBAction private func convertCamera(_ sender: UIButton) {
@@ -88,6 +86,17 @@ extension CameraViewController {
 }
 
 extension CameraViewController {
+    func captureImage() {
+        filterGroup?.useNextFrameForImageCapture()
+        guard let image = filterGroup?.imageFromCurrentFramebuffer() else { return }
+        let newImage = cropImage(image: image)
+        shotEffectView.alpha = 0.7
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.shotEffectView.alpha = 0
+        }
+        UIImageWriteToSavedPhotosAlbum(newImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
     func cropImage(image: UIImage) -> UIImage {
         let maxValue = max(image.size.height, image.size.width)
         let imageScale = maxValue / view.frame.height
@@ -271,6 +280,27 @@ extension CameraViewController {
 
     @objc func handleDoubleTab(_ gestureRecognizer: UITapGestureRecognizer) {
         changeCamaraPosition()
+    }
+
+    // 볼륨키로 카메라 찍기
+    func listenVolumeButton() {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setActive(true, options: [])
+            audioSession.addObserver(self, forKeyPath: "outputVolume",
+                                     options: NSKeyValueObservingOptions.new, context: nil)
+        } catch {
+            print("Error at volume button shot")
+        }
+    }
+
+    func addVolumeButtonObserver() {
+        let volumeView = MPVolumeView(frame: .zero)
+        view.addSubview(volumeView)
+        let audioSession = AVAudioSession.sharedInstance()
+        obs = audioSession.observe( \.outputVolume ) {[weak self] _, _ in
+            self?.captureImage()
+        }
     }
 }
 
