@@ -222,6 +222,7 @@
                                             <outlet property="filterImageView" destination="zl5-hk-ewa" id="th9-f3-TG8"/>
                                             <outlet property="filterTitleView" destination="Hy3-nX-TUw" id="1x8-dH-SRy"/>
                                             <outlet property="uploadButton" destination="sIo-q2-4FS" id="Iam-fY-Yrm"/>
+                                            <segue destination="CKw-mv-w9C" kind="show" id="c9l-sw-VYW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -252,6 +253,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aE-97-XHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1098.5507246376812" y="66.964285714285708"/>
+        </scene>
+        <!--FilterSetting-->
+        <scene sceneID="vav-IX-Kpp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FilterSetting" id="CKw-mv-w9C" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaW-Od-Zbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="-143"/>
         </scene>
         <!--Feed-->
         <scene sceneID="y7g-gU-CFY">
