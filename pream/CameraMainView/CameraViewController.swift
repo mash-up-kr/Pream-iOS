@@ -96,11 +96,12 @@ extension CameraViewController {
 
 extension CameraViewController {
     func cropImage(image: UIImage) -> UIImage {
-        let imageScale = image.size.height / view.frame.height
+        let maxValue = max(image.size.height, image.size.width)
+        let imageScale = maxValue / view.frame.height
         let shotViewFrame = shotView.frame
         let imageWidth = shotViewFrame.width * imageScale
         let imageHeight = shotViewFrame.height * imageScale
-        let imageX = (image.size.width / 2) - (imageWidth / 2)
+        let imageX = shotView.center.x * imageScale - (imageWidth / 2)
         let imageY = shotView.center.y * imageScale - (imageHeight / 2)
         let imageCropFrame = CGRect(x: imageX, y: imageY, width: imageWidth, height: imageHeight)
         return image.crop(rect: imageCropFrame)
