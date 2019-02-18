@@ -104,18 +104,45 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                         </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picachu" translatesAutoresizingMaskIntoConstraints="NO" id="rlq-1R-tF8" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
+                                            <rect key="frame" x="285" y="52" width="34" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="0Y3-Io-eC7"/>
+                                                <constraint firstAttribute="width" constant="34" id="zi9-yF-6dM"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picachu" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-Bj-rpv" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
+                                            <rect key="frame" x="315" y="52" width="34" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="gqS-Rb-fhS"/>
+                                                <constraint firstAttribute="width" constant="34" id="jpT-17-NME"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picachu" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-bj-6v2" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
+                                            <rect key="frame" x="345" y="52" width="34" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="34" id="SOG-5A-Z12"/>
+                                                <constraint firstAttribute="height" constant="34" id="yXc-ZM-Vui"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="PKn-Hj-x0v" secondAttribute="trailing" constant="27" id="36p-qd-U6s"/>
+                                        <constraint firstItem="LZh-Bj-rpv" firstAttribute="leading" secondItem="rlq-1R-tF8" secondAttribute="trailing" constant="-4" id="Ah8-pO-Blz"/>
                                         <constraint firstItem="vWd-of-b2b" firstAttribute="leading" secondItem="JI0-9Y-qeo" secondAttribute="leading" constant="35" id="FIA-dj-8kR"/>
+                                        <constraint firstAttribute="trailing" secondItem="s9a-bj-6v2" secondAttribute="trailing" constant="35" id="M2J-uP-65s"/>
                                         <constraint firstAttribute="bottom" secondItem="PKn-Hj-x0v" secondAttribute="bottom" constant="20" id="O1p-5I-xHk"/>
+                                        <constraint firstItem="PKn-Hj-x0v" firstAttribute="top" secondItem="s9a-bj-6v2" secondAttribute="bottom" constant="8" id="RCh-PV-Hbt"/>
+                                        <constraint firstItem="s9a-bj-6v2" firstAttribute="leading" secondItem="LZh-Bj-rpv" secondAttribute="trailing" constant="-4" id="S8i-cZ-6BS"/>
+                                        <constraint firstItem="rlq-1R-tF8" firstAttribute="bottom" secondItem="s9a-bj-6v2" secondAttribute="bottom" id="WAl-MZ-MfV"/>
                                         <constraint firstItem="PKn-Hj-x0v" firstAttribute="leading" secondItem="JI0-9Y-qeo" secondAttribute="leading" constant="27" id="WtY-Si-RSO"/>
                                         <constraint firstItem="01o-AV-Hff" firstAttribute="top" secondItem="uFj-BM-6GX" secondAttribute="bottom" constant="3" id="dhw-C3-7ce"/>
                                         <constraint firstItem="uFj-BM-6GX" firstAttribute="top" secondItem="vWd-of-b2b" secondAttribute="bottom" constant="3" id="oP9-vk-45U"/>
                                         <constraint firstItem="01o-AV-Hff" firstAttribute="leading" secondItem="uFj-BM-6GX" secondAttribute="leading" id="pZn-9v-efO"/>
                                         <constraint firstItem="vWd-of-b2b" firstAttribute="top" secondItem="JI0-9Y-qeo" secondAttribute="top" constant="20" id="y3S-VJ-S7Z"/>
                                         <constraint firstItem="uFj-BM-6GX" firstAttribute="leading" secondItem="vWd-of-b2b" secondAttribute="leading" id="zIj-1I-a0z"/>
+                                        <constraint firstItem="LZh-Bj-rpv" firstAttribute="bottom" secondItem="s9a-bj-6v2" secondAttribute="bottom" id="zLg-Ni-QLX"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -237,6 +264,7 @@
         <image name="icPlus" width="40" height="40"/>
         <image name="icSetting" width="40" height="40"/>
         <image name="icUpload" width="40" height="40"/>
+        <image name="picachu" width="480" height="270"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

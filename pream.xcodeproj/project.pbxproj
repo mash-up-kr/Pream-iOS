@@ -23,6 +23,7 @@
 		B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECF45220B2A1D00B11954 /* FeedViewController.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
 		B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */; };
+		B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */; };
 		D1D41A82D695DE76E564E0B5 /* Pods_pream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EF6112755CBDA5CC865C20 /* Pods_pream.framework */; };
 		EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5A1C421E21E3400802F7E /* BlurView.swift */; };
 		EFB5A1C821E2212A00802F7E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB5A1C721E2212A00802F7E /* Login.storyboard */; };
@@ -66,6 +67,7 @@
 		B84ECF45220B2A1D00B11954 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B8DACC7921F875B7006B6AE2 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		EFB5A1C421E21E3400802F7E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		EFB5A1C721E2212A00802F7E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EFB5A1C921E2213700802F7E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				EFC8AC9B21FC741F004B940A /* PresentError.swift */,
 				03D28F2822082FBB007C8B15 /* DimmedView.swift */,
 				EFF00E34221457BD00865921 /* CameraRatio.swift */,
+				B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
 				B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */,
 				EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */,
+				B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */,
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
