@@ -10,10 +10,10 @@ import UIKit
 
 class FilterSettingViewController: UIViewController {
     @IBOutlet weak var previewImageView: UIImageView!
-    
+
     @IBAction func saveButtonAction(_ sender: Any) {
     }
-    
+
     @IBAction private func imageSelectButton(_ sender: Any) {
         let alert = UIAlertController(title: "Image Select", message: "Please Select an Image", preferredStyle: .actionSheet)
 

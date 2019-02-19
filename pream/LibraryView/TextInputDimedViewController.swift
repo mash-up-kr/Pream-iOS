@@ -11,7 +11,7 @@ import Foundation
 class TextInputDimedViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
+
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var inputTexteField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
