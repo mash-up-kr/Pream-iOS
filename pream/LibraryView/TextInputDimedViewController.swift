@@ -13,6 +13,8 @@ protocol TextInputDimedViewDelegate: class {
 }
 
 class TextInputDimedViewController: UIViewController {
+    var mainTitle: String?
+    var message: String?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var inputTexteField: UITextField!
@@ -28,6 +30,13 @@ class TextInputDimedViewController: UIViewController {
     }
 
     func setText(mainTitle: String, message: String) {
+        self.mainTitle = mainTitle
+        self.message = message
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
         titleLabel.text = mainTitle
         messageLabel.text = message
     }
