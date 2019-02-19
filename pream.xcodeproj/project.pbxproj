@@ -19,6 +19,7 @@
 		03896F1F221B0483003637C8 /* RegisterPasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F1E221B0483003637C8 /* RegisterPasswordCheckViewController.swift */; };
 		03896F21221B04AF003637C8 /* RegisterEmailCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F20221B04AF003637C8 /* RegisterEmailCheckViewController.swift */; };
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
+		4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */; };
 		4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */; };
@@ -70,6 +71,7 @@
 		03896F20221B04AF003637C8 /* RegisterEmailCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailCheckViewController.swift; sourceTree = "<group>"; };
 		03D28F2822082FBB007C8B15 /* DimmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
 		3CBFE07F816140D178519767 /* Pods-pream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.debug.xcconfig"; sourceTree = "<group>"; };
+		4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		63D6211621DFA88000EF4059 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				EF099752221B03BD00DD29D3 /* FilterSetting.storyboard */,
 				EF099754221B0CA900DD29D3 /* FilterSettingViewController.swift */,
+				4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */,
 			);
 			path = FilterSettingView;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */,
 				EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */,
 				B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */,
+				4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */,
 				EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */,
 				EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */,
 				EFF00E122208491500865921 /* GPUImageBeautifyFilter.m in Sources */,

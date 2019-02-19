@@ -36,6 +36,10 @@ class TextInputDimedViewController: UIViewController {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         titleLabel.text = mainTitle
         messageLabel.text = message
