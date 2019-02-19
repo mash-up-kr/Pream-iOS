@@ -11,7 +11,12 @@ import UIKit
 class FilterSettingViewController: UIViewController {
     @IBOutlet weak var previewImageView: UIImageView!
 
-    @IBAction func saveButtonAction(_ sender: Any) {
+    @IBAction private func saveButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Library", bundle: nil)
+        guard let textInputDimedViewController = storyboard.instantiateViewController(withIdentifier: "TextInputDimedViewController") as? TextInputDimedViewController else { return }
+        textInputDimedViewController.delegate = self
+        textInputDimedViewController.setText(mainTitle: "Share your filter", message: "Explain when it is best\nto use your filter")
+        present(textInputDimedViewController, animated: true, completion: nil)
     }
 
     @IBAction private func imageSelectButton(_ sender: Any) {
@@ -34,5 +39,11 @@ class FilterSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+
+extension FilterSettingViewController: TextInputDimedViewDelegate {
+    func doneButtonAction(textField: String?) {
+
     }
 }

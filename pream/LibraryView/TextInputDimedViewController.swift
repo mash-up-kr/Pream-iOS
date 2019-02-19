@@ -8,15 +8,27 @@
 
 import Foundation
 
+protocol TextInputDimedViewDelegate: class {
+    func doneButtonAction(textField: String?)
+}
+
 class TextInputDimedViewController: UIViewController {
-
     @IBOutlet weak var titleLabel: UILabel!
-
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var inputTexteField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
-    @IBAction func doneButtonAction(_ sender: Any) {
+    weak var delegate: TextInputDimedViewDelegate?
+
+    @IBAction private func doneButtonAction(_ sender: Any) {
+        delegate?.doneButtonAction(textField: inputTexteField.text)
     }
-    @IBAction func closeButtonAction(_ sender: Any) {
+
+    @IBAction private func closeButtonAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    func setText(mainTitle: String, message: String) {
+        titleLabel.text = mainTitle
+        messageLabel.text = message
     }
 }
