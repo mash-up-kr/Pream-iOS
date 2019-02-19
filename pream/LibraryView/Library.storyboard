@@ -117,7 +117,7 @@ to use your filter</string>
         <!--Library View Controller-->
         <scene sceneID="RoZ-qG-075">
             <objects>
-                <viewController id="WSD-5l-Giq" customClass="LibraryViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LibraryViewController" id="WSD-5l-Giq" customClass="LibraryViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WGO-Pu-P4p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

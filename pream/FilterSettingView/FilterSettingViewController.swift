@@ -11,6 +11,10 @@ import UIKit
 class FilterSettingViewController: UIViewController {
     @IBOutlet weak var previewImageView: UIImageView!
 
+    @IBAction private func dissmissAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+
     @IBAction private func saveButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Library", bundle: nil)
         guard let textInputDimedViewController = storyboard.instantiateViewController(withIdentifier: "TextInputDimedViewController") as? TextInputDimedViewController else { return }
@@ -22,10 +26,11 @@ class FilterSettingViewController: UIViewController {
     @IBAction private func imageSelectButton(_ sender: Any) {
         let alert = UIAlertController(title: "Image Select", message: "Please Select an Image", preferredStyle: .actionSheet)
 
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-        }))
-
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { [weak self] _ in
+            let storyboard = UIStoryboard(name: "Library", bundle: nil)
+            guard let libraryViewController = storyboard.instantiateViewController(withIdentifier: "LibraryViewController") as? LibraryViewController else { return }
+            libraryViewController.delegate = self
+            self?.present(libraryViewController, animated: true, completion: nil)
         }))
 
         alert.addAction(UIAlertAction(title: "Random", style: .default, handler: { _ in
@@ -39,6 +44,16 @@ class FilterSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+
+extension FilterSettingViewController: LibraryDelegate {
+    func selectImage(data: Data?) {
+        if let data = data {
+            let image = UIImage(data: data)
+            previewImageView.image = image
+        }
+        dismiss(animated: true, completion: nil)
     }
 }
 

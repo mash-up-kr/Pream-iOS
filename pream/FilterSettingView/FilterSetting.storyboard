@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Filter-->
+        <!--Filter Setting View Controller-->
         <scene sceneID="pSy-ld-D2B">
             <objects>
                 <viewController storyboardIdentifier="FilterSettingViewController" id="pXQ-m9-uwp" customClass="FilterSettingViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXf-wD-xJ2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="81" width="375" height="375"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U23-K8-rNu">
                                         <rect key="frame" x="118.5" y="125.5" width="138.5" height="124"/>
@@ -50,8 +50,8 @@ to apply your filter</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7yy-9c-LRB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xie-pG-OB7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xie-pG-OB7">
+                                        <rect key="frame" x="0.0" y="70" width="375" height="305"/>
                                         <connections>
                                             <action selector="imageSelectButton:" destination="pXQ-m9-uwp" eventType="touchUpInside" id="kg8-TU-gCs"/>
                                         </connections>
@@ -83,10 +83,10 @@ to apply your filter</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQf-he-Yf3">
-                                <rect key="frame" x="0.0" y="439" width="375" height="163"/>
+                                <rect key="frame" x="0.0" y="456" width="375" height="146"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="23A-Qv-TQI">
-                                        <rect key="frame" x="0.0" y="51" width="375" height="61"/>
+                                        <rect key="frame" x="0.0" y="42.5" width="375" height="61"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="61" id="30M-5H-kgS"/>
@@ -156,27 +156,67 @@ to apply your filter</string>
                                     <constraint firstAttribute="trailing" secondItem="23A-Qv-TQI" secondAttribute="trailing" id="cCK-ny-jzR"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ylg-M8-PHr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JX-Jf-LvQ">
+                                        <rect key="frame" x="146" y="20" width="83" height="21"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <color key="textColor" name="greyishBrownTwo"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2e-Jz-vIk">
+                                        <rect key="frame" x="325" y="11" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="n24-ri-uxE"/>
+                                            <constraint firstAttribute="width" constant="40" id="uZ1-tI-Llc"/>
+                                        </constraints>
+                                        <state key="normal" image="icPlus"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9x-yp-r1f">
+                                        <rect key="frame" x="5" y="11" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CGQ-w2-hkv"/>
+                                            <constraint firstAttribute="width" constant="40" id="Tqc-Tb-ZfH"/>
+                                        </constraints>
+                                        <state key="normal" image="icBack"/>
+                                        <connections>
+                                            <action selector="dissmissAction:" destination="pXQ-m9-uwp" eventType="touchUpInside" id="bhS-PN-hsP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="4ks-ak-W0B"/>
+                                    <constraint firstItem="3JX-Jf-LvQ" firstAttribute="centerX" secondItem="Ylg-M8-PHr" secondAttribute="centerX" id="E6z-pt-mVv"/>
+                                    <constraint firstAttribute="bottom" secondItem="3JX-Jf-LvQ" secondAttribute="bottom" constant="20" id="GPn-Ay-5Mn"/>
+                                    <constraint firstItem="3JX-Jf-LvQ" firstAttribute="top" secondItem="Ylg-M8-PHr" secondAttribute="top" constant="20" id="OxE-Qa-0Gj"/>
+                                    <constraint firstItem="G9x-yp-r1f" firstAttribute="leading" secondItem="Ylg-M8-PHr" secondAttribute="leading" constant="5" id="PL4-Ra-aNl"/>
+                                    <constraint firstItem="a2e-Jz-vIk" firstAttribute="top" secondItem="Ylg-M8-PHr" secondAttribute="top" constant="11" id="TQv-3i-otf"/>
+                                    <constraint firstAttribute="trailing" secondItem="a2e-Jz-vIk" secondAttribute="trailing" constant="10" id="l1J-zJ-d8x"/>
+                                    <constraint firstItem="G9x-yp-r1f" firstAttribute="top" secondItem="Ylg-M8-PHr" secondAttribute="top" constant="11" id="mzo-Ax-ugG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LXf-wD-xJ2" firstAttribute="top" secondItem="Ylg-M8-PHr" secondAttribute="bottom" id="12H-sd-sLZ"/>
+                            <constraint firstItem="Ylg-M8-PHr" firstAttribute="top" secondItem="2Jo-tp-ULQ" secondAttribute="top" id="44I-rC-CTH"/>
                             <constraint firstItem="6ic-aw-AhE" firstAttribute="leading" secondItem="2Jo-tp-ULQ" secondAttribute="leading" constant="20" id="9Jb-ba-ooh"/>
-                            <constraint firstItem="LXf-wD-xJ2" firstAttribute="top" secondItem="2Jo-tp-ULQ" secondAttribute="top" id="E76-gH-dnK"/>
                             <constraint firstItem="sQf-he-Yf3" firstAttribute="leading" secondItem="2Jo-tp-ULQ" secondAttribute="leading" id="ItB-Eh-rpj"/>
                             <constraint firstItem="2Jo-tp-ULQ" firstAttribute="trailing" secondItem="LXf-wD-xJ2" secondAttribute="trailing" id="TVK-ww-8hi"/>
+                            <constraint firstItem="Ylg-M8-PHr" firstAttribute="leading" secondItem="lcY-6Z-jyl" secondAttribute="leading" id="WGG-gz-ZMI"/>
                             <constraint firstItem="2Jo-tp-ULQ" firstAttribute="trailing" secondItem="6ic-aw-AhE" secondAttribute="trailing" constant="20" id="cGr-eh-8fk"/>
                             <constraint firstItem="LXf-wD-xJ2" firstAttribute="leading" secondItem="2Jo-tp-ULQ" secondAttribute="leading" id="gln-Cu-Xhb"/>
                             <constraint firstItem="sQf-he-Yf3" firstAttribute="top" secondItem="LXf-wD-xJ2" secondAttribute="bottom" id="lsw-Dx-tSp"/>
                             <constraint firstItem="2Jo-tp-ULQ" firstAttribute="trailing" secondItem="sQf-he-Yf3" secondAttribute="trailing" id="mdV-Jh-340"/>
                             <constraint firstItem="6ic-aw-AhE" firstAttribute="top" secondItem="sQf-he-Yf3" secondAttribute="bottom" id="ojX-52-rui"/>
                             <constraint firstItem="2Jo-tp-ULQ" firstAttribute="bottom" secondItem="6ic-aw-AhE" secondAttribute="bottom" constant="20" id="ts5-q1-4hy"/>
+                            <constraint firstAttribute="trailing" secondItem="Ylg-M8-PHr" secondAttribute="trailing" id="xlh-xM-KK3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Jo-tp-ULQ"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="New Filter" id="vaj-k8-XZ2">
-                        <barButtonItem key="rightBarButtonItem" title="정보!" id="BYn-nE-aFx"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="previewImageView" destination="7yy-9c-LRB" id="tYj-08-cmB"/>
                     </connections>
@@ -188,6 +228,8 @@ to apply your filter</string>
     </scenes>
     <resources>
         <image name="addphoto" width="80" height="62"/>
+        <image name="icBack" width="40" height="40"/>
+        <image name="icPlus" width="40" height="40"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

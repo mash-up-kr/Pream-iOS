@@ -9,6 +9,10 @@
 import UIKit
 import Photos
 
+protocol LibraryDelegate: class {
+    func selectImage(data: Data?)
+}
+
 class LibraryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -18,6 +22,7 @@ class LibraryViewController: UIViewController {
     var fetchResult: PHFetchResult<PHAsset>?
     var imageManager = PHCachingImageManager()
     var targetSize = CGSize.zero
+    weak var delegate: LibraryDelegate?
 
     @IBAction private func closeButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -74,5 +79,15 @@ extension LibraryViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return fetchResult?.count ?? 0
+    }
+}
+
+extension LibraryViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let fetchResult = fetchResult else { return }
+        let photoAsset = fetchResult.object(at: indexPath.item)
+        imageManager.requestImageData(for: photoAsset, options: nil) { [weak self] data, _, _, _ in
+            self?.delegate?.selectImage(data: data)
+        }
     }
 }

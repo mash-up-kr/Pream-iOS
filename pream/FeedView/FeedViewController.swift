@@ -21,7 +21,7 @@ class FeedViewController: UIViewController {
     }
 
     @IBAction func backButtonAction(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }
 
