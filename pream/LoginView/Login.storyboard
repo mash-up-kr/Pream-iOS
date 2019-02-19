@@ -32,6 +32,9 @@ would you like to take today?</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-va-982">
                                 <rect key="frame" x="37" y="525" width="301" height="40"/>
                                 <state key="normal" image="LoginGradationButton"/>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="vvq-P0-DvV" eventType="touchUpInside" id="16b-Q8-Mps"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taF-Fc-Xvi">
                                 <rect key="frame" x="37" y="600" width="174" height="27"/>
@@ -103,6 +106,11 @@ would you like to take today?</string>
                         <viewLayoutGuide key="safeArea" id="NUS-dJ-1d2"/>
                     </view>
                     <navigationItem key="navigationItem" id="Dj7-QW-gJU"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="mWr-qT-UYr" id="FOy-eU-QRF"/>
+                        <outlet property="loginButton" destination="C2q-va-982" id="JU2-Md-PrQ"/>
+                        <outlet property="passwordTextField" destination="AmX-tb-CkT" id="NSz-Wj-nSI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5D-kN-0C0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -55,6 +55,8 @@
 		EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9E221E2160C00B7CCA8 /* Log.swift */; };
 		EFF00E122208491500865921 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF00E112208491500865921 /* GPUImageBeautifyFilter.m */; };
 		EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF00E34221457BD00865921 /* CameraRatio.swift */; };
+		EFFDBE1C221C2E5000AB8BB2 /* PreamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */; };
+		EFFDBE1E221C315700AB8BB2 /* PreamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +114,8 @@
 		EFF00E112208491500865921 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		EFF00E132208495000865921 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
 		EFF00E34221457BD00865921 /* CameraRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRatio.swift; sourceTree = "<group>"; };
+		EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreamService.swift; sourceTree = "<group>"; };
+		EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreamProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,7 @@
 		EFEAE9C621DE3CAA00B7CCA8 /* pream */ = {
 			isa = PBXGroup;
 			children = (
+				EFFDBE1A221C2DF600AB8BB2 /* Network */,
 				EF099751221B039C00DD29D3 /* FilterSettingView */,
 				B84ECF42220B29C500B11954 /* FeedView */,
 				EFF00E0F220848FB00865921 /* Filters */,
@@ -304,6 +309,15 @@
 				EFF00E102208491400865921 /* pream-Bridging-Header.h */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		EFFDBE1A221C2DF600AB8BB2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */,
+				EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,6 +513,7 @@
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
 				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
 				B8365F202219D39500BA255C /* FilterListViewController.swift in Sources */,
+				EFFDBE1E221C315700AB8BB2 /* PreamProvider.swift in Sources */,
 				03896F1F221B0483003637C8 /* RegisterPasswordCheckViewController.swift in Sources */,
 				EF099757221B126D00DD29D3 /* UIView+Extension.swift in Sources */,
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
@@ -512,6 +527,7 @@
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
 				EF099759221B140500DD29D3 /* TextInputDimedViewController.swift in Sources */,
+				EFFDBE1C221C2E5000AB8BB2 /* PreamService.swift in Sources */,
 				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
 				03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */,
 				03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */,
