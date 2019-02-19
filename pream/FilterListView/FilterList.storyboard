@@ -34,7 +34,7 @@
                                             <constraint firstAttribute="width" constant="40" id="gmD-ic-XqB"/>
                                             <constraint firstAttribute="height" constant="40" id="k8J-Pf-ly3"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icPlus"/>
+                                        <state key="normal" image="icPlus"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXL-gk-SwC">
                                         <rect key="frame" x="324" y="11" width="40" height="40"/>
@@ -273,7 +273,7 @@
         <!--Navigation Controller-->
         <scene sceneID="FoJ-TX-ClM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pa2-ie-aKs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FilterListMainNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pa2-ie-aKs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N60-H4-lcX">
                         <autoresizingMask key="autoresizingMask"/>

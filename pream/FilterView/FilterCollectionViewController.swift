@@ -41,6 +41,13 @@ class FilterCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let storyboard = UIStoryboard(name: "FilterList", bundle: nil)
+        let feedMainNavigationController = storyboard.instantiateViewController(withIdentifier: "FilterListMainNavigationController")
+        present(feedMainNavigationController, animated: true, completion: nil)
+    }
+
     // MARK: UICollectionViewDelegate
 
     /*
