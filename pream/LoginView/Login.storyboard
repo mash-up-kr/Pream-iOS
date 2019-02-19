@@ -751,14 +751,6 @@ would you like to take today?</string>
             </objects>
             <point key="canvasLocation" x="4428" y="-235"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="hA3-yV-EVH">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="7i1-fv-nqp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5ZK-Cb-Zsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5912" y="-236"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="6yW-qa-5Mp">
             <objects>
@@ -804,21 +796,11 @@ would you like to take today?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-yH-Qsp">
-                                <rect key="frame" x="37.5" y="501" width="300" height="45"/>
+                                <rect key="frame" x="37.5" y="535" width="300" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5pO-4l-7OZ"/>
                                 </constraints>
                                 <state key="normal" image="finalactivebutton"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2N-4x-yBI">
-                                <rect key="frame" x="37.5" y="562" width="300" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="2Nm-d3-8yB"/>
-                                </constraints>
-                                <state key="normal" image="defaultbutton"/>
-                                <connections>
-                                    <segue destination="7i1-fv-nqp" kind="show" id="Eto-iW-zV2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -826,13 +808,10 @@ would you like to take today?</string>
                             <constraint firstItem="6dS-bI-at6" firstAttribute="top" secondItem="fHg-y4-IoU" secondAttribute="bottom" id="6Kf-ca-8RN"/>
                             <constraint firstItem="vte-Wi-ngc" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="8fy-0v-1NR"/>
                             <constraint firstItem="fHg-y4-IoU" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="BcU-hL-uMf"/>
-                            <constraint firstItem="G2N-4x-yBI" firstAttribute="top" secondItem="VNN-yH-Qsp" secondAttribute="bottom" constant="16" id="Flh-wd-dS4"/>
                             <constraint firstItem="6dS-bI-at6" firstAttribute="leading" secondItem="fHg-y4-IoU" secondAttribute="leading" id="Y3b-KU-zB6"/>
                             <constraint firstItem="vrJ-fL-Wey" firstAttribute="top" secondItem="vte-Wi-ngc" secondAttribute="bottom" id="bc1-Xf-osW"/>
                             <constraint firstItem="fHg-y4-IoU" firstAttribute="top" secondItem="6C0-Ew-CuX" secondAttribute="top" priority="250" constant="226" id="c0S-sQ-lH6"/>
-                            <constraint firstItem="G2N-4x-yBI" firstAttribute="centerX" secondItem="4ee-Xc-V8w" secondAttribute="centerX" id="f46-Tj-t7L"/>
-                            <constraint firstItem="VNN-yH-Qsp" firstAttribute="top" secondItem="vrJ-fL-Wey" secondAttribute="bottom" constant="95" id="fGy-No-N3H"/>
-                            <constraint firstItem="6C0-Ew-CuX" firstAttribute="bottom" secondItem="G2N-4x-yBI" secondAttribute="bottom" constant="60" id="hI1-Rw-Zjr"/>
+                            <constraint firstItem="VNN-yH-Qsp" firstAttribute="top" secondItem="vrJ-fL-Wey" secondAttribute="bottom" constant="129" id="fGy-No-N3H"/>
                             <constraint firstItem="VNN-yH-Qsp" firstAttribute="centerX" secondItem="4ee-Xc-V8w" secondAttribute="centerX" id="j47-6A-5P8"/>
                             <constraint firstItem="vrJ-fL-Wey" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="qJc-88-bEL"/>
                             <constraint firstItem="vte-Wi-ngc" firstAttribute="top" secondItem="6dS-bI-at6" secondAttribute="bottom" constant="32" id="xtE-cB-vdt"/>
@@ -992,7 +971,6 @@ would you like to take today?</string>
         <image name="LoginGradationButton" width="301" height="40"/>
         <image name="NextGradationButton" width="300" height="40"/>
         <image name="closeBtn" width="40" height="40"/>
-        <image name="defaultbutton" width="300" height="45"/>
         <image name="finalactivebutton" width="300" height="45"/>
         <image name="next" width="46" height="46"/>
         <image name="previous" width="36" height="36"/>
