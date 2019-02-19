@@ -21,11 +21,13 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var libraryButton: UIButton!
     @IBOutlet weak var convertCameraButton: UIButton!
     @IBOutlet weak var changeRatioButton: UIButton!
+    @IBOutlet weak var setTimerButton: UIButton!
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var topBlurView: BlurView!
     @IBOutlet weak var bottomBlurView: BlurView!
     @IBOutlet weak var bottomBlurViewHeight: NSLayoutConstraint!
     @IBOutlet weak var topBlurViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var timerCount: UILabel!
 
     var isLogin: Bool = true
     var videoCamera: GPUImageVideoCamera?
@@ -33,12 +35,15 @@ class CameraViewController: UIViewController {
     var isDuringbuttonColorAnimation = false
     var cameraPosition: AVCaptureDevice.Position = .front
     var currentRatio: CameraRatio = .fourthree
+    var seconds: Int = Int()
+    var timer: Timer = Timer()
 
     var obs: NSKeyValueObservation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        timerCount.isHidden = true
         startCameraSession()
         addBlur()
         registerDoubleTapShotView()
@@ -82,6 +87,11 @@ extension CameraViewController {
     @IBAction private func changeRatio(_ sender: UIButton) {
         currentRatio.next()
         setRatio()
+    }
+    // 타이머
+    @IBAction private func didTabOnTimerButton(_ sender: UIButton) {
+        initTimer()
+        runTimer()
     }
 }
 
@@ -300,6 +310,43 @@ extension CameraViewController {
         let audioSession = AVAudioSession.sharedInstance()
         obs = audioSession.observe( \.outputVolume ) {[weak self] _, _ in
             self?.captureImage()
+        }
+    }
+
+    // 타이머 선택시 사진 찍기
+    func initTimer() {
+        // get seconds from timer
+        seconds = 4
+        // visible timer count label
+        timerCount.isHidden = false
+    }
+
+    func deinitTimer() {
+        timer.invalidate()
+        timerCount.isHidden = true
+        seconds = Int()
+    }
+
+    func runTimer() {
+        // timer init run
+        updateTimerLabel()
+
+        // run timer
+        timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(CameraViewController.updateTimerLabel),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+
+    @objc func updateTimerLabel() {
+        seconds -= 1
+
+        if seconds > 0 {
+            timerCount.text = String(seconds)
+        } else {
+            deinitTimer()
+            captureImage()
         }
     }
 }

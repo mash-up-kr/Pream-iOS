@@ -94,14 +94,17 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dk3-PT-42r">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                <state key="normal" image="menu"/>
+                                                <state key="normal" image="icMenu"/>
                                                 <connections>
                                                     <segue destination="Uvf-xZ-j9D" kind="show" id="KFO-lE-qyl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSE-o5-6MN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSE-o5-6MN" userLabel="Timer">
                                                 <rect key="frame" x="104.33333333333333" y="0.0" width="39.999999999999986" height="40"/>
-                                                <state key="normal" image="oval4"/>
+                                                <state key="normal" image="icTimer"/>
+                                                <connections>
+                                                    <action selector="didTabOnTimerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35y-Ml-tnT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTV-9d-nrG">
                                                 <rect key="frame" x="208.66666666666666" y="0.0" width="40" height="40"/>
@@ -109,7 +112,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="hYG-mj-qyb"/>
                                                     <constraint firstAttribute="height" constant="40" id="jgk-qF-QQR"/>
                                                 </constraints>
-                                                <state key="normal" image="rectangle4Copy"/>
+                                                <state key="normal" image="icRatio43"/>
                                                 <connections>
                                                     <action selector="changeRatio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rOR-mE-tce"/>
                                                 </connections>
@@ -120,7 +123,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="9LV-jP-c7G"/>
                                                     <constraint firstAttribute="height" constant="40" id="xZa-ib-PS0"/>
                                                 </constraints>
-                                                <state key="normal" image="group9"/>
+                                                <state key="normal" image="icChange"/>
                                                 <connections>
                                                     <action selector="convertCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uiN-16-5RY"/>
                                                 </connections>
@@ -229,6 +232,12 @@
                                     <segue destination="Yh2-PV-88P" kind="embed" id="3Z3-I6-enj"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izc-KY-1Ez">
+                                <rect key="frame" x="187.66666666666666" y="411" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -241,6 +250,7 @@
                             <constraint firstItem="1av-25-bPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ER5-b0-MGj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1av-25-bPo" secondAttribute="trailing" id="Ei9-e7-c7J"/>
                             <constraint firstItem="Q2H-nO-yAM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IKZ-3Y-ZFp"/>
+                            <constraint firstItem="izc-KY-1Ez" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="J0z-WM-Qxe"/>
                             <constraint firstItem="Xr0-Oz-7Yd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JD9-I8-XdS"/>
                             <constraint firstAttribute="bottom" secondItem="7DG-UB-7q2" secondAttribute="bottom" id="K0V-k4-HSj"/>
                             <constraint firstItem="OwD-Zi-m1h" firstAttribute="bottom" secondItem="VEd-gE-dL9" secondAttribute="top" id="KL9-6a-CF8"/>
@@ -253,6 +263,7 @@
                             <constraint firstItem="mVf-gm-oAc" firstAttribute="bottom" secondItem="1av-25-bPo" secondAttribute="bottom" id="e22-hu-7I9"/>
                             <constraint firstItem="UrY-P1-C8A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eDk-7A-u7e"/>
                             <constraint firstItem="UrY-P1-C8A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eSn-8T-sFJ"/>
+                            <constraint firstItem="izc-KY-1Ez" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gPa-gN-10I"/>
                             <constraint firstItem="VEd-gE-dL9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hWi-SM-ooG"/>
                             <constraint firstItem="mVf-gm-oAc" firstAttribute="top" secondItem="1av-25-bPo" secondAttribute="top" id="lMP-lE-Eey"/>
                             <constraint firstItem="VEd-gE-dL9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mDV-zF-mno"/>
@@ -271,8 +282,10 @@
                         <outlet property="filterView" destination="OwD-Zi-m1h" id="m5f-Ys-eFQ"/>
                         <outlet property="gpuImageView" destination="Q2H-nO-yAM" id="AnY-7U-ZLV"/>
                         <outlet property="libraryButton" destination="Avu-oK-WfQ" id="qPl-cZ-Fsq"/>
+                        <outlet property="setTimerButton" destination="OSE-o5-6MN" id="qB5-td-lmW"/>
                         <outlet property="shotEffectView" destination="mVf-gm-oAc" id="Xwd-6d-zcP"/>
                         <outlet property="shotView" destination="1av-25-bPo" id="69h-oQ-4Er"/>
+                        <outlet property="timerCount" destination="izc-KY-1Ez" id="gcf-Jx-6Lv"/>
                         <outlet property="topBlurView" destination="UrY-P1-C8A" id="cxD-lV-96u"/>
                         <outlet property="topBlurViewHeight" destination="LZT-xA-7L9" id="x7x-YE-cJT"/>
                     </connections>
@@ -326,10 +339,10 @@
     </scenes>
     <resources>
         <image name="group4" width="33" height="33"/>
-        <image name="group9" width="40" height="40"/>
+        <image name="icChange" width="41" height="40"/>
+        <image name="icMenu" width="40" height="40"/>
+        <image name="icRatio43" width="40" height="40"/>
+        <image name="icTimer" width="40" height="40"/>
         <image name="library" width="40" height="40"/>
-        <image name="menu" width="40" height="40"/>
-        <image name="oval4" width="40" height="40"/>
-        <image name="rectangle4Copy" width="40" height="40"/>
     </resources>
 </document>
