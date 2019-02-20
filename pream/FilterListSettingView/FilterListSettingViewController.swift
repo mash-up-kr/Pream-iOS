@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct Picachu {
+    let title: String
+    let image: UIImage
+}
+
 class FilterListSettingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var trashButton: UIButton!
@@ -15,10 +20,13 @@ class FilterListSettingViewController: UIViewController {
 
     private let cellIdentifier = "filterListSetting"
     private var settingMode: SettingMode = .edit
+    private let picachu = Picachu(title: "Picachu", image: #imageLiteral(resourceName: "picachu"))
+    private var picachuDummies: [Picachu] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.allowsMultipleSelection = true
+        picachuDummies = [Picachu](repeatElement(picachu, count: 20))
     }
 
     @IBAction func backButtonAction() {
@@ -46,12 +54,13 @@ private extension FilterListSettingViewController {
 
 extension FilterListSettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return picachuDummies.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FilterListSettingTableViewCell else { return UITableViewCell() }
-        cell.configure(settingMode: settingMode, title: "Picachu", image: #imageLiteral(resourceName: "picachu"))
+        let item = picachuDummies[indexPath.row]
+        cell.configure(settingMode: settingMode, title: item.title, image: item.image)
         cell.filterTitleTextField.delegate = self
         return cell
     }
