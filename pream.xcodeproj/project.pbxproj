@@ -13,11 +13,13 @@
 		034230642209F7F6003CC91C /* MyFilterCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034230632209F7F6003CC91C /* MyFilterCategory.storyboard */; };
 		03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03423065220A0482003CC91C /* MyFilterCategoryViewController.swift */; };
 		03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */; };
+		037A7F17221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F16221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift */; };
 		03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F16221B0097003637C8 /* RegisterEmailViewController.swift */; };
 		03896F19221B03D4003637C8 /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F18221B03D4003637C8 /* RegisterPasswordViewController.swift */; };
 		03896F1D221B0419003637C8 /* RegisterNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F1C221B0419003637C8 /* RegisterNicknameViewController.swift */; };
 		03896F1F221B0483003637C8 /* RegisterPasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F1E221B0483003637C8 /* RegisterPasswordCheckViewController.swift */; };
 		03896F21221B04AF003637C8 /* RegisterEmailCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F20221B04AF003637C8 /* RegisterEmailCheckViewController.swift */; };
+		03CA5A32221C22FB00C85AFC /* DefaultFilterRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CA5A31221C22FB00C85AFC /* DefaultFilterRegister.storyboard */; };
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */; };
 		4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */; };
@@ -64,11 +66,13 @@
 		034230632209F7F6003CC91C /* MyFilterCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFilterCategory.storyboard; sourceTree = "<group>"; };
 		03423065220A0482003CC91C /* MyFilterCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilterCategoryViewController.swift; sourceTree = "<group>"; };
 		03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilterCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		037A7F16221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFilterRegisterViewController.swift; sourceTree = "<group>"; };
 		03896F16221B0097003637C8 /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
 		03896F18221B03D4003637C8 /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
 		03896F1C221B0419003637C8 /* RegisterNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNicknameViewController.swift; sourceTree = "<group>"; };
 		03896F1E221B0483003637C8 /* RegisterPasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordCheckViewController.swift; sourceTree = "<group>"; };
 		03896F20221B04AF003637C8 /* RegisterEmailCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailCheckViewController.swift; sourceTree = "<group>"; };
+		03CA5A31221C22FB00C85AFC /* DefaultFilterRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefaultFilterRegister.storyboard; sourceTree = "<group>"; };
 		03D28F2822082FBB007C8B15 /* DimmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
 		3CBFE07F816140D178519767 /* Pods-pream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.debug.xcconfig"; sourceTree = "<group>"; };
 		4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -147,6 +151,15 @@
 				B8365F212219DF4000BA255C /* FilterTableViewCell.swift */,
 			);
 			path = FilterListView;
+			sourceTree = "<group>";
+		};
+		03CA5A30221C223600C85AFC /* DefaultFilterRegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				03CA5A31221C22FB00C85AFC /* DefaultFilterRegister.storyboard */,
+				037A7F16221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift */,
+			);
+			path = DefaultFilterRegisterView;
 			sourceTree = "<group>";
 		};
 		2801250D0943AF45842BC22E /* Frameworks */ = {
@@ -243,6 +256,7 @@
 		EFEAE9C621DE3CAA00B7CCA8 /* pream */ = {
 			isa = PBXGroup;
 			children = (
+				03CA5A30221C223600C85AFC /* DefaultFilterRegisterView */,
 				EF099751221B039C00DD29D3 /* FilterSettingView */,
 				B84ECF42220B29C500B11954 /* FeedView */,
 				EFF00E0F220848FB00865921 /* Filters */,
@@ -375,6 +389,7 @@
 				EF099753221B03BD00DD29D3 /* FilterSetting.storyboard in Resources */,
 				EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */,
 				030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */,
+				03CA5A32221C22FB00C85AFC /* DefaultFilterRegister.storyboard in Resources */,
 				034230642209F7F6003CC91C /* MyFilterCategory.storyboard in Resources */,
 				B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
@@ -489,6 +504,7 @@
 				EFDEA173221466FB00B683B9 /* UIImage+Crop.swift in Sources */,
 				B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */,
 				4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */,
+				037A7F17221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift in Sources */,
 				EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */,
 				B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */,
 				4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */,

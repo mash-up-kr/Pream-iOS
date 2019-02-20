@@ -196,13 +196,14 @@ would you like to take today?</string>
                                     <action selector="previousButtonAction:" destination="M3S-0a-fBc" eventType="touchUpInside" id="wgs-WT-tNU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95K-xn-ehQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95K-xn-ehQ">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Vw1-Ej-PAR"/>
                                     <constraint firstAttribute="width" constant="46" id="neP-Mz-7JK"/>
                                 </constraints>
-                                <state key="normal" image="inactivenextbutton"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="NzH-NJ-GRi" kind="show" id="3sO-X0-PKw"/>
                                 </connections>
@@ -349,13 +350,14 @@ would you like to take today?</string>
                                     <action selector="previousButtonAction:" destination="Ljy-cc-q0i" eventType="touchUpInside" id="JIY-Cc-nDM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-Cj-Mcp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-Cj-Mcp">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="HcI-6U-qUH"/>
                                     <constraint firstAttribute="height" constant="46" id="wH5-4d-Taj"/>
                                 </constraints>
-                                <state key="normal" image="inactivenextbutton"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="j9J-wc-Nck" kind="show" id="Uda-0A-JEl"/>
                                 </connections>
@@ -483,13 +485,14 @@ would you like to take today?</string>
                                     <action selector="previousButtonAction:" destination="j9J-wc-Nck" eventType="touchUpInside" id="J2Q-RX-TDF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hv-nd-Jzb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hv-nd-Jzb">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="JAw-pB-zTb"/>
                                     <constraint firstAttribute="width" constant="46" id="Z3S-83-Eg7"/>
                                 </constraints>
-                                <state key="normal" image="inactivenextbutton"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="YEA-Oy-5xj" kind="show" id="xqB-6N-zwO"/>
                                 </connections>
@@ -617,13 +620,14 @@ would you like to take today?</string>
                                     <action selector="previousButtonAction:" destination="YEA-Oy-5xj" eventType="touchUpInside" id="Rds-k5-34p"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnB-QD-Ezw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnB-QD-Ezw">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="LQf-8i-RJj"/>
                                     <constraint firstAttribute="width" constant="46" id="grS-NX-M4F"/>
                                 </constraints>
-                                <state key="normal" image="inactivenextbutton"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="oxh-1q-PbL" kind="show" id="trK-Sv-Ga4"/>
                                 </connections>
@@ -680,8 +684,8 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have successfuly signed up." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-bI-at6">
-                                <rect key="frame" x="40" y="329" width="225" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have successfully signed up." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-bI-at6">
+                                <rect key="frame" x="40" y="329" width="228.5" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="01A-hL-163"/>
                                 </constraints>
@@ -698,7 +702,7 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-yH-Qsp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-yH-Qsp">
                                 <rect key="frame" x="37.5" y="535" width="300" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5pO-4l-7OZ"/>
@@ -711,6 +715,7 @@ would you like to take today?</string>
                             <constraint firstItem="6dS-bI-at6" firstAttribute="top" secondItem="fHg-y4-IoU" secondAttribute="bottom" id="6Kf-ca-8RN"/>
                             <constraint firstItem="vte-Wi-ngc" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="8fy-0v-1NR"/>
                             <constraint firstItem="fHg-y4-IoU" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="BcU-hL-uMf"/>
+                            <constraint firstItem="6C0-Ew-CuX" firstAttribute="bottom" secondItem="VNN-yH-Qsp" secondAttribute="bottom" constant="87" id="DAr-OG-sUm"/>
                             <constraint firstItem="6dS-bI-at6" firstAttribute="leading" secondItem="fHg-y4-IoU" secondAttribute="leading" id="Y3b-KU-zB6"/>
                             <constraint firstItem="fHg-y4-IoU" firstAttribute="top" secondItem="6C0-Ew-CuX" secondAttribute="top" priority="250" constant="277" id="c0S-sQ-lH6"/>
                             <constraint firstItem="VNN-yH-Qsp" firstAttribute="centerX" secondItem="4ee-Xc-V8w" secondAttribute="centerX" id="j47-6A-5P8"/>
@@ -802,13 +807,14 @@ would you like to take today?</string>
                                     <action selector="previousButtonAction:" destination="NzH-NJ-GRi" eventType="touchUpInside" id="QDe-Sw-qzG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s08-Ph-2tg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s08-Ph-2tg">
                                 <rect key="frame" x="309" y="343" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="LIu-ZC-try"/>
                                     <constraint firstAttribute="height" constant="46" id="VEB-3m-NsQ"/>
                                 </constraints>
-                                <state key="normal" image="inactivenextbutton"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="Ljy-cc-q0i" kind="show" id="dzI-xb-PJ0"/>
                                 </connections>
@@ -869,6 +875,7 @@ would you like to take today?</string>
     </scenes>
     <resources>
         <image name="LoginGradationButton" width="301" height="40"/>
+        <image name="activeNextButton" width="46" height="46"/>
         <image name="closeBtn" width="40" height="40"/>
         <image name="finalactivebutton" width="300" height="45"/>
         <image name="inactivenextbutton" width="46" height="46"/>
