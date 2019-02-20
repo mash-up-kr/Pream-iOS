@@ -50,14 +50,27 @@
                                             <action selector="backButtonAction" destination="jZz-2Y-dLN" eventType="touchUpInside" id="wgB-Sg-7iJ"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohH-rV-2KW">
+                                        <rect key="frame" x="325" y="19" width="30" height="23"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="19"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" name="greyishBrownTwo"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="okButtonAction" destination="jZz-2Y-dLN" eventType="touchUpInside" id="H2j-HM-F0B"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ohH-rV-2KW" secondAttribute="bottom" constant="19" id="Al5-Yp-R5I"/>
                                     <constraint firstAttribute="bottom" secondItem="FGr-km-yRy" secondAttribute="bottom" constant="20" id="Dri-au-guf"/>
                                     <constraint firstItem="Tq8-wT-oKI" firstAttribute="leading" secondItem="pWU-Rh-tfk" secondAttribute="leading" constant="5" id="Euk-FT-Bgv"/>
                                     <constraint firstItem="FGr-km-yRy" firstAttribute="centerX" secondItem="pWU-Rh-tfk" secondAttribute="centerX" id="HYW-EV-o5c"/>
                                     <constraint firstItem="Tq8-wT-oKI" firstAttribute="top" secondItem="pWU-Rh-tfk" secondAttribute="top" constant="11" id="Uef-dI-PCV"/>
                                     <constraint firstAttribute="trailing" secondItem="y0W-uW-V8H" secondAttribute="trailing" constant="10" id="Vc3-s2-He6"/>
+                                    <constraint firstItem="ohH-rV-2KW" firstAttribute="top" secondItem="pWU-Rh-tfk" secondAttribute="top" constant="19" id="Ve3-He-CIG"/>
+                                    <constraint firstAttribute="trailing" secondItem="ohH-rV-2KW" secondAttribute="trailing" constant="20" id="cjv-z5-lCO"/>
                                     <constraint firstItem="y0W-uW-V8H" firstAttribute="top" secondItem="pWU-Rh-tfk" secondAttribute="top" constant="11" id="ffj-ui-1Z6"/>
                                     <constraint firstAttribute="height" constant="61" id="iaV-Of-YC8"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="jio-TK-xY4"/>
@@ -166,6 +179,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uwd-vH-GaY"/>
                     </view>
+                    <connections>
+                        <outlet property="okButton" destination="ohH-rV-2KW" id="Oug-V7-59W"/>
+                        <outlet property="tableView" destination="MEr-J1-Rzm" id="Ez2-hv-Kb3"/>
+                        <outlet property="trashButton" destination="y0W-uW-V8H" id="YC4-CE-17l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdb-Hu-0or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

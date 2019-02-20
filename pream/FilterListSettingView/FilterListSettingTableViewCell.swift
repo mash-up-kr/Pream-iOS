@@ -45,8 +45,10 @@ extension FilterListSettingTableViewCell {
         }
         lineView.isHidden = isHidden
         filterTitleTextField.isHidden = isHidden
+        filterTitleLabel.isHidden = !isHidden
 
         filterTitleLabel.text = title
+        filterTitleTextField.text = title
         filterImageView.image = image
     }
 }
