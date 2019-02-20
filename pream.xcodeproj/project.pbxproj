@@ -21,6 +21,7 @@
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */; };
 		4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */; };
+		634E9B2A221CEEE2002ADE31 /* ShotTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634E9B29221CEEE2002ADE31 /* ShotTimer.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */; };
 		B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8365F1D2219D36C00BA255C /* FilterList.storyboard */; };
@@ -58,6 +59,8 @@
 		EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9E221E2160C00B7CCA8 /* Log.swift */; };
 		EFF00E122208491500865921 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF00E112208491500865921 /* GPUImageBeautifyFilter.m */; };
 		EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF00E34221457BD00865921 /* CameraRatio.swift */; };
+		EFFDBE1C221C2E5000AB8BB2 /* PreamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */; };
+		EFFDBE1E221C315700AB8BB2 /* PreamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,7 @@
 		3CBFE07F816140D178519767 /* Pods-pream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.debug.xcconfig"; sourceTree = "<group>"; };
 		4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		634E9B29221CEEE2002ADE31 /* ShotTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotTimer.swift; sourceTree = "<group>"; };
 		63D6211621DFA88000EF4059 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
 		68EF6112755CBDA5CC865C20 /* Pods_pream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,8 @@
 		EFF00E112208491500865921 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		EFF00E132208495000865921 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
 		EFF00E34221457BD00865921 /* CameraRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRatio.swift; sourceTree = "<group>"; };
+		EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreamService.swift; sourceTree = "<group>"; };
+		EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreamProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				B872811C221C061400D1AF96 /* FilterListSettingView */,
+				EFFDBE1A221C2DF600AB8BB2 /* Network */,
 				EF099751221B039C00DD29D3 /* FilterSettingView */,
 				B84ECF42220B29C500B11954 /* FeedView */,
 				EFF00E0F220848FB00865921 /* Filters */,
@@ -288,6 +295,7 @@
 				03D28F2822082FBB007C8B15 /* DimmedView.swift */,
 				EFF00E34221457BD00865921 /* CameraRatio.swift */,
 				B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */,
+				634E9B29221CEEE2002ADE31 /* ShotTimer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -321,6 +329,15 @@
 				EFF00E102208491400865921 /* pream-Bridging-Header.h */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		EFFDBE1A221C2DF600AB8BB2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */,
+				EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,6 +535,7 @@
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
 				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
 				B8365F202219D39500BA255C /* FilterListViewController.swift in Sources */,
+				EFFDBE1E221C315700AB8BB2 /* PreamProvider.swift in Sources */,
 				03896F1F221B0483003637C8 /* RegisterPasswordCheckViewController.swift in Sources */,
 				EF099757221B126D00DD29D3 /* UIView+Extension.swift in Sources */,
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
@@ -532,7 +550,9 @@
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
 				EF099759221B140500DD29D3 /* TextInputDimedViewController.swift in Sources */,
+				EFFDBE1C221C2E5000AB8BB2 /* PreamService.swift in Sources */,
 				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
+				634E9B2A221CEEE2002ADE31 /* ShotTimer.swift in Sources */,
 				03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */,
 				03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */,
 				030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */,

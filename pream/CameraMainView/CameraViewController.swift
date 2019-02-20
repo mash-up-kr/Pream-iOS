@@ -21,11 +21,13 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var libraryButton: UIButton!
     @IBOutlet weak var convertCameraButton: UIButton!
     @IBOutlet weak var changeRatioButton: UIButton!
+    @IBOutlet weak var setTimerButton: UIButton!
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var topBlurView: BlurView!
     @IBOutlet weak var bottomBlurView: BlurView!
     @IBOutlet weak var bottomBlurViewHeight: NSLayoutConstraint!
     @IBOutlet weak var topBlurViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var timerCount: UILabel!
 
     var isLogin: Bool = true
     var videoCamera: GPUImageVideoCamera?
@@ -33,12 +35,16 @@ class CameraViewController: UIViewController {
     var isDuringbuttonColorAnimation = false
     var cameraPosition: AVCaptureDevice.Position = .front
     var currentRatio: CameraRatio = .fourthree
+    var seconds: Int = Int()
+    var timer: Timer = Timer()
+    var currentTimer: ShotTimer = .zero
 
     var obs: NSKeyValueObservation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        timerCount.isHidden = true
         startCameraSession()
         addBlur()
         registerDoubleTapShotView()
@@ -72,7 +78,11 @@ class CameraViewController: UIViewController {
 extension CameraViewController {
     //사진촬영 버튼 동작
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
-        captureImage()
+        if currentTimer == .zero {
+            captureImage()
+        } else {
+            runTimer()
+        }
     }
     //카메라 앞뒤 전환 동장
     @IBAction private func convertCamera(_ sender: UIButton) {
@@ -82,6 +92,12 @@ extension CameraViewController {
     @IBAction private func changeRatio(_ sender: UIButton) {
         currentRatio.next()
         setRatio()
+        changeRotateButtonImage(changeRatioButton, currentRatio)
+    }
+    // 타이머
+    @IBAction private func didTabOnTimerButton(_ sender: UIButton) {
+        initTimer()
+        changeRotateButtonImage(setTimerButton, currentTimer)
     }
 }
 
@@ -301,6 +317,45 @@ extension CameraViewController {
         obs = audioSession.observe( \.outputVolume ) {[weak self] _, _ in
             self?.captureImage()
         }
+    }
+
+    // 타이머 선택시 사진 찍기
+    func initTimer() {
+        currentTimer.next()
+        seconds = currentTimer.getSeconds() + 1
+    }
+
+    func deinitTimer() {
+        timer.invalidate()
+        timerCount.isHidden.toggle()
+        seconds = Int()
+    }
+
+    func runTimer() {
+        timerCount.isHidden.toggle()
+        updateTimerLabel()
+
+        // run timer
+        timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(CameraViewController.updateTimerLabel),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+
+    @objc func updateTimerLabel() {
+        seconds -= 1
+
+        if seconds > 0 {
+            timerCount.text = String(seconds)
+        } else {
+            deinitTimer()
+            captureImage()
+        }
+    }
+
+    func changeRotateButtonImage<T: RotateButton>(_ button: UIButton, _ buttonState: T) {
+        button.setImage(UIImage(named: buttonState.getImageName()), for: .normal)
     }
 }
 

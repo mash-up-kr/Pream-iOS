@@ -19,6 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTS-2B-AKG" userLabel="BottomSizeView">
+                                <rect key="frame" x="0.0" y="456" width="375" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXf-wD-xJ2">
                                 <rect key="frame" x="0.0" y="81" width="375" height="375"/>
                                 <subviews>
@@ -86,28 +90,28 @@ to apply your filter</string>
                                 <rect key="frame" x="0.0" y="456" width="375" height="146"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="23A-Qv-TQI">
-                                        <rect key="frame" x="0.0" y="42.5" width="375" height="61"/>
+                                        <rect key="frame" x="0.0" y="34.5" width="375" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="61" id="30M-5H-kgS"/>
+                                            <constraint firstAttribute="height" constant="77" id="30M-5H-kgS"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="NQD-ku-CGd">
-                                            <size key="itemSize" width="71" height="59"/>
+                                            <size key="itemSize" width="80" height="77"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterSelectCollectionViewCell" id="4I7-W9-For" customClass="FilterSelectCollectionViewCell" customModule="pream" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="1" width="71" height="59"/>
+                                                <rect key="frame" x="20" y="0.0" width="71" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="59"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZJe-Q1-Bo6">
                                                             <rect key="frame" x="15.5" y="0.0" width="40" height="40"/>
-                                                            <color key="backgroundColor" red="1" green="0.41176470590000003" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="G4i-iY-xvC"/>
                                                                 <constraint firstAttribute="width" constant="40" id="Vd6-EG-ebe"/>
@@ -118,8 +122,8 @@ to apply your filter</string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exposure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVA-o8-Yie">
-                                                            <rect key="frame" x="0.0" y="45" width="71" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exposure ac" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVA-o8-Yie">
+                                                            <rect key="frame" x="0.0" y="45" width="71" height="32"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                             <color key="textColor" name="greyishBrownTwo"/>
                                                             <nil key="highlightedColor"/>
@@ -134,7 +138,11 @@ to apply your filter</string>
                                                     <constraint firstItem="vVA-o8-Yie" firstAttribute="top" secondItem="ZJe-Q1-Bo6" secondAttribute="bottom" constant="5" id="iUb-yP-eRT"/>
                                                     <constraint firstItem="ZJe-Q1-Bo6" firstAttribute="centerX" secondItem="4I7-W9-For" secondAttribute="centerX" id="r5H-2Z-P3X"/>
                                                 </constraints>
-                                                <size key="customSize" width="71" height="59"/>
+                                                <size key="customSize" width="71" height="77"/>
+                                                <connections>
+                                                    <outlet property="effectImageView" destination="ZJe-Q1-Bo6" id="Rd3-xb-D5V"/>
+                                                    <outlet property="effectLabel" destination="vVA-o8-Yie" id="mdW-FR-VPk"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>
@@ -191,27 +199,99 @@ to apply your filter</string>
                                     <constraint firstItem="G9x-yp-r1f" firstAttribute="top" secondItem="Ylg-M8-PHr" secondAttribute="top" constant="11" id="mzo-Ax-ugG"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBs-UY-2oz">
+                                <rect key="frame" x="0.0" y="-85" width="375" height="61"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yqi-aO-bS2">
+                                        <rect key="frame" x="172.5" y="15.5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RAf-M7-kWn"/>
+                                            <constraint firstAttribute="width" constant="30" id="no7-Bi-yms"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Yqi-aO-bS2" firstAttribute="centerX" secondItem="VBs-UY-2oz" secondAttribute="centerX" id="o0d-3y-5Oc"/>
+                                    <constraint firstAttribute="height" constant="61" id="qZv-kD-MLP"/>
+                                    <constraint firstItem="Yqi-aO-bS2" firstAttribute="centerY" secondItem="VBs-UY-2oz" secondAttribute="centerY" id="tef-fT-bF8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdq-mh-8GS">
+                                <rect key="frame" x="0.0" y="456" width="375" height="211"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEi-k8-SnC">
+                                        <rect key="frame" x="166.5" y="165.5" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3q2-jZ-2X9">
+                                        <rect key="frame" x="326" y="156" width="40" height="40"/>
+                                        <state key="normal" image="icCheck"/>
+                                        <connections>
+                                            <action selector="acceptButtonAction:" destination="pXQ-m9-uwp" eventType="touchUpInside" id="gul-0T-5Mh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMu-hp-iAy">
+                                        <rect key="frame" x="9" y="156" width="40" height="40"/>
+                                        <state key="normal" image="closeBtn"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="pXQ-m9-uwp" eventType="touchUpInside" id="90q-jL-To2"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dlk-kv-dm3">
+                                        <rect key="frame" x="128" y="73" width="118" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iMu-hp-iAy" firstAttribute="leading" secondItem="pdq-mh-8GS" secondAttribute="leading" constant="9" id="4Vi-bg-fQG"/>
+                                    <constraint firstAttribute="bottom" secondItem="3q2-jZ-2X9" secondAttribute="bottom" constant="15" id="L5x-gw-Bck"/>
+                                    <constraint firstAttribute="trailing" secondItem="3q2-jZ-2X9" secondAttribute="trailing" constant="9" id="NUo-jc-5XY"/>
+                                    <constraint firstItem="mEi-k8-SnC" firstAttribute="centerY" secondItem="iMu-hp-iAy" secondAttribute="centerY" id="qVr-vA-IdW"/>
+                                    <constraint firstItem="mEi-k8-SnC" firstAttribute="centerX" secondItem="pdq-mh-8GS" secondAttribute="centerX" id="u0n-tR-6aP"/>
+                                    <constraint firstItem="3q2-jZ-2X9" firstAttribute="centerY" secondItem="iMu-hp-iAy" secondAttribute="centerY" id="uvy-Ek-rrP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ylg-M8-PHr" firstAttribute="leading" secondItem="VBs-UY-2oz" secondAttribute="leading" id="0G4-ac-vva"/>
                             <constraint firstItem="LXf-wD-xJ2" firstAttribute="top" secondItem="Ylg-M8-PHr" secondAttribute="bottom" id="12H-sd-sLZ"/>
+                            <constraint firstItem="fTS-2B-AKG" firstAttribute="leading" secondItem="2Jo-tp-ULQ" secondAttribute="leading" id="2Ee-Wh-YNZ"/>
                             <constraint firstItem="Ylg-M8-PHr" firstAttribute="top" secondItem="2Jo-tp-ULQ" secondAttribute="top" id="44I-rC-CTH"/>
+                            <constraint firstItem="pdq-mh-8GS" firstAttribute="trailing" secondItem="sQf-he-Yf3" secondAttribute="trailing" id="8H2-Bh-Dgm"/>
                             <constraint firstItem="6ic-aw-AhE" firstAttribute="leading" secondItem="2Jo-tp-ULQ" secondAttribute="leading" constant="20" id="9Jb-ba-ooh"/>
                             <constraint firstItem="sQf-he-Yf3" firstAttribute="leading" secondItem="2Jo-tp-ULQ" secondAttribute="leading" id="ItB-Eh-rpj"/>
+                            <constraint firstItem="2Jo-tp-ULQ" firstAttribute="bottom" secondItem="fTS-2B-AKG" secondAttribute="bottom" id="OO1-iF-VXl"/>
+                            <constraint firstItem="fTS-2B-AKG" firstAttribute="top" secondItem="LXf-wD-xJ2" secondAttribute="bottom" id="Of8-Vo-TSg"/>
                             <constraint firstItem="2Jo-tp-ULQ" firstAttribute="trailing" secondItem="LXf-wD-xJ2" secondAttribute="trailing" id="TVK-ww-8hi"/>
+                            <constraint firstItem="2Jo-tp-ULQ" firstAttribute="trailing" secondItem="fTS-2B-AKG" secondAttribute="trailing" id="UBz-9E-Cat"/>
+                            <constraint firstItem="pdq-mh-8GS" firstAttribute="leading" secondItem="sQf-he-Yf3" secondAttribute="leading" id="UcG-Xc-Slo"/>
                             <constraint firstItem="Ylg-M8-PHr" firstAttribute="leading" secondItem="lcY-6Z-jyl" secondAttribute="leading" id="WGG-gz-ZMI"/>
                             <constraint firstItem="2Jo-tp-ULQ" firstAttribute="trailing" secondItem="6ic-aw-AhE" secondAttribute="trailing" constant="20" id="cGr-eh-8fk"/>
+                            <constraint firstItem="pdq-mh-8GS" firstAttribute="height" secondItem="fTS-2B-AKG" secondAttribute="height" id="cwi-8b-4Qe"/>
                             <constraint firstItem="LXf-wD-xJ2" firstAttribute="leading" secondItem="2Jo-tp-ULQ" secondAttribute="leading" id="gln-Cu-Xhb"/>
+                            <constraint firstItem="Ylg-M8-PHr" firstAttribute="bottom" secondItem="VBs-UY-2oz" secondAttribute="bottom" constant="105" id="ihB-ZE-H1G"/>
                             <constraint firstItem="sQf-he-Yf3" firstAttribute="top" secondItem="LXf-wD-xJ2" secondAttribute="bottom" id="lsw-Dx-tSp"/>
                             <constraint firstItem="2Jo-tp-ULQ" firstAttribute="trailing" secondItem="sQf-he-Yf3" secondAttribute="trailing" id="mdV-Jh-340"/>
                             <constraint firstItem="6ic-aw-AhE" firstAttribute="top" secondItem="sQf-he-Yf3" secondAttribute="bottom" id="ojX-52-rui"/>
                             <constraint firstItem="2Jo-tp-ULQ" firstAttribute="bottom" secondItem="6ic-aw-AhE" secondAttribute="bottom" constant="20" id="ts5-q1-4hy"/>
                             <constraint firstAttribute="trailing" secondItem="Ylg-M8-PHr" secondAttribute="trailing" id="xlh-xM-KK3"/>
+                            <constraint firstItem="pdq-mh-8GS" firstAttribute="top" secondItem="sQf-he-Yf3" secondAttribute="top" id="xoh-TF-mF2"/>
+                            <constraint firstItem="Ylg-M8-PHr" firstAttribute="trailing" secondItem="VBs-UY-2oz" secondAttribute="trailing" id="ySp-qB-Ubp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Jo-tp-ULQ"/>
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="bottomSizeView" destination="fTS-2B-AKG" id="gN9-gd-77a"/>
+                        <outlet property="bottomViewTopConstraints" destination="xoh-TF-mF2" id="dFA-a3-NpQ"/>
+                        <outlet property="effectNameLabel" destination="mEi-k8-SnC" id="5dI-Tt-zfG"/>
+                        <outlet property="filterSettingTopIcon" destination="Yqi-aO-bS2" id="Pj1-uJ-9a3"/>
+                        <outlet property="filterSettingTopViewBottomConstraints" destination="ihB-ZE-H1G" id="C7E-S3-Llr"/>
                         <outlet property="previewImageView" destination="7yy-9c-LRB" id="tYj-08-cmB"/>
                     </connections>
                 </viewController>
@@ -222,7 +302,9 @@ to apply your filter</string>
     </scenes>
     <resources>
         <image name="addphoto" width="80" height="62"/>
+        <image name="closeBtn" width="40" height="40"/>
         <image name="icBack" width="40" height="40"/>
+        <image name="icCheck" width="40" height="40"/>
         <image name="icPlus" width="40" height="40"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -20,10 +20,10 @@ class RegisterEmailCheckViewController: UIViewController {
         authenticationCodeTextField.becomeFirstResponder()
     }
 
-    @IBAction func closeButtonAction(_ sender: Any) {
+    @IBAction private func closeButtonAction(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
-    @IBAction func previousButtonAction(_ sender: Any) {
+    @IBAction private func previousButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }
