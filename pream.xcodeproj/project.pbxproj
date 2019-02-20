@@ -21,6 +21,7 @@
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */; };
 		4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */; };
+		634E9B2A221CEEE2002ADE31 /* ShotTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634E9B29221CEEE2002ADE31 /* ShotTimer.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
 		B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */; };
 		B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8365F1D2219D36C00BA255C /* FilterList.storyboard */; };
@@ -75,6 +76,7 @@
 		3CBFE07F816140D178519767 /* Pods-pream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.debug.xcconfig"; sourceTree = "<group>"; };
 		4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		634E9B29221CEEE2002ADE31 /* ShotTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotTimer.swift; sourceTree = "<group>"; };
 		63D6211621DFA88000EF4059 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		640295087D8A7D1B2B6F7153 /* Pods-pream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.release.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.release.xcconfig"; sourceTree = "<group>"; };
 		68EF6112755CBDA5CC865C20 /* Pods_pream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,6 +278,7 @@
 				03D28F2822082FBB007C8B15 /* DimmedView.swift */,
 				EFF00E34221457BD00865921 /* CameraRatio.swift */,
 				B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */,
+				634E9B29221CEEE2002ADE31 /* ShotTimer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				EF099759221B140500DD29D3 /* TextInputDimedViewController.swift in Sources */,
 				EFFDBE1C221C2E5000AB8BB2 /* PreamService.swift in Sources */,
 				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
+				634E9B2A221CEEE2002ADE31 /* ShotTimer.swift in Sources */,
 				03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */,
 				03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */,
 				030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */,

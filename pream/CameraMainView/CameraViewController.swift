@@ -37,6 +37,7 @@ class CameraViewController: UIViewController {
     var currentRatio: CameraRatio = .fourthree
     var seconds: Int = Int()
     var timer: Timer = Timer()
+    var currentTimer: ShotTimer = .zero
 
     var obs: NSKeyValueObservation?
 
@@ -77,7 +78,11 @@ class CameraViewController: UIViewController {
 extension CameraViewController {
     //사진촬영 버튼 동작
     @IBAction private func didTabOnShotButton(_ sender: UIButton) {
-        captureImage()
+        if currentTimer == .zero {
+            captureImage()
+        } else {
+            runTimer()
+        }
     }
     //카메라 앞뒤 전환 동장
     @IBAction private func convertCamera(_ sender: UIButton) {
@@ -87,11 +92,12 @@ extension CameraViewController {
     @IBAction private func changeRatio(_ sender: UIButton) {
         currentRatio.next()
         setRatio()
+        changeRotateButtonImage(changeRatioButton, currentRatio)
     }
     // 타이머
     @IBAction private func didTabOnTimerButton(_ sender: UIButton) {
         initTimer()
-        runTimer()
+        changeRotateButtonImage(setTimerButton, currentTimer)
     }
 }
 
@@ -315,20 +321,18 @@ extension CameraViewController {
 
     // 타이머 선택시 사진 찍기
     func initTimer() {
-        // get seconds from timer
-        seconds = 4
-        // visible timer count label
-        timerCount.isHidden = false
+        currentTimer.next()
+        seconds = currentTimer.getSeconds() + 1
     }
 
     func deinitTimer() {
         timer.invalidate()
-        timerCount.isHidden = true
+        timerCount.isHidden.toggle()
         seconds = Int()
     }
 
     func runTimer() {
-        // timer init run
+        timerCount.isHidden.toggle()
         updateTimerLabel()
 
         // run timer
@@ -348,6 +352,10 @@ extension CameraViewController {
             deinitTimer()
             captureImage()
         }
+    }
+
+    func changeRotateButtonImage<T: RotateButton>(_ button: UIButton, _ buttonState: T) {
+        button.setImage(UIImage(named: buttonState.getImageName()), for: .normal)
     }
 }
 
