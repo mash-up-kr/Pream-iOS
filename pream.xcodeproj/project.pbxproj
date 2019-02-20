@@ -13,7 +13,10 @@
 		034230642209F7F6003CC91C /* MyFilterCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034230632209F7F6003CC91C /* MyFilterCategory.storyboard */; };
 		03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03423065220A0482003CC91C /* MyFilterCategoryViewController.swift */; };
 		03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */; };
-		037A7F17221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F16221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift */; };
+		037A7F19221DA70500A670D7 /* PortraitFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F18221DA70500A670D7 /* PortraitFilterViewController.swift */; };
+		037A7F1B221DA74B00A670D7 /* FoodFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F1A221DA74B00A670D7 /* FoodFilterViewController.swift */; };
+		037A7F1D221DA75A00A670D7 /* ObjectFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F1C221DA75A00A670D7 /* ObjectFilterViewController.swift */; };
+		037A7F1F221DA87500A670D7 /* SceneryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F1E221DA87500A670D7 /* SceneryFilterViewController.swift */; };
 		03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F16221B0097003637C8 /* RegisterEmailViewController.swift */; };
 		03896F19221B03D4003637C8 /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F18221B03D4003637C8 /* RegisterPasswordViewController.swift */; };
 		03896F1D221B0419003637C8 /* RegisterNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F1C221B0419003637C8 /* RegisterNicknameViewController.swift */; };
@@ -66,7 +69,10 @@
 		034230632209F7F6003CC91C /* MyFilterCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFilterCategory.storyboard; sourceTree = "<group>"; };
 		03423065220A0482003CC91C /* MyFilterCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilterCategoryViewController.swift; sourceTree = "<group>"; };
 		03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilterCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		037A7F16221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFilterRegisterViewController.swift; sourceTree = "<group>"; };
+		037A7F18221DA70500A670D7 /* PortraitFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitFilterViewController.swift; sourceTree = "<group>"; };
+		037A7F1A221DA74B00A670D7 /* FoodFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFilterViewController.swift; sourceTree = "<group>"; };
+		037A7F1C221DA75A00A670D7 /* ObjectFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFilterViewController.swift; sourceTree = "<group>"; };
+		037A7F1E221DA87500A670D7 /* SceneryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneryFilterViewController.swift; sourceTree = "<group>"; };
 		03896F16221B0097003637C8 /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
 		03896F18221B03D4003637C8 /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
 		03896F1C221B0419003637C8 /* RegisterNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNicknameViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				03CA5A31221C22FB00C85AFC /* DefaultFilterRegister.storyboard */,
-				037A7F16221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift */,
+				037A7F18221DA70500A670D7 /* PortraitFilterViewController.swift */,
+				037A7F1A221DA74B00A670D7 /* FoodFilterViewController.swift */,
+				037A7F1C221DA75A00A670D7 /* ObjectFilterViewController.swift */,
+				037A7F1E221DA87500A670D7 /* SceneryFilterViewController.swift */,
 			);
 			path = DefaultFilterRegisterView;
 			sourceTree = "<group>";
@@ -504,19 +513,20 @@
 				EFDEA173221466FB00B683B9 /* UIImage+Crop.swift in Sources */,
 				B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */,
 				4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */,
-				037A7F17221C3CFC00A670D7 /* DefaultFilterRegisterViewController.swift in Sources */,
 				EFC8AC9E21FC75CB004B940A /* UIView+FindViewController.swift in Sources */,
 				B815C658220B5977003885C0 /* UserFiltersTableViewCell.swift in Sources */,
 				4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */,
 				EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */,
 				EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */,
 				EFF00E122208491500865921 /* GPUImageBeautifyFilter.m in Sources */,
+				037A7F1D221DA75A00A670D7 /* ObjectFilterViewController.swift in Sources */,
 				03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */,
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
 				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
 				B8365F202219D39500BA255C /* FilterListViewController.swift in Sources */,
 				03896F1F221B0483003637C8 /* RegisterPasswordCheckViewController.swift in Sources */,
 				EF099757221B126D00DD29D3 /* UIView+Extension.swift in Sources */,
+				037A7F1B221DA74B00A670D7 /* FoodFilterViewController.swift in Sources */,
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
 				B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */,
 				EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */,
@@ -527,10 +537,12 @@
 				B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */,
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
+				037A7F1F221DA87500A670D7 /* SceneryFilterViewController.swift in Sources */,
 				EF099759221B140500DD29D3 /* TextInputDimedViewController.swift in Sources */,
 				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
 				03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */,
 				03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */,
+				037A7F19221DA70500A670D7 /* PortraitFilterViewController.swift in Sources */,
 				030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */,
 				EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */,
 				EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */,
