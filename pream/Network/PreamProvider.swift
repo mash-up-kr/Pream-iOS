@@ -18,7 +18,101 @@ class PreamProvider {
             self.resultTask(result, completion: completion, failure: failure)
         }
     }
-
+    
+    func signupCheckEmail(email: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.signupCheckEmail(email: email)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func signupCheckNickname(nickname: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.signupCheckNickname(nickname: nickname)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func signupSave(email: String, nickname: String, password: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.signupSave(email: email, nickname: nickname, password: password)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func createMyFilter(adjust: Float,
+                        clarity: Float,
+                        colorFilter: Float,
+                        contrast: Float,
+                        exposure: Float,
+                        fade: Float,
+                        grain: Float,
+                        id: Int,
+                        name: String,
+                        saturation: Float,
+                        sharpen: Float,
+                        splitTone: Float,
+                        tone: Float,
+                        vignette: Float,
+                        whiteBalance: Float,
+                        completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.createMyFilter(adjust: adjust,
+                                         clarity: clarity,
+                                         colorFilter: colorFilter,
+                                         contrast: contrast,
+                                         exposure: exposure,
+                                         fade: fade,
+                                         grain: grain,
+                                         id: id,
+                                         name: name,
+                                         saturation: saturation,
+                                         sharpen: sharpen,
+                                         splitTone: splitTone,
+                                         tone: tone,
+                                         vignette: vignette,
+                                         whiteBalance: whiteBalance)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func getMyFilterList(completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.getMyFilterList) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func updateMyFilter(adjust: Float,
+                        clarity: Float,
+                        colorFilter: Float,
+                        contrast: Float,
+                        exposure: Float,
+                        fade: Float,
+                        grain: Float,
+                        id: Int,
+                        name: String,
+                        saturation: Float,
+                        sharpen: Float,
+                        splitTone: Float,
+                        tone: Float,
+                        vignette: Float,
+                        whiteBalance: Float,
+                        completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.updateMyFilter(adjust: adjust,
+                                         clarity: clarity,
+                                         colorFilter: colorFilter,
+                                         contrast: contrast,
+                                         exposure: exposure,
+                                         fade: fade,
+                                         grain: grain,
+                                         id: id,
+                                         name: name,
+                                         saturation: saturation,
+                                         sharpen: sharpen,
+                                         splitTone: splitTone,
+                                         tone: tone,
+                                         vignette: vignette,
+                                         whiteBalance: whiteBalance)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
 //    provider.request(.updateUser(id: 123, firstName: "Harry", lastName: "Potter")) { result in
 //    }
 }
