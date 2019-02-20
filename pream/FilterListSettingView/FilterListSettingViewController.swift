@@ -18,6 +18,7 @@ class FilterListSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.allowsMultipleSelection = true
     }
 
     @IBAction func backButtonAction() {

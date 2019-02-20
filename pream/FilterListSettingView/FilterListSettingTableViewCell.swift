@@ -23,6 +23,8 @@ class FilterListSettingTableViewCell: UITableViewCell {
     @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var checkImageView: UIImageView!
 
+    private var mode: SettingMode?
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -36,6 +38,8 @@ extension FilterListSettingTableViewCell {
         dimmedView.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
         checkImageView.isHidden = true
 
+        mode = settingMode
+
         let isHidden: Bool
         switch settingMode {
         case .edit:
@@ -46,9 +50,27 @@ extension FilterListSettingTableViewCell {
         lineView.isHidden = isHidden
         filterTitleTextField.isHidden = isHidden
         filterTitleLabel.isHidden = !isHidden
+        checkImageView.isHidden = !isHidden
 
         filterTitleLabel.text = title
         filterTitleTextField.text = title
         filterImageView.image = image
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: true)
+        guard let mode = mode else { return }
+        switch mode {
+        case .delete:
+            if isSelected {
+                dimmedView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                checkImageView.isHidden = false
+            } else {
+                dimmedView.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
+                checkImageView.isHidden = true
+            }
+        default:
+            break
+        }
     }
 }
