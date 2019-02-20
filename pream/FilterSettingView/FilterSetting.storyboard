@@ -86,28 +86,28 @@ to apply your filter</string>
                                 <rect key="frame" x="0.0" y="456" width="375" height="146"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="23A-Qv-TQI">
-                                        <rect key="frame" x="0.0" y="42.5" width="375" height="61"/>
+                                        <rect key="frame" x="0.0" y="34.5" width="375" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="61" id="30M-5H-kgS"/>
+                                            <constraint firstAttribute="height" constant="77" id="30M-5H-kgS"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="NQD-ku-CGd">
-                                            <size key="itemSize" width="71" height="59"/>
+                                            <size key="itemSize" width="80" height="77"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterSelectCollectionViewCell" id="4I7-W9-For" customClass="FilterSelectCollectionViewCell" customModule="pream" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="1" width="71" height="59"/>
+                                                <rect key="frame" x="20" y="0.0" width="71" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="59"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZJe-Q1-Bo6">
                                                             <rect key="frame" x="15.5" y="0.0" width="40" height="40"/>
-                                                            <color key="backgroundColor" red="1" green="0.41176470590000003" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="G4i-iY-xvC"/>
                                                                 <constraint firstAttribute="width" constant="40" id="Vd6-EG-ebe"/>
@@ -118,8 +118,8 @@ to apply your filter</string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exposure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVA-o8-Yie">
-                                                            <rect key="frame" x="0.0" y="45" width="71" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exposure ac" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVA-o8-Yie">
+                                                            <rect key="frame" x="0.0" y="45" width="71" height="55"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                             <color key="textColor" name="greyishBrownTwo"/>
                                                             <nil key="highlightedColor"/>
@@ -134,7 +134,11 @@ to apply your filter</string>
                                                     <constraint firstItem="vVA-o8-Yie" firstAttribute="top" secondItem="ZJe-Q1-Bo6" secondAttribute="bottom" constant="5" id="iUb-yP-eRT"/>
                                                     <constraint firstItem="ZJe-Q1-Bo6" firstAttribute="centerX" secondItem="4I7-W9-For" secondAttribute="centerX" id="r5H-2Z-P3X"/>
                                                 </constraints>
-                                                <size key="customSize" width="71" height="59"/>
+                                                <size key="customSize" width="71" height="77"/>
+                                                <connections>
+                                                    <outlet property="effectImageView" destination="ZJe-Q1-Bo6" id="Rd3-xb-D5V"/>
+                                                    <outlet property="effectLabel" destination="vVA-o8-Yie" id="mdW-FR-VPk"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>
