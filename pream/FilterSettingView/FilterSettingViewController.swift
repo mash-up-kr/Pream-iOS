@@ -10,7 +10,19 @@ import UIKit
 
 class FilterSettingViewController: UIViewController {
     @IBOutlet weak var previewImageView: UIImageView!
+    @IBOutlet weak var filterSettingTopIcon: UIImageView!
+    @IBOutlet weak var filterSettingTopViewBottomConstraints: NSLayoutConstraint!
+    @IBOutlet weak var bottomViewTopConstraints: NSLayoutConstraint!
+    @IBOutlet weak var bottomSizeView: UIView!
+    @IBOutlet weak var effectNameLabel: UILabel!
 
+    @IBAction func closeButtonAction(_ sender: Any) {
+        setDefaultConstraints()
+    }
+
+    @IBAction func acceptButtonAction(_ sender: Any) {
+        setDefaultConstraints()
+    }
     @IBAction private func dissmissAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -45,9 +57,19 @@ class FilterSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setDefaultConstraints()
+    }
 }
 
 extension FilterSettingViewController: LibraryDelegate {
+    func setDefaultConstraints() {
+        filterSettingTopViewBottomConstraints.constant = 110
+        bottomViewTopConstraints.constant = bottomSizeView.frame.height
+    }
+
     func selectImage(data: Data?) {
         if let data = data {
             let image = UIImage(data: data)
@@ -73,5 +95,16 @@ extension FilterSettingViewController: UICollectionViewDelegate, UICollectionVie
             let effect = Effects(rawValue: indexPath.item) else { return UICollectionViewCell() }
         cell.setEffect(effect)
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let effect = Effects(rawValue: indexPath.item) else { return }
+        filterSettingTopIcon.image = effect.getImage()
+        effectNameLabel.text = effect.getText()
+        filterSettingTopViewBottomConstraints.constant = 0
+        bottomViewTopConstraints.constant = 0
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
     }
 }
