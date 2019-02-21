@@ -16,11 +16,11 @@ class FilterSettingViewController: UIViewController {
     @IBOutlet weak var bottomSizeView: UIView!
     @IBOutlet weak var effectNameLabel: UILabel!
 
-    @IBAction func closeButtonAction(_ sender: Any) {
+    @IBAction private func closeButtonAction(_ sender: Any) {
         setDefaultConstraints()
     }
 
-    @IBAction func acceptButtonAction(_ sender: Any) {
+    @IBAction private func acceptButtonAction(_ sender: Any) {
         setDefaultConstraints()
     }
     @IBAction private func dissmissAction(_ sender: Any) {
