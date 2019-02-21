@@ -8,7 +8,12 @@
 
 import Foundation
 
-enum CameraRatio {
+protocol RotateButton {
+    func getImageName() -> String
+    mutating func next()
+}
+
+enum CameraRatio: RotateButton {
     case full
     case oneone
     case fourthree
@@ -21,6 +26,17 @@ enum CameraRatio {
             self = .oneone
         case .oneone:
             self = .full
+        }
+    }
+
+    func getImageName() -> String {
+        switch self {
+        case .full:
+            return "icRatioFull"
+        case .oneone:
+            return "icRatio11"
+        case .fourthree:
+            return "icRatio43"
         }
     }
 }

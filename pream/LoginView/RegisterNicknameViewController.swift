@@ -20,11 +20,11 @@ class RegisterNicknameViewController: UIViewController {
         nicknameTextField.becomeFirstResponder()
     }
 
-    @IBAction func closeButtonAction(_ sender: Any) {
+    @IBAction private func closeButtonAction(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
 
-    @IBAction func previousButtonAction(_ sender: Any) {
+    @IBAction private func previousButtonAction(_ sender: Any) {
 //        dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
