@@ -68,6 +68,10 @@ extension FilterSettingViewController: LibraryDelegate {
     func setDefaultConstraints() {
         filterSettingTopViewBottomConstraints.constant = 110
         bottomViewTopConstraints.constant = bottomSizeView.frame.height
+
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
     }
 
     func selectImage(data: Data?) {

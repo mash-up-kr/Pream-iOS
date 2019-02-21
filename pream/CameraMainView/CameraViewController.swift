@@ -45,11 +45,11 @@ class CameraViewController: UIViewController {
         super.viewDidLoad()
 
         timerCount.isHidden = true
+        listenVolumeButton()
+        addVolumeButtonObserver()
         startCameraSession()
         addBlur()
         registerDoubleTapShotView()
-        listenVolumeButton()
-        addVolumeButtonObserver()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -306,12 +306,12 @@ extension CameraViewController {
             audioSession.addObserver(self, forKeyPath: "outputVolume",
                                      options: NSKeyValueObservingOptions.new, context: nil)
         } catch {
-            print("Error at volume button shot")
+            Log.msg("Error at volume button shot")
         }
     }
 
     func addVolumeButtonObserver() {
-        let volumeView = MPVolumeView(frame: .zero)
+        let volumeView = MPVolumeView(frame: .init(x: -5000, y: -5000, width: 0, height: 0))
         view.addSubview(volumeView)
         let audioSession = AVAudioSession.sharedInstance()
         obs = audioSession.observe( \.outputVolume ) {[weak self] _, _ in
