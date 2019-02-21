@@ -29,6 +29,9 @@
 		B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8365F212219DF4000BA255C /* FilterTableViewCell.swift */; };
 		B84ECF44220B29EE00B11954 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84ECF43220B29EE00B11954 /* Feed.storyboard */; };
 		B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECF45220B2A1D00B11954 /* FeedViewController.swift */; };
+		B872811E221C062800D1AF96 /* FilterListSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B872811D221C062800D1AF96 /* FilterListSetting.storyboard */; };
+		B8728120221C065900D1AF96 /* FilterListSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */; };
+		B8728122221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
 		B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */; };
 		B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */; };
@@ -86,6 +89,9 @@
 		B8365F212219DF4000BA255C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		B84ECF43220B29EE00B11954 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		B84ECF45220B2A1D00B11954 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		B872811D221C062800D1AF96 /* FilterListSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterListSetting.storyboard; sourceTree = "<group>"; };
+		B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListSettingViewController.swift; sourceTree = "<group>"; };
+		B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListSettingTableViewCell.swift; sourceTree = "<group>"; };
 		B8DACC7921F875B7006B6AE2 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
@@ -182,6 +188,16 @@
 			path = FeedView;
 			sourceTree = "<group>";
 		};
+		B872811C221C061400D1AF96 /* FilterListSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				B872811D221C062800D1AF96 /* FilterListSetting.storyboard */,
+				B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */,
+				B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */,
+			);
+			path = FilterListSettingView;
+			sourceTree = "<group>";
+		};
 		B8DACC7821F8753B006B6AE2 /* LibraryView */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +265,7 @@
 		EFEAE9C621DE3CAA00B7CCA8 /* pream */ = {
 			isa = PBXGroup;
 			children = (
+				B872811C221C061400D1AF96 /* FilterListSettingView */,
 				EFFDBE1A221C2DF600AB8BB2 /* Network */,
 				EF099751221B039C00DD29D3 /* FilterSettingView */,
 				B84ECF42220B29C500B11954 /* FeedView */,
@@ -393,6 +410,7 @@
 				EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */,
 				030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */,
 				034230642209F7F6003CC91C /* MyFilterCategory.storyboard in Resources */,
+				B872811E221C062800D1AF96 /* FilterListSetting.storyboard in Resources */,
 				B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
 				B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */,
@@ -500,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8728120221C065900D1AF96 /* FilterListSettingViewController.swift in Sources */,
 				030F2A9B21FC95670066AEAC /* FilterCollectionViewController.swift in Sources */,
 				EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */,
 				EF099755221B0CA900DD29D3 /* FilterSettingViewController.swift in Sources */,
@@ -524,6 +543,7 @@
 				EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */,
 				B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
+				B8728122221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift in Sources */,
 				03896F19221B03D4003637C8 /* RegisterPasswordViewController.swift in Sources */,
 				03896F1D221B0419003637C8 /* RegisterNicknameViewController.swift in Sources */,
 				B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */,
