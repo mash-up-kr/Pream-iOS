@@ -24,18 +24,29 @@ class FilterSettingViewController: UIViewController {
        let groupFilter = GPUImageFilterGroup()
         groupFilter.addFilter(gpuExposureFilter)
         groupFilter.addFilter(gpuContrastFilter)
+        groupFilter.addFilter(gpuSharpenFilter)
+
+        gpuExposureFilter.addTarget(gpuContrastFilter)
+        gpuContrastFilter.addTarget(gpuSharpenFilter)
+
+        groupFilter.initialFilters = [gpuExposureFilter]
+        groupFilter.terminalFilter = gpuSharpenFilter
+
         return groupFilter
     }()
     var gpuExposureFilter: GPUImageExposureFilter = GPUImageExposureFilter()
     var gpuContrastFilter: GPUImageContrastFilter = GPUImageContrastFilter()
+    var gpuSharpenFilter: GPUImageSharpenFilter = GPUImageSharpenFilter()
 
     @IBAction private func changedValue(_ sender: UISlider) {
         currentValue = sender.value
         valueLabel.text = "\(sender.value)"
         if effectNameLabel.text == "Exposure" {
             gpuExposureFilter.exposure = CGFloat(sender.value)
-        } else {
+        } else if effectNameLabel.text == "Contrast" {
             gpuContrastFilter.contrast = CGFloat(sender.value)
+        } else {
+            gpuSharpenFilter.sharpness = CGFloat(sender.value)
         }
 
         gpuImage?.processImage()
@@ -102,10 +113,6 @@ extension FilterSettingViewController: LibraryDelegate {
             let image = UIImage(data: data)
             gpuImage = GPUImagePicture(image: image)
 
-            gpuExposureFilter.addTarget(gpuContrastFilter)
-
-            gpuGroupFilter.initialFilters = [gpuExposureFilter]
-            gpuGroupFilter.terminalFilter = gpuContrastFilter
             gpuImage?.addTarget(gpuGroupFilter)
             gpuGroupFilter.addTarget(previewImageView)
             gpuImage?.processImage()
