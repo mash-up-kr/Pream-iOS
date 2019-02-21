@@ -44,7 +44,9 @@ extension FilterListSettingTableViewCell {
         switch settingMode {
         case .edit:
             isHidden = false
-        case .delete, .move:
+        case .delete:
+            isHidden = true
+        case .move:
             isHidden = true
         }
         lineView.isHidden = isHidden
@@ -68,6 +70,21 @@ extension FilterListSettingTableViewCell {
             } else {
                 dimmedView.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
                 checkImageView.isHidden = true
+            }
+        case .edit:
+            if isSelected {
+                self.mode = .move
+            }
+        case .move:
+            if isSelected {
+                filterImageView.layer.cornerRadius = filterImageView.bounds.height / 2
+                dimmedView.layer.cornerRadius = filterImageView.bounds.height / 2
+                dimmedView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//                isSelected.toggle()
+            } else {
+                filterImageView.layer.cornerRadius = 2
+                dimmedView.layer.cornerRadius = 2
+                dimmedView.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             }
         default:
             break
