@@ -51,9 +51,10 @@ to apply your filter</string>
                                             <constraint firstItem="vB5-tv-DXz" firstAttribute="top" secondItem="U23-K8-rNu" secondAttribute="top" id="thl-wt-yTK"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7yy-9c-LRB">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-jA-jy6" customClass="GPUImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
-                                    </imageView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xie-pG-OB7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                         <connections>
@@ -63,17 +64,17 @@ to apply your filter</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="7yy-9c-LRB" firstAttribute="top" secondItem="LXf-wD-xJ2" secondAttribute="top" id="1DH-6i-IzO"/>
                                     <constraint firstAttribute="bottom" secondItem="Xie-pG-OB7" secondAttribute="bottom" id="J74-iI-QaR"/>
                                     <constraint firstItem="Xie-pG-OB7" firstAttribute="top" secondItem="LXf-wD-xJ2" secondAttribute="top" id="MuC-cJ-7Sf"/>
+                                    <constraint firstItem="kGt-jA-jy6" firstAttribute="leading" secondItem="LXf-wD-xJ2" secondAttribute="leading" id="NuS-1s-D7B"/>
+                                    <constraint firstAttribute="bottom" secondItem="kGt-jA-jy6" secondAttribute="bottom" id="QQv-9W-7uj"/>
                                     <constraint firstItem="U23-K8-rNu" firstAttribute="centerY" secondItem="LXf-wD-xJ2" secondAttribute="centerY" id="UJ1-0p-fnt"/>
-                                    <constraint firstItem="7yy-9c-LRB" firstAttribute="leading" secondItem="LXf-wD-xJ2" secondAttribute="leading" id="WOL-KM-jLa"/>
                                     <constraint firstAttribute="trailing" secondItem="Xie-pG-OB7" secondAttribute="trailing" id="XNh-Ci-lTj"/>
                                     <constraint firstAttribute="width" secondItem="LXf-wD-xJ2" secondAttribute="height" multiplier="1:1" id="bst-iv-QNC"/>
-                                    <constraint firstAttribute="bottom" secondItem="7yy-9c-LRB" secondAttribute="bottom" id="iyl-xR-pSY"/>
-                                    <constraint firstAttribute="trailing" secondItem="7yy-9c-LRB" secondAttribute="trailing" id="lvc-gd-ryY"/>
                                     <constraint firstItem="U23-K8-rNu" firstAttribute="centerX" secondItem="LXf-wD-xJ2" secondAttribute="centerX" id="oCU-rE-lha"/>
+                                    <constraint firstItem="kGt-jA-jy6" firstAttribute="top" secondItem="LXf-wD-xJ2" secondAttribute="top" id="u2H-HX-sPE"/>
                                     <constraint firstItem="Xie-pG-OB7" firstAttribute="leading" secondItem="LXf-wD-xJ2" secondAttribute="leading" id="w1m-PZ-YQ1"/>
+                                    <constraint firstAttribute="trailing" secondItem="kGt-jA-jy6" secondAttribute="trailing" id="xYB-zO-MIH"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ic-aw-AhE">
@@ -240,17 +241,30 @@ to apply your filter</string>
                                             <action selector="closeButtonAction:" destination="pXQ-m9-uwp" eventType="touchUpInside" id="90q-jL-To2"/>
                                         </connections>
                                     </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dlk-kv-dm3">
-                                        <rect key="frame" x="128" y="73" width="118" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dlk-kv-dm3">
+                                        <rect key="frame" x="18" y="58" width="339" height="31"/>
+                                        <connections>
+                                            <action selector="changedValue:" destination="pXQ-m9-uwp" eventType="valueChanged" id="i8W-p9-rXB"/>
+                                        </connections>
                                     </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nD-O1-izw">
+                                        <rect key="frame" x="166.5" y="36" width="42" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="iMu-hp-iAy" firstAttribute="leading" secondItem="pdq-mh-8GS" secondAttribute="leading" constant="9" id="4Vi-bg-fQG"/>
                                     <constraint firstAttribute="bottom" secondItem="3q2-jZ-2X9" secondAttribute="bottom" constant="15" id="L5x-gw-Bck"/>
+                                    <constraint firstItem="dlk-kv-dm3" firstAttribute="leading" secondItem="pdq-mh-8GS" secondAttribute="leading" constant="20" id="NE0-3C-uqr"/>
                                     <constraint firstAttribute="trailing" secondItem="3q2-jZ-2X9" secondAttribute="trailing" constant="9" id="NUo-jc-5XY"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlk-kv-dm3" secondAttribute="trailing" constant="20" id="Xtv-dc-gW1"/>
+                                    <constraint firstItem="3q2-jZ-2X9" firstAttribute="top" secondItem="dlk-kv-dm3" secondAttribute="bottom" constant="68" id="ibx-Ci-d5A"/>
+                                    <constraint firstItem="dlk-kv-dm3" firstAttribute="top" secondItem="3nD-O1-izw" secondAttribute="bottom" constant="2" id="mJM-1u-Amb"/>
                                     <constraint firstItem="mEi-k8-SnC" firstAttribute="centerY" secondItem="iMu-hp-iAy" secondAttribute="centerY" id="qVr-vA-IdW"/>
+                                    <constraint firstItem="3nD-O1-izw" firstAttribute="centerX" secondItem="pdq-mh-8GS" secondAttribute="centerX" id="rlK-we-sEr"/>
                                     <constraint firstItem="mEi-k8-SnC" firstAttribute="centerX" secondItem="pdq-mh-8GS" secondAttribute="centerX" id="u0n-tR-6aP"/>
                                     <constraint firstItem="3q2-jZ-2X9" firstAttribute="centerY" secondItem="iMu-hp-iAy" secondAttribute="centerY" id="uvy-Ek-rrP"/>
                                 </constraints>
@@ -292,7 +306,9 @@ to apply your filter</string>
                         <outlet property="effectNameLabel" destination="mEi-k8-SnC" id="5dI-Tt-zfG"/>
                         <outlet property="filterSettingTopIcon" destination="Yqi-aO-bS2" id="Pj1-uJ-9a3"/>
                         <outlet property="filterSettingTopViewBottomConstraints" destination="ihB-ZE-H1G" id="C7E-S3-Llr"/>
-                        <outlet property="previewImageView" destination="7yy-9c-LRB" id="tYj-08-cmB"/>
+                        <outlet property="previewImageView" destination="kGt-jA-jy6" id="amC-3f-dF7"/>
+                        <outlet property="sliderOutlet" destination="dlk-kv-dm3" id="0u4-U3-Kcp"/>
+                        <outlet property="valueLabel" destination="3nD-O1-izw" id="G91-mJ-Erc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mnh-1d-EiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
