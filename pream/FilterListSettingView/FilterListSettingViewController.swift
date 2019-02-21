@@ -23,7 +23,7 @@ class FilterListSettingViewController: UIViewController {
     private let picachu = Picachu(title: "Picachu", image: #imageLiteral(resourceName: "picachu"))
     private var picachuDummyData: [Picachu] = []
     private var sourceIndexPath: IndexPath?
-    private var cellSnapShot: UIView?
+    private var cellSnapshot: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,9 +63,12 @@ private extension FilterListSettingViewController {
         switch state {
         case .began:
             sourceIndexPath = indexPath
-            guard let cell = tableView.cellForRow(at: indexPath) else { return }
-            cellSnapShot = customSnapshotFromView(inputView: cell)
-            guard let snapshot = cellSnapShot else { return }
+            guard let cell = tableView.cellForRow(at: indexPath) as? FilterListSettingTableViewCell else { return }
+            cell.filterImageView.layer.cornerRadius = cell.filterImageView.bounds.height / 2
+            cell.dimmedView.layer.cornerRadius = cell.dimmedView.bounds.height / 2
+            cell.dimmedView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cellSnapshot = customSnapshotFromView(inputView: cell)
+            guard let snapshot = cellSnapshot else { return }
             snapshot.center = cell.center
             snapshot.alpha = 0
             tableView.addSubview(snapshot)
@@ -78,7 +81,7 @@ private extension FilterListSettingViewController {
                 cell.isHidden = true
             })
         case .changed:
-            guard  let snapshot = cellSnapShot else {
+            guard  let snapshot = cellSnapshot else {
                 return
             }
             snapshot.center.y = location.y
@@ -92,13 +95,16 @@ private extension FilterListSettingViewController {
                 self.sourceIndexPath = indexPath
             }
         default:
-            guard let cell = self.tableView.cellForRow(at: indexPath) else {
+            guard let cell = self.tableView.cellForRow(at: indexPath) as? FilterListSettingTableViewCell else {
                 return
             }
-            guard  let snapshot = cellSnapShot else {
+            guard  let snapshot = cellSnapshot else {
                 return
             }
             cell.isHidden = false
+            cell.filterImageView.cornerRadius = 2
+            cell.dimmedView.layer.cornerRadius = 2
+            cell.dimmedView.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             cell.alpha = 0.0
             UIView.animate(withDuration: 0.25, animations: {
                 snapshot.center = cell.center
@@ -124,16 +130,16 @@ private extension FilterListSettingViewController {
         let snapshot = UIImageView(image: image)
         snapshot.layer.masksToBounds = false
         snapshot.layer.cornerRadius = 0
-        snapshot.layer.shadowOffset = CGSize(width: -5, height: 0)
-        snapshot.layer.shadowRadius = 5
-        snapshot.layer.shadowOpacity = 0.4
+//        snapshot.layer.shadowOffset = CGSize(width: -5, height: 0)
+//        snapshot.layer.shadowRadius = 5
+//        snapshot.layer.shadowOpacity = 0.4
         return snapshot
     }
 
     func cleanup() {
         sourceIndexPath = nil
-        cellSnapShot?.removeFromSuperview()
-        cellSnapShot = nil
+        cellSnapshot?.removeFromSuperview()
+        cellSnapshot = nil
     }
 }
 
