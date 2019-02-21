@@ -18,6 +18,7 @@ class FilterSettingViewController: UIViewController {
     @IBOutlet weak var effectNameLabel: UILabel!
     @IBOutlet weak var sliderOutlet: UISlider!
     @IBOutlet weak var valueLabel: UILabel!
+    var currentFilter: Effects = .exposure
     var currentValue: Float?
     var gpuImage: GPUImagePicture?
     lazy var gpuGroupFilter: GPUImageFilterGroup = {
@@ -25,28 +26,57 @@ class FilterSettingViewController: UIViewController {
         groupFilter.addFilter(gpuExposureFilter)
         groupFilter.addFilter(gpuContrastFilter)
         groupFilter.addFilter(gpuSharpenFilter)
+        groupFilter.addFilter(gpuSaturationFilter)
+        groupFilter.addFilter(gpuHighlightFilter)
+        groupFilter.addFilter(gpuWhiteBalanceFilter)
+        groupFilter.addFilter(gpuVignetteFilter)
 
         gpuExposureFilter.addTarget(gpuContrastFilter)
         gpuContrastFilter.addTarget(gpuSharpenFilter)
+        gpuSharpenFilter.addTarget(gpuSaturationFilter)
+        gpuSaturationFilter.addTarget(gpuHighlightFilter)
+        gpuHighlightFilter.addTarget(gpuWhiteBalanceFilter)
+        gpuWhiteBalanceFilter.addTarget(gpuVignetteFilter)
 
         groupFilter.initialFilters = [gpuExposureFilter]
-        groupFilter.terminalFilter = gpuSharpenFilter
+        groupFilter.terminalFilter = gpuVignetteFilter
 
         return groupFilter
     }()
     var gpuExposureFilter: GPUImageExposureFilter = GPUImageExposureFilter()
     var gpuContrastFilter: GPUImageContrastFilter = GPUImageContrastFilter()
     var gpuSharpenFilter: GPUImageSharpenFilter = GPUImageSharpenFilter()
+    var gpuSaturationFilter: GPUImageSaturationFilter = GPUImageSaturationFilter()
+    var gpuHighlightFilter: GPUImageHighlightShadowFilter = GPUImageHighlightShadowFilter()
+    var gpuWhiteBalanceFilter: GPUImageWhiteBalanceFilter = GPUImageWhiteBalanceFilter()
+    var gpuVignetteFilter: GPUImageVignetteFilter = GPUImageVignetteFilter()
 
     @IBAction private func changedValue(_ sender: UISlider) {
         currentValue = sender.value
         valueLabel.text = "\(sender.value)"
-        if effectNameLabel.text == "Exposure" {
+        switch currentFilter {
+        case .exposure:
             gpuExposureFilter.exposure = CGFloat(sender.value)
-        } else if effectNameLabel.text == "Contrast" {
+        case .contrast:
             gpuContrastFilter.contrast = CGFloat(sender.value)
-        } else {
+        case .sharpen:
             gpuSharpenFilter.sharpness = CGFloat(sender.value)
+        case .saturation:
+            gpuSaturationFilter.saturation = CGFloat(sender.value)
+        case .highlight:
+            gpuHighlightFilter.highlights = CGFloat(sender.value)
+        case .shadow:
+            gpuHighlightFilter.shadows = CGFloat(sender.value)
+        case .whiteBalance:
+            gpuWhiteBalanceFilter.temperature = CGFloat(sender.value)
+        case .vignette:
+            gpuVignetteFilter.vignetteEnd = CGFloat(sender.value)
+        case .grain:
+            Log.msg("grain")
+        case .fade:
+            Log.msg("grain")
+        case .splitTone:
+            Log.msg("grain")
         }
 
         gpuImage?.processImage()
@@ -141,10 +171,36 @@ extension FilterSettingViewController: UICollectionViewDelegate, UICollectionVie
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let effect = Effects(rawValue: indexPath.item) else { return }
+        switch effect {
+        case .exposure:
+            sliderOutlet.value = Float(gpuExposureFilter.exposure)
+        case .contrast:
+            sliderOutlet.value = Float(gpuContrastFilter.contrast)
+        case .sharpen:
+            sliderOutlet.value = Float(gpuSharpenFilter.sharpness)
+        case .saturation:
+            sliderOutlet.value = Float(gpuSaturationFilter.saturation)
+        case .highlight:
+            sliderOutlet.value = Float(gpuHighlightFilter.highlights)
+        case .shadow:
+            sliderOutlet.value = Float(gpuHighlightFilter.shadows)
+        case .whiteBalance:
+            sliderOutlet.value = Float(gpuWhiteBalanceFilter.temperature)
+        case .vignette:
+            sliderOutlet.value = Float(gpuVignetteFilter.vignetteEnd)
+        case .grain:
+            Log.msg("grain")
+        case .fade:
+            Log.msg("fade")
+        case .splitTone:
+            Log.msg("splitTone")
+        }
+        
         filterSettingTopIcon.image = effect.getImage()
         effectNameLabel.text = effect.getText()
         filterSettingTopViewBottomConstraints.constant = 0
         bottomViewTopConstraints.constant = 0
+        currentFilter = effect
         UIView.animate(withDuration: 0.25) { [weak self] in
             self?.view.layoutIfNeeded()
         }
