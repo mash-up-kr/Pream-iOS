@@ -13,11 +13,16 @@
 		034230642209F7F6003CC91C /* MyFilterCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034230632209F7F6003CC91C /* MyFilterCategory.storyboard */; };
 		03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03423065220A0482003CC91C /* MyFilterCategoryViewController.swift */; };
 		03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */; };
+		037A7F19221DA70500A670D7 /* PortraitFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F18221DA70500A670D7 /* PortraitFilterViewController.swift */; };
+		037A7F1B221DA74B00A670D7 /* FoodFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F1A221DA74B00A670D7 /* FoodFilterViewController.swift */; };
+		037A7F1D221DA75A00A670D7 /* ObjectFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F1C221DA75A00A670D7 /* ObjectFilterViewController.swift */; };
+		037A7F1F221DA87500A670D7 /* SceneryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A7F1E221DA87500A670D7 /* SceneryFilterViewController.swift */; };
 		03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F16221B0097003637C8 /* RegisterEmailViewController.swift */; };
 		03896F19221B03D4003637C8 /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F18221B03D4003637C8 /* RegisterPasswordViewController.swift */; };
 		03896F1D221B0419003637C8 /* RegisterNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F1C221B0419003637C8 /* RegisterNicknameViewController.swift */; };
 		03896F1F221B0483003637C8 /* RegisterPasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F1E221B0483003637C8 /* RegisterPasswordCheckViewController.swift */; };
 		03896F21221B04AF003637C8 /* RegisterEmailCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896F20221B04AF003637C8 /* RegisterEmailCheckViewController.swift */; };
+		03CA5A32221C22FB00C85AFC /* DefaultFilterRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CA5A31221C22FB00C85AFC /* DefaultFilterRegister.storyboard */; };
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */; };
 		4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */; };
@@ -29,6 +34,9 @@
 		B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8365F212219DF4000BA255C /* FilterTableViewCell.swift */; };
 		B84ECF44220B29EE00B11954 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84ECF43220B29EE00B11954 /* Feed.storyboard */; };
 		B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECF45220B2A1D00B11954 /* FeedViewController.swift */; };
+		B872811E221C062800D1AF96 /* FilterListSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B872811D221C062800D1AF96 /* FilterListSetting.storyboard */; };
+		B8728120221C065900D1AF96 /* FilterListSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */; };
+		B8728122221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
 		B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */; };
 		B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */; };
@@ -67,11 +75,16 @@
 		034230632209F7F6003CC91C /* MyFilterCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFilterCategory.storyboard; sourceTree = "<group>"; };
 		03423065220A0482003CC91C /* MyFilterCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilterCategoryViewController.swift; sourceTree = "<group>"; };
 		03423067220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFilterCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		037A7F18221DA70500A670D7 /* PortraitFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitFilterViewController.swift; sourceTree = "<group>"; };
+		037A7F1A221DA74B00A670D7 /* FoodFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFilterViewController.swift; sourceTree = "<group>"; };
+		037A7F1C221DA75A00A670D7 /* ObjectFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFilterViewController.swift; sourceTree = "<group>"; };
+		037A7F1E221DA87500A670D7 /* SceneryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneryFilterViewController.swift; sourceTree = "<group>"; };
 		03896F16221B0097003637C8 /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
 		03896F18221B03D4003637C8 /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
 		03896F1C221B0419003637C8 /* RegisterNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNicknameViewController.swift; sourceTree = "<group>"; };
 		03896F1E221B0483003637C8 /* RegisterPasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordCheckViewController.swift; sourceTree = "<group>"; };
 		03896F20221B04AF003637C8 /* RegisterEmailCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailCheckViewController.swift; sourceTree = "<group>"; };
+		03CA5A31221C22FB00C85AFC /* DefaultFilterRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefaultFilterRegister.storyboard; sourceTree = "<group>"; };
 		03D28F2822082FBB007C8B15 /* DimmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
 		3CBFE07F816140D178519767 /* Pods-pream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.debug.xcconfig"; sourceTree = "<group>"; };
 		4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +99,9 @@
 		B8365F212219DF4000BA255C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		B84ECF43220B29EE00B11954 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		B84ECF45220B2A1D00B11954 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		B872811D221C062800D1AF96 /* FilterListSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterListSetting.storyboard; sourceTree = "<group>"; };
+		B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListSettingViewController.swift; sourceTree = "<group>"; };
+		B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListSettingTableViewCell.swift; sourceTree = "<group>"; };
 		B8DACC7921F875B7006B6AE2 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
@@ -155,6 +171,18 @@
 			path = FilterListView;
 			sourceTree = "<group>";
 		};
+		03CA5A30221C223600C85AFC /* DefaultFilterRegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				03CA5A31221C22FB00C85AFC /* DefaultFilterRegister.storyboard */,
+				037A7F18221DA70500A670D7 /* PortraitFilterViewController.swift */,
+				037A7F1A221DA74B00A670D7 /* FoodFilterViewController.swift */,
+				037A7F1C221DA75A00A670D7 /* ObjectFilterViewController.swift */,
+				037A7F1E221DA87500A670D7 /* SceneryFilterViewController.swift */,
+			);
+			path = DefaultFilterRegisterView;
+			sourceTree = "<group>";
+		};
 		2801250D0943AF45842BC22E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +208,16 @@
 				B815C657220B5977003885C0 /* UserFiltersTableViewCell.swift */,
 			);
 			path = FeedView;
+			sourceTree = "<group>";
+		};
+		B872811C221C061400D1AF96 /* FilterListSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				B872811D221C062800D1AF96 /* FilterListSetting.storyboard */,
+				B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */,
+				B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */,
+			);
+			path = FilterListSettingView;
 			sourceTree = "<group>";
 		};
 		B8DACC7821F8753B006B6AE2 /* LibraryView */ = {
@@ -249,6 +287,8 @@
 		EFEAE9C621DE3CAA00B7CCA8 /* pream */ = {
 			isa = PBXGroup;
 			children = (
+				03CA5A30221C223600C85AFC /* DefaultFilterRegisterView */,
+				B872811C221C061400D1AF96 /* FilterListSettingView */,
 				EFFDBE1A221C2DF600AB8BB2 /* Network */,
 				EF099751221B039C00DD29D3 /* FilterSettingView */,
 				B84ECF42220B29C500B11954 /* FeedView */,
@@ -392,7 +432,9 @@
 				EF099753221B03BD00DD29D3 /* FilterSetting.storyboard in Resources */,
 				EFB5A1D921EE36A800802F7E /* Colors.xcassets in Resources */,
 				030F2A9921FC94960066AEAC /* FilterCollection.storyboard in Resources */,
+				03CA5A32221C22FB00C85AFC /* DefaultFilterRegister.storyboard in Resources */,
 				034230642209F7F6003CC91C /* MyFilterCategory.storyboard in Resources */,
+				B872811E221C062800D1AF96 /* FilterListSetting.storyboard in Resources */,
 				B8365F1E2219D36C00BA255C /* FilterList.storyboard in Resources */,
 				EFEAE9CF21DE3CAC00B7CCA8 /* Assets.xcassets in Resources */,
 				B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */,
@@ -500,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8728120221C065900D1AF96 /* FilterListSettingViewController.swift in Sources */,
 				030F2A9B21FC95670066AEAC /* FilterCollectionViewController.swift in Sources */,
 				EFB5A1D321E22D1700802F7E /* KeyboardViewController.swift in Sources */,
 				EF099755221B0CA900DD29D3 /* FilterSettingViewController.swift in Sources */,
@@ -512,6 +555,7 @@
 				EFB5A1CA21E2213700802F7E /* LoginViewController.swift in Sources */,
 				EFEAE9DF21E20F8600B7CCA8 /* RoundButton.swift in Sources */,
 				EFF00E122208491500865921 /* GPUImageBeautifyFilter.m in Sources */,
+				037A7F1D221DA75A00A670D7 /* ObjectFilterViewController.swift in Sources */,
 				03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */,
 				EFEAE9C821DE3CAA00B7CCA8 /* AppDelegate.swift in Sources */,
 				EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */,
@@ -519,22 +563,26 @@
 				EFFDBE1E221C315700AB8BB2 /* PreamProvider.swift in Sources */,
 				03896F1F221B0483003637C8 /* RegisterPasswordCheckViewController.swift in Sources */,
 				EF099757221B126D00DD29D3 /* UIView+Extension.swift in Sources */,
+				037A7F1B221DA74B00A670D7 /* FoodFilterViewController.swift in Sources */,
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
 				B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */,
 				EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */,
 				B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
+				B8728122221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift in Sources */,
 				03896F19221B03D4003637C8 /* RegisterPasswordViewController.swift in Sources */,
 				03896F1D221B0419003637C8 /* RegisterNicknameViewController.swift in Sources */,
 				B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */,
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
+				037A7F1F221DA87500A670D7 /* SceneryFilterViewController.swift in Sources */,
 				EF099759221B140500DD29D3 /* TextInputDimedViewController.swift in Sources */,
 				EFFDBE1C221C2E5000AB8BB2 /* PreamService.swift in Sources */,
 				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
 				634E9B2A221CEEE2002ADE31 /* ShotTimer.swift in Sources */,
 				03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */,
 				03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */,
+				037A7F19221DA70500A670D7 /* PortraitFilterViewController.swift in Sources */,
 				030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */,
 				EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */,
 				EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */,

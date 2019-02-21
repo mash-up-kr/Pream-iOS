@@ -39,6 +39,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXL-gk-SwC">
                                         <rect key="frame" x="324" y="11" width="40" height="40"/>
                                         <state key="normal" image="icSetting"/>
+                                        <connections>
+                                            <segue destination="8k8-3v-eAv" kind="show" id="BdM-cg-r4t"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMH-vR-iJs">
                                         <rect key="frame" x="5" y="11" width="40" height="40"/>
@@ -253,6 +256,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aE-97-XHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1098.5507246376812" y="66.964285714285708"/>
+        </scene>
+        <!--FilterListSetting-->
+        <scene sceneID="3FM-yI-Kpn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FilterListSetting" id="8k8-3v-eAv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDd-Fy-TSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="-199"/>
         </scene>
         <!--FilterSetting-->
         <scene sceneID="vav-IX-Kpp">
