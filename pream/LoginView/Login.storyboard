@@ -116,74 +116,6 @@ would you like to take today?</string>
             </objects>
             <point key="canvasLocation" x="431" y="-235"/>
         </scene>
-        <!--Register View Controller-->
-        <scene sceneID="H5f-6U-tYm">
-            <objects>
-                <viewController id="kEO-Q9-jf5" customClass="RegisterViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jfw-dU-bGi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btC-ye-TBC">
-                                <rect key="frame" x="38" y="537" width="300" height="40"/>
-                                <state key="normal" image="NextGradationButton"/>
-                                <connections>
-                                    <action selector="nextButtonAction:" destination="kEO-Q9-jf5" eventType="touchUpInside" id="MfB-Kv-owL"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-3k-CE1">
-                                <rect key="frame" x="58" y="93" width="56" height="15"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="패스워드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXK-k3-heN">
-                                <rect key="frame" x="58" y="143" width="42" height="15"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="패스워드 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-xx-QZZ">
-                                <rect key="frame" x="58" y="193" width="66" height="15"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTz-6M-AFI">
-                                <rect key="frame" x="58" y="243" width="32" height="15"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 잊으셨나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrg-Py-ac2">
-                                <rect key="frame" x="40" y="612" width="113" height="15"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="hTz-6M-AFI" firstAttribute="leading" secondItem="zWe-3k-CE1" secondAttribute="leading" id="2Nj-wO-zNO"/>
-                            <constraint firstItem="DXK-k3-heN" firstAttribute="leading" secondItem="zWe-3k-CE1" secondAttribute="leading" id="2lo-bP-tme"/>
-                            <constraint firstItem="Rrg-Py-ac2" firstAttribute="top" secondItem="btC-ye-TBC" secondAttribute="bottom" constant="35" id="3vX-RO-rdb"/>
-                            <constraint firstItem="btC-ye-TBC" firstAttribute="leading" secondItem="x9d-A8-5oE" secondAttribute="leading" constant="38" id="77P-wb-mqx"/>
-                            <constraint firstItem="x9d-A8-5oE" firstAttribute="bottom" secondItem="btC-ye-TBC" secondAttribute="bottom" constant="90" id="9EH-Ll-OfD"/>
-                            <constraint firstItem="hTz-6M-AFI" firstAttribute="top" secondItem="bmz-xx-QZZ" secondAttribute="bottom" constant="35" id="GSS-S2-qSh"/>
-                            <constraint firstItem="Rrg-Py-ac2" firstAttribute="leading" secondItem="x9d-A8-5oE" secondAttribute="leading" constant="40" id="Ptu-LK-MCJ"/>
-                            <constraint firstItem="bmz-xx-QZZ" firstAttribute="top" secondItem="DXK-k3-heN" secondAttribute="bottom" constant="35" id="aX4-d8-dm5"/>
-                            <constraint firstItem="zWe-3k-CE1" firstAttribute="top" secondItem="x9d-A8-5oE" secondAttribute="top" constant="73" id="aXd-Y4-Oc9"/>
-                            <constraint firstItem="zWe-3k-CE1" firstAttribute="leading" secondItem="x9d-A8-5oE" secondAttribute="leading" constant="58" id="e1C-ao-irL"/>
-                            <constraint firstItem="DXK-k3-heN" firstAttribute="top" secondItem="zWe-3k-CE1" secondAttribute="bottom" constant="35" id="mV0-c3-aEH"/>
-                            <constraint firstItem="bmz-xx-QZZ" firstAttribute="leading" secondItem="zWe-3k-CE1" secondAttribute="leading" id="tnW-0u-ALW"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="x9d-A8-5oE"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nmd-fS-UPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2850" y="-942"/>
-        </scene>
         <!--Register Email View Controller-->
         <scene sceneID="vg9-cF-Whd">
             <objects>
@@ -230,17 +162,11 @@ would you like to take today?</string>
                                 <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제가 사용할 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTA-MT-ZCZ">
-                                <rect key="frame" x="20" y="188" width="83" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My email address is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3G-Kp-EH4">
+                                <rect key="frame" x="20" y="217" width="139" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="Rpe-bD-uUV"/>
+                                    <constraint firstAttribute="height" constant="29" id="tyn-Uu-sgj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 주소는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3G-Kp-EH4">
-                                <rect key="frame" x="20" y="217" width="93" height="29"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -284,7 +210,8 @@ would you like to take today?</string>
                                     <constraint firstAttribute="height" constant="46" id="Vw1-Ej-PAR"/>
                                     <constraint firstAttribute="width" constant="46" id="neP-Mz-7JK"/>
                                 </constraints>
-                                <state key="normal" image="next"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="NzH-NJ-GRi" kind="show" id="3sO-X0-PKw"/>
                                 </connections>
@@ -294,7 +221,7 @@ would you like to take today?</string>
                         <constraints>
                             <constraint firstItem="oHr-CV-it2" firstAttribute="top" secondItem="SJe-4I-KF3" secondAttribute="top" id="1kz-Cv-Enz"/>
                             <constraint firstItem="SJe-4I-KF3" firstAttribute="trailing" secondItem="oHr-CV-it2" secondAttribute="trailing" id="CZj-Nb-PgY"/>
-                            <constraint firstItem="w3G-Kp-EH4" firstAttribute="leading" secondItem="MTA-MT-ZCZ" secondAttribute="leading" id="DUN-AP-1ub"/>
+                            <constraint firstItem="w3G-Kp-EH4" firstAttribute="top" secondItem="oHr-CV-it2" secondAttribute="bottom" constant="138" id="GJj-Hf-EKX"/>
                             <constraint firstItem="LnV-iY-dEE" firstAttribute="width" secondItem="zpv-ns-iHL" secondAttribute="width" id="HxG-qj-RKN"/>
                             <constraint firstItem="zpv-ns-iHL" firstAttribute="top" secondItem="LnV-iY-dEE" secondAttribute="bottom" id="Jc8-FU-ZZl"/>
                             <constraint firstItem="sWJ-qJ-dNC" firstAttribute="leading" secondItem="9F5-jb-DXo" secondAttribute="trailing" constant="5" id="Jix-y5-8xy"/>
@@ -303,14 +230,11 @@ would you like to take today?</string>
                             <constraint firstItem="miq-w5-XPK" firstAttribute="bottom" secondItem="zpv-ns-iHL" secondAttribute="bottom" id="Owa-x5-NdZ"/>
                             <constraint firstItem="95K-xn-ehQ" firstAttribute="top" secondItem="miq-w5-XPK" secondAttribute="bottom" constant="49" id="PPk-vY-mvK"/>
                             <constraint firstItem="zpv-ns-iHL" firstAttribute="leading" secondItem="LnV-iY-dEE" secondAttribute="leading" id="Pm2-84-sXI"/>
-                            <constraint firstItem="MTA-MT-ZCZ" firstAttribute="top" secondItem="oHr-CV-it2" secondAttribute="bottom" constant="109" id="SDc-E6-2G1"/>
                             <constraint firstItem="HrY-dx-Pn1" firstAttribute="leading" secondItem="SJe-4I-KF3" secondAttribute="leading" constant="20" id="Sf8-Ef-q3b"/>
                             <constraint firstItem="sWJ-qJ-dNC" firstAttribute="top" secondItem="oHr-CV-it2" secondAttribute="bottom" constant="9" id="TDu-1u-PfH"/>
                             <constraint firstItem="9F5-jb-DXo" firstAttribute="top" secondItem="oHr-CV-it2" secondAttribute="bottom" id="VGH-Zz-RUC"/>
+                            <constraint firstItem="w3G-Kp-EH4" firstAttribute="leading" secondItem="SJe-4I-KF3" secondAttribute="leading" constant="20" id="WEh-0C-weP"/>
                             <constraint firstItem="SJe-4I-KF3" firstAttribute="trailing" secondItem="95K-xn-ehQ" secondAttribute="trailing" constant="20" id="WfV-bc-pmp"/>
-                            <constraint firstItem="w3G-Kp-EH4" firstAttribute="top" secondItem="MTA-MT-ZCZ" secondAttribute="bottom" id="Xwv-mL-DLX"/>
-                            <constraint firstItem="w3G-Kp-EH4" firstAttribute="height" secondItem="MTA-MT-ZCZ" secondAttribute="height" id="YaD-0K-hEO"/>
-                            <constraint firstItem="MTA-MT-ZCZ" firstAttribute="leading" secondItem="SJe-4I-KF3" secondAttribute="leading" constant="20" id="bkG-ke-7yO"/>
                             <constraint firstItem="LnV-iY-dEE" firstAttribute="top" secondItem="w3G-Kp-EH4" secondAttribute="bottom" constant="12" id="c8g-7j-RHK"/>
                             <constraint firstItem="SJe-4I-KF3" firstAttribute="trailing" secondItem="sWJ-qJ-dNC" secondAttribute="trailing" constant="20" id="d6m-Yv-1lN"/>
                             <constraint firstItem="HrY-dx-Pn1" firstAttribute="centerY" secondItem="95K-xn-ehQ" secondAttribute="centerY" id="i1d-0X-eJS"/>
@@ -392,8 +316,8 @@ would you like to take today?</string>
                                 <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저의 비밀번호는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X8-yn-0qK">
-                                <rect key="frame" x="20" y="217" width="107.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My password is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X8-yn-0qK">
+                                <rect key="frame" x="20" y="217" width="110" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="GTt-xj-0tu"/>
                                 </constraints>
@@ -440,7 +364,8 @@ would you like to take today?</string>
                                     <constraint firstAttribute="width" constant="46" id="HcI-6U-qUH"/>
                                     <constraint firstAttribute="height" constant="46" id="wH5-4d-Taj"/>
                                 </constraints>
-                                <state key="normal" image="next"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="j9J-wc-Nck" kind="show" id="Uda-0A-JEl"/>
                                 </connections>
@@ -526,8 +451,8 @@ would you like to take today?</string>
                                 <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저의 비밀번호는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVS-TS-aTQ">
-                                <rect key="frame" x="20" y="217" width="107.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please confirm your password." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVS-TS-aTQ">
+                                <rect key="frame" x="20" y="217" width="218" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="ds9-7Z-ktG"/>
                                 </constraints>
@@ -574,33 +499,23 @@ would you like to take today?</string>
                                     <constraint firstAttribute="height" constant="46" id="JAw-pB-zTb"/>
                                     <constraint firstAttribute="width" constant="46" id="Z3S-83-Eg7"/>
                                 </constraints>
-                                <state key="normal" image="next"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="YEA-Oy-5xj" kind="show" id="xqB-6N-zwO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한번 더 확인할게요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq3-es-QHh">
-                                <rect key="frame" x="20" y="176" width="127" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="698-Hx-SHy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6qB-z6-YhX" firstAttribute="width" secondItem="CCz-lY-VtO" secondAttribute="width" id="3SV-Fp-7Dg"/>
                             <constraint firstItem="CCz-lY-VtO" firstAttribute="top" secondItem="6qB-z6-YhX" secondAttribute="bottom" id="5JR-DO-DKH"/>
-                            <constraint firstItem="xq3-es-QHh" firstAttribute="leading" secondItem="6KJ-86-qDp" secondAttribute="leading" constant="20" id="5TO-Gq-QmN"/>
                             <constraint firstItem="934-H3-WgZ" firstAttribute="leading" secondItem="6KJ-86-qDp" secondAttribute="leading" id="8tv-F6-B0i"/>
-                            <constraint firstItem="hVS-TS-aTQ" firstAttribute="top" secondItem="xq3-es-QHh" secondAttribute="bottom" constant="12" id="Cw3-HS-FQE"/>
-                            <constraint firstItem="xq3-es-QHh" firstAttribute="top" secondItem="934-H3-WgZ" secondAttribute="bottom" constant="97" id="EJF-iR-xcH"/>
                             <constraint firstItem="RA4-nB-vFA" firstAttribute="top" secondItem="934-H3-WgZ" secondAttribute="bottom" constant="9" id="Ell-RQ-tAa"/>
                             <constraint firstItem="934-H3-WgZ" firstAttribute="top" secondItem="6KJ-86-qDp" secondAttribute="top" id="MFR-qk-FjM"/>
                             <constraint firstItem="hVS-TS-aTQ" firstAttribute="leading" secondItem="6KJ-86-qDp" secondAttribute="leading" constant="20" id="O0X-Cy-hJv"/>
                             <constraint firstItem="Jxj-Mz-q5Y" firstAttribute="top" secondItem="934-H3-WgZ" secondAttribute="bottom" id="PUQ-ne-OUN"/>
+                            <constraint firstItem="hVS-TS-aTQ" firstAttribute="top" secondItem="934-H3-WgZ" secondAttribute="bottom" constant="138" id="aC3-GB-igw"/>
                             <constraint firstItem="1Dc-ck-yfp" firstAttribute="leading" secondItem="6KJ-86-qDp" secondAttribute="leading" constant="20" id="aZZ-lB-ga6"/>
                             <constraint firstItem="ldh-jr-rQR" firstAttribute="leading" secondItem="CCz-lY-VtO" secondAttribute="trailing" constant="7" id="cfy-UT-flc"/>
                             <constraint firstItem="6qB-z6-YhX" firstAttribute="top" secondItem="hVS-TS-aTQ" secondAttribute="bottom" constant="12" id="dAl-Bk-Itk"/>
@@ -671,8 +586,8 @@ would you like to take today?</string>
                                 <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저의 닉네임은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-XQ-NKa">
-                                <rect key="frame" x="20" y="217" width="93" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My nickname is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-XQ-NKa">
+                                <rect key="frame" x="20" y="217" width="110" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="D9d-6i-X1W"/>
                                 </constraints>
@@ -719,7 +634,8 @@ would you like to take today?</string>
                                     <constraint firstAttribute="height" constant="46" id="LQf-8i-RJj"/>
                                     <constraint firstAttribute="width" constant="46" id="grS-NX-M4F"/>
                                 </constraints>
-                                <state key="normal" image="next"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="oxh-1q-PbL" kind="show" id="trK-Sv-Ga4"/>
                                 </connections>
@@ -759,14 +675,6 @@ would you like to take today?</string>
             </objects>
             <point key="canvasLocation" x="4428" y="-235"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="hA3-yV-EVH">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="7i1-fv-nqp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5ZK-Cb-Zsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5912" y="-236"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="6yW-qa-5Mp">
             <objects>
@@ -775,8 +683,8 @@ would you like to take today?</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="축하드립니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-y4-IoU">
-                                <rect key="frame" x="40" y="246" width="93" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-y4-IoU">
+                                <rect key="frame" x="40" y="297" width="69.5" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="wMw-N4-8Vq"/>
                                 </constraints>
@@ -784,8 +692,8 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정 생성이 완료 되었어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-bI-at6">
-                                <rect key="frame" x="40" y="278" width="179" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have successfully signed up." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-bI-at6">
+                                <rect key="frame" x="40" y="329" width="228.5" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="01A-hL-163"/>
                                 </constraints>
@@ -793,8 +701,8 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="블루문 님이 사용하실 필터를" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vte-Wi-ngc">
-                                <rect key="frame" x="40" y="342" width="190" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now let’s go choose your filters!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vte-Wi-ngc">
+                                <rect key="frame" x="40" y="393" width="226" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="vrP-mG-L5r"/>
                                 </constraints>
@@ -802,30 +710,14 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택하러 가볼까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrJ-fL-Wey">
-                                <rect key="frame" x="40" y="374" width="130" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="9Hm-gk-zyX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-yH-Qsp">
-                                <rect key="frame" x="37.5" y="501" width="300" height="45"/>
+                                <rect key="frame" x="37.5" y="535" width="300" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5pO-4l-7OZ"/>
                                 </constraints>
                                 <state key="normal" image="finalactivebutton"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2N-4x-yBI">
-                                <rect key="frame" x="37.5" y="562" width="300" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="2Nm-d3-8yB"/>
-                                </constraints>
-                                <state key="normal" image="defaultbutton"/>
                                 <connections>
-                                    <segue destination="7i1-fv-nqp" kind="show" id="Eto-iW-zV2"/>
+                                    <segue destination="MUk-td-EuJ" kind="show" id="dhs-am-a4Y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -834,15 +726,10 @@ would you like to take today?</string>
                             <constraint firstItem="6dS-bI-at6" firstAttribute="top" secondItem="fHg-y4-IoU" secondAttribute="bottom" id="6Kf-ca-8RN"/>
                             <constraint firstItem="vte-Wi-ngc" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="8fy-0v-1NR"/>
                             <constraint firstItem="fHg-y4-IoU" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="BcU-hL-uMf"/>
-                            <constraint firstItem="G2N-4x-yBI" firstAttribute="top" secondItem="VNN-yH-Qsp" secondAttribute="bottom" constant="16" id="Flh-wd-dS4"/>
+                            <constraint firstItem="6C0-Ew-CuX" firstAttribute="bottom" secondItem="VNN-yH-Qsp" secondAttribute="bottom" constant="87" id="DAr-OG-sUm"/>
                             <constraint firstItem="6dS-bI-at6" firstAttribute="leading" secondItem="fHg-y4-IoU" secondAttribute="leading" id="Y3b-KU-zB6"/>
-                            <constraint firstItem="vrJ-fL-Wey" firstAttribute="top" secondItem="vte-Wi-ngc" secondAttribute="bottom" id="bc1-Xf-osW"/>
-                            <constraint firstItem="fHg-y4-IoU" firstAttribute="top" secondItem="6C0-Ew-CuX" secondAttribute="top" priority="250" constant="226" id="c0S-sQ-lH6"/>
-                            <constraint firstItem="G2N-4x-yBI" firstAttribute="centerX" secondItem="4ee-Xc-V8w" secondAttribute="centerX" id="f46-Tj-t7L"/>
-                            <constraint firstItem="VNN-yH-Qsp" firstAttribute="top" secondItem="vrJ-fL-Wey" secondAttribute="bottom" constant="95" id="fGy-No-N3H"/>
-                            <constraint firstItem="6C0-Ew-CuX" firstAttribute="bottom" secondItem="G2N-4x-yBI" secondAttribute="bottom" constant="60" id="hI1-Rw-Zjr"/>
+                            <constraint firstItem="fHg-y4-IoU" firstAttribute="top" secondItem="6C0-Ew-CuX" secondAttribute="top" priority="250" constant="277" id="c0S-sQ-lH6"/>
                             <constraint firstItem="VNN-yH-Qsp" firstAttribute="centerX" secondItem="4ee-Xc-V8w" secondAttribute="centerX" id="j47-6A-5P8"/>
-                            <constraint firstItem="vrJ-fL-Wey" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="qJc-88-bEL"/>
                             <constraint firstItem="vte-Wi-ngc" firstAttribute="top" secondItem="6dS-bI-at6" secondAttribute="bottom" constant="32" id="xtE-cB-vdt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6C0-Ew-CuX"/>
@@ -851,6 +738,14 @@ would you like to take today?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sj0-vg-WsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5236" y="-235"/>
+        </scene>
+        <!--DefaultFilterRegister-->
+        <scene sceneID="Vpi-tm-Oev">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DefaultFilterRegister" id="MUk-td-EuJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLg-eo-3Sj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5838" y="-236"/>
         </scene>
         <!--Register Email Check View Controller-->
         <scene sceneID="vmg-mG-03z">
@@ -937,13 +832,14 @@ would you like to take today?</string>
                                     <constraint firstAttribute="width" constant="46" id="LIu-ZC-try"/>
                                     <constraint firstAttribute="height" constant="46" id="VEB-3m-NsQ"/>
                                 </constraints>
-                                <state key="normal" image="next"/>
+                                <state key="normal" image="activeNextButton"/>
+                                <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
                                     <segue destination="Ljy-cc-q0i" kind="show" id="dzI-xb-PJ0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입력하신 이메일로 인증코드를 보내드렸어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-pf-AUD">
-                                <rect key="frame" x="20" y="188" width="297.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ve sent you a verification code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-pf-AUD">
+                                <rect key="frame" x="20" y="188" width="244.5" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="Z2S-YN-7hE"/>
                                 </constraints>
@@ -951,8 +847,8 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증코드를 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8b-9x-D7A">
-                                <rect key="frame" x="20" y="217" width="170.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to your email. Please input your code." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8b-9x-D7A">
+                                <rect key="frame" x="20" y="217" width="269" height="29"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -998,11 +894,10 @@ would you like to take today?</string>
     </scenes>
     <resources>
         <image name="LoginGradationButton" width="301" height="40"/>
-        <image name="NextGradationButton" width="300" height="40"/>
+        <image name="activeNextButton" width="46" height="46"/>
         <image name="closeBtn" width="40" height="40"/>
-        <image name="defaultbutton" width="300" height="45"/>
         <image name="finalactivebutton" width="300" height="45"/>
-        <image name="next" width="46" height="46"/>
+        <image name="inactivenextbutton" width="46" height="46"/>
         <image name="previous" width="36" height="36"/>
         <namedColor name="brightViolet">
             <color red="0.59999999999999998" green="0.11372549019607843" blue="0.92156862745098034" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
