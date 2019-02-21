@@ -14,9 +14,9 @@ class SceneryFilterViewController: UIViewController {
     @IBOutlet weak var secondFilterImageView: UIImageView!
     @IBOutlet weak var thirdFilterImageView: UIImageView!
     @IBOutlet weak var fourthFilterImageView: UIImageView!
-    
+
     @IBOutlet weak var startButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

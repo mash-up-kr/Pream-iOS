@@ -9,12 +9,12 @@
 import UIKit
 
 class ObjectFilterViewController: UIViewController {
-    
+
     @IBOutlet weak var firstFilterImageView: UIImageView!
     @IBOutlet weak var secondFilterImageView: UIImageView!
     @IBOutlet weak var thirdFilterImageView: UIImageView!
     @IBOutlet weak var fourthFilterImageView: UIImageView!
-    
+
     @IBOutlet weak var nextButton: UIButton!
 
     override func viewDidLoad() {
@@ -22,5 +22,5 @@ class ObjectFilterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
 }
