@@ -7,19 +7,53 @@
 //
 
 import UIKit
+import GPUImage
 
 class FilterSettingViewController: UIViewController {
-    @IBOutlet weak var previewImageView: UIImageView!
+    @IBOutlet weak var previewImageView: GPUImageView!
     @IBOutlet weak var filterSettingTopIcon: UIImageView!
     @IBOutlet weak var filterSettingTopViewBottomConstraints: NSLayoutConstraint!
     @IBOutlet weak var bottomViewTopConstraints: NSLayoutConstraint!
     @IBOutlet weak var bottomSizeView: UIView!
     @IBOutlet weak var effectNameLabel: UILabel!
+    @IBOutlet weak var sliderOutlet: UISlider!
+    @IBOutlet weak var valueLabel: UILabel!
+    var currentValue: Float?
+    var gpuImage: GPUImagePicture?
+    lazy var gpuGroupFilter: GPUImageFilterGroup = {
+       let groupFilter = GPUImageFilterGroup()
+        groupFilter.addFilter(gpuExposureFilter)
+        groupFilter.addFilter(gpuContrastFilter)
+        groupFilter.addFilter(gpuSharpenFilter)
 
+        gpuExposureFilter.addTarget(gpuContrastFilter)
+        gpuContrastFilter.addTarget(gpuSharpenFilter)
+
+        groupFilter.initialFilters = [gpuExposureFilter]
+        groupFilter.terminalFilter = gpuSharpenFilter
+
+        return groupFilter
+    }()
+    var gpuExposureFilter: GPUImageExposureFilter = GPUImageExposureFilter()
+    var gpuContrastFilter: GPUImageContrastFilter = GPUImageContrastFilter()
+    var gpuSharpenFilter: GPUImageSharpenFilter = GPUImageSharpenFilter()
+
+    @IBAction private func changedValue(_ sender: UISlider) {
+        currentValue = sender.value
+        valueLabel.text = "\(sender.value)"
+        if effectNameLabel.text == "Exposure" {
+            gpuExposureFilter.exposure = CGFloat(sender.value)
+        } else if effectNameLabel.text == "Contrast" {
+            gpuContrastFilter.contrast = CGFloat(sender.value)
+        } else {
+            gpuSharpenFilter.sharpness = CGFloat(sender.value)
+        }
+
+        gpuImage?.processImage()
+    }
     @IBAction private func closeButtonAction(_ sender: Any) {
         setDefaultConstraints()
     }
-
     @IBAction private func acceptButtonAction(_ sender: Any) {
         setDefaultConstraints()
     }
@@ -77,7 +111,11 @@ extension FilterSettingViewController: LibraryDelegate {
     func selectImage(data: Data?) {
         if let data = data {
             let image = UIImage(data: data)
-            previewImageView.image = image
+            gpuImage = GPUImagePicture(image: image)
+
+            gpuImage?.addTarget(gpuGroupFilter)
+            gpuGroupFilter.addTarget(previewImageView)
+            gpuImage?.processImage()
         }
         dismiss(animated: true, completion: nil)
     }

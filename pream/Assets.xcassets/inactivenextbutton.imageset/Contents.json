@@ -2,17 +2,17 @@
   "images" : [
     {
       "scale" : "1x",
-      "filename" : "finalactivebutton.png",
+      "filename" : "inactivenextbutton.png",
       "idiom" : "universal"
     },
     {
       "scale" : "2x",
-      "filename" : "finalactivebutton@2x.png",
+      "filename" : "inactivenextbutton@2x.png",
       "idiom" : "universal"
     },
     {
       "scale" : "3x",
-      "filename" : "finalactivebutton@3x.png",
+      "filename" : "inactivenextbutton@3x.png",
       "idiom" : "universal"
     }
   ],
