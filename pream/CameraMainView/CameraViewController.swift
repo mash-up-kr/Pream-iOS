@@ -47,7 +47,7 @@ class CameraViewController: UIViewController {
         timerCount.isHidden = true
         listenVolumeButton()
         addVolumeButtonObserver()
-        setCameraPositionFromUserDefaults()
+        setParamsFromUserDefaults()
         startCameraSession()
         addBlur()
         registerDoubleTapShotView()
@@ -93,6 +93,7 @@ extension CameraViewController {
         currentRatio.next()
         setRatio()
         changeRotateButtonImage(changeRatioButton, currentRatio)
+        setCurrentRatioIntoUserDefaults()
     }
     // 타이머
     @IBAction private func didTabOnTimerButton(_ sender: UIButton) {
@@ -258,8 +259,18 @@ extension CameraViewController {
         setCameraPositionIntoUserDefault()
     }
 
+    // set params from UserDefaults
+    func setParamsFromUserDefaults() {
+        setCameraPositionFromUserDefaults()
+        setCurrentRatioFromUserDefaults()
+    }
+
     func setCameraPositionFromUserDefaults() {
         cameraPosition = AVCaptureDevice.Position(rawValue: UserDefaults.standard.integer(forKey: "cameraPosition")) ?? .front
+    }
+
+    func setCurrentRatioFromUserDefaults() {
+        currentRatio = CameraRatio(rawValue: UserDefaults.standard.integer(forKey: "currentRatio")) ?? .fourthree
     }
 
     // 더블탭 카메라 전환
@@ -333,9 +344,14 @@ extension CameraViewController {
         button.setImage(UIImage(named: buttonState.getImageName()), for: .normal)
     }
 
-    // cameraPosition UserDefault
+    // cameraPosition UserDefaults
     func setCameraPositionIntoUserDefault() {
         UserDefaults.standard.set(cameraPosition.rawValue, forKey: "cameraPosition")
+    }
+
+    // currentRatio UserDefaults
+    func setCurrentRatioIntoUserDefaults() {
+        UserDefaults.standard.set(currentRatio.rawValue, forKey: "currentRatio")
     }
 }
 

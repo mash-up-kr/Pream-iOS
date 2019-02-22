@@ -13,7 +13,7 @@ protocol RotateButton {
     mutating func next()
 }
 
-enum CameraRatio: RotateButton {
+enum CameraRatio: Int, RotateButton {
     case full
     case oneone
     case fourthree
