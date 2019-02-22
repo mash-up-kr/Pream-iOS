@@ -10,6 +10,7 @@ import UIKit
 
 enum Effects: Int, CaseIterable {
     case exposure
+    case brightness
     case contrast
     case sharpen
     case saturation
@@ -17,14 +18,16 @@ enum Effects: Int, CaseIterable {
     case shadow
     case whiteBalance
     case vignette
-    case grain
-    case fade
+//    case grain
+//    case fade
     case splitTone
 
     func getImage() -> UIImage {
         switch self {
         case .exposure:
             return UIImage(imageLiteralResourceName: "icExposure")
+        case .brightness:
+            return UIImage(imageLiteralResourceName: "icBrightness")
         case .contrast:
             return UIImage(imageLiteralResourceName: "icContrast")
         case .sharpen:
@@ -39,10 +42,10 @@ enum Effects: Int, CaseIterable {
             return UIImage(imageLiteralResourceName: "icWhiteBalance")
         case .vignette:
             return UIImage(imageLiteralResourceName: "icVignette")
-        case .grain:
-            return UIImage(imageLiteralResourceName: "icGrain")
-        case .fade:
-            return UIImage(imageLiteralResourceName: "icFade")
+//        case .grain:
+//            return UIImage(imageLiteralResourceName: "icGrain")
+//        case .fade:
+//            return UIImage(imageLiteralResourceName: "icFade")
         case .splitTone:
             return UIImage(imageLiteralResourceName: "icSplitTone")
         }
@@ -52,6 +55,8 @@ enum Effects: Int, CaseIterable {
         switch self {
         case .exposure:
             return "Exposure"
+        case .brightness:
+            return "Brightness"
         case .contrast:
             return "Contrast"
         case .sharpen:
@@ -66,12 +71,12 @@ enum Effects: Int, CaseIterable {
             return "White\nBalance"
         case .vignette:
             return "Vignette"
-        case .grain:
-            return "Grain"
-        case .fade:
-            return "Fade"
+//        case .grain:
+//            return "Grain"
+//        case .fade:
+//            return "Fade"
         case .splitTone:
-            return "Split\nTone"
+            return "Color\nFilter"
         }
     }
 }

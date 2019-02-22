@@ -28,6 +28,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var bottomBlurViewHeight: NSLayoutConstraint!
     @IBOutlet weak var topBlurViewHeight: NSLayoutConstraint!
     @IBOutlet weak var timerCount: UILabel!
+    var currentFilterModel: FilterModel = FilterModel()
 
     var isLogin: Bool = true
     var videoCamera: GPUImageVideoCamera?
@@ -151,43 +152,10 @@ extension CameraViewController {
     func touchToFocus() {
         do {
             try videoCamera?.inputCamera.lockForConfiguration()
-//            videoCamera?.inputCamera.focusMode = .continuousAutoFocus
-//            videoCamera?.inputCamera.setFocusModeLocked(lensPosition: 0.5, completionHandler: nil)
             videoCamera?.inputCamera.unlockForConfiguration()
         } catch let error as NSError {
             Log.msg(error)
         }
-    }
-    //필터 추가
-    func addFilter() {
-        filterGroup = GPUImageFilterGroup()
-//        Exposure ranges from -10.0 to 10.0, with 0.0 as the normal level
-        let exposureFilter = GPUImageExposureFilter()
-        exposureFilter.exposure = 0.5
-        let contrastFilter = GPUImageContrastFilter()
-        let sharpenFilter = GPUImageSharpenFilter()
-        let saturationFilter = GPUImageSaturationFilter()
-        let whiteBalanceFilter = GPUImageWhiteBalanceFilter()
-        let vignetteFilter = GPUImageVignetteFilter()
-//        let toneFilter = GPUImageToneCurveFilter()
-        //        let adjustFilter = gpuimagea
-        //        let clarityFilter = gpuimageclari
-        //        let grainFilter = gpuimagegrain
-        //        let fadeFilter = gpuimagefade
-        //        let splittoneFilter = gpuimagespli
-        //        let colorFilter = gpuimagecolor
-
-        filterGroup?.addTarget(exposureFilter)
-        //        filterGroup?.addTarget(contrastFilter)
-        //        filterGroup?.addTarget(sharpenFilter)
-        //        filterGroup?.addTarget(saturationFilter)
-        //        filterGroup?.addTarget(toneFilter)
-        //        filterGroup?.addTarget(whiteBalanceFilter)
-        filterGroup?.initialFilters = [exposureFilter]
-        filterGroup?.terminalFilter = exposureFilter
-
-        videoCamera?.addTarget(filterGroup)
-        filterGroup?.addTarget(gpuImageView)
     }
     //카메라 동작
     func startCameraSession() {
@@ -201,7 +169,9 @@ extension CameraViewController {
         videoCamera?.outputImageOrientation = .portrait
         videoCamera?.delegate = self
         videoCamera?.horizontallyMirrorFrontFacingCamera = true
-        addFilter()
+
+        videoCamera?.addTarget(currentFilterModel.groupFilter.gpuGroupFilter)
+        currentFilterModel.groupFilter.gpuGroupFilter.addTarget(gpuImageView)
         videoCamera?.startCapture()
         touchToFocus()
     }

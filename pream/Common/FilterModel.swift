@@ -21,9 +21,15 @@ class GroupFilter {
     var gpuSaturationFilter: GPUImageSaturationFilter = GPUImageSaturationFilter()
     var gpuHighlightFilter: GPUImageHighlightShadowFilter = GPUImageHighlightShadowFilter()
     var gpuWhiteBalanceFilter: GPUImageWhiteBalanceFilter = GPUImageWhiteBalanceFilter()
-    var gpuVignetteFilter: GPUImageVignetteFilter = GPUImageVignetteFilter()
-    var gpuGrainFilter: GPUImageExposureFilter = GPUImageExposureFilter()
-    var gpuFadeFilter: GPUImageExposureFilter = GPUImageExposureFilter()
+    var gpuBrightnessFilter: GPUImageBrightnessFilter = GPUImageBrightnessFilter()
+    var gpuVignetteFilter: GPUImageVignetteFilter = {
+        let filter = GPUImageVignetteFilter()
+        filter.vignetteStart = 0
+        filter.vignetteEnd = 5
+        return filter
+    }()
+//    var gpuGrainFilter: GPUImageExposureFilter = GPUImageExposureFilter()
+//    var gpuFadeFilter: GPUImageExposureFilter = GPUImageExposureFilter()
     var gpuSplitToneFilter: GPUImageExposureFilter = GPUImageExposureFilter()
     lazy var gpuGroupFilter: GPUImageFilterGroup = {
         let groupFilter = GPUImageFilterGroup()
@@ -34,8 +40,9 @@ class GroupFilter {
         groupFilter.addFilter(gpuHighlightFilter)
         groupFilter.addFilter(gpuWhiteBalanceFilter)
         groupFilter.addFilter(gpuVignetteFilter)
-        groupFilter.addFilter(gpuGrainFilter)
-        groupFilter.addFilter(gpuFadeFilter)
+        groupFilter.addFilter(gpuBrightnessFilter)
+//        groupFilter.addFilter(gpuGrainFilter)
+//        groupFilter.addFilter(gpuFadeFilter)
         groupFilter.addFilter(gpuSplitToneFilter)
 
         gpuExposureFilter.addTarget(gpuContrastFilter)
@@ -44,9 +51,10 @@ class GroupFilter {
         gpuSaturationFilter.addTarget(gpuHighlightFilter)
         gpuHighlightFilter.addTarget(gpuWhiteBalanceFilter)
         gpuWhiteBalanceFilter.addTarget(gpuVignetteFilter)
-        gpuVignetteFilter.addTarget(gpuGrainFilter)
-        gpuGrainFilter.addTarget(gpuFadeFilter)
-        gpuFadeFilter.addTarget(gpuSplitToneFilter)
+        gpuVignetteFilter.addTarget(gpuBrightnessFilter)
+        gpuBrightnessFilter.addTarget(gpuSplitToneFilter)
+//        gpuGrainFilter.addTarget(gpuFadeFilter)
+//        gpuFadeFilter.addTarget(gpuSplitToneFilter)
 
         groupFilter.initialFilters = [gpuExposureFilter]
         groupFilter.terminalFilter = gpuSplitToneFilter
@@ -58,6 +66,8 @@ class GroupFilter {
         switch filter {
         case .exposure:
             return (-10, 10)
+        case .brightness:
+            return (-1, 1)
         case .contrast:
             return (0, 4)
         case .sharpen:
@@ -75,11 +85,11 @@ class GroupFilter {
                 return (0, 100)
             }
         case .vignette:
-            return (0, 1)
-        case .grain:
-            return (0, 0)
-        case .fade:
-            return (0, 0)
+            return (0, 5)
+//        case .grain:
+//            return (0, 0)
+//        case .fade:
+//            return (0, 0)
         case .splitTone:
             return (0, 0)
         }
@@ -89,6 +99,8 @@ class GroupFilter {
         switch currentFilter {
         case .exposure:
             gpuExposureFilter.exposure = value
+        case .brightness:
+            gpuBrightnessFilter.brightness = value
         case .contrast:
             gpuContrastFilter.contrast = value
         case .sharpen:
@@ -106,11 +118,12 @@ class GroupFilter {
                 gpuWhiteBalanceFilter.tint = value
             }
         case .vignette:
+            gpuVignetteFilter.vignetteStart = 0
             gpuVignetteFilter.vignetteEnd = value
-        case .grain:
-            Log.msg("grain")
-        case .fade:
-            Log.msg("grain")
+//        case .grain:
+//            Log.msg("grain")
+//        case .fade:
+//            Log.msg("grain")
         case .splitTone:
             Log.msg("grain")
         }
@@ -120,6 +133,8 @@ class GroupFilter {
         switch effect {
         case .exposure:
             return gpuExposureFilter.exposure
+        case .brightness:
+            return gpuBrightnessFilter.brightness
         case .contrast:
             return gpuContrastFilter.contrast
         case .sharpen:
@@ -138,10 +153,10 @@ class GroupFilter {
             }
         case .vignette:
             return gpuVignetteFilter.vignetteEnd
-        case .grain:
-            return 0
-        case .fade:
-            return 0
+//        case .grain:
+//            return 0
+//        case .fade:
+//            return 0
         case .splitTone:
             return 0
         }
