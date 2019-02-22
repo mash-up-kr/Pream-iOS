@@ -48,6 +48,7 @@ class CameraViewController: UIViewController {
         timerCount.isHidden = true
         listenVolumeButton()
         addVolumeButtonObserver()
+        setCameraPositionFromUserDefaults()
         startCameraSession()
         addBlur()
         registerDoubleTapShotView()
@@ -255,6 +256,11 @@ extension CameraViewController {
         videoCamera?.stopCapture()
         cameraPosition = cameraPosition == .front ? .back : .front
         startCameraSession()
+        setCameraPositionIntoUserDefault()
+    }
+
+    func setCameraPositionFromUserDefaults() {
+        cameraPosition = AVCaptureDevice.Position(rawValue: UserDefaults.standard.integer(forKey: "cameraPosition")) ?? .front
     }
 
     // 더블탭 카메라 전환
@@ -326,6 +332,11 @@ extension CameraViewController {
 
     func changeRotateButtonImage<T: RotateButton>(_ button: UIButton, _ buttonState: T) {
         button.setImage(UIImage(named: buttonState.getImageName()), for: .normal)
+    }
+
+    // cameraPosition UserDefault
+    func setCameraPositionIntoUserDefault() {
+        UserDefaults.standard.set(cameraPosition.rawValue, forKey: "cameraPosition")
     }
 }
 
