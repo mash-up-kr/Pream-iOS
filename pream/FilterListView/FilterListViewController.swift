@@ -80,7 +80,12 @@ extension FilterListViewController: UITableViewDelegate {
 }
 
 extension FilterListViewController: FilterTableViewCellDelegate {
-    func filterTableViewCell(_ sender: FilterTableViewCell, viewControllerToPresent: TextInputDimedViewController) {
+    func filterTableViewCell(_ sender: FilterTableViewCell, viewControllerToPresent: UIViewController) {
         present(viewControllerToPresent, animated: true, completion: nil)
+    }
+
+    func filterTableViewCell(_ sender: FilterTableViewCell, alertToPresent: UIAlertController) {
+        dismiss(animated: true, completion: nil)
+        present(alertToPresent, animated: true, completion: nil)
     }
 }
