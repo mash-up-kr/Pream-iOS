@@ -57,7 +57,7 @@ class FilterListSettingViewController: KeyboardViewController {
                 picachuDummyData.remove(at: indexPath.row)
             }
         }
-        
+
         tableView.reloadData()
     }
 
