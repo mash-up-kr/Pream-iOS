@@ -409,9 +409,8 @@ to apply your filter</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yz-iU-E5e">
-                                <rect key="frame" x="304" y="49" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yz-iU-E5e">
+                                <rect key="frame" x="327" y="49" width="40" height="40"/>
                                 <state key="normal" image="closeWhite"/>
                                 <connections>
                                     <action selector="dismissAction:" destination="j1a-hF-yca" eventType="touchUpInside" id="Kaa-av-HVy"/>
@@ -419,6 +418,10 @@ to apply your filter</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ila-tD-Kia" firstAttribute="trailing" secondItem="4Yz-iU-E5e" secondAttribute="trailing" constant="8" id="Pme-uj-iqB"/>
+                            <constraint firstItem="4Yz-iU-E5e" firstAttribute="top" secondItem="ila-tD-Kia" secondAttribute="top" constant="29" id="sVS-aH-svn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ila-tD-Kia"/>
                     </view>
                 </viewController>

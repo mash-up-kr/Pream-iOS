@@ -50,10 +50,17 @@ class FilterSettingViewController: UIViewController {
         gpuImage?.processImage()
     }
     @IBAction private func closeButtonAction(_ sender: Any) {
-        sliderOutlet.value = beforeTemperature
+        sliderOutlet.value = beforeValue
         tintSlider.value = beforeTint
         temperatureSlider.value = beforeTemperature
-        
+
+        if currentFilter == .whiteBalance {
+            filterModel.groupFilter.setFilter(currentFilter: currentFilter, customField: "temperature", value: CGFloat(beforeTemperature))
+            filterModel.groupFilter.setFilter(currentFilter: currentFilter, customField: "tint", value: CGFloat(beforeTint))
+        } else {
+            filterModel.groupFilter.setFilter(currentFilter: currentFilter, value: CGFloat(beforeValue))
+        }
+        gpuImage?.processImage()
         setDefaultConstraints()
     }
     @IBAction private func acceptButtonAction(_ sender: Any) {
@@ -67,7 +74,7 @@ class FilterSettingViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Library", bundle: nil)
         guard let textInputDimedViewController = storyboard.instantiateViewController(withIdentifier: "TextInputDimedViewController") as? TextInputDimedViewController else { return }
         textInputDimedViewController.delegate = self
-        textInputDimedViewController.setText(mainTitle: "Share your filter", message: "Explain when it is best\nto use your filter")
+        textInputDimedViewController.setText(mainTitle: "", message: "What’s your filters name?")
         present(textInputDimedViewController, animated: true, completion: nil)
     }
 
@@ -125,7 +132,9 @@ extension FilterSettingViewController: LibraryDelegate {
 
 extension FilterSettingViewController: TextInputDimedViewDelegate {
     func doneButtonAction(textField: String?) {
-
+        dismiss(animated: true) { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -153,9 +162,9 @@ extension FilterSettingViewController: UICollectionViewDelegate, UICollectionVie
             tintSlider.maximumValue = sliderTintValue.max
 
             temperatureSlider.value = Float(filterModel.groupFilter.getValue(effect: effect, customField: "temperature"))
-            temperatureLabel.text = "\(filterModel.groupFilter.getValue(effect: effect, customField: "temperature")))"
+            temperatureLabel.text = "\(filterModel.groupFilter.getValue(effect: effect, customField: "temperature"))"
             tintSlider.value = Float(filterModel.groupFilter.getValue(effect: effect, customField: "tint"))
-            tintLabel.text = "\(filterModel.groupFilter.getValue(effect: effect, customField: "tint")))"
+            tintLabel.text = "\(filterModel.groupFilter.getValue(effect: effect, customField: "tint"))"
         } else {
             whiteBalanceView.isHidden = true
             let sliderValue = filterModel.groupFilter.getMinMaxValue(filter: effect)
@@ -170,11 +179,11 @@ extension FilterSettingViewController: UICollectionViewDelegate, UICollectionVie
         filterSettingTopViewBottomConstraints.constant = 0
         bottomViewTopConstraints.constant = 0
         currentFilter = effect
-        
+
         beforeValue = sliderOutlet.value
         beforeTint = tintSlider.value
         beforeTemperature = temperatureSlider.value
-        
+
         UIView.animate(withDuration: 0.25) { [weak self] in
             self?.view.layoutIfNeeded()
         }

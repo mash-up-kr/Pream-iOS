@@ -53,8 +53,17 @@ to use your filter</string>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbJ-u6-D1e">
                                         <rect key="frame" x="35" y="195" width="230" height="1"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line5" translatesAutoresizingMaskIntoConstraints="NO" id="OFg-14-xtb">
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="1"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="OFg-14-xtb" secondAttribute="bottom" id="Nkt-lk-bAr"/>
+                                            <constraint firstAttribute="trailing" secondItem="OFg-14-xtb" secondAttribute="trailing" id="e6c-n3-1YO"/>
+                                            <constraint firstItem="OFg-14-xtb" firstAttribute="leading" secondItem="RbJ-u6-D1e" secondAttribute="leading" id="fE0-PU-xql"/>
+                                            <constraint firstItem="OFg-14-xtb" firstAttribute="top" secondItem="RbJ-u6-D1e" secondAttribute="top" id="uRN-NJ-6JN"/>
                                             <constraint firstAttribute="height" constant="1" id="x1N-eO-YDq"/>
                                         </constraints>
                                     </view>
@@ -64,7 +73,7 @@ to use your filter</string>
                                             <constraint firstAttribute="height" constant="46" id="6DT-uE-y7H"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
-                                        <state key="normal" title="Button" backgroundImage="rectangle2Copy2">
+                                        <state key="normal" title="Submit" backgroundImage="rectangle2Copy2">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <state key="disabled" backgroundImage="start"/>
@@ -188,6 +197,7 @@ to use your filter</string>
     </scenes>
     <resources>
         <image name="icX" width="40" height="40"/>
+        <image name="line5" width="232" height="2"/>
         <image name="rectangle2Copy2" width="260" height="46"/>
         <image name="start" width="335" height="45"/>
     </resources>
