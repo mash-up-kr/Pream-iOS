@@ -80,7 +80,8 @@ private extension FilterListSettingViewController {
     @objc func handleLongPress(_ sender: UILongPressGestureRecognizer) {
         let state = sender.state
         let location = sender.location(in: tableView)
-        guard let indexPath = tableView.indexPathForRow(at: location) else {
+        guard settingMode != .delete,
+            let indexPath = tableView.indexPathForRow(at: location) else {
             cleanup()
             return
         }
