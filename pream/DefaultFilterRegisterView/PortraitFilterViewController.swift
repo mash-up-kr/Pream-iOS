@@ -55,7 +55,6 @@ class PortraitFilterViewController: UIViewController {
                 return
             }
             navigationController?.show(viewController, sender: nil)
-//            present(viewController, animated: true, completion: nil)
         }
     }
 }
