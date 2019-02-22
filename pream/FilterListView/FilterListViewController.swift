@@ -30,6 +30,7 @@ class FilterListViewController: UIViewController {
 private extension FilterListViewController {
     func getFilterCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, section: FilterListCell) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: section.rawValue, for: indexPath) as? FilterTableViewCell else { return UITableViewCell() }
+        cell.delegate = self
         cell.filterImageView.image = #imageLiteral(resourceName: "picachu")
         cell.filterTitleView.text = "피카피카"
         return cell
@@ -76,4 +77,10 @@ extension FilterListViewController: UITableViewDataSource {
 
 extension FilterListViewController: UITableViewDelegate {
 
+}
+
+extension FilterListViewController: FilterTableViewCellDelegate {
+    func filterTableViewCell(_ sender: FilterTableViewCell, viewControllerToPresent: TextInputDimedViewController) {
+        present(viewControllerToPresent, animated: true, completion: nil)
+    }
 }
