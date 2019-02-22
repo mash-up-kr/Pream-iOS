@@ -18,16 +18,25 @@ class FilterCollectionViewCell: UICollectionViewCell {
         filterImageView.image = UIImage(named: "picachu")
     }
 
+    func firstCellConfig() {
+        filterNameLabel.isHidden = true
+        dimmedView.isHidden = true
+        filterImageView.image = UIImage(named: "icFilterSetting")
+        filterImageView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
+    }
+
     override var isSelected: Bool {
         didSet {
-            if self.isSelected {
-                filterNameLabel.textColor = UIColor.white
-                dimmedView.isHidden = false
-                filterNameLabel.isHidden = false
-            } else {
-                filterNameLabel.textColor = UIColor(named: "grey")
-                dimmedView.isHidden = true
-                filterNameLabel.isHidden = true
+            if filterImageView.image != UIImage(named: "icFilterSetting") {
+                if self.isSelected {
+                    filterNameLabel.textColor = .white
+                    dimmedView.isHidden = false
+                    filterNameLabel.isHidden = false
+                } else {
+                    filterNameLabel.textColor = UIColor(named: "grey")
+                    dimmedView.isHidden = true
+                    filterNameLabel.isHidden = true
+                }
             }
         }
     }
