@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct Picachu {
-    var title: String
-    let image: UIImage
-}
-
 class FilterListSettingViewController: KeyboardViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var trashButton: UIButton!
@@ -20,8 +15,11 @@ class FilterListSettingViewController: KeyboardViewController {
 
     private let cellIdentifier = "filterListSetting"
     private var settingMode: SettingMode = .edit
-    private let picachu = Picachu(title: "Picachu", image: #imageLiteral(resourceName: "picachu"))
-    private var picachuDummyData: [Picachu] = []
+    private lazy var dummies: [FilterModel] = {
+        let filterModelDummy = FilterModelDummy()
+        filterModelDummy.makeDummy()
+        return filterModelDummy.dummyFilters
+    }()
     private var sourceIndexPath: IndexPath?
     private var cellSnapshot: UIView?
     var activeField: UITextField?
@@ -30,7 +28,6 @@ class FilterListSettingViewController: KeyboardViewController {
         super.viewDidLoad()
         tableView.allowsMultipleSelection = true
         tableView.showsVerticalScrollIndicator = false
-        picachuDummyData = [Picachu](repeatElement(picachu, count: 20))
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPress)
     }
@@ -54,7 +51,7 @@ class FilterListSettingViewController: KeyboardViewController {
         if let selectedIndexPaths = tableView.indexPathsForSelectedRows {
             let sortedIndexPaths = selectedIndexPaths.sorted { $0.row > $1.row }
             for indexPath in sortedIndexPaths {
-                picachuDummyData.remove(at: indexPath.row)
+                dummies.remove(at: indexPath.row)
             }
         }
 
@@ -115,9 +112,9 @@ private extension FilterListSettingViewController {
             guard let sourceIndexPath = self.sourceIndexPath else { return }
             if indexPath != sourceIndexPath {
 //                swap(&picachuDummyData[indexPath.row], &picachuDummyData[sourceIndexPath.row])
-                let sourceData = picachuDummyData[sourceIndexPath.row]
-                picachuDummyData[sourceIndexPath.row] = picachuDummyData[indexPath.row]
-                picachuDummyData[indexPath.row] = sourceData
+                let sourceData = dummies[sourceIndexPath.row]
+                dummies[sourceIndexPath.row] = dummies[indexPath.row]
+                dummies[indexPath.row] = sourceData
                 self.tableView.moveRow(at: sourceIndexPath, to: indexPath)
                 self.sourceIndexPath = indexPath
             }
@@ -172,13 +169,23 @@ private extension FilterListSettingViewController {
 
 extension FilterListSettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return picachuDummyData.count
+        return dummies.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FilterListSettingTableViewCell else { return UITableViewCell() }
-        let item = picachuDummyData[indexPath.row]
-        cell.configure(settingMode: settingMode, title: item.title, image: item.image)
+        let item = dummies[indexPath.row]
+        cell.configure(settingMode: settingMode)
+
+        if let groupName = item.groupName {
+            cell.filterTitleLabel.text = groupName
+            cell.filterTitleTextField.text = groupName
+        }
+
+        if let groupImage = item.groupImage {
+            cell.filterImageView.image = groupImage
+        }
+
         cell.filterTitleTextField.delegate = self
         return cell
     }
@@ -200,6 +207,6 @@ extension FilterListSettingViewController: UITextFieldDelegate {
             let indexPath = tableView.indexPath(for: cell),
             let text = textField.text else { return }
         cell.filterTitleLabel.text = text
-        picachuDummyData[indexPath.row].title = text
+        dummies[indexPath.row].groupName = text
     }
 }
