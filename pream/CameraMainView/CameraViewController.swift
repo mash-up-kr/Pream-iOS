@@ -69,10 +69,9 @@ class CameraViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let sideMenuNavigationController = segue.destination as? UISideMenuNavigationController {
-            sideMenuNavigationController.sideMenuManager.menuAnimationBackgroundColor = UIColor.clear
-            SideMenuManager.default.menuPresentMode = .viewSlideInOut
-            SideMenuManager.default.menuShadowOpacity = 0
+        if segue.identifier == "FilterCollectionSegue" {
+            guard let filterListViewController = segue.destination as? FilterCollectionViewController else { return }
+            filterListViewController.delegate = self
         }
     }
 }
@@ -150,6 +149,7 @@ extension CameraViewController {
             self?.view.layoutIfNeeded()
         }
     }
+
     func touchToFocus() {
         do {
             try videoCamera?.inputCamera.lockForConfiguration()
@@ -392,5 +392,15 @@ extension CameraViewController: GPUImageVideoCameraDelegate {
             } catch {
             }
         }
+    }
+}
+
+extension CameraViewController: FilterCollectionViewDelegate {
+    func filterSelected(model: FilterModel) {
+        videoCamera?.removeAllTargets()
+        currentFilterModel = model
+
+        videoCamera?.addTarget(currentFilterModel.groupFilter.gpuGroupFilter)
+        currentFilterModel.groupFilter.gpuGroupFilter.addTarget(gpuImageView)
     }
 }

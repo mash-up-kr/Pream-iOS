@@ -10,8 +10,13 @@ import UIKit
 
 private let reuseIdentifier = "FilterCollectionViewCell"
 
+protocol FilterCollectionViewDelegate: class {
+    func filterSelected(model: FilterModel)
+}
+
 class FilterCollectionViewController: UICollectionViewController {
 
+    weak var delegate: FilterCollectionViewDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,7 +50,14 @@ class FilterCollectionViewController: UICollectionViewController {
 
         let storyboard = UIStoryboard(name: "FilterList", bundle: nil)
         let feedMainNavigationController = storyboard.instantiateViewController(withIdentifier: "FilterListMainNavigationController")
-        present(feedMainNavigationController, animated: true, completion: nil)
+        if indexPath.item == 0 {
+            present(feedMainNavigationController, animated: true, completion: nil)
+        } else {
+            // TODO: - 수정필요
+            let dummy = FilterModelDummy()
+            dummy.makeDummy()
+            delegate?.filterSelected(model: dummy.dummyFilters.first!)
+        }
     }
 
     // MARK: UICollectionViewDelegate

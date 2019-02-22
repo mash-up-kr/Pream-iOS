@@ -229,7 +229,7 @@
                                     <constraint firstAttribute="height" constant="75" id="atM-uh-LiM"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="Yh2-PV-88P" kind="embed" id="3Z3-I6-enj"/>
+                                    <segue destination="Yh2-PV-88P" kind="embed" identifier="FilterCollectionSegue" id="3Z3-I6-enj"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izc-KY-1Ez">
