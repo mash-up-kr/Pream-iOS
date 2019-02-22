@@ -203,6 +203,9 @@
                                                         <constraint firstAttribute="width" constant="40" id="Ofn-7b-k0P"/>
                                                     </constraints>
                                                     <state key="normal" image="icUpload"/>
+                                                    <connections>
+                                                        <action selector="uploadButtonAction" destination="bsa-4I-hQy" eventType="touchUpInside" id="zxV-yr-Nvb"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
