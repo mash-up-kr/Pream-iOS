@@ -25,6 +25,7 @@
 		03CA5A32221C22FB00C85AFC /* DefaultFilterRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CA5A31221C22FB00C85AFC /* DefaultFilterRegister.storyboard */; };
 		03D28F2922082FBB007C8B15 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D28F2822082FBB007C8B15 /* DimmedView.swift */; };
 		4D857C58221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */; };
+		4D857C5C221FBE3A009CAC3D /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D857C5B221FBE3A009CAC3D /* FilterModel.swift */; };
 		4DFED2FC221BADDB00121AB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */; };
 		634E9B2A221CEEE2002ADE31 /* ShotTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634E9B29221CEEE2002ADE31 /* ShotTimer.swift */; };
 		63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6211621DFA88000EF4059 /* CameraViewController.swift */; };
@@ -88,6 +89,7 @@
 		03D28F2822082FBB007C8B15 /* DimmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
 		3CBFE07F816140D178519767 /* Pods-pream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pream/Pods-pream.debug.xcconfig"; sourceTree = "<group>"; };
 		4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D857C5B221FBE3A009CAC3D /* FilterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
 		4DFED2FB221BADDB00121AB9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		634E9B29221CEEE2002ADE31 /* ShotTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotTimer.swift; sourceTree = "<group>"; };
 		63D6211621DFA88000EF4059 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		EFEAE9DB21E20F1900B7CCA8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4D857C5B221FBE3A009CAC3D /* FilterModel.swift */,
 				EFEAE9DC21E20F3000B7CCA8 /* RoundView.swift */,
 				EFEAE9DE21E20F8600B7CCA8 /* RoundButton.swift */,
 				EFEAE9E221E2160C00B7CCA8 /* Log.swift */,
@@ -581,6 +584,7 @@
 				EFE3801921FCF83700CB2DDF /* UIColor+ColorPicker.swift in Sources */,
 				634E9B2A221CEEE2002ADE31 /* ShotTimer.swift in Sources */,
 				03423068220A0A4F003CC91C /* MyFilterCategoryCollectionViewCell.swift in Sources */,
+				4D857C5C221FBE3A009CAC3D /* FilterModel.swift in Sources */,
 				03896F17221B0097003637C8 /* RegisterEmailViewController.swift in Sources */,
 				037A7F19221DA70500A670D7 /* PortraitFilterViewController.swift in Sources */,
 				030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */,
