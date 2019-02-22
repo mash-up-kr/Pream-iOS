@@ -17,9 +17,45 @@ class PortraitFilterViewController: UIViewController {
 
     @IBOutlet weak var nextButton: UIButton!
 
+    @IBOutlet weak var firstFilterImageButton: UIButton!
+    @IBOutlet weak var secondFilterImageButton: UIButton!
+    @IBOutlet weak var thirdFilterImageButton: UIButton!
+    @IBOutlet weak var fourthFilterImageButton: UIButton!
+
+    var count = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nextButton.isEnabled = false
+    }
+
+    @IBAction func filterImageButtonsAction(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+            sender.backgroundColor = .clear
+            count -= 1
+        } else {
+            sender.isSelected = true
+            sender.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6000000238)
+            count += 1
+        }
+        if count > 0 {
+            nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
+        }
+    }
+
+    @IBAction func nextButtonAction(_ sender: UIButton) {
+        if sender.isEnabled {
+            let storyboard = UIStoryboard(name: "DefaultFilterRegister", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(withIdentifier: "FoodFilterViewController") as? FoodFilterViewController else {
+                return
+            }
+            navigationController?.show(viewController, sender: nil)
+//            present(viewController, animated: true, completion: nil)
+        }
     }
 }
