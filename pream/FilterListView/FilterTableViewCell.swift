@@ -8,14 +8,34 @@
 
 import UIKit
 
+protocol FilterTableViewCellDelegate: class {
+    func filterTableViewCell(_ sender: FilterTableViewCell, viewControllerToPresent: TextInputDimedViewController)
+}
+
 class FilterTableViewCell: UITableViewCell {
 
     @IBOutlet weak var filterImageView: UIImageView!
     @IBOutlet weak var filterTitleView: UILabel!
     @IBOutlet weak var uploadButton: UIButton!
 
+    weak var delegate: FilterTableViewCellDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         filterImageView.layer.cornerRadius = 2
+    }
+
+    @IBAction private func uploadButtonAction() {
+        let storyboard = UIStoryboard(name: "Library", bundle: nil)
+        guard let textInputDimedViewController = storyboard.instantiateViewController(withIdentifier: "TextInputDimedViewController") as? TextInputDimedViewController else { return }
+        textInputDimedViewController.delegate = self
+        textInputDimedViewController.setText(mainTitle: "Share your filter", message: "Explain when it is best\nto use your filter")
+        delegate?.filterTableViewCell(self, viewControllerToPresent: textInputDimedViewController)
+    }
+}
+
+extension FilterTableViewCell: TextInputDimedViewDelegate {
+    func doneButtonAction(textField: String?) {
+
     }
 }

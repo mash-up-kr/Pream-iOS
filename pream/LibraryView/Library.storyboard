@@ -22,8 +22,8 @@
                                 <rect key="frame" x="37.5" y="181" width="300" height="305"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hI-uz-pTG">
-                                        <rect key="frame" x="260" y="10" width="30" height="30"/>
-                                        <state key="normal" title="닫기"/>
+                                        <rect key="frame" x="250" y="10" width="40" height="40"/>
+                                        <state key="normal" backgroundImage="icX"/>
                                         <connections>
                                             <action selector="closeButtonAction:" destination="5Ur-sJ-UpT" eventType="touchUpInside" id="IX4-uU-5ZR"/>
                                         </connections>
@@ -63,7 +63,11 @@ to use your filter</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="6DT-uE-y7H"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="Button" backgroundImage="rectangle2Copy2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled" backgroundImage="start"/>
                                         <connections>
                                             <action selector="doneButtonAction:" destination="5Ur-sJ-UpT" eventType="touchUpInside" id="3Tz-Gk-xVI"/>
                                         </connections>
@@ -182,4 +186,9 @@ to use your filter</string>
             <point key="canvasLocation" x="47" y="115"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icX" width="40" height="40"/>
+        <image name="rectangle2Copy2" width="260" height="46"/>
+        <image name="start" width="335" height="45"/>
+    </resources>
 </document>

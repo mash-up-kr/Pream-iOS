@@ -96,14 +96,13 @@
                                             <color key="textColor" name="greyishBrownTwo"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKn-Hj-x0v">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKn-Hj-x0v">
                                             <rect key="frame" x="27" y="94" width="360" height="30"/>
-                                            <color key="backgroundColor" name="lightLavendar"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="3xR-hZ-WVS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="12"/>
-                                            <state key="normal" title="PREAM 필터 보러가기">
+                                            <state key="normal" title="browse PREAM FILTER" backgroundImage="btnColor">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
@@ -203,6 +202,9 @@
                                                         <constraint firstAttribute="width" constant="40" id="Ofn-7b-k0P"/>
                                                     </constraints>
                                                     <state key="normal" image="icUpload"/>
+                                                    <connections>
+                                                        <action selector="uploadButtonAction" destination="bsa-4I-hQy" eventType="touchUpInside" id="zxV-yr-Nvb"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -300,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btnColor" width="321" height="30"/>
         <image name="icBack" width="40" height="40"/>
         <image name="icPlus" width="40" height="40"/>
         <image name="icSetting" width="40" height="40"/>
@@ -307,9 +310,6 @@
         <image name="picachu" width="480" height="270"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="lightLavendar">
-            <color red="1" green="0.63921568627450975" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
