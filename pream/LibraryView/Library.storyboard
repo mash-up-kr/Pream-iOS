@@ -117,8 +117,9 @@ to use your filter</string>
                         <viewLayoutGuide key="safeArea" id="aEj-jp-jG3"/>
                     </view>
                     <connections>
+                        <outlet property="baseView" destination="ewQ-8t-uG1" id="ex1-3r-dNZ"/>
                         <outlet property="doneButton" destination="NFR-u8-PKz" id="aw3-XZ-I17"/>
-                        <outlet property="inputTexteField" destination="OKI-4x-aBX" id="YA6-C0-NGX"/>
+                        <outlet property="inputTextField" destination="OKI-4x-aBX" id="YA6-C0-NGX"/>
                         <outlet property="messageLabel" destination="dbF-SL-84t" id="c0O-6M-fdE"/>
                         <outlet property="titleLabel" destination="o8W-0m-EGj" id="aj2-pv-17J"/>
                     </connections>
