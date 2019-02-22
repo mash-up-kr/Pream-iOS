@@ -16,6 +16,11 @@ class FilterListViewController: UIViewController {
         case filterHeader
         case filter
     }
+    private lazy var dummies: [FilterModel] = {
+        let filterModelDummy = FilterModelDummy()
+        filterModelDummy.makeDummy()
+        return filterModelDummy.dummyFilters
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +35,17 @@ class FilterListViewController: UIViewController {
 private extension FilterListViewController {
     func getFilterCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, section: FilterListCell) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: section.rawValue, for: indexPath) as? FilterTableViewCell else { return UITableViewCell() }
+        let item = dummies[indexPath.row]
         cell.delegate = self
-        cell.filterImageView.image = #imageLiteral(resourceName: "picachu")
-        cell.filterTitleView.text = "피카피카"
+
+        if let groupName = item.groupName {
+            cell.filterTitleView.text = groupName
+        }
+
+        if let groupImage = item.groupImage {
+            cell.filterImageView.image = groupImage
+        }
+
         return cell
     }
 
@@ -56,7 +69,7 @@ extension FilterListViewController: UITableViewDataSource {
         case .filterHeader:
             return 1
         case .filter:
-            return 20
+            return dummies.count
         }
     }
 
