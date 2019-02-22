@@ -9,7 +9,7 @@
 import UIKit
 
 struct Picachu {
-    let title: String
+    var title: String
     let image: UIImage
 }
 
@@ -196,5 +196,10 @@ extension FilterListSettingViewController: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         activeField = nil
+        guard let cell = textField.superview?.superview as? FilterListSettingTableViewCell,
+            let indexPath = tableView.indexPath(for: cell),
+            let text = textField.text else { return }
+        cell.filterTitleLabel.text = text
+        picachuDummyData[indexPath.row].title = text
     }
 }
