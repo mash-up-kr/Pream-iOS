@@ -65,7 +65,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Lul-XJ-CEp" secondAttribute="height" multiplier="1:1" id="iDg-z1-sOU"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="LP5-af-zc2" eventType="touchUpInside" id="ZvP-ga-930"/>
                                         </connections>
@@ -78,7 +78,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQI-rF-dbI">
                                         <rect key="frame" x="170" y="0.0" width="165" height="165"/>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="LP5-af-zc2" eventType="touchUpInside" id="AAW-Vk-anD"/>
                                         </connections>
@@ -94,7 +94,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="T0C-c0-cgo" secondAttribute="height" multiplier="1:1" id="9xD-St-2ox"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="LP5-af-zc2" eventType="touchUpInside" id="gTU-ku-MiH"/>
                                         </connections>
@@ -107,7 +107,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqy-7C-T2v">
                                         <rect key="frame" x="170" y="170" width="165" height="165"/>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="LP5-af-zc2" eventType="touchUpInside" id="idG-NL-K8f"/>
                                         </connections>
@@ -255,7 +255,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mQb-aE-S94" secondAttribute="height" multiplier="1:1" id="rLi-Hn-opg"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="cmc-mu-T9T" eventType="touchUpInside" id="Okz-8o-I6P"/>
                                         </connections>
@@ -268,7 +268,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKQ-uj-EdF">
                                         <rect key="frame" x="170" y="0.0" width="165" height="165"/>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="cmc-mu-T9T" eventType="touchUpInside" id="7y0-oP-dAb"/>
                                         </connections>
@@ -284,7 +284,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ga9-Ge-7lL" secondAttribute="height" multiplier="1:1" id="sMi-qh-P0o"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="cmc-mu-T9T" eventType="touchUpInside" id="Xqz-o4-cFy"/>
                                         </connections>
@@ -297,7 +297,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ux9-hY-kKb">
                                         <rect key="frame" x="170" y="170" width="165" height="165"/>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="cmc-mu-T9T" eventType="touchUpInside" id="wbW-vC-SkJ"/>
                                         </connections>
@@ -446,7 +446,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="chM-QD-FT6" secondAttribute="height" multiplier="1:1" id="2nd-8q-Axg"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="q9N-pM-cn2" eventType="touchUpInside" id="DW1-Xr-pie"/>
                                         </connections>
@@ -462,7 +462,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HX9-PG-Y2a" secondAttribute="height" multiplier="1:1" id="e83-T1-EVX"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="q9N-pM-cn2" eventType="touchUpInside" id="MPe-7R-yOU"/>
                                         </connections>
@@ -478,7 +478,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="U3d-u2-XW3" secondAttribute="height" multiplier="1:1" id="usR-Zq-O7D"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="q9N-pM-cn2" eventType="touchUpInside" id="8De-jT-pyo"/>
                                         </connections>
@@ -494,7 +494,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="a9p-Cp-vpc" secondAttribute="height" multiplier="1:1" id="bBj-tl-bDF"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="q9N-pM-cn2" eventType="touchUpInside" id="eSw-0g-MXI"/>
                                         </connections>
@@ -641,7 +641,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="TQI-sG-J83" secondAttribute="height" multiplier="1:1" id="1Ae-kL-rCW"/>
                                         </constraints>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="J9r-vs-EKP" eventType="touchUpInside" id="6qU-m7-hf1"/>
                                         </connections>
@@ -654,7 +654,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lta-e8-qQZ">
                                         <rect key="frame" x="170" y="0.0" width="165" height="165"/>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="J9r-vs-EKP" eventType="touchUpInside" id="aji-hI-inb"/>
                                         </connections>
@@ -667,7 +667,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifl-rn-pKC">
                                         <rect key="frame" x="0.0" y="170" width="165" height="165"/>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="J9r-vs-EKP" eventType="touchUpInside" id="Il9-nb-oah"/>
                                         </connections>
@@ -680,7 +680,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kr-qo-yxw">
                                         <rect key="frame" x="170" y="170" width="165" height="165"/>
-                                        <state key="selected" image="icCheck"/>
+                                        <state key="selected" image="icCheckWhite"/>
                                         <connections>
                                             <action selector="filterImageButtonsAction:" destination="J9r-vs-EKP" eventType="touchUpInside" id="dxD-7a-wfm"/>
                                         </connections>
@@ -782,7 +782,7 @@
     </scenes>
     <resources>
         <image name="food" width="3542" height="2947"/>
-        <image name="icCheck" width="51" height="50"/>
+        <image name="icCheckWhite" width="51" height="50"/>
         <image name="inactiveButton" width="335" height="45"/>
         <image name="object" width="4160" height="6240"/>
         <image name="portrait" width="3215" height="2572"/>
