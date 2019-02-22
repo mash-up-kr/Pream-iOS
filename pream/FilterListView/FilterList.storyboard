@@ -81,20 +81,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREMER들이 만든" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWd-of-b2b">
-                                            <rect key="frame" x="35" y="20" width="104" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start browsing " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWd-of-b2b">
+                                            <rect key="frame" x="35" y="20" width="92" height="17"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
                                             <color key="textColor" name="greyishBrownTwo"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양하고 예쁜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFj-BM-6GX">
-                                            <rect key="frame" x="35" y="40" width="77" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stylish filters made by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFj-BM-6GX">
+                                            <rect key="frame" x="35" y="40" width="132" height="17"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
                                             <color key="textColor" name="greyishBrownTwo"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필터를 다운받아보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01o-AV-Hff">
-                                            <rect key="frame" x="35" y="60" width="125" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREAMERS around the world." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01o-AV-Hff">
+                                            <rect key="frame" x="35" y="60" width="179" height="17"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
                                             <color key="textColor" name="greyishBrownTwo"/>
                                             <nil key="highlightedColor"/>
@@ -112,21 +112,21 @@
                                                 <segue destination="vNG-O9-EOp" kind="show" id="E7G-eX-PCg"/>
                                             </connections>
                                         </button>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picachu" translatesAutoresizingMaskIntoConstraints="NO" id="rlq-1R-tF8" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery" translatesAutoresizingMaskIntoConstraints="NO" id="rlq-1R-tF8" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
                                             <rect key="frame" x="285" y="52" width="34" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="34" id="0Y3-Io-eC7"/>
                                                 <constraint firstAttribute="width" constant="34" id="zi9-yF-6dM"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picachu" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-Bj-rpv" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-Bj-rpv" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
                                             <rect key="frame" x="315" y="52" width="34" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="34" id="gqS-Rb-fhS"/>
                                                 <constraint firstAttribute="width" constant="34" id="jpT-17-NME"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picachu" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-bj-6v2" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="object" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-bj-6v2" customClass="RoundImageView" customModule="pream" customModuleProvider="target">
                                             <rect key="frame" x="345" y="52" width="34" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="34" id="SOG-5A-Z12"/>
@@ -161,8 +161,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 필터를 관리해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DT-FE-syk">
-                                                    <rect key="frame" x="20" y="20" width="131" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage your filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DT-FE-syk">
+                                                    <rect key="frame" x="19.999999999999993" y="20" width="104.33333333333331" height="18"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <color key="textColor" name="greyishBrownTwo"/>
                                                     <nil key="highlightedColor"/>
@@ -310,7 +310,9 @@
         <image name="icPlus" width="40" height="40"/>
         <image name="icSetting" width="40" height="40"/>
         <image name="icUpload" width="40" height="40"/>
-        <image name="picachu" width="480" height="270"/>
+        <image name="object" width="4160" height="6240"/>
+        <image name="portrait" width="3215" height="2572"/>
+        <image name="scenery" width="3959" height="5939"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
