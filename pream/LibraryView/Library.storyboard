@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WSD-5l-Giq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UaB-A4-H4j">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -137,20 +138,13 @@ to use your filter</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgp-ss-7xF">
-                                <rect key="frame" x="158" y="54" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="156.5" y="40" width="62.5" height="22"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" name="greyishBrownTwo"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAm-YL-yS9">
-                                <rect key="frame" x="321" y="49.5" width="30" height="30"/>
-                                <state key="normal" title="닫기"/>
-                                <connections>
-                                    <action selector="closeButtonAction:" destination="WSD-5l-Giq" eventType="touchUpInside" id="CnE-F2-OPo"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nPy-AE-ZEz">
-                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                                <rect key="frame" x="0.0" y="82" width="375" height="585"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TLN-fy-d6i">
                                     <size key="itemSize" width="50" height="50"/>
@@ -173,33 +167,62 @@ to use your filter</string>
                                     <outlet property="delegate" destination="WSD-5l-Giq" id="dbn-DY-km4"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUU-h0-XV7">
+                                <rect key="frame" x="5" y="31" width="40" height="40"/>
+                                <state key="normal" image="icBack"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="WSD-5l-Giq" eventType="touchUpInside" id="Q7b-Xz-ppv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dUc-YH-42k" firstAttribute="trailing" secondItem="nPy-AE-ZEz" secondAttribute="trailing" id="9dW-fo-Mhl"/>
-                            <constraint firstItem="qgp-ss-7xF" firstAttribute="top" secondItem="dUc-YH-42k" secondAttribute="top" constant="34" id="BKG-af-DTK"/>
-                            <constraint firstAttribute="trailing" secondItem="zAm-YL-yS9" secondAttribute="trailing" constant="24" id="DKR-HQ-Otq"/>
+                            <constraint firstItem="qgp-ss-7xF" firstAttribute="top" secondItem="dUc-YH-42k" secondAttribute="top" constant="20" id="BKG-af-DTK"/>
                             <constraint firstItem="dUc-YH-42k" firstAttribute="bottom" secondItem="nPy-AE-ZEz" secondAttribute="bottom" id="HCa-es-E4c"/>
-                            <constraint firstItem="zAm-YL-yS9" firstAttribute="centerY" secondItem="qgp-ss-7xF" secondAttribute="centerY" id="hfQ-pO-eqH"/>
+                            <constraint firstItem="gUU-h0-XV7" firstAttribute="leading" secondItem="dUc-YH-42k" secondAttribute="leading" constant="5" id="UZY-kq-j3p"/>
+                            <constraint firstItem="gUU-h0-XV7" firstAttribute="top" secondItem="dUc-YH-42k" secondAttribute="top" constant="11" id="far-xC-qR3"/>
                             <constraint firstItem="qgp-ss-7xF" firstAttribute="centerX" secondItem="WGO-Pu-P4p" secondAttribute="centerX" id="qDq-9X-8t5"/>
-                            <constraint firstItem="nPy-AE-ZEz" firstAttribute="top" secondItem="qgp-ss-7xF" secondAttribute="bottom" constant="29" id="wIk-Bm-LVB"/>
+                            <constraint firstItem="nPy-AE-ZEz" firstAttribute="top" secondItem="qgp-ss-7xF" secondAttribute="bottom" constant="20" id="wIk-Bm-LVB"/>
                             <constraint firstItem="nPy-AE-ZEz" firstAttribute="leading" secondItem="dUc-YH-42k" secondAttribute="leading" id="zYj-qt-SiX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dUc-YH-42k"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yUo-XN-1Px"/>
                     <connections>
                         <outlet property="collectionView" destination="nPy-AE-ZEz" id="cMa-i1-pEC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIF-K6-1fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="115"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="134.48275862068968"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3eA-oR-8aa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="UaB-A4-H4j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hZB-H3-doT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WSD-5l-Giq" kind="relationship" relationship="rootViewController" id="4ou-0j-mZG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSn-u5-tZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icBack" width="40" height="40"/>
         <image name="icX" width="40" height="40"/>
         <image name="line5" width="232" height="2"/>
         <image name="rectangle2Copy2" width="260" height="46"/>
         <image name="start" width="335" height="45"/>
+        <namedColor name="greyishBrownTwo">
+            <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -24,9 +24,10 @@ class LibraryViewController: UIViewController {
     var targetSize = CGSize.zero
     weak var delegate: LibraryDelegate?
 
-    @IBAction private func closeButtonAction(_ sender: Any) {
+    @IBAction private func backButtonAction(_ sendder: Any) {
         dismiss(animated: true, completion: nil)
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
