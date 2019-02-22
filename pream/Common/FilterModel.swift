@@ -26,10 +26,10 @@ class FilterModelDummy {
         let filter4 = GroupFilter()
         filter4.setFilterValues(exposure: 0.2, contrast: 1.35, sharpness: nil, saturation: 1.15, highlights: nil, shadows: nil, temperature: nil, tint: nil, vignetteEnd: nil, brightness: nil)
 
-        dummy1.makeModel(localId: 1, groupName: "화사한", groupImage: nil, groupFilter: filter1)
-        dummy2.makeModel(localId: 2, groupName: "채도 낮은 차분", groupImage: nil, groupFilter: filter2)
-        dummy3.makeModel(localId: 3, groupName: "비비드", groupImage: nil, groupFilter: filter3)
-        dummy4.makeModel(localId: 4, groupName: "강렬한", groupImage: nil, groupFilter: filter4)
+        dummy1.makeModel(localId: 1, groupName: "화사한", groupImage: #imageLiteral(resourceName: "object.jpeg"), groupFilter: filter1)
+        dummy2.makeModel(localId: 2, groupName: "채도 낮은 차분", groupImage: #imageLiteral(resourceName: "food"), groupFilter: filter2)
+        dummy3.makeModel(localId: 3, groupName: "비비드", groupImage: #imageLiteral(resourceName: "portrait"), groupFilter: filter3)
+        dummy4.makeModel(localId: 4, groupName: "강렬한", groupImage: #imageLiteral(resourceName: "scenery"), groupFilter: filter4)
 
         dummyFilters.append(dummy1)
         dummyFilters.append(dummy2)
