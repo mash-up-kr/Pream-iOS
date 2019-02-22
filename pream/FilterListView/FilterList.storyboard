@@ -35,6 +35,9 @@
                                             <constraint firstAttribute="height" constant="40" id="k8J-Pf-ly3"/>
                                         </constraints>
                                         <state key="normal" image="icPlus"/>
+                                        <connections>
+                                            <segue destination="CKw-mv-w9C" kind="show" id="OXZ-Ce-g57"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXL-gk-SwC">
                                         <rect key="frame" x="324" y="11" width="40" height="40"/>
@@ -312,4 +315,7 @@
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="c9l-sw-VYW"/>
+    </inferredMetricsTieBreakers>
 </document>

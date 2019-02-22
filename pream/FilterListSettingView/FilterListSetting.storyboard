@@ -98,7 +98,7 @@
                                                     <rect key="frame" x="20" y="6" width="335" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCheck" translatesAutoresizingMaskIntoConstraints="NO" id="Wqk-y9-e1Y">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCheckWhite" translatesAutoresizingMaskIntoConstraints="NO" id="Wqk-y9-e1Y">
                                                     <rect key="frame" x="306" y="11" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="W9f-AU-ArA"/>
@@ -192,7 +192,7 @@
     </scenes>
     <resources>
         <image name="icBack" width="40" height="40"/>
-        <image name="icCheck" width="40" height="40"/>
+        <image name="icCheckWhite" width="51" height="50"/>
         <image name="icTrash" width="40" height="40"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
