@@ -32,7 +32,6 @@ class CameraViewController: UIViewController {
 
     var isLogin: Bool = true
     var videoCamera: GPUImageVideoCamera?
-    var filterGroup: GPUImageFilterGroup?
     var isDuringbuttonColorAnimation = false
     var cameraPosition: AVCaptureDevice.Position = .front
     var currentRatio: CameraRatio = .fourthree
@@ -104,8 +103,8 @@ extension CameraViewController {
 
 extension CameraViewController {
     func captureImage() {
-        filterGroup?.useNextFrameForImageCapture()
-        guard let image = filterGroup?.imageFromCurrentFramebuffer() else { return }
+        currentFilterModel.groupFilter.gpuGroupFilter.useNextFrameForImageCapture()
+        guard let image = currentFilterModel.groupFilter.gpuGroupFilter.imageFromCurrentFramebuffer() else { return }
         let newImage = cropImage(image: image)
         shotEffectView.alpha = 0.7
         UIView.animate(withDuration: 0.5) { [weak self] in
