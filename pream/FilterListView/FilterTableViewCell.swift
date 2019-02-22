@@ -9,7 +9,8 @@
 import UIKit
 
 protocol FilterTableViewCellDelegate: class {
-    func filterTableViewCell(_ sender: FilterTableViewCell, viewControllerToPresent: TextInputDimedViewController)
+    func filterTableViewCell(_ sender: FilterTableViewCell, viewControllerToPresent: UIViewController)
+    func filterTableViewCell(_ sender: FilterTableViewCell, alertToPresent: UIAlertController)
 }
 
 class FilterTableViewCell: UITableViewCell {
@@ -36,6 +37,9 @@ class FilterTableViewCell: UITableViewCell {
 
 extension FilterTableViewCell: TextInputDimedViewDelegate {
     func doneButtonAction(textField: String?) {
-
+        let alert = UIAlertController(title: "Submitted Successfully!", message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(action)
+        delegate?.filterTableViewCell(self, alertToPresent: alert)
     }
 }
