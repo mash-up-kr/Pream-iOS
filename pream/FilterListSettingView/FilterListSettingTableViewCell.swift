@@ -32,7 +32,7 @@ class FilterListSettingTableViewCell: UITableViewCell {
 }
 
 extension FilterListSettingTableViewCell {
-    func configure(settingMode: SettingMode, title: String, image: UIImage) {
+    func configure(settingMode: SettingMode) {
         filterImageView.layer.cornerRadius = 2
         dimmedView.layer.cornerRadius = 2
         dimmedView.layer.opacity = 0.8
@@ -54,10 +54,6 @@ extension FilterListSettingTableViewCell {
         filterTitleTextField.isHidden = isHidden
         filterTitleLabel.isHidden = !isHidden
         checkImageView.isHidden = !isHidden
-
-        filterTitleLabel.text = title
-        filterTitleTextField.text = title
-        filterImageView.image = image
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -87,8 +83,6 @@ extension FilterListSettingTableViewCell {
                 dimmedView.layer.cornerRadius = 2
                 dimmedView.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             }
-        default:
-            break
         }
     }
 }
