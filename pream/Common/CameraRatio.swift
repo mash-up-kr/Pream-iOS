@@ -25,7 +25,7 @@ enum CameraRatio: RotateButton {
         case .fourthree:
             self = .oneone
         case .oneone:
-            self = .full
+            self = .fourthree
         }
     }
 
