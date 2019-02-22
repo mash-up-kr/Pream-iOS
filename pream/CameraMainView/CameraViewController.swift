@@ -30,7 +30,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var timerCount: UILabel!
     var currentFilterModel: FilterModel = FilterModel()
 
-    var isLogin: Bool = true
+    var isLogin: Bool = false
     var videoCamera: GPUImageVideoCamera?
     var isDuringbuttonColorAnimation = false
     var cameraPosition: AVCaptureDevice.Position = .front
