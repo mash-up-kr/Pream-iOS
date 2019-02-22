@@ -47,7 +47,11 @@ class FilterCollectionViewController: UICollectionViewController {
         }
 
         // Configure the cell
-        cell.config()
+        if indexPath.item == 0 {
+            cell.firstCellConfig()
+        } else {
+            cell.config()
+        }
 
         return cell
     }
