@@ -77,12 +77,13 @@ to apply your filter</string>
                                     <constraint firstAttribute="trailing" secondItem="kGt-jA-jy6" secondAttribute="trailing" id="xYB-zO-MIH"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ic-aw-AhE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ic-aw-AhE">
                                 <rect key="frame" x="20" y="602" width="335" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Dyt-rx-feh"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save" backgroundImage="register"/>
                                 <connections>
                                     <action selector="saveButtonAction:" destination="pXQ-m9-uwp" eventType="touchUpInside" id="5PI-Ry-veH"/>
                                 </connections>
@@ -175,6 +176,9 @@ to apply your filter</string>
                                             <constraint firstAttribute="width" constant="40" id="uZ1-tI-Llc"/>
                                         </constraints>
                                         <state key="normal" image="icInfo"/>
+                                        <connections>
+                                            <segue destination="j1a-hF-yca" kind="presentation" id="eiq-KN-JDv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9x-yp-r1f">
                                         <rect key="frame" x="5" y="11" width="40" height="40"/>
@@ -397,13 +401,40 @@ to apply your filter</string>
             </objects>
             <point key="canvasLocation" x="290.39999999999998" y="-280.20989505247377"/>
         </scene>
+        <!--Filter Setting Info View Controller-->
+        <scene sceneID="J3c-K0-tx4">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="j1a-hF-yca" customClass="FilterSettingInfoViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Udf-j8-zMm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yz-iU-E5e">
+                                <rect key="frame" x="304" y="49" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="closeWhite"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="j1a-hF-yca" eventType="touchUpInside" id="Kaa-av-HVy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ila-tD-Kia"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vP-Yd-yVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="-280"/>
+        </scene>
     </scenes>
     <resources>
         <image name="addphoto" width="80" height="62"/>
         <image name="closeBtn" width="40" height="40"/>
+        <image name="closeWhite" width="40" height="40"/>
         <image name="icBack" width="40" height="40"/>
         <image name="icCheck" width="40" height="40"/>
         <image name="icInfo" width="40" height="40"/>
+        <image name="register" width="335" height="45"/>
         <namedColor name="greyishBrownTwo">
             <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

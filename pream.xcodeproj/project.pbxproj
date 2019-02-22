@@ -65,6 +65,7 @@
 		EFEAE9E321E2160C00B7CCA8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEAE9E221E2160C00B7CCA8 /* Log.swift */; };
 		EFF00E122208491500865921 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF00E112208491500865921 /* GPUImageBeautifyFilter.m */; };
 		EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF00E34221457BD00865921 /* CameraRatio.swift */; };
+		EFF7F44D2220417900664D88 /* FilterSettingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7F44C2220417900664D88 /* FilterSettingInfoViewController.swift */; };
 		EFFDBE1C221C2E5000AB8BB2 /* PreamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */; };
 		EFFDBE1E221C315700AB8BB2 /* PreamProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		EFF00E112208491500865921 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		EFF00E132208495000865921 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
 		EFF00E34221457BD00865921 /* CameraRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRatio.swift; sourceTree = "<group>"; };
+		EFF7F44C2220417900664D88 /* FilterSettingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSettingInfoViewController.swift; sourceTree = "<group>"; };
 		EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreamService.swift; sourceTree = "<group>"; };
 		EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreamProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +240,7 @@
 				EF099752221B03BD00DD29D3 /* FilterSetting.storyboard */,
 				EF099754221B0CA900DD29D3 /* FilterSettingViewController.swift */,
 				4D857C57221BF67A009CAC3D /* FilterSelectCollectionViewCell.swift */,
+				EFF7F44C2220417900664D88 /* FilterSettingInfoViewController.swift */,
 			);
 			path = FilterSettingView;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				B8728122221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift in Sources */,
+				EFF7F44D2220417900664D88 /* FilterSettingInfoViewController.swift in Sources */,
 				03896F19221B03D4003637C8 /* RegisterPasswordViewController.swift in Sources */,
 				03896F1D221B0419003637C8 /* RegisterNicknameViewController.swift in Sources */,
 				B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */,

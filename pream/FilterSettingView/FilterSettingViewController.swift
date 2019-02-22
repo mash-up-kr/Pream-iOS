@@ -27,6 +27,9 @@ class FilterSettingViewController: UIViewController {
     var currentValue: Float?
     var gpuImage: GPUImagePicture?
     var filterModel: FilterModel = FilterModel()
+    var beforeValue: Float = 0
+    var beforeTint: Float = 0
+    var beforeTemperature: Float = 0
 
     @IBAction private func temperatureChangedValue(_ sender: UISlider) {
         currentValue = sender.value
@@ -47,6 +50,10 @@ class FilterSettingViewController: UIViewController {
         gpuImage?.processImage()
     }
     @IBAction private func closeButtonAction(_ sender: Any) {
+        sliderOutlet.value = beforeTemperature
+        tintSlider.value = beforeTint
+        temperatureSlider.value = beforeTemperature
+        
         setDefaultConstraints()
     }
     @IBAction private func acceptButtonAction(_ sender: Any) {
@@ -163,6 +170,11 @@ extension FilterSettingViewController: UICollectionViewDelegate, UICollectionVie
         filterSettingTopViewBottomConstraints.constant = 0
         bottomViewTopConstraints.constant = 0
         currentFilter = effect
+        
+        beforeValue = sliderOutlet.value
+        beforeTint = tintSlider.value
+        beforeTemperature = temperatureSlider.value
+        
         UIView.animate(withDuration: 0.25) { [weak self] in
             self?.view.layoutIfNeeded()
         }
