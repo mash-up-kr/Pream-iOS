@@ -13,7 +13,7 @@ struct Picachu {
     let image: UIImage
 }
 
-class FilterListSettingViewController: UIViewController {
+class FilterListSettingViewController: KeyboardViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var trashButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
@@ -24,10 +24,12 @@ class FilterListSettingViewController: UIViewController {
     private var picachuDummyData: [Picachu] = []
     private var sourceIndexPath: IndexPath?
     private var cellSnapshot: UIView?
+    var activeField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.allowsMultipleSelection = true
+        tableView.showsVerticalScrollIndicator = false
         picachuDummyData = [Picachu](repeatElement(picachu, count: 20))
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPress)
@@ -49,6 +51,23 @@ class FilterListSettingViewController: UIViewController {
         trashButton.isHidden = false
         okButton.isHidden = true
         tableView.reloadData()
+    }
+
+    override func keyboardWillHide(notification: NSNotification) {
+        tableView.contentInset = .zero
+    }
+
+    override func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + 10, right: 0)
+            var croppedFrame = view.frame
+            croppedFrame.size.height -= keyboardSize.height
+
+            guard let activeField = activeField else { return }
+            if !croppedFrame.contains(activeField.frame.origin) {
+                tableView.scrollRectToVisible(activeField.frame, animated: true)
+            }
+        }
     }
 }
 
@@ -158,5 +177,16 @@ extension FilterListSettingViewController: UITableViewDataSource {
 }
 
 extension FilterListSettingViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeField = textField
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        activeField = nil
+    }
 }
