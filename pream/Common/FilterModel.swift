@@ -16,30 +16,25 @@ class FilterModelDummy {
         let dummy2 = FilterModel()
         let dummy3 = FilterModel()
         let dummy4 = FilterModel()
-        let dummy5 = FilterModel()
 
         let filter1 = GroupFilter()
-        filter1.setFilterValues(exposure: 0.3, contrast: 0.2, sharpness: 0.2, saturation: 0.2, highlights: 0.2, shadows: 0.2, temperature: 5000, tint: 0, vignetteEnd: 0.2, brightness: 0.2)
+        filter1.setFilterValues(exposure: 0.09, contrast: 1.05, sharpness: nil, saturation: 1.18, highlights: nil, shadows: 0.2, temperature: nil, tint: nil, vignetteEnd: nil, brightness: 0.1)
         let filter2 = GroupFilter()
-        filter2.setFilterValues(exposure: 0.1, contrast: 0.4, sharpness: 0.3, saturation: 0.1, highlights: 0.5, shadows: 0.5, temperature: 6000, tint: 0, vignetteEnd: 0.1, brightness: 0.3)
+        filter2.setFilterValues(exposure: nil, contrast: 1.42, sharpness: nil, saturation: 0.8, highlights: nil, shadows: nil, temperature: nil, tint: nil, vignetteEnd: nil, brightness: 0.08)
         let filter3 = GroupFilter()
-        filter3.setFilterValues(exposure: 0.5, contrast: 0.2, sharpness: 0.3, saturation: 0.1, highlights: 0.1, shadows: 0.2, temperature: 4000, tint: 0, vignetteEnd: 0.1, brightness: 0.1)
+        filter3.setFilterValues(exposure: 0.08, contrast: 1.10, sharpness: nil, saturation: 1.5, highlights: nil, shadows: nil, temperature: nil, tint: nil, vignetteEnd: nil, brightness: 0.08)
         let filter4 = GroupFilter()
-        filter4.setFilterValues(exposure: 0.1, contrast: 0.1, sharpness: 0.1, saturation: 0.1, highlights: 0.11, shadows: 0.2, temperature: 5000, tint: 0, vignetteEnd: 0.1, brightness: 0.1)
-        let filter5 = GroupFilter()
-        filter5.setFilterValues(exposure: 0.3, contrast: 0.3, sharpness: 0.3, saturation: 0.3, highlights: 0.3, shadows: 0.3, temperature: 6000, tint: 0, vignetteEnd: 0.3, brightness: 0.3)
+        filter4.setFilterValues(exposure: 0.2, contrast: 1.35, sharpness: nil, saturation: 1.15, highlights: nil, shadows: nil, temperature: nil, tint: nil, vignetteEnd: nil, brightness: nil)
 
-        dummy1.makeModel(localId: 1, groupName: "이름", groupImage: nil, groupFilter: filter1)
-        dummy2.makeModel(localId: 2, groupName: "피카", groupImage: nil, groupFilter: filter2)
-        dummy3.makeModel(localId: 3, groupName: "duddj", groupImage: nil, groupFilter: filter3)
-        dummy4.makeModel(localId: 4, groupName: "하하하하하", groupImage: nil, groupFilter: filter4)
-        dummy5.makeModel(localId: 5, groupName: "필터닷", groupImage: nil, groupFilter: filter5)
+        dummy1.makeModel(localId: 1, groupName: "화사한", groupImage: nil, groupFilter: filter1)
+        dummy2.makeModel(localId: 2, groupName: "채도 낮은 차분", groupImage: nil, groupFilter: filter2)
+        dummy3.makeModel(localId: 3, groupName: "비비드", groupImage: nil, groupFilter: filter3)
+        dummy4.makeModel(localId: 4, groupName: "강렬한", groupImage: nil, groupFilter: filter4)
 
         dummyFilters.append(dummy1)
         dummyFilters.append(dummy2)
         dummyFilters.append(dummy3)
         dummyFilters.append(dummy4)
-        dummyFilters.append(dummy5)
     }
 }
 
@@ -72,8 +67,8 @@ class GroupFilter {
         filter.vignetteEnd = 5
         return filter
     }()
-//    var gpuGrainFilter: GPUImageExposureFilter = GPUImageExposureFilter()
-//    var gpuFadeFilter: GPUImageExposureFilter = GPUImageExposureFilter()
+    //    var gpuGrainFilter: GPUImageExposureFilter = GPUImageExposureFilter()
+    //    var gpuFadeFilter: GPUImageExposureFilter = GPUImageExposureFilter()
     var gpuSplitToneFilter: GPUImageExposureFilter = GPUImageExposureFilter()
     lazy var gpuGroupFilter: GPUImageFilterGroup = {
         let groupFilter = GPUImageFilterGroup()
@@ -85,8 +80,8 @@ class GroupFilter {
         groupFilter.addFilter(gpuWhiteBalanceFilter)
         groupFilter.addFilter(gpuVignetteFilter)
         groupFilter.addFilter(gpuBrightnessFilter)
-//        groupFilter.addFilter(gpuGrainFilter)
-//        groupFilter.addFilter(gpuFadeFilter)
+        //        groupFilter.addFilter(gpuGrainFilter)
+        //        groupFilter.addFilter(gpuFadeFilter)
         groupFilter.addFilter(gpuSplitToneFilter)
 
         gpuExposureFilter.addTarget(gpuContrastFilter)
@@ -97,8 +92,8 @@ class GroupFilter {
         gpuWhiteBalanceFilter.addTarget(gpuVignetteFilter)
         gpuVignetteFilter.addTarget(gpuBrightnessFilter)
         gpuBrightnessFilter.addTarget(gpuSplitToneFilter)
-//        gpuGrainFilter.addTarget(gpuFadeFilter)
-//        gpuFadeFilter.addTarget(gpuSplitToneFilter)
+        //        gpuGrainFilter.addTarget(gpuFadeFilter)
+        //        gpuFadeFilter.addTarget(gpuSplitToneFilter)
 
         groupFilter.initialFilters = [gpuExposureFilter]
         groupFilter.terminalFilter = gpuSplitToneFilter
@@ -130,29 +125,49 @@ class GroupFilter {
             }
         case .vignette:
             return (0, 5)
-//        case .grain:
-//            return (0, 0)
-//        case .fade:
-//            return (0, 0)
+            //        case .grain:
+            //            return (0, 0)
+            //        case .fade:
+        //            return (0, 0)
         case .splitTone:
             return (0, 0)
         }
     }
 
-    func setFilterValues(exposure: CGFloat, contrast: CGFloat, sharpness: CGFloat, saturation: CGFloat, highlights: CGFloat, shadows: CGFloat, temperature: CGFloat, tint: CGFloat, vignetteEnd: CGFloat, brightness: CGFloat) {
-        gpuExposureFilter.exposure = exposure
-        gpuContrastFilter.contrast = contrast
-        gpuSharpenFilter.sharpness = sharpness
-        gpuSaturationFilter.saturation = saturation
-        gpuHighlightFilter.highlights = highlights
-        gpuHighlightFilter.shadows = shadows
-        gpuWhiteBalanceFilter.temperature = temperature
-        gpuWhiteBalanceFilter.tint = tint
-        gpuVignetteFilter.vignetteEnd = vignetteEnd
-        gpuBrightnessFilter.brightness = brightness
-//        gpuGrainFilter
-//        gpuFadeFilter
-//        gpuSplitToneFilter
+    func setFilterValues(exposure: CGFloat?, contrast: CGFloat?, sharpness: CGFloat?, saturation: CGFloat?, highlights: CGFloat?, shadows: CGFloat?, temperature: CGFloat?, tint: CGFloat?, vignetteEnd: CGFloat?, brightness: CGFloat?) {
+        if let exposure = exposure {
+            gpuExposureFilter.exposure = exposure
+        }
+        if let contrast = contrast {
+            gpuContrastFilter.contrast = contrast
+        }
+        if let sharpness = sharpness {
+            gpuSharpenFilter.sharpness = sharpness
+        }
+        if let saturation = saturation {
+            gpuSaturationFilter.saturation = saturation
+        }
+        if let highlights = highlights {
+            gpuHighlightFilter.highlights = highlights
+        }
+        if let shadows = shadows {
+            gpuHighlightFilter.shadows = shadows
+        }
+        if let temperature = temperature {
+            gpuWhiteBalanceFilter.temperature = temperature
+        }
+        if let tint = tint {
+            gpuWhiteBalanceFilter.tint = tint
+        }
+        if let vignetteEnd = vignetteEnd {
+            gpuVignetteFilter.vignetteEnd = vignetteEnd
+        }
+        if let brightness = brightness {
+            gpuBrightnessFilter.brightness = brightness
+        }
+        //        gpuGrainFilter
+        //        gpuFadeFilter
+        //        gpuSplitToneFilter
     }
 
     func setFilter(currentFilter: Effects, customField: String? = nil, value: CGFloat) {
@@ -180,10 +195,10 @@ class GroupFilter {
         case .vignette:
             gpuVignetteFilter.vignetteStart = 0
             gpuVignetteFilter.vignetteEnd = value
-//        case .grain:
-//            Log.msg("grain")
-//        case .fade:
-//            Log.msg("grain")
+            //        case .grain:
+            //            Log.msg("grain")
+            //        case .fade:
+        //            Log.msg("grain")
         case .splitTone:
             Log.msg("grain")
         }
@@ -213,10 +228,10 @@ class GroupFilter {
             }
         case .vignette:
             return gpuVignetteFilter.vignetteEnd
-//        case .grain:
-//            return 0
-//        case .fade:
-//            return 0
+            //        case .grain:
+            //            return 0
+            //        case .fade:
+        //            return 0
         case .splitTone:
             return 0
         }
