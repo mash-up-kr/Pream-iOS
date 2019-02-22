@@ -50,6 +50,14 @@ class FilterListSettingViewController: KeyboardViewController {
         settingMode = .edit
         trashButton.isHidden = false
         okButton.isHidden = true
+
+        if let selectedIndexPaths = tableView.indexPathsForSelectedRows {
+            let sortedIndexPaths = selectedIndexPaths.sorted { $0.row > $1.row }
+            for indexPath in sortedIndexPaths {
+                picachuDummyData.remove(at: indexPath.row)
+            }
+        }
+        
         tableView.reloadData()
     }
 
