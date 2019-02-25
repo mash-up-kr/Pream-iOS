@@ -15,13 +15,14 @@ class MyFilterCategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numberOfFiltersLabel: UILabel!
 
     override func awakeFromNib() {
+        super.awakeFromNib()
         categoryBackgroundImageView.layer.cornerRadius = 5
     }
 
     func config() {
         categoryNameLabel.text = "Restaurant"
         categoryDetailLabel.text = "18.10.29 Used 3245"
-        categoryBackgroundImageView.image = UIImage(named: "picachu")
+        categoryBackgroundImageView.image = UIImage(imageLiteralResourceName: "picachu")
         numberOfFiltersLabel.text = "8 Filter"
     }
 }

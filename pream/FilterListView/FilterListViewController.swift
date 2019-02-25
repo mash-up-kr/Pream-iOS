@@ -27,7 +27,7 @@ class FilterListViewController: UIViewController {
         configurePreamFilterView()
     }
 
-    @IBAction func backButtonAction(_ sender: UIButton) {
+    @IBAction private func backButtonAction(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
 }

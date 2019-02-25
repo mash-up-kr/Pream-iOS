@@ -31,7 +31,7 @@ class ObjectFilterViewController: UIViewController {
         nextButton.isEnabled = false
     }
 
-    @IBAction func filterImageButtonsAction(_ sender: UIButton) {
+    @IBAction private func filterImageButtonsAction(_ sender: UIButton) {
         if sender.isSelected {
             sender.isSelected = false
             sender.backgroundColor = .clear
@@ -48,7 +48,7 @@ class ObjectFilterViewController: UIViewController {
         }
     }
 
-    @IBAction func nextButtonAction(_ sender: UIButton) {
+    @IBAction private func nextButtonAction(_ sender: UIButton) {
         if sender.isEnabled {
             let storyboard = UIStoryboard(name: "DefaultFilterRegister", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "SceneryFilterViewController") as? SceneryFilterViewController else {

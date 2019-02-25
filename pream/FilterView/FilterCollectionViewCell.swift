@@ -15,19 +15,19 @@ class FilterCollectionViewCell: UICollectionViewCell {
 
     func config() {
         filterNameLabel.text = "피카츄"
-        filterImageView.image = UIImage(named: "picachu")
+        filterImageView.image = UIImage(imageLiteralResourceName: "picachu")
     }
 
     func firstCellConfig() {
         filterNameLabel.isHidden = true
         dimmedView.isHidden = true
-        filterImageView.image = UIImage(named: "icFilterSetting")
+        filterImageView.image = UIImage(imageLiteralResourceName: "icFilterSetting")
         filterImageView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
     }
 
     override var isSelected: Bool {
         didSet {
-            if filterImageView.image != UIImage(named: "icFilterSetting") {
+            if filterImageView.image != UIImage(imageLiteralResourceName: "icFilterSetting") {
                 if self.isSelected {
                     filterNameLabel.textColor = .white
                     dimmedView.isHidden = false

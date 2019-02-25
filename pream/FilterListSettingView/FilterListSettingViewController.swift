@@ -32,18 +32,18 @@ class FilterListSettingViewController: KeyboardViewController {
         tableView.addGestureRecognizer(longPress)
     }
 
-    @IBAction func backButtonAction() {
+    @IBAction private func backButtonAction() {
         navigationController?.popViewController(animated: true)
     }
 
-    @IBAction func trashButtonAction() {
+    @IBAction private func trashButtonAction() {
         settingMode = .delete
         trashButton.isHidden = true
         okButton.isHidden = false
         tableView.reloadData()
     }
 
-    @IBAction func okButtonAction() {
+    @IBAction private func okButtonAction() {
         settingMode = .edit
         trashButton.isHidden = false
         okButton.isHidden = true

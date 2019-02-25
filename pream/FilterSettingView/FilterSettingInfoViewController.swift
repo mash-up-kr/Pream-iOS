@@ -10,7 +10,7 @@ import UIKit
 
 class FilterSettingInfoViewController: UIViewController {
 
-    @IBAction func dismissAction(_ sender: Any) {
+    @IBAction private func dismissAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 

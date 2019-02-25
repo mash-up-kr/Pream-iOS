@@ -52,7 +52,8 @@ class PreamProvider {
                         tone: Float,
                         vignette: Float,
                         whiteBalance: Float,
-                        completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+                        completion: @escaping ((Data?) -> Void),
+                        failure: @escaping ((Error) -> Void)) {
         provider.request(.createMyFilter(adjust: adjust,
                                          clarity: clarity,
                                          colorFilter: colorFilter,
@@ -68,7 +69,7 @@ class PreamProvider {
                                          tone: tone,
                                          vignette: vignette,
                                          whiteBalance: whiteBalance)) { result in
-            self.resultTask(result, completion: completion, failure: failure)
+                                            self.resultTask(result, completion: completion, failure: failure)
         }
     }
 
@@ -93,7 +94,8 @@ class PreamProvider {
                         tone: Float,
                         vignette: Float,
                         whiteBalance: Float,
-                        completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+                        completion: @escaping ((Data?) -> Void),
+                        failure: @escaping ((Error) -> Void)) {
         provider.request(.updateMyFilter(adjust: adjust,
                                          clarity: clarity,
                                          colorFilter: colorFilter,

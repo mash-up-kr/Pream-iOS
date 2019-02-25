@@ -20,7 +20,7 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func backButtonAction(_ sender: UIButton) {
+    @IBAction private func backButtonAction(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
 }
