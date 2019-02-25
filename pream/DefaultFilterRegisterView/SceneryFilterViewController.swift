@@ -54,7 +54,6 @@ class SceneryFilterViewController: UIViewController {
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "CameraViewController") as? CameraViewController else {
                 return
             }
-            viewController.isLogin = true
             present(viewController, animated: true, completion: nil)
         }
     }

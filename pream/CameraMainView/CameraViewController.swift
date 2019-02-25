@@ -30,7 +30,6 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var timerCount: UILabel!
     var currentFilterModel: FilterModel = FilterModel()
 
-    var isLogin: Bool = false
     var videoCamera: GPUImageVideoCamera?
     var isDuringbuttonColorAnimation = false
     var cameraPosition: AVCaptureDevice.Position = .front
@@ -142,7 +141,6 @@ extension CameraViewController {
             topBlurViewHeight.constant = 0
             bottomBlurViewHeight.constant = 0
             filterView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15)
-
         }
 
         UIView.animate(withDuration: 0.25) { [weak self] in
@@ -213,12 +211,12 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 extension CameraViewController {
     //첫 진입시 로그인 체크
     func loginChecked() {
-        guard !isLogin else { return }
-        isLogin.toggle()
-
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController")
-        present(loginViewController, animated: true, completion: nil)
+        guard let _ = UserDefaultsManager.shared.getUser() else {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController")
+            present(loginViewController, animated: true, completion: nil)
+            return
+        }
     }
 
     //상하단 블러 추가
@@ -256,21 +254,13 @@ extension CameraViewController {
         videoCamera?.stopCapture()
         cameraPosition = cameraPosition == .front ? .back : .front
         startCameraSession()
-        setCameraPositionIntoUserDefault()
+        UserDefaultsManager.shared.setCameraPositionIntoUserDefault(cameraPosition: cameraPosition)
     }
 
     // set params from UserDefaults
     func setParamsFromUserDefaults() {
-        setCameraPositionFromUserDefaults()
-        setCurrentRatioFromUserDefaults()
-    }
-
-    func setCameraPositionFromUserDefaults() {
-        cameraPosition = AVCaptureDevice.Position(rawValue: UserDefaults.standard.integer(forKey: "cameraPosition")) ?? .front
-    }
-
-    func setCurrentRatioFromUserDefaults() {
-        currentRatio = CameraRatio(rawValue: UserDefaults.standard.integer(forKey: "currentRatio")) ?? .fourthree
+        cameraPosition = UserDefaultsManager.shared.getCameraPosition()
+        currentRatio = UserDefaultsManager.shared.getCameraRatio()
     }
 
     // 더블탭 카메라 전환
