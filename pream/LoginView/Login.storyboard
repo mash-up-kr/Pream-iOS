@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fil-g3-5gn">
-                                <rect key="frame" x="37" y="230.5" width="216.5" height="81.5"/>
+                                <rect key="frame" x="40" y="224.5" width="216.5" height="81.5"/>
                                 <string key="text">Hello!
 
 What kind of photo
@@ -30,21 +30,21 @@ would you like to take today?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-va-982">
-                                <rect key="frame" x="37" y="525" width="301" height="40"/>
-                                <state key="normal" image="LoginGradationButton"/>
+                                <rect key="frame" x="37" y="519" width="301" height="46"/>
+                                <state key="normal" title="Login" backgroundImage="rectangle2Copy2"/>
                                 <connections>
                                     <action selector="loginButtonAction:" destination="vvq-P0-DvV" eventType="touchUpInside" id="16b-Q8-Mps"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taF-Fc-Xvi">
-                                <rect key="frame" x="37" y="600" width="174" height="27"/>
+                                <rect key="frame" x="40" y="600" width="174" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                 <state key="normal" title="Are you not a member up yet?">
                                     <color key="titleColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GX-h2-55l">
-                                <rect key="frame" x="230" y="600" width="46" height="27"/>
+                                <rect key="frame" x="233" y="600" width="46" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,27 +54,27 @@ would you like to take today?</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-8J-m4A">
-                                <rect key="frame" x="37" y="450" width="301" height="1"/>
+                                <rect key="frame" x="37" y="444" width="301" height="1"/>
                                 <color key="backgroundColor" red="0.74509803921568629" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Rlh-qD-S4d"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRQ-IQ-TIN">
-                                <rect key="frame" x="37" y="502" width="301" height="1"/>
+                                <rect key="frame" x="37" y="496" width="301" height="1"/>
                                 <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="0nh-5c-6qd"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AmX-tb-CkT">
-                                <rect key="frame" x="37" y="476" width="301" height="20"/>
+                                <rect key="frame" x="44" y="470" width="287" height="20"/>
                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWr-qT-UYr">
-                                <rect key="frame" x="37" y="424" width="301" height="20"/>
+                                <rect key="frame" x="44" y="418" width="287" height="20"/>
                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
@@ -83,25 +83,27 @@ would you like to take today?</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Dd3-8J-m4A" firstAttribute="top" secondItem="mWr-qT-UYr" secondAttribute="bottom" constant="6" id="29d-L3-HoL"/>
+                            <constraint firstItem="mWr-qT-UYr" firstAttribute="leading" secondItem="NUS-dJ-1d2" secondAttribute="leading" constant="44" id="7os-AC-W0q"/>
+                            <constraint firstItem="NUS-dJ-1d2" firstAttribute="trailing" secondItem="AmX-tb-CkT" secondAttribute="trailing" constant="44" id="A8g-s2-wRO"/>
                             <constraint firstItem="9GX-h2-55l" firstAttribute="leading" secondItem="taF-Fc-Xvi" secondAttribute="trailing" constant="19" id="BWX-4E-Tnh"/>
-                            <constraint firstItem="cRQ-IQ-TIN" firstAttribute="trailing" secondItem="mWr-qT-UYr" secondAttribute="trailing" id="BpR-Gc-kVr"/>
-                            <constraint firstItem="C2q-va-982" firstAttribute="trailing" secondItem="mWr-qT-UYr" secondAttribute="trailing" id="Dou-Ej-hAH"/>
-                            <constraint firstItem="cRQ-IQ-TIN" firstAttribute="leading" secondItem="mWr-qT-UYr" secondAttribute="leading" id="Gd8-sg-6eC"/>
                             <constraint firstItem="taF-Fc-Xvi" firstAttribute="top" secondItem="C2q-va-982" secondAttribute="bottom" constant="35" id="KxU-d2-nSH"/>
                             <constraint firstItem="taF-Fc-Xvi" firstAttribute="leading" secondItem="fil-g3-5gn" secondAttribute="leading" id="LYa-6r-x2g"/>
-                            <constraint firstItem="Dd3-8J-m4A" firstAttribute="trailing" secondItem="mWr-qT-UYr" secondAttribute="trailing" id="Lur-n7-i7a"/>
                             <constraint firstItem="NUS-dJ-1d2" firstAttribute="bottom" secondItem="taF-Fc-Xvi" secondAttribute="bottom" constant="40" id="PQI-KM-mSi"/>
+                            <constraint firstItem="cRQ-IQ-TIN" firstAttribute="leading" secondItem="8b8-Qi-rIZ" secondAttribute="leading" constant="37" id="PcH-bC-nHr"/>
+                            <constraint firstAttribute="trailing" secondItem="Dd3-8J-m4A" secondAttribute="trailing" constant="37" id="Zh6-rJ-AP8"/>
                             <constraint firstItem="cRQ-IQ-TIN" firstAttribute="top" secondItem="AmX-tb-CkT" secondAttribute="bottom" constant="6" id="dwm-UQ-Gxf"/>
-                            <constraint firstItem="Dd3-8J-m4A" firstAttribute="leading" secondItem="mWr-qT-UYr" secondAttribute="leading" id="gtV-tw-joZ"/>
+                            <constraint firstItem="C2q-va-982" firstAttribute="leading" secondItem="NUS-dJ-1d2" secondAttribute="leading" constant="37" id="f6n-TK-Lgn"/>
+                            <constraint firstItem="Dd3-8J-m4A" firstAttribute="leading" secondItem="8b8-Qi-rIZ" secondAttribute="leading" constant="37" id="hjE-Zg-ATi"/>
                             <constraint firstItem="C2q-va-982" firstAttribute="centerX" secondItem="8b8-Qi-rIZ" secondAttribute="centerX" id="i7J-wZ-fZi"/>
                             <constraint firstItem="C2q-va-982" firstAttribute="top" secondItem="cRQ-IQ-TIN" secondAttribute="bottom" constant="22" id="jWf-YK-RvI"/>
                             <constraint firstItem="AmX-tb-CkT" firstAttribute="top" secondItem="Dd3-8J-m4A" secondAttribute="bottom" constant="25" id="kWg-p9-yQc"/>
-                            <constraint firstItem="C2q-va-982" firstAttribute="leading" secondItem="fil-g3-5gn" secondAttribute="leading" id="lOt-st-FLp"/>
-                            <constraint firstItem="AmX-tb-CkT" firstAttribute="leading" secondItem="mWr-qT-UYr" secondAttribute="leading" id="nqE-mv-Ubh"/>
+                            <constraint firstItem="NUS-dJ-1d2" firstAttribute="trailing" secondItem="C2q-va-982" secondAttribute="trailing" constant="37" id="nTQ-LX-kyx"/>
                             <constraint firstItem="mWr-qT-UYr" firstAttribute="top" secondItem="fil-g3-5gn" secondAttribute="bottom" constant="112" id="p2N-c2-vSQ"/>
-                            <constraint firstItem="C2q-va-982" firstAttribute="leading" secondItem="mWr-qT-UYr" secondAttribute="leading" id="qcI-6t-xqg"/>
+                            <constraint firstItem="fil-g3-5gn" firstAttribute="leading" secondItem="NUS-dJ-1d2" secondAttribute="leading" constant="40" id="qML-Cg-ERz"/>
+                            <constraint firstAttribute="trailing" secondItem="cRQ-IQ-TIN" secondAttribute="trailing" constant="37" id="r5H-OE-sTm"/>
+                            <constraint firstItem="AmX-tb-CkT" firstAttribute="leading" secondItem="NUS-dJ-1d2" secondAttribute="leading" constant="44" id="sU7-9U-ftP"/>
+                            <constraint firstItem="NUS-dJ-1d2" firstAttribute="trailing" secondItem="mWr-qT-UYr" secondAttribute="trailing" constant="44" id="tne-vA-m0O"/>
                             <constraint firstItem="9GX-h2-55l" firstAttribute="centerY" secondItem="taF-Fc-Xvi" secondAttribute="centerY" id="uPH-OK-HvY"/>
-                            <constraint firstItem="AmX-tb-CkT" firstAttribute="trailing" secondItem="mWr-qT-UYr" secondAttribute="trailing" id="xGT-9x-k8l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NUS-dJ-1d2"/>
                     </view>
@@ -324,7 +326,7 @@ would you like to take today?</string>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-ax-oui">
                                 <rect key="frame" x="20" y="291" width="335" height="3"/>
@@ -679,7 +681,7 @@ would you like to take today?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-yH-Qsp">
-                                <rect key="frame" x="37.5" y="535" width="300" height="45"/>
+                                <rect key="frame" x="37" y="535" width="301" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5pO-4l-7OZ"/>
                                 </constraints>
@@ -695,9 +697,11 @@ would you like to take today?</string>
                             <constraint firstItem="vte-Wi-ngc" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="8fy-0v-1NR"/>
                             <constraint firstItem="fHg-y4-IoU" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="40" id="BcU-hL-uMf"/>
                             <constraint firstItem="6C0-Ew-CuX" firstAttribute="bottom" secondItem="VNN-yH-Qsp" secondAttribute="bottom" constant="87" id="DAr-OG-sUm"/>
+                            <constraint firstItem="VNN-yH-Qsp" firstAttribute="leading" secondItem="6C0-Ew-CuX" secondAttribute="leading" constant="37" id="Szl-2P-06u"/>
                             <constraint firstItem="6dS-bI-at6" firstAttribute="leading" secondItem="fHg-y4-IoU" secondAttribute="leading" id="Y3b-KU-zB6"/>
                             <constraint firstItem="fHg-y4-IoU" firstAttribute="top" secondItem="6C0-Ew-CuX" secondAttribute="top" priority="250" constant="277" id="c0S-sQ-lH6"/>
                             <constraint firstItem="VNN-yH-Qsp" firstAttribute="centerX" secondItem="4ee-Xc-V8w" secondAttribute="centerX" id="j47-6A-5P8"/>
+                            <constraint firstItem="6C0-Ew-CuX" firstAttribute="trailing" secondItem="VNN-yH-Qsp" secondAttribute="trailing" constant="37" id="tVf-zJ-cLc"/>
                             <constraint firstItem="vte-Wi-ngc" firstAttribute="top" secondItem="6dS-bI-at6" secondAttribute="bottom" constant="32" id="xtE-cB-vdt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6C0-Ew-CuX"/>
@@ -768,7 +772,7 @@ would you like to take today?</string>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" textContentType="one-time-code"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfC-qQ-Qzz">
                                 <rect key="frame" x="20" y="291" width="335" height="3"/>
@@ -853,12 +857,12 @@ would you like to take today?</string>
         </scene>
     </scenes>
     <resources>
-        <image name="LoginGradationButton" width="301" height="40"/>
         <image name="activeNextButton" width="46" height="46"/>
         <image name="closeBtn" width="40" height="40"/>
         <image name="finalactivebutton" width="300" height="45"/>
         <image name="inactivenextbutton" width="46" height="46"/>
         <image name="previous" width="36" height="36"/>
+        <image name="rectangle2Copy2" width="260" height="46"/>
         <namedColor name="brightViolet">
             <color red="0.59999999999999998" green="0.11372549019607843" blue="0.92156862745098034" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
