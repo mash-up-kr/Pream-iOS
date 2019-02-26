@@ -50,7 +50,7 @@ enum PreamService {
 
 extension PreamService: TargetType {
     var sampleData: Data { return Data() }
-    var baseURL: URL { return URL(string: "http://ec2-13-124-136-88.ap-northeast-2.compute.amazonaws.com:9000")! }
+    var baseURL: URL { return URL(string: "http://pream-backend-dev.ap-northeast-2.elasticbeanstalk.com")! }
     var path: String {
         switch self {
         case .login:
