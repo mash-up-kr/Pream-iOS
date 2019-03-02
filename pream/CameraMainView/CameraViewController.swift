@@ -214,7 +214,7 @@ extension CameraViewController {
         guard let _ = UserDefaultsManager.shared.getUser() else {
             let storyboard = UIStoryboard(name: "Login", bundle: nil)
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController")
-//            present(loginViewController, animated: true, completion: nil)
+            present(loginViewController, animated: true, completion: nil)
             return
         }
     }
