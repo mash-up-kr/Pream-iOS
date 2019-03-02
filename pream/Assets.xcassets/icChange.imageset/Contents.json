@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "icChange.png",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "icChange@2x.png",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "icChange@3x.png",
-      "scale" : "3x"
+      "filename" : "icChange.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {
