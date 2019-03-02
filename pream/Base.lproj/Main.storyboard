@@ -193,7 +193,7 @@
                                             <constraint firstAttribute="width" constant="40" id="RIn-Lg-qGC"/>
                                             <constraint firstAttribute="height" constant="40" id="gz0-Bv-f6d"/>
                                         </constraints>
-                                        <state key="normal" image="library">
+                                        <state key="normal" image="icGallery">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -206,7 +206,7 @@
                                             <constraint firstAttribute="width" constant="40" id="1FL-RP-TMV"/>
                                             <constraint firstAttribute="height" constant="40" id="e3x-fJ-9LZ"/>
                                         </constraints>
-                                        <state key="normal" image="group4"/>
+                                        <state key="normal" image="icFilter"/>
                                         <connections>
                                             <action selector="showFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NSc-hq-y3U"/>
                                         </connections>
@@ -338,11 +338,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="group4" width="33" height="33"/>
         <image name="icChange" width="41" height="40"/>
+        <image name="icFilter" width="40" height="40"/>
+        <image name="icGallery" width="40" height="40"/>
         <image name="icMenu" width="40" height="40"/>
         <image name="icRatio43" width="40" height="40"/>
         <image name="icTimer" width="40" height="40"/>
-        <image name="library" width="40" height="40"/>
     </resources>
 </document>
