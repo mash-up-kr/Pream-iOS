@@ -40,6 +40,7 @@
 		B872811E221C062800D1AF96 /* FilterListSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B872811D221C062800D1AF96 /* FilterListSetting.storyboard */; };
 		B8728120221C065900D1AF96 /* FilterListSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */; };
 		B8728122221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */; };
+		B8888983222A7DD100A2EDF7 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8888982222A7DD100A2EDF7 /* LoginResponse.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
 		B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */; };
 		B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */; };
@@ -108,6 +109,7 @@
 		B872811D221C062800D1AF96 /* FilterListSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterListSetting.storyboard; sourceTree = "<group>"; };
 		B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListSettingViewController.swift; sourceTree = "<group>"; };
 		B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListSettingTableViewCell.swift; sourceTree = "<group>"; };
+		B8888982222A7DD100A2EDF7 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		B8DACC7921F875B7006B6AE2 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
@@ -224,6 +226,14 @@
 				B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */,
 			);
 			path = FilterListSettingView;
+			sourceTree = "<group>";
+		};
+		B8888981222A7DB900A2EDF7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B8888982222A7DD100A2EDF7 /* LoginResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		B8DACC7821F8753B006B6AE2 /* LibraryView */ = {
@@ -366,6 +376,7 @@
 		EFFDBE1A221C2DF600AB8BB2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B8888981222A7DB900A2EDF7 /* Response */,
 				EFFDBE1B221C2E5000AB8BB2 /* PreamService.swift */,
 				EFFDBE1D221C315700AB8BB2 /* PreamProvider.swift */,
 			);
@@ -585,6 +596,7 @@
 				B84ECF46220B2A1D00B11954 /* FeedViewController.swift in Sources */,
 				EFB5A1D121E2293A00802F7E /* UIView+ConvertImage.swift in Sources */,
 				63D6211721DFA88000EF4059 /* CameraViewController.swift in Sources */,
+				B8888983222A7DD100A2EDF7 /* LoginResponse.swift in Sources */,
 				037A7F1F221DA87500A670D7 /* SceneryFilterViewController.swift in Sources */,
 				EF099759221B140500DD29D3 /* TextInputDimedViewController.swift in Sources */,
 				EFFDBE1C221C2E5000AB8BB2 /* PreamService.swift in Sources */,
