@@ -14,14 +14,14 @@ protocol RotateButton {
 }
 
 enum CameraRatio: Int, RotateButton {
-    case full
+//    case full
     case oneone
     case fourthree
 
     mutating func next() {
         switch self {
-        case .full:
-            self = .fourthree
+//        case .full:
+//            self = .fourthree
         case .fourthree:
             self = .oneone
         case .oneone:
@@ -31,8 +31,8 @@ enum CameraRatio: Int, RotateButton {
 
     func getImageName() -> String {
         switch self {
-        case .full:
-            return "icRatioFull"
+//        case .full:
+//            return "icRatioFull"
         case .oneone:
             return "icRatio11"
         case .fourthree:
