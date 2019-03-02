@@ -18,8 +18,20 @@ class LoginViewController: KeyboardViewController {
 
     @IBAction private func loginButtonAction(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-        PreamProvider().login(email: email, password: password, completion: { data in
+        PreamProvider().login(email: email, password: password, completion: { [weak self] data in
             Log.msg(data)
+            let decoder = JSONDecoder()
+            if let data = data {
+                do {
+                    let loginResponse = try decoder.decode(LoginResponse.self, from: data)
+                    let nickName = loginResponse.result.nickname
+                    let user = User(nickName: nickName, email: email)
+                    UserDefaultsManager.shared.setUser(user: user)
+                    self?.dismiss(animated: true, completion: nil)
+                } catch {
+                    Log.msg(error)
+                }
+            }
         }) { error in
             Log.msg(error)
         }
