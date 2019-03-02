@@ -209,7 +209,7 @@ would you like to take today?</string>
                                 <state key="normal" image="activeNextButton"/>
                                 <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
-                                    <segue destination="NzH-NJ-GRi" kind="show" id="3sO-X0-PKw"/>
+                                    <action selector="nextButtonAction:" destination="M3S-0a-fBc" eventType="touchUpInside" id="Js1-l8-tPM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -267,7 +267,7 @@ would you like to take today?</string>
         <!--Register Password View Controller-->
         <scene sceneID="fMp-Pz-V3b">
             <objects>
-                <viewController id="Ljy-cc-q0i" customClass="RegisterPasswordViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterPassword" id="Ljy-cc-q0i" customClass="RegisterPasswordViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4hi-iZ-kGj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -482,7 +482,7 @@ would you like to take today?</string>
                                 <state key="normal" image="activeNextButton"/>
                                 <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
-                                    <segue destination="YEA-Oy-5xj" kind="show" id="xqB-6N-zwO"/>
+                                    <action selector="nextButtonAction:" destination="j9J-wc-Nck" eventType="touchUpInside" id="9ie-AI-qyi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -521,7 +521,7 @@ would you like to take today?</string>
         <!--Register Nickname View Controller-->
         <scene sceneID="iWu-6y-2tx">
             <objects>
-                <viewController id="YEA-Oy-5xj" customClass="RegisterNicknameViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterNickname" id="YEA-Oy-5xj" customClass="RegisterNicknameViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFg-0s-H46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -609,7 +609,7 @@ would you like to take today?</string>
                                 <state key="normal" image="activeNextButton"/>
                                 <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
-                                    <segue destination="oxh-1q-PbL" kind="show" id="trK-Sv-Ga4"/>
+                                    <action selector="nextButtonAction:" destination="YEA-Oy-5xj" eventType="touchUpInside" id="Rvj-at-0Mb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -648,7 +648,7 @@ would you like to take today?</string>
         <!--View Controller-->
         <scene sceneID="6yW-qa-5Mp">
             <objects>
-                <viewController id="oxh-1q-PbL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome" id="oxh-1q-PbL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ee-Xc-V8w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -722,7 +722,7 @@ would you like to take today?</string>
         <!--Register Email Check View Controller-->
         <scene sceneID="vmg-mG-03z">
             <objects>
-                <viewController id="NzH-NJ-GRi" customClass="RegisterEmailCheckViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterEmailCheck" id="NzH-NJ-GRi" customClass="RegisterEmailCheckViewController" customModule="pream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52E-FB-0hR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -801,7 +801,7 @@ would you like to take today?</string>
                                 <state key="normal" image="activeNextButton"/>
                                 <state key="disabled" image="inactivenextbutton"/>
                                 <connections>
-                                    <segue destination="Ljy-cc-q0i" kind="show" id="dzI-xb-PJ0"/>
+                                    <action selector="nextButtonAction:" destination="NzH-NJ-GRi" eventType="touchUpInside" id="DJ7-iL-tSf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ve sent you a verification code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-pf-AUD">

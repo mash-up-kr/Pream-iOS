@@ -41,6 +41,8 @@
 		B8728120221C065900D1AF96 /* FilterListSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */; };
 		B8728122221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */; };
 		B8888983222A7DD100A2EDF7 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8888982222A7DD100A2EDF7 /* LoginResponse.swift */; };
+		B8888985222A88AC00A2EDF7 /* CheckEmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8888984222A88AC00A2EDF7 /* CheckEmailResponse.swift */; };
+		B8888987222A976900A2EDF7 /* CheckNicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8888986222A976900A2EDF7 /* CheckNicknameResponse.swift */; };
 		B8DACC7A21F875B7006B6AE2 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DACC7921F875B7006B6AE2 /* Library.storyboard */; };
 		B8DACC7C21F875DF006B6AE2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */; };
 		B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */; };
@@ -110,6 +112,8 @@
 		B872811F221C065900D1AF96 /* FilterListSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListSettingViewController.swift; sourceTree = "<group>"; };
 		B8728121221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListSettingTableViewCell.swift; sourceTree = "<group>"; };
 		B8888982222A7DD100A2EDF7 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		B8888984222A88AC00A2EDF7 /* CheckEmailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailResponse.swift; sourceTree = "<group>"; };
+		B8888986222A976900A2EDF7 /* CheckNicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckNicknameResponse.swift; sourceTree = "<group>"; };
 		B8DACC7921F875B7006B6AE2 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		B8DACC7B21F875DF006B6AE2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		B8FF0F63221B0EE300BA72CB /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
@@ -232,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				B8888982222A7DD100A2EDF7 /* LoginResponse.swift */,
+				B8888984222A88AC00A2EDF7 /* CheckEmailResponse.swift */,
+				B8888986222A976900A2EDF7 /* CheckNicknameResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -590,6 +596,7 @@
 				03423066220A0482003CC91C /* MyFilterCategoryViewController.swift in Sources */,
 				B8365F222219DF4000BA255C /* FilterTableViewCell.swift in Sources */,
 				EFF00E35221457BD00865921 /* CameraRatio.swift in Sources */,
+				B8888985222A88AC00A2EDF7 /* CheckEmailResponse.swift in Sources */,
 				B8FF0F64221B0EE300BA72CB /* RoundImageView.swift in Sources */,
 				EFEAE9DD21E20F3000B7CCA8 /* RoundView.swift in Sources */,
 				B8728122221C0C8900D1AF96 /* FilterListSettingTableViewCell.swift in Sources */,
@@ -611,6 +618,7 @@
 				037A7F19221DA70500A670D7 /* PortraitFilterViewController.swift in Sources */,
 				030F2A8C21FC7E690066AEAC /* FilterCollectionViewCell.swift in Sources */,
 				EFB5A1C521E21E3400802F7E /* BlurView.swift in Sources */,
+				B8888987222A976900A2EDF7 /* CheckNicknameResponse.swift in Sources */,
 				EFC8AC9C21FC741F004B940A /* PresentError.swift in Sources */,
 				03896F21221B04AF003637C8 /* RegisterEmailCheckViewController.swift in Sources */,
 			);

@@ -11,8 +11,17 @@ import UIKit
 class RegisterPasswordViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
 
+    var email: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? RegisterPasswordCheckViewController,
+            let passwordInput = passwordTextField.text else { return }
+        viewController.prevPassword = passwordInput
+        viewController.email = email
     }
 
     override func viewWillAppear(_ animated: Bool) {
