@@ -11,6 +11,9 @@ import UIKit
 class RegisterPasswordCheckViewController: UIViewController {
     @IBOutlet weak var passwordCheckTextField: UITextField!
 
+    var email: String?
+    var prevPassword: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,5 +29,18 @@ class RegisterPasswordCheckViewController: UIViewController {
 
     @IBAction private func previousButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction private func nextButtonAction(_ sender: Any) {
+        guard let prev = prevPassword,
+            let password = passwordCheckTextField.text else { return }
+
+        if prev == password {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(withIdentifier: "RegisterNickname") as? RegisterNicknameViewController else { return }
+            viewController.email = email
+            viewController.password = password
+            navigationController?.show(viewController, sender: nil)
+        }
     }
 }
