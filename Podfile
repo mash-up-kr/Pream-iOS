@@ -9,4 +9,5 @@ target 'pream' do
   pod 'Alamofire'
   pod 'SideMenu'
   pod 'GPUImage'
+  pod 'NVActivityIndicatorView'
 end

@@ -6,6 +6,9 @@ PODS:
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
   - Result (4.0.0)
   - SideMenu (5.0.3)
   - SnapKit (4.2.0)
@@ -14,6 +17,7 @@ DEPENDENCIES:
   - Alamofire
   - GPUImage
   - Moya
+  - NVActivityIndicatorView
   - SideMenu
   - SnapKit
 
@@ -22,6 +26,7 @@ SPEC REPOS:
     - Alamofire
     - GPUImage
     - Moya
+    - NVActivityIndicatorView
     - Result
     - SideMenu
     - SnapKit
@@ -30,10 +35,11 @@ SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 16fef61f7ac308bc9abf5762f79e7c9dce753590
+PODFILE CHECKSUM: 13b7ac9b10f33f032c03718f62a3dce72f7de5d1
 
 COCOAPODS: 1.5.3
