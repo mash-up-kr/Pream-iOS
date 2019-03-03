@@ -10,12 +10,14 @@ import UIKit
 
 class RegisterNicknameViewController: UIViewController {
     @IBOutlet weak var nicknameTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
 
     var email: String?
     var password: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +32,10 @@ class RegisterNicknameViewController: UIViewController {
     @IBAction private func previousButtonAction(_ sender: Any) {
 //        dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction private func textFieldChangedAction(_ sender: Any) {
+        nicknameTextField.activateButtonIfNotEmpty(button: nextButton)
     }
 
     @IBAction private func nextButtonAction(_ sender: Any) {

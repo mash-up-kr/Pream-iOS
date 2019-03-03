@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterEmailCheckViewController: UIViewController {
     @IBOutlet weak var authenticationCodeTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
 
     var email: String?
     var authNumber: String?
@@ -20,6 +21,7 @@ class RegisterEmailCheckViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        nextButton.isEnabled = false
         authenticationCodeTextField.becomeFirstResponder()
     }
 
@@ -29,6 +31,10 @@ class RegisterEmailCheckViewController: UIViewController {
 
     @IBAction private func previousButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction private func textFieldChangedAction(_ sender: Any) {
+        authenticationCodeTextField.activateButtonIfNotEmpty(button: nextButton)
     }
 
     @IBAction private func nextButtonAction(_ sender: Any) {

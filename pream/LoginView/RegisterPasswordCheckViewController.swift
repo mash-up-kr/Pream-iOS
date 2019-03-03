@@ -10,12 +10,14 @@ import UIKit
 
 class RegisterPasswordCheckViewController: UIViewController {
     @IBOutlet weak var passwordCheckTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
 
     var email: String?
     var prevPassword: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +31,10 @@ class RegisterPasswordCheckViewController: UIViewController {
 
     @IBAction private func previousButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction private func textFieldChangedAction(_ sender: Any) {
+        passwordCheckTextField.activateButtonIfNotEmpty(button: nextButton)
     }
 
     @IBAction private func nextButtonAction(_ sender: Any) {

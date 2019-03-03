@@ -10,9 +10,11 @@ import UIKit
 
 class RegisterEmailViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +28,10 @@ class RegisterEmailViewController: UIViewController {
 
     @IBAction private func previousButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction private func textFieldChangedAction(_ sender: Any) {
+        emailTextField.activateButtonIfNotEmpty(button: nextButton)
     }
 
     @IBAction private func nextButtonAction(_ sender: Any) {
