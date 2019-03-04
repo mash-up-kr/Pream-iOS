@@ -10,11 +10,13 @@ import UIKit
 
 class RegisterPasswordViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
 
     var email: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,5 +37,9 @@ class RegisterPasswordViewController: UIViewController {
 
     @IBAction private func previousButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction private func textFieldChangedAction(_ sender: Any) {
+        passwordTextField.activateButtonIfNotEmpty(button: nextButton)
     }
 }

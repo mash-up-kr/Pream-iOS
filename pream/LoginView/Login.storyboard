@@ -181,6 +181,9 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="email"/>
+                                <connections>
+                                    <action selector="textFieldChangedAction:" destination="M3S-0a-fBc" eventType="editingChanged" id="gve-oE-OZX"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpv-ns-iHL">
                                 <rect key="frame" x="20" y="291" width="319" height="3"/>
@@ -240,6 +243,7 @@ would you like to take today?</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="LnV-iY-dEE" id="xgV-fk-y7o"/>
+                        <outlet property="nextButton" destination="95K-xn-ehQ" id="4dA-fW-PLA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLn-zX-i5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,6 +331,9 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <action selector="textFieldChangedAction:" destination="Ljy-cc-q0i" eventType="editingChanged" id="Dye-RI-DKC"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-ax-oui">
                                 <rect key="frame" x="20" y="291" width="335" height="3"/>
@@ -384,6 +391,7 @@ would you like to take today?</string>
                         <viewLayoutGuide key="safeArea" id="j6U-Bj-d8r"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="Nfb-Cj-Mcp" id="a1J-ts-o4E"/>
                         <outlet property="passwordTextField" destination="9cC-ki-wsh" id="JvE-Ob-rWG"/>
                     </connections>
                 </viewController>
@@ -454,6 +462,9 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="textFieldChangedAction:" destination="j9J-wc-Nck" eventType="editingChanged" id="R14-S5-p5V"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCz-lY-VtO">
                                 <rect key="frame" x="20" y="291" width="335" height="3"/>
@@ -511,6 +522,7 @@ would you like to take today?</string>
                         <viewLayoutGuide key="safeArea" id="6KJ-86-qDp"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="3hv-nd-Jzb" id="dcm-iB-vg0"/>
                         <outlet property="passwordCheckTextField" destination="6qB-z6-YhX" id="tbD-MX-MKh"/>
                     </connections>
                 </viewController>
@@ -581,6 +593,9 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldChangedAction:" destination="YEA-Oy-5xj" eventType="editingChanged" id="9xD-4V-Km7"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xa3-Mq-cs9">
                                 <rect key="frame" x="20" y="291" width="335" height="3"/>
@@ -638,6 +653,7 @@ would you like to take today?</string>
                         <viewLayoutGuide key="safeArea" id="Dlz-zZ-14j"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="PnB-QD-Ezw" id="5dM-Mz-IMZ"/>
                         <outlet property="nicknameTextField" destination="JpQ-IP-G18" id="IQi-ui-sEa"/>
                     </connections>
                 </viewController>
@@ -773,6 +789,9 @@ would you like to take today?</string>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" textContentType="one-time-code"/>
+                                <connections>
+                                    <action selector="textFieldChangedAction:" destination="NzH-NJ-GRi" eventType="editingChanged" id="wZa-65-WPW"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfC-qQ-Qzz">
                                 <rect key="frame" x="20" y="291" width="335" height="3"/>
@@ -849,6 +868,7 @@ would you like to take today?</string>
                     </view>
                     <connections>
                         <outlet property="authenticationCodeTextField" destination="Puw-G6-WPo" id="cQa-2k-u0W"/>
+                        <outlet property="nextButton" destination="s08-Ph-2tg" id="dPN-AV-M6p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rab-gS-8H4" userLabel="First Responder" sceneMemberID="firstResponder"/>
