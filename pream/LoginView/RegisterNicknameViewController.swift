@@ -48,6 +48,8 @@ class RegisterNicknameViewController: UIViewController {
                     let storyboard = UIStoryboard(name: "Login", bundle: nil)
                     let viewController = storyboard.instantiateViewController(withIdentifier: "Welcome")
                     self?.navigationController?.show(viewController, sender: nil)
+                    let user = User(nickName: nickname, email: email)
+                    UserDefaultsManager.shared.setUser(user: user)
                 }, failure: { error in
                     Log.msg(error)
                 })
