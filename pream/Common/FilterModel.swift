@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class FilterModelDummy {
     var dummyFilters: [FilterModel] = []
@@ -38,6 +39,24 @@ class FilterModelDummy {
     }
 }
 
+class FilterObject: Object {
+    @objc dynamic var localId: Int = 0
+    @objc dynamic var serverId: Int = 0
+    @objc dynamic var groupName: String = ""
+    @objc dynamic var groupImage: Data?
+
+    @objc dynamic var exposure: Float = 0
+    @objc dynamic var contrast: Float = 0
+    @objc dynamic var sharpness: Float = 0
+    @objc dynamic var saturation: Float = 0
+    @objc dynamic var highlights: Float = 0
+    @objc dynamic var shadows: Float = 0
+    @objc dynamic var temperature: Float = 0
+    @objc dynamic var tint: Float = 0
+    @objc dynamic var vignetteEnd: Float = 0
+    @objc dynamic var brightness: Float = 0
+}
+
 class FilterModel {
     var localId: Int?
     var serverId: Int?
@@ -50,6 +69,18 @@ class FilterModel {
         self.groupName = groupName
         self.groupImage = groupImage
         self.groupFilter = groupFilter
+    }
+
+    func makeObject() -> FilterObject {
+        let filterObject = FilterObject()
+        filterObject.localId = localId ?? 0
+        filterObject.serverId = serverId ?? 0
+        filterObject.groupName = groupName ?? ""
+
+        filterObject.exposure = Float(groupFilter.gpuExposureFilter.exposure)
+        filterObject.contrast = Float(groupFilter.gpuContrastFilter.contrast)
+
+        return filterObject
     }
 }
 

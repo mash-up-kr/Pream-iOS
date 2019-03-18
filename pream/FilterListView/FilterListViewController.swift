@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FilterListViewController: UIViewController {
     @IBOutlet weak var preamFilterView: UIView!
@@ -16,10 +17,9 @@ class FilterListViewController: UIViewController {
         case filterHeader
         case filter
     }
-    private lazy var dummies: [FilterModel] = {
-        let filterModelDummy = FilterModelDummy()
-        filterModelDummy.makeDummy()
-        return filterModelDummy.dummyFilters
+    private lazy var filters: Results<FilterObject> = {
+        let realm = try! Realm()
+        return realm.objects(FilterObject.self)
     }()
 
     override func viewDidLoad() {
@@ -35,15 +35,13 @@ class FilterListViewController: UIViewController {
 private extension FilterListViewController {
     func getFilterCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, section: FilterListCell) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: section.rawValue, for: indexPath) as? FilterTableViewCell else { return UITableViewCell() }
-        let item = dummies[indexPath.row]
+        let item = filters[indexPath.row]
         cell.delegate = self
 
-        if let groupName = item.groupName {
-            cell.filterTitleView.text = groupName
-        }
+        cell.filterTitleView.text = item.groupName
 
         if let groupImage = item.groupImage {
-            cell.filterImageView.image = groupImage
+            cell.filterImageView.image = UIImage(data: groupImage)
         }
 
         return cell
@@ -69,7 +67,7 @@ extension FilterListViewController: UITableViewDataSource {
         case .filterHeader:
             return 1
         case .filter:
-            return dummies.count
+            return filters.count
         }
     }
 

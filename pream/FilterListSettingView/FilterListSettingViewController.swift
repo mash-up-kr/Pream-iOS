@@ -15,11 +15,12 @@ class FilterListSettingViewController: KeyboardViewController {
 
     private let cellIdentifier = "filterListSetting"
     private var settingMode: SettingMode = .edit
-    private lazy var dummies: [FilterModel] = {
-        let filterModelDummy = FilterModelDummy()
-        filterModelDummy.makeDummy()
-        return filterModelDummy.dummyFilters
-    }()
+    private lazy var dummies: [FilterModel] = []
+//    {
+//        let filterModelDummy = FilterModelDummy()
+//        filterModelDummy.makeDummy()
+//        return filterModelDummy.dummyFilters
+//    }()
     private var sourceIndexPath: IndexPath?
     private var cellSnapshot: UIView?
     var activeField: UITextField?

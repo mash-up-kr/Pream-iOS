@@ -8,6 +8,7 @@
 
 import UIKit
 import GPUImage
+import RealmSwift
 
 class FilterSettingViewController: UIViewController {
     @IBOutlet weak var previewImageView: GPUImageView!
@@ -132,9 +133,17 @@ extension FilterSettingViewController: LibraryDelegate {
 
 extension FilterSettingViewController: TextInputDimedViewDelegate {
     func doneButtonAction(textField: String?) {
-        dismiss(animated: true) { [weak self] in
-            self?.dismiss(animated: true, completion: nil)
-        }
+        filterModel.groupName = textField
+
+        filterModel.groupFilter.gpuGroupFilter.useNextFrameForImageCapture()
+        filterModel.groupImage = filterModel.groupFilter.gpuGroupFilter.imageFromCurrentFramebuffer()
+
+        let realm = try! Realm()
+        realm.beginWrite()
+        realm.add(filterModel.makeObject())
+        try! realm.commitWrite()
+
+        dismiss(animated: true, completion: nil)
     }
 }
 

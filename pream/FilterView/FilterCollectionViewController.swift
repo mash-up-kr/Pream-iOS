@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 private let reuseIdentifier = "FilterCollectionViewCell"
 
@@ -15,12 +16,10 @@ protocol FilterCollectionViewDelegate: class {
 }
 
 class FilterCollectionViewController: UICollectionViewController {
-    let dummy: FilterModelDummy = {
-        let dummy = FilterModelDummy()
-        dummy.makeDummy()
-        return dummy
+    private lazy var filters: Results<FilterObject> = {
+        let realm = try! Realm()
+        return realm.objects(FilterObject.self)
     }()
-    //삭제 필
 
     weak var delegate: FilterCollectionViewDelegate?
     override func viewDidLoad() {
@@ -38,7 +37,7 @@ class FilterCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return dummy.dummyFilters.count + 1
+        return filters.count + 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,8 +62,7 @@ class FilterCollectionViewController: UICollectionViewController {
         if indexPath.item == 0 {
             present(feedMainNavigationController, animated: true, completion: nil)
         } else {
-            // TODO: - 수정필요
-            delegate?.filterSelected(model: dummy.dummyFilters[indexPath.item - 1])
+//            delegate?.filterSelected(model: filters[indexPath.item - 1])
         }
     }
 
