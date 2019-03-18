@@ -26,7 +26,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>카메라 써두 돼요???</string>
+	<string>카메라 써또대?</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>사진첨에 저장해도 돼요???</string>
 	<key>NSPhotoLibraryUsageDescription</key>

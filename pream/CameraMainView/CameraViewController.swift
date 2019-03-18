@@ -43,6 +43,14 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+            if response {
+                //access granted
+            } else {
+
+            }
+        }
+
         timerCount.isHidden = true
         listenVolumeButton()
         addVolumeButtonObserver()
@@ -59,7 +67,7 @@ class CameraViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setRatio()
-        loginChecked()
+//        loginChecked()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -304,7 +312,7 @@ extension CameraViewController {
     func deinitTimer() {
         timer.invalidate()
         timerCount.isHidden.toggle()
-        seconds = Int()
+        seconds = currentTimer.getSeconds()
     }
 
     func runTimer() {

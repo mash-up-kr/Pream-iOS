@@ -136,7 +136,7 @@ extension FilterSettingViewController: TextInputDimedViewDelegate {
         filterModel.groupName = textField
 
         filterModel.groupFilter.gpuGroupFilter.useNextFrameForImageCapture()
-        filterModel.groupImage = filterModel.groupFilter.gpuGroupFilter.imageFromCurrentFramebuffer()
+        filterModel.groupImage = gpuImage?.imageFromCurrentFramebuffer()
 
         let realm = try! Realm()
         realm.beginWrite()

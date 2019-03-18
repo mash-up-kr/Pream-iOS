@@ -33,7 +33,11 @@ class UserDefaultsManager {
     }
 
     func getCameraPosition() -> AVCaptureDevice.Position {
-        return AVCaptureDevice.Position(rawValue: userDefault.integer(forKey: key.cameraPosition.rawValue)) ?? .front
+        let position = AVCaptureDevice.Position(rawValue: UserDefaults.standard.integer(forKey: "cameraPosition")) ?? .front
+        if position.rawValue == 0 {
+            return .front
+        }
+        return position
     }
 
     func getCameraRatio() -> CameraRatio {
