@@ -10,4 +10,5 @@ target 'pream' do
   pod 'SideMenu'
   pod 'GPUImage'
   pod 'NVActivityIndicatorView'
+  pod 'RealmSwift'
 end

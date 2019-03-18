@@ -9,6 +9,11 @@ PODS:
   - NVActivityIndicatorView (4.6.1):
     - NVActivityIndicatorView/Presenter (= 4.6.1)
   - NVActivityIndicatorView/Presenter (4.6.1)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
   - Result (4.0.0)
   - SideMenu (5.0.3)
   - SnapKit (4.2.0)
@@ -18,6 +23,7 @@ DEPENDENCIES:
   - GPUImage
   - Moya
   - NVActivityIndicatorView
+  - RealmSwift
   - SideMenu
   - SnapKit
 
@@ -27,6 +33,8 @@ SPEC REPOS:
     - GPUImage
     - Moya
     - NVActivityIndicatorView
+    - Realm
+    - RealmSwift
     - Result
     - SideMenu
     - SnapKit
@@ -36,10 +44,12 @@ SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 13b7ac9b10f33f032c03718f62a3dce72f7de5d1
+PODFILE CHECKSUM: c99987057b5639b229cfda5bcba83009b3148b47
 
 COCOAPODS: 1.5.3
