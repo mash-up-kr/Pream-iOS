@@ -166,7 +166,8 @@ extension CameraViewController {
     }
     //카메라 동작
     func startCameraSession() {
-        let device = UIDevice.current.name
+//        let device = UIDevice.current.name
+        let device = UIDevice.modelName
         if device == "iPhone SE" {
             videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.high.rawValue, cameraPosition: cameraPosition)
         } else {
